@@ -27,6 +27,6 @@ ReactDOM.render(<LoadingPage/>, document.getElementById('app'));
 setTimeout(() => {
     renderApp();
     if (history.location.pathname === '/') {
-        history.push('/sportsmen/1');
+        history.push('/sportsman/1');
     }
 }, 1000);

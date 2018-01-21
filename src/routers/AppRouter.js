@@ -5,7 +5,9 @@ import NotFoundPage from '../components/NotFoundPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import IndexPage from "../components/IndexPage";
-import SportsmenPage from "../components/sportsmen/SportsmenPage";
+import SportsmenPage from "../components/sportsman/SportsmenPage";
+import SchoolListPage from "../components/schools/list/SchoolListPage";
+import SchoolPage from "../components/schools/school/SchoolPage";
 
 export const history = createHistory();
 
@@ -14,7 +16,9 @@ const AppRouter = () => (
         <div>
             <Switch>
                 <PublicRoute path="/" component={IndexPage} exact={true}/>
-                <PrivateRoute path="/sportsmens/:id" component={SportsmenPage}/>
+                <PrivateRoute path="/sportsman/:id" component={SportsmenPage}/>
+                <PrivateRoute path="/schools" exact={true} component={SchoolListPage}/>
+                <PrivateRoute path="/schools/:id/:view?" component={SchoolPage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>
