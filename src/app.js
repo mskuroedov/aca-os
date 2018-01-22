@@ -29,4 +29,4 @@ setTimeout(() => {
     if (history.location.pathname === '/') {
         history.push('/sportsman/1');
     }
-}, 1000);
+}, 1);
