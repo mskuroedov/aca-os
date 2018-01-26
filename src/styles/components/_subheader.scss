@@ -1,0 +1,36 @@
+.subheader{
+  padding-top: 55px;
+  padding-left: 168px;
+  padding-right: 168px;
+  padding-bottom: 16px;
+  background-color: #00755E;
+  color: white;
+  ::after{
+    color: #fff;
+  }
+  ::before{
+    color: #fff;
+  }
+  .path{
+    a{
+      transition: all 0.3s;
+      color: white;
+      margin-right: 5px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      &:hover{
+        border-bottom: 1px solid rgba(255,255,255,1);
+
+      }
+    }
+    .material-icons{
+      vertical-align: middle;
+      font-size: 14px;
+      margin-right:5px;
+    }
+    &:last-child{
+      font-size: 32px;
+      margin-top: 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+  }
+}

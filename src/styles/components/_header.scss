@@ -1,0 +1,36 @@
+.header{
+  background-color: #006652 !important;
+  color: #fff !important;
+  font-size: 16px;
+  font-family: BlissPro !important;
+  padding: 0 14px 0 14px!important;
+  min-height:56px !important;
+  box-shadow: none !important;
+  span{
+    font-size:24px;
+  }
+  a{
+    color: #fff;
+    margin-right: 14px;
+    font-family: BlissPro;
+
+  }
+  a:first-of-type{
+    margin-left: 16px;
+  }
+  a.active{
+    color: rgba(255,255,255,0.6);
+  }
+  &__input{
+    color: #fff !important;
+    font-size:16px !important;
+    width: 100px;
+    border:none !important;
+    &:after{
+      background-color: white !important;
+    }
+    &:before{
+       background-color: white !important;
+     }
+  }
+}

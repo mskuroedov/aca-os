@@ -1,4 +1,7 @@
 @import './base/settings';
 @import './base/base';
+@import 'components/header';
+@import 'components/subheader';
 @import './components/table';
-@import './components/_fonts';
+@import './components/paper';
+@import './components/custom-select';

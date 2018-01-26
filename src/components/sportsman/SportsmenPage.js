@@ -1,12 +1,16 @@
 import React from 'react';
 import SportsmenPageProfile from "./profile/SportsmenPageProfile";
+import SportsmenHeader from "./profile/SportsmenHeader";
+import SportsmenMenu from "./profile/SportsmenMenu";
+import Header from "../../Header";
+import Subheader from "../../Subheader";
 
 const SportsmenPage = () => (
     <div>
-        <p>MainHeader</p>
-        <p>SubHeader</p>
-        <p>PageHeader</p>
-        <SportsmenPageProfile />
+        <Header />
+        <Subheader />
+        <SportsmenHeader />
+        <SportsmenMenu />
     </div>
 );
 

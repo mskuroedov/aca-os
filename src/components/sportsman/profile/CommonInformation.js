@@ -19,7 +19,7 @@ const CommonInformation = () => (
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        <TableRow key='profile-info'>
+                        <TableRow>
                             <TableCell>01.10.1995</TableCell>
                             <TableCell>2000</TableCell>
                             <TableCell>Мужской</TableCell>
