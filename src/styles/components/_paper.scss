@@ -1,30 +1,53 @@
-.paper{
+.paper {
   box-shadow: none !important;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px !important;
 }
-.paper__info{
+.trainer{
+  border-bottom:1px solid rgba(36,36,33,0.2);
+  transition:all 0.2s;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+.trainer:hover {
+  border-bottom: 1px solid rgba(36, 36, 33, 1);
+  transition: all 0.2s;
+}
+.paper__info {
   padding: 24px;
   font-size: 16px;
   align-items: center;
-  i{
+  i {
     width: 10px;
     display: initial;
     margin-right: 21px;
-    color: #918F8A;
+    color: #242421;
+    opacity: 0.3;
+    line-height: 0.5;
   }
-  a{
-   color: #00755E;
+  a {
+    color: rgba(36,36,33,1);
+    border-bottom:1px solid rgba(36,36,33,0.2);
+    transition:all 0.2s;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    }
+
+  a:hover {
+    border-bottom:1px solid rgba(36,36,33,1)
+
   }
-  a:hover{
-    text-decoration: underline;
-  }
-  img{
+
+  img {
     border-radius: 100%;
     text-align: center;
   }
-  div{
+  div {
     display: flex;
     align-self: center;
   }
+}
+.sportsmen_contact{
+  font-size: 14px;
 }

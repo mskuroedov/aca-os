@@ -21,11 +21,12 @@ module.exports = (env) => {
             filename: 'bundle.js'
         },
         module: {
-            rules: [{
-                loader: 'babel-loader',
-                test: /\.js$/,
-                exclude: /node_modules/
-            },
+            rules: [
+                {
+                    loader: 'babel-loader',
+                    test: /\.js$/,
+                    exclude: /node_modules/
+                },
                 {
                     test: /\.s?css$/,
                     use: CSSExtract.extract({
@@ -44,7 +45,8 @@ module.exports = (env) => {
                             }
                         ]
                     })
-                }]
+                }
+            ]
         },
         plugins: [
             CSSExtract,

@@ -1,0 +1,18 @@
+.contact_status{
+ font-size:14px;
+  color: rgba(36,36,33,0.6);
+  position: relative;
+  text-align: right;
+  span{
+    &:before{
+      content:close-quote;
+      position: absolute;
+      border-radius: 100%;
+      left:-8px;
+      top: 11px;
+      width: 8px;
+      height: 8px;
+      background-color: #00765E;
+    }
+  }
+}

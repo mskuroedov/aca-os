@@ -5,6 +5,7 @@ import AppBar from 'material-ui/AppBar';
 import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 import SportsmenPageProfile from "./SportsmenPageProfile";
+import Perfomance from "./Perfomance";
 
 function TabContainer(props) {
     return (
@@ -36,7 +37,6 @@ const styles = theme => ({
         fontWeight: 'bold',
         justifyContent: 'flex-end',
         boxShadow: 'none'
-
     },
     tabs: {
         justifyContent: 'flex-end',
@@ -51,7 +51,6 @@ const styles = theme => ({
         fontSize: 14,
         fontWeight:'bold',
         fontFamily:'BlissPro',
-        // width: 40,
     },
     bc:{
         color:"#000 !important"
@@ -71,7 +70,7 @@ class SportsmenMenu extends React.Component {
     }
 
     state = {
-        value: 4,
+        value: 3,
     };
 
     handleChange = (event, value) => {
@@ -91,9 +90,8 @@ class SportsmenMenu extends React.Component {
                           indicatorColor="primary"
                           textColor="primary"
                           classes={{
-                              root: classes.rootInherit, // className, e.g. `OverridesClasses-root-X`
-                              // buttonAuto: classes.button, // className, e.g. `OverridesClasses-root-X`
-                              rootPrimary:classes.rootTabPrimary,
+                              root: classes.rootInherit,
+                              buttonAuto: classes.button, // className, e.g. `OverridesClasses-root-X`
                               flexContainer:classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
 
                           }}
@@ -114,8 +112,6 @@ class SportsmenMenu extends React.Component {
                                  label: classes.button,
                                  rootPrimarySelected:classes.bc,
                                  rootPrimary:classes.rootTabPrimary
-                                 // rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-// className, e.g. `OverridesClasses-label-X`
                              }}
                         />
                         <Tab label="Журнал"
@@ -148,10 +144,18 @@ class SportsmenMenu extends React.Component {
                 {value === 0 && <TabContainer>
                     <SportsmenPageProfile/>
                 </TabContainer>}
-                {value === 1 && <TabContainer>Item Two</TabContainer>}
-                {value === 2 && <TabContainer>Item Three</TabContainer>}
-                {value === 3 && <TabContainer>Item Two</TabContainer>}
-                {value === 4 && <TabContainer>Item Three</TabContainer>}
+                {value === 1 && <TabContainer>
+                    1
+                </TabContainer>}
+                {value === 2 && <TabContainer>
+                    2
+                </TabContainer>}
+                {value === 3 && <TabContainer>
+                    <Perfomance />
+                </TabContainer>}
+                {value === 4 && <TabContainer>
+                    4
+                </TabContainer>}
             </section>
         );
     }

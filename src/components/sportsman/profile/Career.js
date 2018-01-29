@@ -8,8 +8,8 @@ const Career = () => (
                 <TableHead>
                     <TableRow>
                         <TableCell>Период</TableCell>
-                        <TableCell >Амплуа</TableCell>
-                        <TableCell >Команда</TableCell>
+                        <TableCell>Амплуа</TableCell>
+                        <TableCell>Команда</TableCell>
                         <TableCell numeric>Игры</TableCell>
                         <TableCell numeric>Выигрыши</TableCell>
                         <TableCell >Тренер</TableCell>
@@ -22,7 +22,7 @@ const Career = () => (
                         <TableCell>АкБарс</TableCell>
                         <TableCell numeric>36</TableCell>
                         <TableCell numeric>14</TableCell>
-                        <TableCell>Саяпов Ренат Маратович</TableCell>
+                        <TableCell ><span className='trainer'>Саяпов Ренат Маратович</span></TableCell>
                     </TableRow>
                 </TableBody>
             </Table>

@@ -1,5 +1,6 @@
 .table__title {
-  padding-bottom: 0 !important;
+  padding-bottom: 11px !important;
+  padding-top:24px !important;
   color: #918F8A;
   font-size: 20px;
   h3 {
@@ -14,12 +15,12 @@
 }
 
 .table {
-  //font-family: BlissPro, sans-serif;
+  font-family: BlissPro, sans-serif;
   //height: 104px;
   background-color: #fff;
   border-radius: 12px;
   th {
-    padding: 22px 0px 20px 24px;
+    padding: 22px 0px 20px 12px;
     color: #918F8A;
     height: 55px;
     white-space: nowrap;
@@ -29,7 +30,7 @@
     }
   }
   td {
-    padding: 22px 0px 20px 24px;
+    padding: 22px 0px 20px 12px;
     font-size: 14px;
     color: #242421;
   }

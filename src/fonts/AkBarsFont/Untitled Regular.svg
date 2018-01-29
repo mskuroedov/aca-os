@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<font id="Untitled" horiz-adv-x="500">
+<font-face font-family="Untitled" underline-thickness="50" font-weight="400" unicode-range="U+0020-0039" units-per-em="1000" ascent="750" underline-position="-150" descent="-250" bbox="19 0 527 750" panose-1="0 0 0 0 0 0 0 0 0 0"/>
+<missing-glyph/>
+<glyph unicode=" " glyph-name="space"/>
+<glyph horiz-adv-x="566" unicode="0" glyph-name="zero" d="M406 750l107 -95v-572l-107 -83h-250l-107 83v572l107 95h250zM347 155v440h-119v-440h119z"/>
+<glyph horiz-adv-x="363" unicode="1" glyph-name="one" d="M47 655l142 95h84v-608h47v-142h-261v142h47v418h-59v95v0z"/>
+<glyph horiz-adv-x="580" unicode="2" glyph-name="two" d="M62 536v119l120 95h237l108 -95v-167l-286 -298v-48h107v60h179v-202h-465v226l298 310v60h-119v-60h-179v0z"/>
+<glyph horiz-adv-x="589" unicode="3" glyph-name="three" d="M54 536v119l107 95h250l107 -95v-239l-48 -47l48 -35v-238l-107 -96h-262l-95 83v133h166v-61h132v131h-144v154h144v156h-132v-60h-166v0z"/>
+<glyph horiz-adv-x="567" unicode="4" glyph-name="four" d="M460 143h47v-143h-262v143h47v24h-226l-47 119l285 464h156v-440h47v-143h-47v-24zM292 310v142l-83 -142h83z"/>
+<glyph horiz-adv-x="577" unicode="5" glyph-name="five" d="M47 750h464v-155h-285v-154h190l107 -96v-250l-107 -95h-261l-108 83v118h179v-47h119v132h-190l-108 95v369v0z"/>
+<glyph horiz-adv-x="553" unicode="6" glyph-name="six" d="M509 535h-167v59h-131v-130h191l107 -96v-286l-107 -82h-262l-95 82v572l107 96h250l107 -96v-119zM342 310h-131v-168h131v168z"/>
+<glyph horiz-adv-x="555" unicode="7" glyph-name="seven" d="M46 523v227h429l47 -143l-201 -453h47l-12 -154h-275v143h60l191 452h-120v-72h-166v0z"/>
+<glyph horiz-adv-x="552" unicode="8" glyph-name="eight" d="M498 655v-250l-48 -36l48 -36v-238l-95 -95h-262l-96 95v250l37 36l-37 24v250l96 95h262zM344 154v156h-132v-156h132zM344 464v132h-132v-132h132z"/>
+<glyph horiz-adv-x="586" unicode="9" glyph-name="nine" d="M414 750l106 -96v-570l-106 -84h-263l-95 84v118h166v-47h132v131h-203l-95 83v285l107 96h251zM354 428v169h-132v-169h132z"/>
+</font>
+</defs>
+</svg>

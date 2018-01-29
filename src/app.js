@@ -18,7 +18,7 @@ const theme = createMuiTheme({
 });
 const store = configureStore();
 const jsx = (
-    <Reboot>
+
         <MuiThemeProvider theme={theme}>
 
             <Provider store={store}>
@@ -26,7 +26,7 @@ const jsx = (
             </Provider>
         </MuiThemeProvider>
 
-    </Reboot>
+
 );
 let hasRendered = false;
 const renderApp = () => {

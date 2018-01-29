@@ -7,16 +7,12 @@ const Rewards = () => (
             <Table className="table">
                 <TableHead>
                     <TableRow>
-                        <TableCell className="table_w_icon"></TableCell>
                         <TableCell >Название</TableCell>
                         <TableCell numeric>Дата</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     <TableRow>
-                        <TableCell className="table_w_icon">
-                            <i className="material-icons">star_rate</i>
-                        </TableCell>
                         <TableCell>
                             Диплом за 1 место в сезоне 2016
                         </TableCell>

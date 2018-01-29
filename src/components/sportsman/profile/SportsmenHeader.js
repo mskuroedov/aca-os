@@ -37,7 +37,8 @@ const styles = {
     },
     sportsmenRatingNum: {
         fontSize: 40,
-        color: '#242421'
+        color: '#242421',
+        fontFamily:'AkBarsFont'
     }
 };
 const SportmenHeader = (props) => {
@@ -46,7 +47,7 @@ const SportmenHeader = (props) => {
 <section className={classNames(classes.sportsmenHeader)}>
 
             <Grid
-                item xs={2} align={'flex-basis'}>
+                item  align={'flex-basis'}>
                 <Avatar
                     alt="Adelle Charles"
                     src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
