@@ -3,7 +3,6 @@ import {Grid} from "material-ui";
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {withStyles} from 'material-ui/styles';
-import LocationCityIcon from 'material-ui-icons/LocationCity';
 import Icon from 'material-ui/Icon';
 
 const styles = {
