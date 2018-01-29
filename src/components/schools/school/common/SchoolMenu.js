@@ -35,7 +35,7 @@ const styles = theme => ({
         fontSize: 1.4,
         backgroundColor: '#fff',
         fontWeight: 'bold',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         boxShadow: 'none'
     },
     tabs: {
@@ -47,7 +47,7 @@ const styles = theme => ({
         fontWeight: 'bold'
     },
     button: {
-        color: '#00755E',
+        // color: '#00755E',
         fontSize: 14,
         fontWeight:'bold',
         fontFamily:'BlissPro',
@@ -56,10 +56,11 @@ const styles = theme => ({
         color:"#000 !important"
     },
     rootTabPrimary:{
-        minWidth:0
+        minWidth:0,
+        color:'#00755E'
     },
     menuFlexContainer:{
-        justifyContent:'flex-end'
+        justifyContent:'center'
     }
 
 });
@@ -70,7 +71,7 @@ class SchoolMenu extends React.Component {
     }
 
     state = {
-        value: 3,
+        value: 0,
     };
 
     handleChange = (event, value) => {

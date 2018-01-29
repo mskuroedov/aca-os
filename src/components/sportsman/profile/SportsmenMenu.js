@@ -47,7 +47,6 @@ const styles = theme => ({
         fontWeight: 'bold'
     },
     button: {
-        color: '#00755E',
         fontSize: 14,
         fontWeight:'bold',
         fontFamily:'BlissPro',
@@ -56,7 +55,8 @@ const styles = theme => ({
         color:"#000 !important"
     },
     rootTabPrimary:{
-        minWidth:0
+        minWidth:0,
+        color:'#00755E'
     },
     menuFlexContainer:{
         justifyContent:'flex-end'

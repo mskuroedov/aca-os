@@ -36,7 +36,7 @@ const styles = {
         fontSize: 14
     },
     sportsmenRatingNum: {
-        fontSize: 40,
+        fontSize:40,
         color: '#242421',
         fontFamily:'AkBarsFont'
     }
