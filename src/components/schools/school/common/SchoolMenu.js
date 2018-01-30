@@ -6,6 +6,7 @@ import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 import SportsmenPageProfile from "../../../sportsman/profile/SportsmenPageProfile";
 import Perfomance from "../../../sportsman/profile/Perfomance";
+import SchoolInfo from "./SchoolInfo";
 
 function TabContainer(props) {
     return (
@@ -159,10 +160,12 @@ class SchoolMenu extends React.Component {
                     </Tabs>
                 </AppBar>
                 {value === 0 && <TabContainer>
-                    <SportsmenPageProfile/>
+                    <SchoolInfo />
+
                 </TabContainer>}
                 {value === 1 && <TabContainer>
-                    1
+                    <SportsmenPageProfile/>
+
                 </TabContainer>}
                 {value === 2 && <TabContainer>
                     2
