@@ -8,12 +8,12 @@ import SearchIcon from 'material-ui-icons/Search';
 import Menu, {MenuItem} from 'material-ui/Menu';
 import MoreVertIcon from 'material-ui-icons/MoreVert';
 import {Grid} from "material-ui";
-import Input, { InputLabel, InputAdornment } from 'material-ui/Input';
+import Input, {InputLabel, InputAdornment} from 'material-ui/Input';
 import teal from 'material-ui/colors/teal';
 import {NavLink} from "react-router-dom";
 
 
-const styles = theme =>(  {
+const styles = theme => (  {
     root: {
         width: '100%',
     },
@@ -92,25 +92,14 @@ class MenuAppBar extends React.Component {
 
         return (
             <div>
-                <AppBar position="static" >
+                <AppBar position="static">
                     <Toolbar className="header">
                         <IconButton color="inherit" aria-label="Search">
                             <SearchIcon/>
                         </IconButton>
-                        {/*<FormControl className={classes.formControl}>*/}
-                            {/*<InputLabel htmlFor="name-simple">Name</InputLabel>*/}
-                            <Input id="name-simple" value={this.state.name} onChange={this.handleChange} className="header__input" placeholder="Поиск"/>
-                        {/*</FormControl>*/}
-                        {/*<Input*/}
-                            {/*id="adornment-amount"*/}
-                            {/*value={this.state.amount} color="inherit"*/}
-                            {/*// onChange={this.handleChange('amount')}*/}
-                            {/*startAdornment={<InputAdornment position="start"><IconButton color="inherit" aria-label="Search">*/}
-                                {/*<SearchIcon/>*/}
-                            {/*</IconButton></InputAdornment>}*/}
-                        {/*/>*/}
-                        <Grid >
-                            <NavLink activeClassName="active" to="/" exact={true}>Рабочий стол</NavLink>
+                        <Input id="name-simple" value={this.state.name} onChange={this.handleChange}
+                               className="header__input" placeholder="Поиск"/>
+                            <NavLink activeClassName="active" to="/" exact={true} style={{marginLeft:'auto'}}>Рабочий стол</NavLink>
                             <NavLink activeClassName="active" to="/schools" exact={true}>Школы</NavLink>
                             <NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>
                             <NavLink activeClassName="active" to="#">Календарь</NavLink>
@@ -119,7 +108,6 @@ class MenuAppBar extends React.Component {
                             <NavLink activeClassName="active" to="#">Тренировочные планы</NavLink>
                             <NavLink activeClassName="active" to="#">Обучение</NavLink>
                             <NavLink activeClassName="active" to="#">Аттестация</NavLink>
-                        </Grid>
                         <div>
                             <IconButton
                                 aria-label="More"
