@@ -5,14 +5,13 @@ import {withStyles} from 'material-ui/styles';
 import Button from 'material-ui/Button';
 import Select from 'material-ui/Select';
 import {MenuItem} from 'material-ui/Menu';
-import {FormControl, FormHelperText} from 'material-ui/Form';
-import SportsmanTable from "./SportsmanTable";
+import {FormControl} from 'material-ui/Form';
+import TableView from "./table/TableView";
 import Icon from "material-ui/es/Icon/Icon";
 import IconButton from "material-ui/es/IconButton/IconButton";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
-import InputLabel from "material-ui/es/Input/InputLabel";
 import Input from "material-ui/es/Input/Input";
-import SportsmanModels from "./SportsmanModels";
+import TilesView from "./tiles/TilesView";
 
 
 const styles = theme => ({
@@ -64,10 +63,10 @@ const styles = theme => ({
     },
     searchInkbar: {
         color: 'rgba(36,36,33,1)',
-        '&:before':{
+        '&:before': {
             backgroundColor: 'rgba(0,0,0,0.2) !important'
         },
-        '&:after':{
+        '&:after': {
             backgroundColor: 'rgba(0,0,0,0.2) !important'
         }
     },
@@ -79,7 +78,23 @@ const styles = theme => ({
 });
 
 
-class Perfomance extends React.Component {
+const sportsman = [
+    {
+        id: 1,
+        firstname: 'Сергей',
+        secondname: 'Красильников',
+        middlename: 'Васильевич'
+    },
+    {
+        id: 2,
+        firstname: 'Дмитрий',
+        secondname: 'Мокшин',
+        middlename: 'Генадьевич'
+    },
+];
+
+
+class Sportsman extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -87,13 +102,12 @@ class Perfomance extends React.Component {
     state = {
         selectSchool: 1,
         name: 'hai',
-        tableView:false,
+        tableView: false,
     };
-    changeView = event =>{
+    changeView = event => {
         this.setState({
-            tableView:!(this.state.tableView)
+            tableView: !(this.state.tableView)
         });
-        console.log(this.state.tableView)
     };
     handleChange = event => {
         this.setState({selectSchool: event.target.value});
@@ -103,10 +117,8 @@ class Perfomance extends React.Component {
         const {classes} = this.props;
         return (
             <div>
-                <Grid container
-                >
+                <Grid container>
                     <Grid item>
-
                         <FormControl>
                             <Select
                                 value={this.state.selectSchool}
@@ -128,7 +140,6 @@ class Perfomance extends React.Component {
                         </FormControl>
                     </Grid>
                     <Grid item>
-
                         <FormControl>
                             <Select
                                 value={this.state.selectSchool}
@@ -176,16 +187,16 @@ class Perfomance extends React.Component {
                         </FormControl>
                     </Grid>
                     <IconButton className={classes.iconbtn} onClick={this.changeView}>
-                        { this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon> }
+                        {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
                     </IconButton>
 
                     <Grid item xs={12} className="paper_w_table">
-                        { this.state.tableView ?
-                            <SportsmanTable/> :
-                            <Grid container>
-                                <SportsmanModels/>
-                            </Grid>}
-
+                        {
+                            this.state.tableView ?
+                                <TableView sportsman={sportsman}/>
+                                :
+                                <TilesView sportsman={sportsman}/>
+                        }
                     </Grid>
                 </Grid>
             </div>
@@ -193,9 +204,9 @@ class Perfomance extends React.Component {
     }
 }
 
-Perfomance.propTypes = {
+Sportsman.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Perfomance);
+export default withStyles(styles)(Sportsman);
 

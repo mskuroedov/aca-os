@@ -7,7 +7,7 @@ import Typography from 'material-ui/Typography';
 import SchoolInfo from "./common/SchoolInfo";
 import SportsmenPageProfile from "../../sportsman/profile/SportsmenPageProfile";
 import Perfomance from "../../sportsman/profile/Perfomance";
-import Sportsman from "./sportsman/Sportsman";
+import Sportsman from "./sportsman/SportsmanListPage";
 import {history} from "../../../routers/AppRouter";
 import NotFoundPage from "../../NotFoundPage";
 import SportsmenPage from "../../sportsman/SportsmenPage";
