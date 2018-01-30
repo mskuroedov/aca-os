@@ -4,9 +4,10 @@ import {withStyles} from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
-import SportsmenPageProfile from "../../../sportsman/profile/SportsmenPageProfile";
-import Perfomance from "../../../sportsman/profile/Perfomance";
-import SchoolInfo from "./SchoolInfo";
+import SchoolInfo from "./common/SchoolInfo";
+import SportsmenPageProfile from "../../sportsman/profile/SportsmenPageProfile";
+import Perfomance from "../../sportsman/profile/Perfomance";
+import Sportsman from "./sportsman/Sportsman";
 
 function TabContainer(props) {
     return (
@@ -72,7 +73,7 @@ class SchoolMenu extends React.Component {
     }
 
     state = {
-        value: 0,
+        value: 4,
     };
 
     handleChange = (event, value) => {
@@ -168,13 +169,14 @@ class SchoolMenu extends React.Component {
 
                 </TabContainer>}
                 {value === 2 && <TabContainer>
-                    2
+                    123
                 </TabContainer>}
                 {value === 3 && <TabContainer>
                     <Perfomance />
                 </TabContainer>}
                 {value === 4 && <TabContainer>
-                    4
+                    <Sportsman />
+
                 </TabContainer>}
                 {value === 5 && <TabContainer>
                     4

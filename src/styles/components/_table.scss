@@ -39,3 +39,28 @@
     color:#918F8A
   }
 }
+.table_sportsman {
+   font-family: BlissPro, sans-serif;
+   //height: 104px;
+   background-color: #fff;
+   border-radius: 12px;
+   th {
+     padding: 30px 10px 22px 12px;
+     color: #918F8A;
+     height: 55px;
+     white-space: nowrap;
+     font-size: 14px;
+     :first-of-type {
+
+     }
+   }
+   td {
+     padding: 8px 10px 12px 12px;
+     font-size: 14px;
+     color: #242421;
+   }
+   .table_w_icon i{
+     width: 10px;
+     color:#918F8A
+   }
+ }

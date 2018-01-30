@@ -1,6 +1,6 @@
 import React from 'react'
 import SchoolHeader from "./common/SchoolHeader";
-import SchoolMenu from "./common/SchoolMenu";
+import SchoolMenu from "./SchoolMenu";
 import Header from "../../../Header";
 import Subheader from "../../../Subheader";
 

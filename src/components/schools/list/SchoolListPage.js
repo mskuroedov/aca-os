@@ -1,8 +1,8 @@
 import React from 'react'
 import SchoolHeader from "../school/common/SchoolHeader";
-import SchoolMenu from "../school/common/SchoolMenu";
 import Header from "../../../Header";
 import Subheader from "../../../Subheader";
+import SchoolMenu from "../school/SchoolMenu";
 
 export default class SchoolListPage extends React.Component {
     render() {
