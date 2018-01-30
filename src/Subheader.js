@@ -7,6 +7,7 @@ import Icon from 'material-ui/Icon';
 import {FormControl, FormHelperText} from 'material-ui/Form';
 import PropTypes from 'prop-types';
 import Input, {InputLabel} from 'material-ui/Input';
+import {Link} from "react-router-dom";
 
 const styles = theme => ({
     container: {
@@ -18,16 +19,16 @@ const styles = theme => ({
     },
     selectEmpty: {},
     select: {
-        paddingLeft:5,
-        fontSize:16,
-        color:'#fff',
+        paddingLeft: 5,
+        fontSize: 16,
+        color: '#fff',
         '&:after': {
             backgroundColor: '#fff'
         }
     },
     selectIcon: {
         color: '#fff',
-        marginTop:3
+        marginTop: 3
     },
     selectLine: {
         color: 'transparent'
@@ -54,16 +55,18 @@ class Subheader extends React.Component {
             <div>
                 <Grid container spacing={0} className="subheader">
                     <Grid item xs={6}>
-                   <span className="path">
-                       <a href="#">Школы</a>
-                       <Icon>keyboard_arrow_right</Icon>
-                   </span>
+                        {
+                            this.props.breadcrumbs.map((val) => (
+                                    <span key={val.link} className="path">
+                                       <Link to={val.link}>{val.title}</Link>
+                                       <Icon>keyboard_arrow_right</Icon>
+                                    </span>
+                                )
+                            )
+                        }
+                        <br/>
                         <span className="path">
-                        <a href="#">Спортивная школа №43</a>
-                        <Icon>keyboard_arrow_right</Icon>
-                    </span><br/>
-                        <span className="path">
-                        Группа мальчиков 2010 г. р.
+                        {this.props.title}
                     </span>
                     </Grid>
                     <Grid item xs={6} style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}>
@@ -78,7 +81,7 @@ class Subheader extends React.Component {
                                     icon: classes.selectIcon,
                                 }}
                             >
-                                <MenuItem value={1} >
+                                <MenuItem value={1}>
                                     ДЮСШ №43
                                 </MenuItem>
                                 <MenuItem value={10}>Ten</MenuItem>
@@ -99,5 +102,7 @@ class Subheader extends React.Component {
 
 Subheader.propTypes = {
     classes: PropTypes.object.isRequired,
+    title: PropTypes.string.isRequired,
+    breadcrumbs: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 export default withStyles(styles)(Subheader);

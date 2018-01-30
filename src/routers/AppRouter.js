@@ -18,8 +18,6 @@ const AppRouter = () => (
     <Router history={history}>
         <div>
             <Reboot />
-            <Header />
-            <Subheader />
             <Switch>
                 <PublicRoute path="/" component={IndexPage} exact={true}/>
                 <PrivateRoute path="/sportsman/:id" exact={true} component={SportsmenPage}/>
