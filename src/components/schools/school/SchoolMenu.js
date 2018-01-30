@@ -8,10 +8,18 @@ import SchoolInfo from "./common/SchoolInfo";
 import SportsmenPageProfile from "../../sportsman/profile/SportsmenPageProfile";
 import Perfomance from "../../sportsman/profile/Perfomance";
 import Sportsman from "./sportsman/Sportsman";
+import {history} from "../../../routers/AppRouter";
+import NotFoundPage from "../../NotFoundPage";
+import SportsmenPage from "../../sportsman/SportsmenPage";
+import SchoolPage from "./SchoolPage";
+import SchoolListPage from "../list/SchoolListPage";
+import IndexPage from "../../IndexPage";
+import {Redirect, Route, Router, Switch} from "react-router-dom";
 
 function TabContainer(props) {
     return (
-        <Typography component="div" style={{paddingTop:24,backgroundColor:"#f6f6f6",paddingRight: 168,paddingLeft:168}}>
+        <Typography component="div"
+                    style={{paddingTop: 24, backgroundColor: "#f6f6f6", paddingRight: 168, paddingLeft: 168}}>
             {props.children}
         </Typography>
     );
@@ -51,18 +59,18 @@ const styles = theme => ({
     button: {
         // color: '#00755E',
         fontSize: 14,
-        fontWeight:'bold',
-        fontFamily:'BlissPro',
+        fontWeight: 'bold',
+        fontFamily: 'BlissPro',
     },
-    bc:{
-        color:"#000 !important"
+    bc: {
+        color: "#000 !important"
     },
-    rootTabPrimary:{
-        minWidth:0,
-        color:'#00755E'
+    rootTabPrimary: {
+        minWidth: 0,
+        color: '#00755E'
     },
-    menuFlexContainer:{
-        justifyContent:'center'
+    menuFlexContainer: {
+        justifyContent: 'center'
     }
 
 });
@@ -70,23 +78,25 @@ const styles = theme => ({
 class SchoolMenu extends React.Component {
     constructor(props) {
         super(props);
+        console.log(props.view);
+        this.state = {
+            value: props.view,
+        };
     }
-
-    state = {
-        value: 4,
-    };
 
     handleChange = (event, value) => {
         this.setState({value});
+        history.push(`/schools/${value}`);
     };
 
     render() {
         const {classes} = this.props;
         const {value} = this.state;
 
-        return (
-            <section >
-                <AppBar position="static" className={classes.appBar} style={{paddingRight: 168,paddingLeft:168,backgroundColor:'#fff'}}>
+        return value ? (
+            <section>
+                <AppBar position="static" className={classes.appBar}
+                        style={{paddingRight: 168, paddingLeft: 168, backgroundColor: '#fff'}}>
                     <Tabs value={value}
                           onChange={this.handleChange}
                           className={classes.tabs}
@@ -95,97 +105,83 @@ class SchoolMenu extends React.Component {
                           classes={{
                               root: classes.rootInherit,
                               buttonAuto: classes.button, // className, e.g. `OverridesClasses-root-X`
-                              flexContainer:classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
-
+                              flexContainer: classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
                           }}
                     >
                         <Tab label="Общее"
                              textColor="primary"
+                             value="common"
                              classes={{
                                  label: classes.button,
                                  labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
                                  wrapper: classes.button,
-                                 rootPrimarySelected:classes.bc,// className, e.g. `OverridesClasses-label-X`
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                 rootPrimarySelected: classes.bc,// className, e.g. `OverridesClasses-label-X`
+                                 rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
                         <Tab label="Расписание"
                              textColor="primary"
 
                              classes={{
                                  label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary
+                                 rootPrimarySelected: classes.bc,
+                                 rootPrimary: classes.rootTabPrimary
                              }}
                         />
                         <Tab label="Статистика"
                              textColor="primary"
-
-
                              classes={{
                                  label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                 rootPrimarySelected: classes.bc,
+                                 rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
                         <Tab label="Группы"
                              textColor="primary"
 
                              classes={{
                                  label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                 rootPrimarySelected: classes.bc,
+                                 rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
                         <Tab label="Спортсмены"
                              textColor="primary"
-
+                             value="sportsman"
                              classes={{
                                  label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                 rootPrimarySelected: classes.bc,
+                                 rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
                         <Tab label="Тренеры"
                              textColor="primary"
 
                              classes={{
                                  label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                 rootPrimarySelected: classes.bc,
+                                 rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
                         <Tab label="Контакты"
                              textColor="primary"
 
                              classes={{
                                  label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                 rootPrimarySelected: classes.bc,
+                                 rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
                     </Tabs>
                 </AppBar>
-                {value === 0 && <TabContainer>
-                    <SchoolInfo />
 
-                </TabContainer>}
-                {value === 1 && <TabContainer>
-                    <SportsmenPageProfile/>
-
-                </TabContainer>}
-                {value === 2 && <TabContainer>
-                    123
-                </TabContainer>}
-                {value === 3 && <TabContainer>
-                    <Perfomance />
-                </TabContainer>}
-                {value === 4 && <TabContainer>
-                    <Sportsman />
-
-                </TabContainer>}
-                {value === 5 && <TabContainer>
-                    4
-                </TabContainer>}
-                {value === 6 && <TabContainer>
-                    4
-                </TabContainer>}
+                <TabContainer>
+                    {value === 'common' && <SchoolInfo/>}
+                    {value === '1' && <SportsmenPageProfile/>}
+                    {value === '2' && 123}
+                    {value === '3' && <Perfomance/>}
+                    {value === 'sportsman' && <Sportsman/>}
+                    {value === '4' && 4}
+                    {value === '5' && 4}
+                </TabContainer>
             </section>
-        );
+        ) : (
+           <Redirect to="/schools/common" />
+        )
     }
 }
 
