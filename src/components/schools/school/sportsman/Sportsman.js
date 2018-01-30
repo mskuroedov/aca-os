@@ -7,22 +7,35 @@ import Select from 'material-ui/Select';
 import {MenuItem} from 'material-ui/Menu';
 import {FormControl, FormHelperText} from 'material-ui/Form';
 import SportsmanTable from "./SportsmanTable";
+import Icon from "material-ui/es/Icon/Icon";
+import IconButton from "material-ui/es/IconButton/IconButton";
+import InputAdornment from "material-ui/es/Input/InputAdornment";
+import InputLabel from "material-ui/es/Input/InputLabel";
+import Input from "material-ui/es/Input/Input";
+import SportsmanModels from "./SportsmanModels";
 
 
 const styles = theme => ({
     button: {
         margin: theme.spacing.unit,
         fontSize: 13,
-        marginLeft: 'auto',
         marginRight: 20,
+        fontWeight: 'bold',
         fontFamily: 'BlissPro',
     },
+    iconbtn: {
+        marginTop: 5,
+        marginLeft: 'auto'
+    },
+    gray: {
+        color: 'rgba(36,36,33,0.3)'
+    },
     select: {
-        backgroundColor:'rgba(36,36,33,0.1)',
+        backgroundColor: 'rgba(36,36,33,0.1)',
         paddingLeft: 17,
-        paddingTop:13,
-        paddingBottom:10,
-        paddingRight:40,
+        paddingTop: 13,
+        paddingBottom: 10,
+        paddingRight: 40,
         fontSize: 16,
         color: '#242421',
         '&:after': {
@@ -35,6 +48,33 @@ const styles = theme => ({
     },
     selectLine: {
         color: 'transparent'
+    },
+    searchInput: {
+        fontSize: 14,
+        color: 'rgba(36,36,33,1)',
+        marginTop: 11,
+        paddingBottom: 5,
+        minWidth: 267,
+        '&:before': {
+            backgroundColor: 'rgba(0,0,0,0.2)'
+        },
+        '&:after': {
+            backgroundColor: 'rgba(0,0,0,0.2)'
+        }
+    },
+    searchInkbar: {
+        color: 'rgba(36,36,33,1)',
+        '&:before':{
+            backgroundColor: 'rgba(0,0,0,0.2) !important'
+        },
+        '&:after':{
+            backgroundColor: 'rgba(0,0,0,0.2) !important'
+        }
+    },
+    searchInputIcon: {
+        color: 'rgba(145,143,138,1)',
+        position: 'relative',
+        top: 8
     }
 });
 
@@ -47,8 +87,14 @@ class Perfomance extends React.Component {
     state = {
         selectSchool: 1,
         name: 'hai',
+        tableView:false,
     };
-
+    changeView = event =>{
+        this.setState({
+            tableView:!(this.state.tableView)
+        });
+        console.log(this.state.tableView)
+    };
     handleChange = event => {
         this.setState({selectSchool: event.target.value});
     };
@@ -59,7 +105,7 @@ class Perfomance extends React.Component {
             <div>
                 <Grid container
                 >
-                    <Grid item >
+                    <Grid item>
 
                         <FormControl>
                             <Select
@@ -103,12 +149,43 @@ class Perfomance extends React.Component {
                             </Select>
                         </FormControl>
                     </Grid>
-                    <Button raised color="primary" className={this.props.classes.button}>
-                        редактировать информацию
+                    <Button classes={{
+                        root: classes.button,
+                        label: classes.gray
+                    }}>
+                        Сбросить
                     </Button>
 
+                    <Grid>
+                        <FormControl className={classes.formControl}>
+                            <Input classes={{
+                                root: classes.searchInput,
+                                inkbar: classes.searchInkbar
+                            }}
+                                   placeholder="Поиск по имени..."
+                                   endAdornment={
+                                       <InputAdornment position="end">
+                                           <Icon classes={{
+                                               root: classes.searchInputIcon
+                                           }}>
+                                               search
+                                           </Icon>
+                                       </InputAdornment>
+                                   }
+                            />
+                        </FormControl>
+                    </Grid>
+                    <IconButton className={classes.iconbtn} onClick={this.changeView}>
+                        { this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon> }
+                    </IconButton>
+
                     <Grid item xs={12} className="paper_w_table">
-                        <SportsmanTable />
+                        { this.state.tableView ?
+                            <SportsmanTable/> :
+                            <Grid container>
+                                <SportsmanModels/>
+                            </Grid>}
+
                     </Grid>
                 </Grid>
             </div>
