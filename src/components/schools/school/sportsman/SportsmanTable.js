@@ -98,8 +98,9 @@ class SportsmanTable extends React.Component {
                                     }}
                                 />
                             </TableCell>
-                            <TableCell ><Link to="#" className={classes.link}>Красильников Сергей
-                                Васильевич</Link></TableCell>
+                            <TableCell >
+                                <Link to="/sportsman/1" className={classes.link}>Красильников Сергей Васильевич</Link>
+                            </TableCell>
                             <TableCell ><Link to="#" className={classes.link}>Группа 2010 г. р.</Link></TableCell>
                             <TableCell numeric >2010</TableCell>
                             <TableCell numeric >12.03.2012</TableCell>
@@ -116,9 +117,10 @@ class SportsmanTable extends React.Component {
                                     }}
                                 />
                             </TableCell>
-                            <TableCell ><Link to="#">Красильников Сергей
-                                Васильевич</Link></TableCell>
-                            <TableCell ><Link to="#">Группа 2010 г. р.</Link></TableCell>
+                            <TableCell >
+                                <Link to="/sportsman/1" className={classes.link}>Красильников Сергей Васильевич</Link>
+                            </TableCell>
+                            <TableCell ><Link to="#" className={classes.link}>Группа 2010 г. р.</Link></TableCell>
                             <TableCell numeric >2010</TableCell>
                             <TableCell numeric >12.03.2012</TableCell>
                             <TableCell >Вратарь</TableCell>

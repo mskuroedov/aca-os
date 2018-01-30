@@ -1,7 +1,7 @@
 import React from 'react'
-import SchoolHeader from "../school/common/SchoolHeader";
 import Header from "../../../Header";
 import Subheader from "../../../Subheader";
+import SchoolHeader from "../school/common/SchoolHeader";
 import SchoolMenu from "../school/SchoolMenu";
 
 export default class SchoolListPage extends React.Component {
@@ -17,7 +17,7 @@ export default class SchoolListPage extends React.Component {
                     ]}
                 />
                 <SchoolHeader />
-                <SchoolMenu />
+                <SchoolMenu view={this.props.match.params.view} />
             </div>
         )
     }
