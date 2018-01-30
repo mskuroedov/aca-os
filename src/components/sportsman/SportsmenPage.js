@@ -7,8 +7,6 @@ import Subheader from "../../Subheader";
 
 const SportsmenPage = () => (
     <div>
-        <Header />
-        <Subheader />
         <SportsmenHeader />
         <SportsmenMenu />
     </div>

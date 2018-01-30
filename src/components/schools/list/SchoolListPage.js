@@ -8,8 +8,6 @@ export default class SchoolListPage extends React.Component {
     render() {
         return (
             <div>
-                <Header />
-                <Subheader />
                 <SchoolHeader />
                 <SchoolMenu />
             </div>

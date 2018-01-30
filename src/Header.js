@@ -10,6 +10,7 @@ import MoreVertIcon from 'material-ui-icons/MoreVert';
 import {Grid} from "material-ui";
 import Input, { InputLabel, InputAdornment } from 'material-ui/Input';
 import teal from 'material-ui/colors/teal';
+import {NavLink} from "react-router-dom";
 
 
 const styles = theme =>(  {
@@ -109,15 +110,15 @@ class MenuAppBar extends React.Component {
                             {/*</IconButton></InputAdornment>}*/}
                         {/*/>*/}
                         <Grid >
-                            <a href="#">Рабочий стол</a>
-                            <a href="#" className="active">Школы</a>
-                            <a href="#">Спортсмены</a>
-                            <a href="#">Календарь</a>
-                            <a href="#">Статистика и аналитика</a>
-                            <a href="#">Отчёты и документы</a>
-                            <a href="#">Тренировочные планы</a>
-                            <a href="#">Обучение</a>
-                            <a href="#">Аттестация</a>
+                            <NavLink activeClassName="active" to="/" exact={true}>Рабочий стол</NavLink>
+                            <NavLink activeClassName="active" to="/schools" exact={true}>Школы</NavLink>
+                            <NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>
+                            <NavLink activeClassName="active" to="#">Календарь</NavLink>
+                            <NavLink activeClassName="active" to="#">Статистика и аналитика</NavLink>
+                            <NavLink activeClassName="active" to="#">Отчёты и документы</NavLink>
+                            <NavLink activeClassName="active" to="#">Тренировочные планы</NavLink>
+                            <NavLink activeClassName="active" to="#">Обучение</NavLink>
+                            <NavLink activeClassName="active" to="#">Аттестация</NavLink>
                         </Grid>
                         <div>
                             <IconButton

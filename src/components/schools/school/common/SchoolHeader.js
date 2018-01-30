@@ -54,7 +54,7 @@ const styles = {
         top:-5
     }
 };
-const SportmenHeader = (props) => {
+const SchoolHeader = (props) => {
     const {classes} = props;
     return (
         <section className={classNames(classes.schoolHeader)}>
@@ -89,8 +89,8 @@ const SportmenHeader = (props) => {
     );
 
 };
-SportmenHeader.propTypes = {
+SchoolHeader.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SportmenHeader);
+export default withStyles(styles)(SchoolHeader);
