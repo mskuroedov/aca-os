@@ -43,12 +43,7 @@ const styles = theme => ({
         paddingBottom: 18
     },
     tableFooter: {
-        fontSize: '13px !important',
-        color:'red',
-        '& label':{
-            color:'red',
-            fontSize:'24px !important'
-        }
+        fontSize: '13px !important'
     }
 });
 

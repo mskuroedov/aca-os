@@ -15,13 +15,6 @@ import TilesView from "./tiles/TilesView";
 
 
 const styles = theme => ({
-    button: {
-        margin: theme.spacing.unit,
-        fontSize: 13,
-        marginRight: 20,
-        fontWeight: 'bold',
-        fontFamily: 'BlissPro',
-    },
     iconbtn: {
         marginTop: 5,
         marginLeft: 'auto'
