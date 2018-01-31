@@ -7,6 +7,8 @@ import TableRow from "material-ui/es/Table/TableRow";
 import TableCell from "material-ui/es/Table/TableCell";
 import {TableBody, TableHead} from "material-ui";
 import TableItem from "./TableItem";
+import TableFooter from "../../../../../../node_modules/material-ui/Table/TableFooter";
+import TablePagination from "material-ui/es/Table/TablePagination";
 
 
 const styles = theme => ({
@@ -39,12 +41,25 @@ const styles = theme => ({
     row: {
         paddingTop: 18,
         paddingBottom: 18
+    },
+    tableFooter: {
+        fontSize: '13px !important',
+        color:'red',
+        '& label':{
+            color:'red',
+            fontSize:'24px !important'
+        }
     }
 });
 
 
 class TableView extends React.Component {
-
+    handleChangePage(){
+        console.log('handleChangePage')
+    };
+    handleChangeRowsPerPage(){
+        console.log('handleChangeRowsPerPage')
+    };
     render() {
         const {classes} = this.props;
         return (
@@ -69,6 +84,28 @@ class TableView extends React.Component {
                             })
                         }
                     </TableBody>
+                    <TableFooter>
+                        <TableRow>
+                            <TablePagination classes={{
+                                caption: 'sportsman_table_footer',
+                                actions: "1"
+                            }}
+                                             colSpan={12}
+                                             rowsPerPage={2}
+                                             count={10}
+                                             page={1}
+                                             backIconButtonProps={{
+                                                 'aria-label': 'Previous Page',
+                                             }}
+                                             nextIconButtonProps={{
+                                                 'aria-label': 'Next Page',
+                                             }}
+                                             // labelDisplayedRows={{({ from, to, count }) => ${from}-+ 'из' + of ${count}}}
+                                             onChangePage={this.handleChangePage}
+                                             onChangeRowsPerPage={this.handleChangeRowsPerPage}
+                            />
+                        </TableRow>
+                    </TableFooter>
                 </Table>
             </Paper>
         )

@@ -102,7 +102,7 @@ class Sportsman extends React.Component {
     state = {
         selectSchool: 1,
         name: 'hai',
-        tableView: false,
+        tableView: true,
     };
     changeView = event => {
         this.setState({
