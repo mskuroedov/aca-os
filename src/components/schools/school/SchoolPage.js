@@ -1,10 +1,10 @@
 import React from 'react'
-import SchoolHeader from "./common/SchoolHeader";
-import SchoolMenu from "./SchoolMenu";
 import Header from "../../../Header";
 import Subheader from "../../../Subheader";
+import SchoolHeader from "./common/SchoolHeader";
+import SchoolMenu from "./SchoolMenu";
 
-export default class SchoolPage extends React.Component {
+export default class SchoolListPage extends React.Component {
     render() {
         return (
             <div>
@@ -16,8 +16,8 @@ export default class SchoolPage extends React.Component {
                         {title: 'Спортивная школа №43', link: '#2'},
                     ]}
                 />
-                <SchoolHeader/>
-                <SchoolMenu/>
+                <SchoolHeader />
+                <SchoolMenu {...this.props.match.params} />
             </div>
         )
     }

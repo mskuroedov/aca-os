@@ -6,15 +6,9 @@ import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 import SchoolInfo from "./common/SchoolInfo";
 import SportsmenPageProfile from "../../sportsman/profile/SportsmenPageProfile";
-import Perfomance from "../../sportsman/profile/Perfomance";
 import Sportsman from "./sportsman/SportsmanListPage";
 import {history} from "../../../routers/AppRouter";
-import NotFoundPage from "../../NotFoundPage";
-import SportsmenPage from "../../sportsman/SportsmenPage";
-import SchoolPage from "./SchoolPage";
-import SchoolListPage from "../list/SchoolListPage";
-import IndexPage from "../../IndexPage";
-import {Redirect, Route, Router, Switch} from "react-router-dom";
+import {Redirect} from "react-router-dom";
 import Trainers from "./trainers/Trainers";
 
 function TabContainer(props) {
@@ -82,12 +76,12 @@ class SchoolMenu extends React.Component {
     }
 
     handleChange = (event, value) => {
-        history.push(`/schools/${value}`);
+        history.push(`/schools/${this.props.schoolId}/${value}`);
     };
 
     render() {
         const {classes} = this.props;
-        const {view} = this.props;
+        const {view, schoolId} = this.props;
 
         return this.props.view ? (
             <section>
@@ -176,7 +170,7 @@ class SchoolMenu extends React.Component {
                 </TabContainer>
             </section>
         ) : (
-           <Redirect to="/schools/common" />
+            <Redirect to={`/schools/${schoolId}/common`}/>
         )
     }
 }
