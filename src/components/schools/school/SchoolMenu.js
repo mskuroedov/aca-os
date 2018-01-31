@@ -79,26 +79,21 @@ const styles = theme => ({
 class SchoolMenu extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props.view);
-        this.state = {
-            value: props.view,
-        };
     }
 
     handleChange = (event, value) => {
-        this.setState({value});
         history.push(`/schools/${value}`);
     };
 
     render() {
         const {classes} = this.props;
-        const {value} = this.state;
+        const {view} = this.props;
 
-        return value ? (
+        return this.props.view ? (
             <section>
                 <AppBar position="static" className={classes.appBar}
                         style={{paddingRight: 168, paddingLeft: 168, backgroundColor: '#fff'}}>
-                    <Tabs value={value}
+                    <Tabs value={view}
                           onChange={this.handleChange}
                           className={classes.tabs}
                           indicatorColor="primary"
@@ -171,13 +166,13 @@ class SchoolMenu extends React.Component {
                 </AppBar>
 
                 <TabContainer>
-                    {value === 'common' && <SchoolInfo/>}
-                    {value === '1' && <SportsmenPageProfile/>}
-                    {value === '2' && 123}
-                    {value === '3' && 123}
-                    {value === 'sportsman' && <Sportsman/>}
-                    {value === 'trainers' && <Trainers/>}
-                    {value === '6' && 6}
+                    {view === 'common' && <SchoolInfo/>}
+                    {view === '1' && <SportsmenPageProfile/>}
+                    {view === '2' && 123}
+                    {view === '3' && 123}
+                    {view === 'sportsman' && <Sportsman/>}
+                    {view === 'trainers' && <Trainers/>}
+                    {view === '6' && 6}
                 </TabContainer>
             </section>
         ) : (

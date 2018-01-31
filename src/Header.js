@@ -99,15 +99,24 @@ class MenuAppBar extends React.Component {
                         </IconButton>
                         <Input id="name-simple" value={this.state.name} onChange={this.handleChange}
                                className="header__input" placeholder="Поиск"/>
-                            <NavLink activeClassName="active" to="/" exact={true} style={{marginLeft:'auto'}}>Рабочий стол</NavLink>
-                            <NavLink activeClassName="active" to="/schools">Школы</NavLink>
-                            <NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>
-                            <NavLink activeClassName="active" to="#">Календарь</NavLink>
-                            <NavLink activeClassName="active" to="#">Статистика и аналитика</NavLink>
-                            <NavLink activeClassName="active" to="#">Отчёты и документы</NavLink>
-                            <NavLink activeClassName="active" to="#">Тренировочные планы</NavLink>
-                            <NavLink activeClassName="active" to="#">Обучение</NavLink>
-                            <NavLink activeClassName="active" to="#">Аттестация</NavLink>
+                            {/*<NavLink activeClassName="active" to="/" exact={true} style={{marginLeft:'auto'}}>Рабочий стол</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="/schools">Школы</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="#">Календарь</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="#">Статистика и аналитика</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="#">Отчёты и документы</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="#">Тренировочные планы</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="#">Обучение</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="#">Аттестация</NavLink>*/}
+
+                        <NavLink activeClassName="active" to="/" exact={true} style={{marginLeft:'auto'}}>Портал</NavLink>
+                        <NavLink activeClassName="active" to="#">Новости</NavLink>
+                        <NavLink activeClassName="active" to="/schools">Школы</NavLink>
+                        {/*<NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>*/}
+                        <NavLink activeClassName="active" to="#">Календарь</NavLink>
+                        <NavLink activeClassName="active" to="#">Статистика</NavLink>
+                        <NavLink activeClassName="active" to="#">Библиотека</NavLink>
+                        <NavLink activeClassName="active" to="#">Пользователям</NavLink>
                         <div>
                             <IconButton
                                 aria-label="More"
