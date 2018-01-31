@@ -100,7 +100,7 @@ class MenuAppBar extends React.Component {
                         <Input id="name-simple" value={this.state.name} onChange={this.handleChange}
                                className="header__input" placeholder="Поиск"/>
                             <NavLink activeClassName="active" to="/" exact={true} style={{marginLeft:'auto'}}>Рабочий стол</NavLink>
-                            <NavLink activeClassName="active" to="/schools" exact={true}>Школы</NavLink>
+                            <NavLink activeClassName="active" to="/schools">Школы</NavLink>
                             <NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>
                             <NavLink activeClassName="active" to="#">Календарь</NavLink>
                             <NavLink activeClassName="active" to="#">Статистика и аналитика</NavLink>
