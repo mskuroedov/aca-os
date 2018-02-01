@@ -94,13 +94,8 @@ const sportsman = [
 
 
 class Sportsman extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     state = {
         selectSchool: 1,
-        name: 'hai',
         tableView: true,
     };
     changeView = event => {

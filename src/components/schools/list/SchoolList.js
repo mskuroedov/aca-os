@@ -108,13 +108,9 @@ const schools = [
 
 
 class SchoolList extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     state = {
         selectSchool: 1,
-        name: 'hai',
         tableView: false,
     };
     changeView = event => {
@@ -143,9 +139,7 @@ class SchoolList extends React.Component {
                                 }}
                                 autoWidth
                             >
-                                <MenuItem value={1}>
-                                    2017
-                                </MenuItem>
+                                <MenuItem value={1}>2017</MenuItem>
                                 <MenuItem value={10}>Ten</MenuItem>
                                 <MenuItem value={20}>Twenty</MenuItem>
                                 <MenuItem value={30}>Thirty</MenuItem>
