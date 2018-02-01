@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from "../../../Header";
 import Subheader from "../../../Subheader";
+import SchoolList from "./SchoolList";
 
 export default class SchoolListPage extends React.Component {
     render() {
@@ -8,8 +9,9 @@ export default class SchoolListPage extends React.Component {
             <div>
                 <Header/>
                 <Subheader
-                    title="Список школ нах"
+                    title="ШКОЛЫ"
                 />
+                <SchoolList />
             </div>
         )
     }

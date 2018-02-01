@@ -2,7 +2,6 @@ import React from 'react';
 import {Grid} from "material-ui";
 import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
-import Button from 'material-ui/Button';
 import Select from 'material-ui/Select';
 import {MenuItem} from 'material-ui/Menu';
 import {FormControl} from 'material-ui/Form';
@@ -15,15 +14,12 @@ import TilesView from "./tiles/TilesView";
 
 
 const styles = theme => ({
-    button: {
-        fontSize: 13,
-        fontWeight: 'bold',
-        marginRight:10,
-        height:'100%'
+    formControl:{
+        marginLeft:'auto'
     },
     iconbtn: {
         marginTop: 5,
-        marginLeft: 'auto'
+        marginLeft:30
     },
     gray: {
         color: 'rgba(36,36,33,0.3)'
@@ -31,7 +27,6 @@ const styles = theme => ({
     select: {
         backgroundColor: 'rgba(36,36,33,0.1)',
         paddingLeft: 17,
-        paddingTop: 13,
         paddingBottom: 10,
         paddingRight: 40,
         fontSize: 16,
@@ -53,6 +48,7 @@ const styles = theme => ({
         marginTop: 11,
         paddingBottom: 5,
         minWidth: 267,
+        marginLeft:'auto',
         '&:before': {
             backgroundColor: 'rgba(0,0,0,0.2)'
         },
@@ -93,7 +89,7 @@ const sportsman = [
 ];
 
 
-class Sportsman extends React.Component {
+class SchoolList extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -101,7 +97,7 @@ class Sportsman extends React.Component {
     state = {
         selectSchool: 1,
         name: 'hai',
-        tableView: true,
+        tableView: false,
     };
     changeView = event => {
         this.setState({
@@ -116,7 +112,7 @@ class Sportsman extends React.Component {
         const {classes} = this.props;
         return (
             <div>
-                <Grid container>
+                <Grid container style={{paddingLeft:168,paddingRight:168,paddingTop:24}}>
                     <Grid item>
                         <FormControl>
                             <Select
@@ -138,42 +134,14 @@ class Sportsman extends React.Component {
                             </Select>
                         </FormControl>
                     </Grid>
-                    <Grid item>
-                        <FormControl>
-                            <Select
-                                value={this.state.selectSchool}
-                                onChange={this.handleChange}
-                                disableUnderline={true}
-                                classes={{
-                                    select: classes.select,
-                                    icon: classes.selectIcon,
-                                }}
-                                autoWidth
-                            >
-                                <MenuItem value={1}>
-                                    Чемпионат России
-                                </MenuItem>
-                                <MenuItem value={10}>Ten</MenuItem>
-                                <MenuItem value={20}>Twenty</MenuItem>
-                                <MenuItem value={30}>Thirty</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </Grid>
-                    <Grid item>
-                        <Button classes={{
-                            root: classes.button,
-                            label: classes.gray
-                        }}>
-                            Сбросить
-                        </Button>
-                    </Grid>
-                    <Grid>
+
+
                         <FormControl className={classes.formControl}>
                             <Input classes={{
                                 root: classes.searchInput,
                                 inkbar: classes.searchInkbar
                             }}
-                                   placeholder="Поиск по имени..."
+                                   placeholder="Поиск по названию"
                                    endAdornment={
                                        <InputAdornment position="end">
                                            <Icon classes={{
@@ -185,7 +153,6 @@ class Sportsman extends React.Component {
                                    }
                             />
                         </FormControl>
-                    </Grid>
                     <IconButton className={classes.iconbtn} onClick={this.changeView}>
                         {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
                     </IconButton>
@@ -204,9 +171,9 @@ class Sportsman extends React.Component {
     }
 }
 
-Sportsman.propTypes = {
+SchoolList.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Sportsman);
+export default withStyles(styles)(SchoolList);
 
