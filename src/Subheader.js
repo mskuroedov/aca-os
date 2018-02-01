@@ -56,7 +56,7 @@ class Subheader extends React.Component {
                 <Grid container spacing={0} className="subheader">
                     <Grid item xs={6}>
                         {
-                            this.props.breadcrumbs.map((val) => (
+                            this.props.breadcrumbs && this.props.breadcrumbs.map((val) => (
                                     <span key={val.link} className="path">
                                        <Link to={val.link}>{val.title}</Link>
                                        <Icon>keyboard_arrow_right</Icon>
@@ -103,6 +103,6 @@ class Subheader extends React.Component {
 Subheader.propTypes = {
     classes: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
-    breadcrumbs: PropTypes.arrayOf(PropTypes.object).isRequired,
+    breadcrumbs: PropTypes.arrayOf(PropTypes.object),
 };
 export default withStyles(styles)(Subheader);

@@ -13,8 +13,9 @@ import Trainers from "./trainers/Trainers";
 
 function TabContainer(props) {
     return (
-        <Typography component="div"
-                    style={{paddingTop: 24, backgroundColor: "#f6f6f6", paddingRight: 168, paddingLeft: 168}}>
+        <Typography
+            component="div"
+            style={{paddingTop: 24, backgroundColor: "#f6f6f6", paddingRight: 168, paddingLeft: 168}}>
             {props.children}
         </Typography>
     );
