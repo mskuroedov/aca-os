@@ -60,7 +60,7 @@ class TilesItem extends React.Component {
     }
 
     render() {
-        const {classes, title, director} = this.props;
+        const {classes, title, sportsman_count, trainers_count, groups_count, director} = this.props;
         return (
             <Grid item xs={4}>
                 <Paper className={classes.paper}>
@@ -86,7 +86,7 @@ class TilesItem extends React.Component {
                                 Спортсмены
                             </Typography>
                             <Typography className={classes.infoVal}>
-                                100
+                                {sportsman_count}
                             </Typography>
                         </Grid>
                         <Grid item>
@@ -94,7 +94,7 @@ class TilesItem extends React.Component {
                                 Тренеры
                             </Typography>
                             <Typography className={classes.infoVal}>
-                                20
+                                {trainers_count}
                             </Typography>
                         </Grid>
                         <Grid item>
@@ -102,7 +102,7 @@ class TilesItem extends React.Component {
                                 Группы
                             </Typography>
                             <Typography className={classes.infoVal}>
-                                15
+                                {groups_count}
                             </Typography>
                         </Grid>
 

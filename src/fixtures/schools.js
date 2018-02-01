@@ -1,0 +1,44 @@
+export const schools = [
+    {
+        id: 1,
+        title: "ДЮСШ №9",
+        city: 'Набережные челны',
+        type: "ДЮСШ",
+        director: {
+            firstname: 'Ильшат',
+            secondname: 'Гайнутдинов',
+            middlename: 'Салихович'
+        },
+        sportsman_count: 100,
+        trainers_count: 20,
+        groups_count: 15
+    },
+    {
+        id: 2,
+        title: "МБОУ ДО ДЮСШ «Динамо»",
+        city: 'Казань',
+        type: "СДЮШОР",
+        director: {
+            firstname: 'Ильшат',
+            secondname: 'Гайнутдинов',
+            middlename: 'Салихович'
+        },
+        sportsman_count: 78,
+        trainers_count: 11,
+        groups_count: 4
+    },
+    {
+        id: 3,
+        title: "ДЮСШ №21",
+        city: 'Саратов',
+        type: "СДЮШОР",
+        director: {
+            firstname: 'Ильшат',
+            secondname: 'Гайнутдинов',
+            middlename: 'Салихович'
+        },
+        sportsman_count: 34,
+        trainers_count: 7,
+        groups_count: 5
+    },
+];

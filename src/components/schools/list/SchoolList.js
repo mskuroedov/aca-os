@@ -11,15 +11,16 @@ import IconButton from "material-ui/es/IconButton/IconButton";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Input from "material-ui/es/Input/Input";
 import TilesView from "./tiles/TilesView";
+import {schools} from "../../../fixtures/schools";
 
 
 const styles = theme => ({
-    formControl:{
-        marginLeft:'auto'
+    formControl: {
+        marginLeft: 'auto'
     },
     iconbtn: {
         marginTop: 5,
-        marginLeft:30
+        marginLeft: 30
     },
     gray: {
         color: 'rgba(36,36,33,0.3)'
@@ -48,7 +49,7 @@ const styles = theme => ({
         marginTop: 11,
         paddingBottom: 5,
         minWidth: 267,
-        marginLeft:'auto',
+        marginLeft: 'auto',
         '&:before': {
             backgroundColor: 'rgba(0,0,0,0.2)'
         },
@@ -73,60 +74,39 @@ const styles = theme => ({
 });
 
 
-const schools = [
-    {
-        id: 1,
-        title: "ДЮСШ №9",
-        type: "ДЮСШ",
-        director: {
-            firstname: 'Ильшат',
-            secondname: 'Гайнутдинов',
-            middlename: 'Салихович'
-        }
-    },
-    {
-        id: 2,
-        title: "МБОУ ДО ДЮСШ «Динамо»",
-        type: "СДЮШОР",
-        director: {
-            firstname: 'Ильшат',
-            secondname: 'Гайнутдинов',
-            middlename: 'Салихович'
-        }
-    },
-    {
-        id: 1,
-        title: "ДЮСШ №21",
-        type: "СДЮШОР",
-        director: {
-            firstname: 'Ильшат',
-            secondname: 'Гайнутдинов',
-            middlename: 'Салихович'
-        }
-    },
-];
-
-
 class SchoolList extends React.Component {
 
     state = {
         selectSchool: 1,
         tableView: false,
+        search: '',
+        schools
     };
+
     changeView = event => {
         this.setState({
             tableView: !(this.state.tableView)
         });
     };
+
     handleChange = event => {
         this.setState({selectSchool: event.target.value});
     };
 
+    onSearchChange = event => {
+        this.setState({
+            schools: schools.filter((school) => (
+                school.title.toLowerCase().includes(event.target.value.toLowerCase().trim())
+            ))
+        })
+    };
+
     render() {
         const {classes} = this.props;
+        const {schools} = this.state;
         return (
             <div>
-                <Grid container style={{paddingLeft:168,paddingRight:168,paddingTop:24}}>
+                <Grid container style={{paddingLeft: 168, paddingRight: 168, paddingTop: 24}}>
                     <Grid item>
                         <FormControl>
                             <Select
@@ -148,23 +128,25 @@ class SchoolList extends React.Component {
                     </Grid>
 
 
-                        <FormControl className={classes.formControl}>
-                            <Input classes={{
+                    <FormControl className={classes.formControl}>
+                        <Input
+                            classes={{
                                 root: classes.searchInput,
                                 inkbar: classes.searchInkbar
                             }}
-                                   placeholder="Поиск по названию"
-                                   endAdornment={
-                                       <InputAdornment position="end">
-                                           <Icon classes={{
-                                               root: classes.searchInputIcon
-                                           }}>
-                                               search
-                                           </Icon>
-                                       </InputAdornment>
-                                   }
-                            />
-                        </FormControl>
+                            onChange={this.onSearchChange}
+                            placeholder="Поиск по названию"
+                            endAdornment={
+                                <InputAdornment position="end">
+                                    <Icon classes={{
+                                        root: classes.searchInputIcon
+                                    }}>
+                                        search
+                                    </Icon>
+                                </InputAdornment>
+                            }
+                        />
+                    </FormControl>
                     <IconButton className={classes.iconbtn} onClick={this.changeView}>
                         {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
                     </IconButton>

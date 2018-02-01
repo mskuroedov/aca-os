@@ -12,14 +12,15 @@ import IconButton from "material-ui/es/IconButton/IconButton";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Input from "material-ui/es/Input/Input";
 import TilesView from "./tiles/TilesView";
+import {sportsman} from "../../../../fixtures/sportsman";
 
 
 const styles = theme => ({
     button: {
         fontSize: 13,
         fontWeight: 'bold',
-        marginRight:10,
-        height:'100%'
+        marginRight: 10,
+        height: '100%'
     },
     iconbtn: {
         marginTop: 5,
@@ -75,22 +76,6 @@ const styles = theme => ({
         top: 8
     }
 });
-
-
-const sportsman = [
-    {
-        id: 1,
-        firstname: 'Сергей',
-        secondname: 'Красильников',
-        middlename: 'Васильевич'
-    },
-    {
-        id: 2,
-        firstname: 'Дмитрий',
-        secondname: 'Мокшин',
-        middlename: 'Генадьевич'
-    },
-];
 
 
 class Sportsman extends React.Component {
