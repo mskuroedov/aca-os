@@ -41,4 +41,60 @@ export const schools = [
         trainers_count: 7,
         groups_count: 5
     },
+    {
+        id: 4,
+        title: "ДЮСШ №21",
+        city: 'Саратов',
+        type: "СДЮШОР",
+        director: {
+            firstname: 'Ильшат',
+            secondname: 'Гайнутдинов',
+            middlename: 'Салихович'
+        },
+        sportsman_count: 34,
+        trainers_count: 7,
+        groups_count: 5
+    },
+    {
+        id: 5,
+        title: "ДЮСШ №21",
+        city: 'Саратов',
+        type: "СДЮШОР",
+        director: {
+            firstname: 'Ильшат',
+            secondname: 'Гайнутдинов',
+            middlename: 'Салихович'
+        },
+        sportsman_count: 34,
+        trainers_count: 7,
+        groups_count: 5
+    },
+    {
+        id: 6,
+        title: "ДЮСШ №21",
+        city: 'Саратов',
+        type: "СДЮШОР",
+        director: {
+            firstname: 'Ильшат',
+            secondname: 'Гайнутдинов',
+            middlename: 'Салихович'
+        },
+        sportsman_count: 34,
+        trainers_count: 7,
+        groups_count: 5
+    },
+    {
+        id: 7,
+        title: "ДЮСШ №21",
+        city: 'Саратов',
+        type: "СДЮШОР",
+        director: {
+            firstname: 'Ильшат',
+            secondname: 'Гайнутдинов',
+            middlename: 'Салихович'
+        },
+        sportsman_count: 34,
+        trainers_count: 7,
+        groups_count: 5
+    }
 ];

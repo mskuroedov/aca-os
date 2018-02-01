@@ -1,56 +1,52 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
 import {Paper, Table, TableBody, TableCell, TableFooter, TableHead, TablePagination, TableRow} from "material-ui";
 import TableItem from "./TableItem";
 
 
-const styles = theme => ({
-    button: {
-        margin: theme.spacing.unit,
-        fontSize: 13,
-        marginLeft: 'auto',
-        marginRight: 20,
-        fontFamily: 'BlissPro',
-    },
-    select: {
-        backgroundColor: 'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingTop: 13,
-        paddingBottom: 10,
-        paddingRight: 40,
-        fontSize: 16,
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        }
-    },
-    selectIcon: {
-        color: '#6D6D6D',
-        marginTop: 3
-    },
-    selectLine: {
-        color: 'transparent'
-    },
-    row: {
-        paddingTop: 18,
-        paddingBottom: 18
-    },
-    tableFooter: {
-        fontSize: '13px !important'
-    }
-});
-
-
 class TableView extends React.Component {
-    handleChangePage(){
-        console.log('handleChangePage')
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            rowsPerPage: 5,
+            count: this.props.schools.length,
+            page: 0,
+            schools: []
+        };
+    }
+
+    // обновляет данные сразу после загрузки компонента
+    componentDidMount() {
+        this.setTableData(this.props.schools, this.state.rowsPerPage, this.state.page)
+    }
+    // обновляет данные при поиске из родительского компонента
+    componentWillReceiveProps(props) {
+        this.setTableData(props.schools, this.state.rowsPerPage, this.state.page)
+    }
+
+    setTableData = (schools, rowsPerPage, page) => {
+        const startIndex = page * rowsPerPage;
+        const endIndex = startIndex + rowsPerPage;
+        this.setState({
+            schools: schools.slice(startIndex, endIndex),
+            count: schools.length,
+            rowsPerPage,
+            page
+        });
     };
-    handleChangeRowsPerPage(){
-        console.log('handleChangeRowsPerPage')
+
+    onPageChange = (event, page) => {
+        this.setTableData(this.props.schools, this.state.rowsPerPage, page)
     };
+
+    onRowsPerPageChange = (event) => {
+        this.setTableData(this.props.schools, event.target.value, this.state.page)
+    };
+
     render() {
-        const {classes, schools} = this.props;
+        const {rowsPerPage, count, page, schools} = this.state;
         return (
 
             <Paper className="paper">
@@ -60,7 +56,7 @@ class TableView extends React.Component {
                             <TableCell>Организация</TableCell>
                             <TableCell>Статус</TableCell>
                             <TableCell>Директор</TableCell>
-                            <TableCell >Адрес</TableCell>
+                            <TableCell>Адрес</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -72,23 +68,27 @@ class TableView extends React.Component {
                     </TableBody>
                     <TableFooter>
                         <TableRow>
-                            <TablePagination classes={{
-                                caption: 'sportsman_table_footer',
-                                actions: "1"
-                            }}
-                                             colSpan={12}
-                                             rowsPerPage={2}
-                                             count={10}
-                                             page={1}
-                                             backIconButtonProps={{
-                                                 'aria-label': 'Previous Page',
-                                             }}
-                                             nextIconButtonProps={{
-                                                 'aria-label': 'Next Page',
-                                             }}
-                                // labelDisplayedRows={{({ from, to, count }) => ${from}-+ 'из' + of ${count}}}
-                                             onChangePage={this.handleChangePage}
-                                             onChangeRowsPerPage={this.handleChangeRowsPerPage}
+                            <TablePagination
+                                classes={{
+                                    caption: 'sportsman_table_footer',
+                                    actions: "1"
+                                }}
+                                colSpan={12}
+                                rowsPerPage={rowsPerPage}
+                                count={count}
+                                page={page}
+                                backIconButtonProps={{
+                                    'aria-label': 'Previous Page',
+                                }}
+                                nextIconButtonProps={{
+                                    'aria-label': 'Next Page',
+                                }}
+                                labelDisplayedRows={
+                                    ({from, to, count}) => `${from}-${to} из ${count}`
+                                }
+                                onChangePage={this.onPageChange}
+                                onChangeRowsPerPage={this.onRowsPerPageChange}
+                                rowsPerPageOptions={[1,5,10,20]}
                             />
                         </TableRow>
                     </TableFooter>
@@ -99,9 +99,8 @@ class TableView extends React.Component {
 }
 
 TableView.propTypes = {
-    classes: PropTypes.object.isRequired,
     schools: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default withStyles(styles)(TableView);
+export default TableView;
 
