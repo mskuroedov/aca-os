@@ -50,7 +50,7 @@ class TableView extends React.Component {
         console.log('handleChangeRowsPerPage')
     };
     render() {
-        const {classes} = this.props;
+        const {classes, schools} = this.props;
         return (
 
             <Paper className="paper">
@@ -65,7 +65,7 @@ class TableView extends React.Component {
                     </TableHead>
                     <TableBody>
                         {
-                            this.props.sportsman.map((item) => {
+                            schools.map((item) => {
                                 return <TableItem key={item.id} {...item} />
                             })
                         }
@@ -100,7 +100,7 @@ class TableView extends React.Component {
 
 TableView.propTypes = {
     classes: PropTypes.object.isRequired,
-    sportsman: PropTypes.arrayOf(PropTypes.object).isRequired,
+    schools: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default withStyles(styles)(TableView);

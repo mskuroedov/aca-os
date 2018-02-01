@@ -73,18 +73,36 @@ const styles = theme => ({
 });
 
 
-const sportsman = [
+const schools = [
     {
         id: 1,
-        firstname: 'Сергей',
-        secondname: 'Красильников',
-        middlename: 'Васильевич'
+        title: "ДЮСШ №9",
+        type: "ДЮСШ",
+        director: {
+            firstname: 'Ильшат',
+            secondname: 'Гайнутдинов',
+            middlename: 'Салихович'
+        }
     },
     {
         id: 2,
-        firstname: 'Дмитрий',
-        secondname: 'Мокшин',
-        middlename: 'Генадьевич'
+        title: "МБОУ ДО ДЮСШ «Динамо»",
+        type: "СДЮШОР",
+        director: {
+            firstname: 'Ильшат',
+            secondname: 'Гайнутдинов',
+            middlename: 'Салихович'
+        }
+    },
+    {
+        id: 1,
+        title: "ДЮСШ №21",
+        type: "СДЮШОР",
+        director: {
+            firstname: 'Ильшат',
+            secondname: 'Гайнутдинов',
+            middlename: 'Салихович'
+        }
     },
 ];
 
@@ -160,9 +178,9 @@ class SchoolList extends React.Component {
                     <Grid item xs={12} className="paper_w_table">
                         {
                             this.state.tableView ?
-                                <TableView sportsman={sportsman}/>
+                                <TableView schools={schools}/>
                                 :
-                                <TilesView sportsman={sportsman}/>
+                                <TilesView schools={schools}/>
                         }
                     </Grid>
                 </Grid>

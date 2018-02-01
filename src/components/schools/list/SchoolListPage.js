@@ -9,9 +9,9 @@ export default class SchoolListPage extends React.Component {
             <div>
                 <Header/>
                 <Subheader
-                    title="ШКОЛЫ"
+                    title="Школы"
                 />
-                <SchoolList />
+                <SchoolList/>
             </div>
         )
     }

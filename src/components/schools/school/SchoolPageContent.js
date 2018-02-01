@@ -165,7 +165,7 @@ class SchoolMenu extends React.Component {
                     {view === '1' && <SportsmenPageProfile/>}
                     {view === '2' && 123}
                     {view === '3' && 123}
-                    {view === 'sportsman' && <Sportsman/>}
+                    {view === 'schools' && <Sportsman/>}
                     {view === 'trainers' && <Trainers/>}
                     {view === '6' && 6}
                 </TabContainer>

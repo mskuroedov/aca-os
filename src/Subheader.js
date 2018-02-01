@@ -4,9 +4,8 @@ import {withStyles} from 'material-ui/styles';
 import Select from 'material-ui/Select';
 import {MenuItem} from 'material-ui/Menu';
 import Icon from 'material-ui/Icon';
-import {FormControl, FormHelperText} from 'material-ui/Form';
+import {FormControl} from 'material-ui/Form';
 import PropTypes from 'prop-types';
-import Input, {InputLabel} from 'material-ui/Input';
 import {Link} from "react-router-dom";
 
 const styles = theme => ({
@@ -50,24 +49,33 @@ class Subheader extends React.Component {
     };
 
     render() {
-        const {classes} = this.props;
+        const {classes, breadcrumbs} = this.props;
         return (
             <div>
                 <Grid container spacing={0} className="subheader">
                     <Grid item xs={6}>
                         {
-                            this.props.breadcrumbs && this.props.breadcrumbs.map((val) => (
-                                    <span key={val.link} className="path">
-                                       <Link to={val.link}>{val.title}</Link>
-                                       <Icon>keyboard_arrow_right</Icon>
-                                    </span>
+                            breadcrumbs && breadcrumbs.map((val, i) => (
+                                    breadcrumbs.length - 1 !== i ?
+                                        <span key={val.link} className="path">
+                                           <Link to={val.link}>{val.title}</Link>
+                                           <Icon>keyboard_arrow_right</Icon>
+                                        </span>
+                                        :
+                                        <span key={val.link} className="path">
+                                            {React.createElement('br')}
+                                            <Link to={val.link}>{val.title}</Link>
+                                        </span>
                                 )
                             )
                         }
-                        <br/>
-                        <span className="path">
-                        {this.props.title}
-                    </span>
+                        {
+                            this.props.title &&
+                            <span className="path">
+                                {React.createElement('br')}
+                                {this.props.title}
+                            </span>
+                        }
                     </Grid>
                     <Grid item xs={6} style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}>
 
@@ -102,7 +110,7 @@ class Subheader extends React.Component {
 
 Subheader.propTypes = {
     classes: PropTypes.object.isRequired,
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     breadcrumbs: PropTypes.arrayOf(PropTypes.object),
 };
 export default withStyles(styles)(Subheader);

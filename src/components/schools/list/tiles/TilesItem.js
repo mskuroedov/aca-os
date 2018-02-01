@@ -60,18 +60,18 @@ class TilesItem extends React.Component {
     }
 
     render() {
-        const {classes} = this.props;
+        const {classes, title, director} = this.props;
         return (
             <Grid item xs={4}>
                 <Paper className={classes.paper}>
                     <Typography className={classes.name}>
-                        ДЮСШ №9
+                        {title}
                     </Typography>
                     <Typography className={classes.infoTitle}>
                         Директор
                     </Typography>
                     <Link to="#" className={classes.link}>
-                        Гайнутдинов Ильшат Салихович
+                        {director.secondname} {director.firstname} {director.middlename}
                     </Link>
                     <Typography className={classes.infoTitle}>
                         Город

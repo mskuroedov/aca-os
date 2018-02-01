@@ -6,11 +6,7 @@ const IndexPage = () => (
     <div>
         <Header/>
         <Subheader
-            title="Группа мальчиков 2010 г. р."
-            breadcrumbs={[
-                {title: 'Школы', link: '#1'},
-                {title: 'Спортивная школа №43', link: '#2'},
-            ]}
+            title="Главная"
         />
         <p>Index Page</p>
     </div>

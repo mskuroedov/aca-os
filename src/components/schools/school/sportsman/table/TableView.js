@@ -74,7 +74,7 @@ class TableView extends React.Component {
                     </TableHead>
                     <TableBody>
                         {
-                            this.props.sportsman.map((item) => {
+                            this.props.schools.map((item) => {
                                 return <TableItem key={item.id} {...item} />
                             })
                         }
@@ -109,7 +109,7 @@ class TableView extends React.Component {
 
 TableView.propTypes = {
     classes: PropTypes.object.isRequired,
-    sportsman: PropTypes.arrayOf(PropTypes.object).isRequired,
+    schools: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default withStyles(styles)(TableView);

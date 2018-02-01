@@ -9,7 +9,7 @@ class TilesView extends React.Component {
         return (
             <Grid container>
                 {
-                    this.props.sportsman.map((item) => {
+                    this.props.schools.map((item) => {
                         return <TilesItem key={item.id} {...item} />
                     })
                 }
