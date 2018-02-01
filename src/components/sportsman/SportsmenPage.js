@@ -1,8 +1,8 @@
 import React from 'react';
 import SportsmenHeader from "./profile/SportsmenHeader";
 import SportsmenMenu from "./profile/SportsmenMenu";
-import Header from "../../Header";
-import Subheader from "../../Subheader";
+import Header from "../headers/Header";
+import Subheader from "../headers/Subheader";
 
 const SportsmenPage = () => (
     <div>

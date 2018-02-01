@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
-import PublicHeader from "./components/headers/PublicHeader";
-import PrivateHeader from "./components/headers/PrivateHeader";
+import PublicHeader from "./PublicHeader";
+import PrivateHeader from "./PrivateHeader";
 
 const Header = (props) => (
     props.isAuthenticated ? <PrivateHeader/> : <PublicHeader/>

@@ -1,43 +1,10 @@
 import React from 'react';
 import {Grid} from "material-ui";
-import {withStyles} from 'material-ui/styles';
-import Select from 'material-ui/Select';
-import {MenuItem} from 'material-ui/Menu';
 import Icon from 'material-ui/Icon';
-import {FormControl} from 'material-ui/Form';
 import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
 
-const styles = theme => ({
-    container: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    formControl: {
-        minWidth: 120,
-    },
-    selectEmpty: {},
-    select: {
-        paddingLeft: 5,
-        fontSize: 16,
-        color: '#fff',
-        '&:after': {
-            backgroundColor: '#fff'
-        }
-    },
-    selectIcon: {
-        color: '#fff',
-        marginTop: 3
-    },
-    selectLine: {
-        color: 'transparent'
-    }
-});
-
 class Subheader extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     state = {
         selectSchool: 1,
@@ -49,7 +16,7 @@ class Subheader extends React.Component {
     };
 
     render() {
-        const {classes, breadcrumbs} = this.props;
+        const {title, breadcrumbs} = this.props;
         return (
             <div>
                 <Grid container spacing={0} className="subheader">
@@ -70,37 +37,15 @@ class Subheader extends React.Component {
                             )
                         }
                         {
-                            this.props.title &&
+                            title &&
                             <span className="path">
                                 {React.createElement('br')}
-                                {this.props.title}
+                                {title}
                             </span>
                         }
                     </Grid>
                     <Grid item xs={6} style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}>
-
-                        <FormControl>
-                            <Select
-                                value={this.state.selectSchool}
-                                onChange={this.handleChange}
-                                disableUnderline={true}
-                                classes={{
-                                    select: classes.select,
-                                    icon: classes.selectIcon,
-                                }}
-                            >
-                                <MenuItem value={1}>
-                                    ДЮСШ №43
-                                </MenuItem>
-                                <MenuItem value={10}>Ten</MenuItem>
-                                <MenuItem value={20}>Twenty</MenuItem>
-                                <MenuItem value={30}>Thirty</MenuItem>
-                            </Select>
-                        </FormControl>
-                        <Icon style={{marginLeft: 41}}>email</Icon>
-                        <Icon style={{marginLeft: 24}}>notifications</Icon>
                         <Icon style={{marginLeft: 24}}>account_circle</Icon>
-
                     </Grid>
                 </Grid>
             </div>
@@ -109,8 +54,7 @@ class Subheader extends React.Component {
 }
 
 Subheader.propTypes = {
-    classes: PropTypes.object.isRequired,
     title: PropTypes.string,
     breadcrumbs: PropTypes.arrayOf(PropTypes.object),
 };
-export default withStyles(styles)(Subheader);
+export default Subheader;

@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from "../../../Header";
-import Subheader from "../../../Subheader";
+import Header from "../../headers/Header";
+import Subheader from "../../headers/Subheader";
 import SchoolList from "./SchoolList";
 
 export default class SchoolListPage extends React.Component {
