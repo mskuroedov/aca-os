@@ -10,6 +10,7 @@ import Sportsman from "./sportsman/SportsmanListPage";
 import {history} from "../../../routers/AppRouter";
 import {Redirect} from "react-router-dom";
 import Trainers from "./trainers/Trainers";
+import Contacts from "./contacts/Contacts";
 
 function TabContainer(props) {
     return (
@@ -151,7 +152,7 @@ class SchoolMenu extends React.Component {
                              }}/>
                         <Tab label="Контакты"
                              textColor="primary"
-
+                             value="contacts"
                              classes={{
                                  label: classes.button,
                                  rootPrimarySelected: classes.bc,
@@ -167,7 +168,7 @@ class SchoolMenu extends React.Component {
                     {view === '3' && 123}
                     {view === 'schools' && <Sportsman/>}
                     {view === 'trainers' && <Trainers/>}
-                    {view === '6' && 6}
+                    {view === 'contacts' && <Contacts />}
                 </TabContainer>
             </section>
         ) : (
