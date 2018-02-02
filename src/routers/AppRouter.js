@@ -7,6 +7,7 @@ import SportsmenPage from "../components/sportsman/SportsmenPage";
 import SchoolPage from "../components/schools/school/SchoolPage";
 import Reboot from "material-ui/es/Reboot/Reboot";
 import SchoolListPage from "../components/schools/list/SchoolListPage";
+import LibrariesPage from "../components/library/LibrariesPage";
 
 export const history = createHistory();
 
@@ -19,7 +20,7 @@ const AppRouter = () => (
                 <Route path="/sportsman/:id" exact={true} component={SportsmenPage}/>
                 <Route path="/schools/:schoolId/:view?" exact={true} component={SchoolPage}/>
                 <Route path="/schools" exact={true} component={SchoolListPage}/>
-                {/*<Route path="/libraries" exact={true} component={LibrariesPage}/>*/}
+                <Route path="/libraries" exact={true} component={LibrariesPage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>
