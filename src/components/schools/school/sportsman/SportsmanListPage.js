@@ -12,7 +12,8 @@ import IconButton from "material-ui/es/IconButton/IconButton";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Input from "material-ui/es/Input/Input";
 import TilesView from "./tiles/TilesView";
-import {sportsman} from "../../../../fixtures/sportsman";
+import {sportsman, sportsmanChampionshipFilters, sportsmanYearFilters} from "../../../../fixtures/sportsman";
+import {schools} from "../../../../fixtures/schools";
 
 
 const styles = theme => ({
@@ -80,28 +81,46 @@ const styles = theme => ({
 
 class Sportsman extends React.Component {
     state = {
-        selectedFilter: 1,
         tableView: true,
+        sportsman,
+        sportsmanYearFilters,
+        sportsmanChampionshipFilters,
+        selectedYearFilter: 1,
+        selectedChampionshipFilter: 1,
     };
-    changeView = event => {
+    onViewChange = event => {
         this.setState({
             tableView: !(this.state.tableView)
         });
     };
-    handleChange = event => {
-        this.setState({selectedFilter: event.target.value});
+
+    onYearFilterChange = event => {
+        this.setState({selectedYearFilter: event.target.value});
+    };
+
+    onChampionshipFilterChange = event => {
+        this.setState({selectedChampionshipFilter: event.target.value});
+    };
+
+    onSearchChange = event => {
+        this.setState({
+            sportsman: sportsman.filter((sportsmen) => (
+                sportsmen.firstname.toLowerCase().includes(event.target.value.toLowerCase().trim())
+            ))
+        })
     };
 
     render() {
         const {classes} = this.props;
+        const {sportsman} = this.state;
         return (
             <div>
                 <Grid container>
                     <Grid item>
                         <FormControl>
                             <Select
-                                value={this.state.selectedFilter}
-                                onChange={this.handleChange}
+                                value={this.state.selectedYearFilter}
+                                onChange={this.onYearFilterChange}
                                 disableUnderline={true}
                                 classes={{
                                     select: classes.select,
@@ -109,20 +128,19 @@ class Sportsman extends React.Component {
                                 }}
                                 autoWidth
                             >
-                                <MenuItem value={1}>
-                                    2017
-                                </MenuItem>
-                                <MenuItem value={10}>Ten</MenuItem>
-                                <MenuItem value={20}>Twenty</MenuItem>
-                                <MenuItem value={30}>Thirty</MenuItem>
+                                {
+                                    this.state.sportsmanYearFilters.map((item) => (
+                                        <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
+                                    ))
+                                }
                             </Select>
                         </FormControl>
                     </Grid>
                     <Grid item>
                         <FormControl>
                             <Select
-                                value={this.state.selectedFilter}
-                                onChange={this.handleChange}
+                                value={this.state.selectedChampionshipFilter}
+                                onChange={this.onChampionshipFilterChange}
                                 disableUnderline={true}
                                 classes={{
                                     select: classes.select,
@@ -130,12 +148,11 @@ class Sportsman extends React.Component {
                                 }}
                                 autoWidth
                             >
-                                <MenuItem value={1}>
-                                    Чемпионат России
-                                </MenuItem>
-                                <MenuItem value={10}>Ten</MenuItem>
-                                <MenuItem value={20}>Twenty</MenuItem>
-                                <MenuItem value={30}>Thirty</MenuItem>
+                                {
+                                    this.state.sportsmanChampionshipFilters.map((item) => (
+                                        <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
+                                    ))
+                                }
                             </Select>
                         </FormControl>
                     </Grid>
@@ -154,19 +171,19 @@ class Sportsman extends React.Component {
                                 inkbar: classes.searchInkbar
                             }}
                                    placeholder="Поиск по имени..."
+                                   onChange={this.onSearchChange}
                                    endAdornment={
                                        <InputAdornment position="end">
                                            <Icon classes={{
                                                root: classes.searchInputIcon
                                            }}>
-                                               search
                                            </Icon>
                                        </InputAdornment>
                                    }
                             />
                         </FormControl>
                     </Grid>
-                    <IconButton className={classes.iconbtn} onClick={this.changeView}>
+                    <IconButton className={classes.iconbtn} onClick={this.onViewChange}>
                         {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
                     </IconButton>
 

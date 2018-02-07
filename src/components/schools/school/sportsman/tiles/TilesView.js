@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Grid from "material-ui/es/Grid/Grid";
 import TilesItem from "./TilesItem";
 
@@ -9,7 +10,7 @@ class TilesView extends React.Component {
         return (
             <Grid container>
                 {
-                    this.props.schools.map((item) => {
+                    this.props.sportsman.map((item) => {
                         return <TilesItem key={item.id} {...item} />
                     })
                 }
@@ -17,6 +18,10 @@ class TilesView extends React.Component {
         )
     }
 }
+
+TilesView.propTypes = {
+    sportsman: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default TilesView;
 

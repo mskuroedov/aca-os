@@ -81,16 +81,15 @@ class SchoolList extends React.Component {
         schools,
         schoolFilters,
         selectedFilter: schoolFilters[0].id,
-        search: '',
     };
 
-    changeView = event => {
+    onViewChange = event => {
         this.setState({
             tableView: !(this.state.tableView)
         });
     };
 
-    handleChange = event => {
+    onFilterChange = event => {
         this.setState({selectedFilter: event.target.value});
     };
 
@@ -112,7 +111,7 @@ class SchoolList extends React.Component {
                         <FormControl>
                             <Select
                                 value={this.state.selectedFilter}
-                                onChange={this.handleChange}
+                                onChange={this.onFilterChange}
                                 disableUnderline={true}
                                 classes={{
                                     select: classes.select,
@@ -143,13 +142,12 @@ class SchoolList extends React.Component {
                                     <Icon classes={{
                                         root: classes.searchInputIcon
                                     }}>
-                                        search
                                     </Icon>
                                 </InputAdornment>
                             }
                         />
                     </FormControl>
-                    <IconButton className={classes.iconbtn} onClick={this.changeView}>
+                    <IconButton className={classes.iconbtn} onClick={this.onViewChange}>
                         {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
                     </IconButton>
 

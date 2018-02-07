@@ -48,7 +48,6 @@ class TableView extends React.Component {
     render() {
         const {rowsPerPage, count, page, schools} = this.state;
         return (
-
             <Paper className="paper">
                 <Table className="table_sportsman">
                     <TableHead>
@@ -74,9 +73,6 @@ class TableView extends React.Component {
                                     actions: "1"
                                 }}
                                 colSpan={12}
-                                rowsPerPage={rowsPerPage}
-                                count={count}
-                                page={page}
                                 backIconButtonProps={{
                                     'aria-label': 'Previous Page',
                                 }}
@@ -86,6 +82,9 @@ class TableView extends React.Component {
                                 labelDisplayedRows={
                                     ({from, to, count}) => `${from}-${to} из ${count}`
                                 }
+                                rowsPerPage={rowsPerPage}
+                                count={count}
+                                page={page}
                                 onChangePage={this.onPageChange}
                                 onChangeRowsPerPage={this.onRowsPerPageChange}
                                 rowsPerPageOptions={[1,5,10,20]}
