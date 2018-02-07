@@ -80,7 +80,7 @@ const styles = theme => ({
 
 class Sportsman extends React.Component {
     state = {
-        selectSchool: 1,
+        selectedFilter: 1,
         tableView: true,
     };
     changeView = event => {

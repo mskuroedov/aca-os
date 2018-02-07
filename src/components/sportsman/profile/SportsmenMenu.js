@@ -6,10 +6,13 @@ import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 import SportsmenPageProfile from "./SportsmenPageProfile";
 import Perfomance from "./Perfomance";
+import Redirect from "react-router-dom/es/Redirect";
+import {history} from "../../../routers/AppRouter";
 
 function TabContainer(props) {
     return (
-        <Typography component="div" style={{paddingTop:24,backgroundColor:"#f6f6f6",paddingRight: 168,paddingLeft:168}}>
+        <Typography component="div"
+                    style={{paddingTop: 24, backgroundColor: "#f6f6f6", paddingRight: 168, paddingLeft: 168}}>
             {props.children}
         </Typography>
     );
@@ -48,43 +51,36 @@ const styles = theme => ({
     },
     button: {
         fontSize: 14,
-        fontWeight:'bold',
-        fontFamily:'BlissPro',
+        fontWeight: 'bold',
+        fontFamily: 'BlissPro',
     },
-    bc:{
-        color:"#000 !important"
+    bc: {
+        color: "#000 !important"
     },
-    rootTabPrimary:{
-        minWidth:0,
-        color:'#00755E'
+    rootTabPrimary: {
+        minWidth: 0,
+        color: '#00755E'
     },
-    menuFlexContainer:{
-        justifyContent:'flex-end'
+    menuFlexContainer: {
+        justifyContent: 'flex-end'
     }
 
 });
 
 class SportsmenMenu extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    state = {
-        value: 3,
-    };
 
     handleChange = (event, value) => {
-        this.setState({value});
+        history.push(`/sportsman/${this.props.sportsmenId}/${value}`);
     };
 
     render() {
-        const {classes} = this.props;
-        const {value} = this.state;
+        const {classes, view, sportsmenId} = this.props;
 
-        return (
-            <section >
-                <AppBar position="static" className={classes.appBar} style={{paddingRight: 168,paddingLeft:168,backgroundColor:'#fff'}}>
-                    <Tabs value={value}
+        return view ? (
+            <section>
+                <AppBar position="static" className={classes.appBar}
+                        style={{paddingRight: 168, paddingLeft: 168, backgroundColor: '#fff'}}>
+                    <Tabs value={view}
                           onChange={this.handleChange}
                           className={classes.tabs}
                           indicatorColor="primary"
@@ -92,72 +88,80 @@ class SportsmenMenu extends React.Component {
                           classes={{
                               root: classes.rootInherit,
                               buttonAuto: classes.button, // className, e.g. `OverridesClasses-root-X`
-                              flexContainer:classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
+                              flexContainer: classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
 
                           }}
                     >
-                        <Tab label="Профиль"
-                             textColor="primary"
-                             classes={{
-                                 label: classes.button,
-                                 labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
-                                 wrapper: classes.button,
-                                 rootPrimarySelected:classes.bc,// className, e.g. `OverridesClasses-label-X`
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-                             }}/>
-                        <Tab label="Тренировочный план"
-                             textColor="primary"
-
-                             classes={{
-                                 label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary
-                             }}
+                        <Tab
+                            label="Профиль"
+                            value="profile"
+                            textColor="primary"
+                            classes={{
+                                label: classes.button,
+                                labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
+                                wrapper: classes.button,
+                                rootPrimarySelected: classes.bc,// className, e.g. `OverridesClasses-label-X`
+                                rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                            }}
                         />
-                        <Tab label="Журнал"
-                             textColor="primary"
+                        <Tab
+                            label="Тренировочный план"
+                            value="plan"
+                            textColor="primary"
+
+                            classes={{
+                                label: classes.button,
+                                rootPrimarySelected: classes.bc,
+                                rootPrimary: classes.rootTabPrimary
+                            }}
+                        />
+                        <Tab
+                            label="Журнал"
+                            value="journal"
+                            textColor="primary"
 
 
-                             classes={{
-                                 label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-                             }}/>
-                        <Tab label="Спортивные показатели"
-                             textColor="primary"
+                            classes={{
+                                label: classes.button,
+                                rootPrimarySelected: classes.bc,
+                                rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                            }}
+                        />
+                        <Tab
+                            label="Спортивные показатели"
+                            value="perfomance"
+                            textColor="primary"
 
-                             classes={{
-                                 label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-                             }}/>
-                        <Tab label="Медицинские показатели"
-                             textColor="primary"
+                            classes={{
+                                label: classes.button,
+                                rootPrimarySelected: classes.bc,
+                                rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                            }}
+                        />
+                        <Tab
+                            label="Медицинские показатели"
+                            value="medical"
+                            textColor="primary"
 
-                             classes={{
-                                 label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-                             }}/>
+                            classes={{
+                                label: classes.button,
+                                rootPrimarySelected: classes.bc,
+                                rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                            }}
+                        />
                     </Tabs>
                 </AppBar>
-                {value === 0 && <TabContainer>
-                    <SportsmenPageProfile/>
-                </TabContainer>}
-                {value === 1 && <TabContainer>
-                    1
-                </TabContainer>}
-                {value === 2 && <TabContainer>
-                    2
-                </TabContainer>}
-                {value === 3 && <TabContainer>
-                    <Perfomance />
-                </TabContainer>}
-                {value === 4 && <TabContainer>
-                    4
-                </TabContainer>}
+                <TabContainer>
+                    {view === 'profile' && <SportsmenPageProfile/>}
+                    {view === 'plan' && 1}
+                    {view === 'journal' && 2}
+                    {view === 'perfomance' && <Perfomance/>}
+                    {view === 'medical' && 4}
+                </TabContainer>
             </section>
-        );
+        ) : (
+            <Redirect to={`/sportsman/${sportsmenId}/profile`}/>
+        )
     }
 }
 

@@ -51,7 +51,7 @@ class Perfomance extends React.Component {
     }
 
     state = {
-        selectSchool: 1,
+        selectedFilter: 1,
         name: 'hai',
     };
 

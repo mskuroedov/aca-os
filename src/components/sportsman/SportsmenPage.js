@@ -4,7 +4,7 @@ import SportsmenMenu from "./profile/SportsmenMenu";
 import Header from "../headers/Header";
 import Subheader from "../headers/Subheader";
 
-const SportsmenPage = () => (
+const SportsmenPage = (props) => (
     <div>
         <Header/>
         <Subheader
@@ -15,7 +15,7 @@ const SportsmenPage = () => (
             ]}
         />
         <SportsmenHeader />
-        <SportsmenMenu />
+        <SportsmenMenu {...props.match.params} />
     </div>
 );
 

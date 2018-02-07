@@ -73,9 +73,6 @@ const styles = theme => ({
 });
 
 class SchoolMenu extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     handleChange = (event, value) => {
         history.push(`/schools/${this.props.schoolId}/${value}`);
@@ -85,7 +82,7 @@ class SchoolMenu extends React.Component {
         const {classes} = this.props;
         const {view, schoolId} = this.props;
 
-        return this.props.view ? (
+        return view ? (
             <section>
                 <AppBar position="static" className={classes.appBar}
                         style={{paddingRight: 168, paddingLeft: 168, backgroundColor: '#fff'}}>

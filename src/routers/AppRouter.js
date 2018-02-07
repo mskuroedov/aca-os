@@ -17,7 +17,7 @@ const AppRouter = () => (
             <Reboot/>
             <Switch>
                 <Route path="/" component={IndexPage} exact={true}/>
-                <Route path="/sportsman/:id" exact={true} component={SportsmenPage}/>
+                <Route path="/sportsman/:sportsmenId/:view?" exact={true} component={SportsmenPage}/>
                 <Route path="/schools/:schoolId/:view?" exact={true} component={SchoolPage}/>
                 <Route path="/schools" exact={true} component={SchoolListPage}/>
                 <Route path="/libraries" exact={true} component={LibrariesPage}/>
