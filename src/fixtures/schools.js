@@ -98,3 +98,18 @@ export const schools = [
         groups_count: 5
     }
 ];
+
+export const schoolFilters = [
+    {
+        'id': 1,
+        'title': '2016'
+    },
+    {
+        'id': 2,
+        'title': '2017'
+    },
+    {
+        'id': 3,
+        'title': '2018'
+    }
+];

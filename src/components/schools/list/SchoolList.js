@@ -11,7 +11,7 @@ import IconButton from "material-ui/es/IconButton/IconButton";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Input from "material-ui/es/Input/Input";
 import TilesView from "./tiles/TilesView";
-import {schools} from "../../../fixtures/schools";
+import {schools, schoolFilters} from "../../../fixtures/schools";
 
 
 const styles = theme => ({
@@ -77,10 +77,11 @@ const styles = theme => ({
 class SchoolList extends React.Component {
 
     state = {
-        selectSchool: 1,
         tableView: false,
+        schools,
+        schoolFilters,
+        selectedFilter: schoolFilters[0].id,
         search: '',
-        schools
     };
 
     changeView = event => {
@@ -90,7 +91,7 @@ class SchoolList extends React.Component {
     };
 
     handleChange = event => {
-        this.setState({selectSchool: event.target.value});
+        this.setState({selectedFilter: event.target.value});
     };
 
     onSearchChange = event => {
@@ -110,7 +111,7 @@ class SchoolList extends React.Component {
                     <Grid item>
                         <FormControl>
                             <Select
-                                value={this.state.selectSchool}
+                                value={this.state.selectedFilter}
                                 onChange={this.handleChange}
                                 disableUnderline={true}
                                 classes={{
@@ -119,10 +120,11 @@ class SchoolList extends React.Component {
                                 }}
                                 autoWidth
                             >
-                                <MenuItem value={1}>2017</MenuItem>
-                                <MenuItem value={10}>Ten</MenuItem>
-                                <MenuItem value={20}>Twenty</MenuItem>
-                                <MenuItem value={30}>Thirty</MenuItem>
+                                {
+                                    this.state.schoolFilters.map((item) => (
+                                        <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
+                                    ))
+                                }
                             </Select>
                         </FormControl>
                     </Grid>

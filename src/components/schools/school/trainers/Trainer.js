@@ -92,7 +92,7 @@ class Trainer extends React.Component {
         });
     };
     handleChange = event => {
-        this.setState({selectSchool: event.target.value});
+        this.setState({selectedFilter: event.target.value});
     };
 
     render() {

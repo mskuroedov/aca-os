@@ -89,7 +89,7 @@ class Sportsman extends React.Component {
         });
     };
     handleChange = event => {
-        this.setState({selectSchool: event.target.value});
+        this.setState({selectedFilter: event.target.value});
     };
 
     render() {
@@ -100,7 +100,7 @@ class Sportsman extends React.Component {
                     <Grid item>
                         <FormControl>
                             <Select
-                                value={this.state.selectSchool}
+                                value={this.state.selectedFilter}
                                 onChange={this.handleChange}
                                 disableUnderline={true}
                                 classes={{
@@ -121,7 +121,7 @@ class Sportsman extends React.Component {
                     <Grid item>
                         <FormControl>
                             <Select
-                                value={this.state.selectSchool}
+                                value={this.state.selectedFilter}
                                 onChange={this.handleChange}
                                 disableUnderline={true}
                                 classes={{

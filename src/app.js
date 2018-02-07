@@ -19,8 +19,8 @@ const theme = createMuiTheme({
 
 const store = configureStore();
 
-// store.dispatch(login('USERNAME', 'PASSWORD'));
-store.dispatch(logout());
+store.dispatch(login('USERNAME', 'PASSWORD'));
+// store.dispatch(logout());
 
 const jsx = (
     <MuiThemeProvider theme={theme}>

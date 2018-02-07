@@ -37,12 +37,12 @@ const styles = theme => ({
 class Subheader extends React.Component {
 
     state = {
-        selectSchool: 1,
+        selectedFilter: 1,
         name: 'hai',
     };
 
     handleChange = event => {
-        this.setState({selectSchool: event.target.value});
+        this.setState({selectedFilter: event.target.value});
     };
 
     render() {
@@ -78,7 +78,7 @@ class Subheader extends React.Component {
 
                         <FormControl>
                             <Select
-                                value={this.state.selectSchool}
+                                value={this.state.selectedFilter}
                                 onChange={this.handleChange}
                                 disableUnderline={true}
                                 classes={{
