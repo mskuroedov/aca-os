@@ -3,13 +3,77 @@ export const sportsman = [
         id: 1,
         firstname: 'Сергей',
         secondname: 'Красильников',
-        middlename: 'Васильевич'
+        middlename: 'Васильевич',
+        common: {
+            date_of_birth: '01.10.1995',
+            recruitment_year: '2000',
+            gender: 'Мужской',
+            role: 'Нападающий',
+            stage_of_preparation: 'Начальный',
+            rank: '2 юношеский',
+            hold: 'Левый',
+            growth: '175 см',
+            weight: '80 кг'
+        },
+        contacts: {
+            location: 'Россия, Казань',
+            phone: '+7 927 729-92-17',
+            email: 'kras@yandex.ru'
+        },
+        parents: [
+            {
+                id: 1,
+                fio: 'Леденев Александр Николаевич',
+                phone: '+7 927 729-92-17',
+                email: 'malishev@yandex.ru',
+                status: 'Активный'
+            },
+            {
+                id: 2,
+                fio: 'Леденев Александр Николаевич',
+                phone: '+7 927 729-92-17',
+                email: 'malishev@yandex.ru',
+                status: 'Активный'
+            }
+        ]
     },
     {
         id: 2,
         firstname: 'Дмитрий',
         secondname: 'Мокшин',
-        middlename: 'Генадьевич'
+        middlename: 'Генадьевич',
+        common: {
+            date_of_birth: '01.10.1995',
+            recruitment_year: '2000',
+            gender: 'Мужской',
+            role: 'Нападающий',
+            stage_of_preparation: 'Начальный',
+            rank: '2 юношеский',
+            hold: 'Левый',
+            growth: '175 см',
+            weight: '80 кг'
+        },
+        contacts: {
+            location: 'Россия, Казань',
+            phone: '+7 927 729-92-17',
+            email: 'mokshin@yandex.ru'
+        },
+        parents: [
+            {
+                id: 1,
+                fio: 'Леденев Александр Николаевич',
+                phone: '+7 927 729-92-17',
+                email: 'malishev@yandex.ru',
+                status: 'Активный'
+            },
+            {
+                id: 2,
+                fio: 'Леденев Александр Николаевич',
+                phone: '+7 927 729-92-17',
+                email: 'malishev@yandex.ru',
+                status: 'Активный'
+            }
+        ]
     },
 ];
 

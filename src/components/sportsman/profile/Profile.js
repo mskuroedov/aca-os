@@ -26,6 +26,7 @@ const styles = theme => ({
 
 class Profile extends React.Component {
     render() {
+        const {sportsmen} = this.props;
         return (
             <div>
                 <Grid container
@@ -34,12 +35,15 @@ class Profile extends React.Component {
                         редактировать информацию
                     </Button>
                     <TableTitle title="Общая инфомация"/>
-                    <CommonInformation/>
+                    <CommonInformation {...sportsmen.common} />
                     <TableTitle title="Контакты спортсмена"/>
-                    <ContactsOfSportsmen/>
+                    <ContactsOfSportsmen {...sportsmen.contacts}/>
                     <TableTitle title="Контакты родителей или законных представителей"/>
-                    <ParentContacts/>
-                    <ParentContacts/>
+                    {
+                        sportsmen.parents.map((item) => (
+                            <ParentContacts key={item.id} {...item}/>
+                        ))
+                    }
                     <TableTitle title="Спортивная карьера"/>
                     <Career/>
                     <TableTitle title="Награды и достижения"/>

@@ -74,7 +74,7 @@ class SportsmenPageContent extends React.Component {
     };
 
     render() {
-        const {classes, view, sportsmenId} = this.props;
+        const {classes, view, sportsmenId, sportsmen} = this.props;
 
         return view ? (
             <section>
@@ -152,7 +152,7 @@ class SportsmenPageContent extends React.Component {
                     </Tabs>
                 </AppBar>
                 <TabContainer>
-                    {view === 'profile' && <Profile sportsmenId={sportsmenId} />}
+                    {view === 'profile' && <Profile sportsmen={sportsmen} />}
                     {view === 'plan' && 1}
                     {view === 'journal' && 2}
                     {view === 'perfomance' && <Perfomance/>}

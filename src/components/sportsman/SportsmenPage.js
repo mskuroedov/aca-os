@@ -43,7 +43,7 @@ class SportsmenPage extends React.Component {
                             ]}
                         />
                         <SportsmenHeader {...sportsmen}/>
-                        <SportsmenPageContent {...this.props.match.params} />
+                        <SportsmenPageContent {...this.props.match.params} sportsmen={sportsmen} />
                     </div>
                     :
                     <NotFoundPage/>

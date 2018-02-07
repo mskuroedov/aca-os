@@ -20,15 +20,15 @@ const CommonInformation = (props) => (
                     </TableHead>
                     <TableBody>
                         <TableRow>
-                            <TableCell>01.10.1995</TableCell>
-                            <TableCell>2000</TableCell>
-                            <TableCell>Мужской</TableCell>
-                            <TableCell>Нападающий</TableCell>
-                            <TableCell>Начальный</TableCell>
-                            <TableCell>2 юношеский</TableCell>
-                            <TableCell>Левый</TableCell>
-                            <TableCell>175 см</TableCell>
-                            <TableCell>80 кг</TableCell>
+                            <TableCell>{props.date_of_birth}</TableCell>
+                            <TableCell>{props.recruitment_year}</TableCell>
+                            <TableCell>{props.gender}</TableCell>
+                            <TableCell>{props.role}</TableCell>
+                            <TableCell>{props.stage_of_preparation}</TableCell>
+                            <TableCell>{props.rank}</TableCell>
+                            <TableCell>{props.hold}</TableCell>
+                            <TableCell>{props.growth}</TableCell>
+                            <TableCell>{props.weight}</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
