@@ -11,6 +11,15 @@ import LibrariesPage from "../components/library/LibrariesPage";
 
 export const history = createHistory();
 
+export const routes = {
+    schoolsPage: () => (
+        '/schools'
+    ),
+    schoolPage: (schoolId, view) => (
+        `/schools/${schoolId}/${view?view:''}`
+    )
+};
+
 const AppRouter = () => (
     <Router history={history}>
         <div>

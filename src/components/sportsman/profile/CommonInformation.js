@@ -1,7 +1,7 @@
 import React from 'react';
 import {Grid, Paper, Table, TableBody, TableCell, TableHead, TableRow} from "material-ui";
 
-const CommonInformation = () => (
+const CommonInformation = (props) => (
         <Grid item xs={12} className="paper_w_table">
             <Paper className="paper">
                 <Table className="table">

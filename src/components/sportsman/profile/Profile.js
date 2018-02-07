@@ -24,42 +24,38 @@ const styles = theme => ({
 });
 
 
-class SportsmenPageProfile extends React.Component {
-    constructor(props) {
-        super(props);
-        this.titles = ['Общая инфомация', 'Контакты спортсмена', 'Контакты родителей или законных представителей', 'Спортивная карьера', 'Награды и достижения', 'Образование']
-    }
-
+class Profile extends React.Component {
     render() {
         return (
-                <div >
-                    <Grid container
-                    >
-                        <Button raised color="primary" className={this.props.classes.button}>
-                            редактировать информацию
-                        </Button>
-                        <TableTitle title={this.titles[0]}/>
-                        <CommonInformation/>
-                        <TableTitle title={this.titles[1]}/>
-                        <ContactsOfSportsmen/>
-                        <TableTitle title={this.titles[2]}/>
-                        <ParentContacts/>
-                        <ParentContacts/>
-                        <TableTitle title={this.titles[3]}/>
-                        <Career/>
-                        <TableTitle title={this.titles[4]}/>
-                        <Rewards/>
-                        <TableTitle title={this.titles[5]}/>
-                        <Achievements/>
-                    </Grid>
-                </div>
+            <div>
+                <Grid container
+                >
+                    <Button raised color="primary" className={this.props.classes.button}>
+                        редактировать информацию
+                    </Button>
+                    <TableTitle title="Общая инфомация"/>
+                    <CommonInformation/>
+                    <TableTitle title="Контакты спортсмена"/>
+                    <ContactsOfSportsmen/>
+                    <TableTitle title="Контакты родителей или законных представителей"/>
+                    <ParentContacts/>
+                    <ParentContacts/>
+                    <TableTitle title="Спортивная карьера"/>
+                    <Career/>
+                    <TableTitle title="Награды и достижения"/>
+                    <Rewards/>
+                    <TableTitle title="Образование"/>
+                    <Achievements/>
+                </Grid>
+            </div>
         )
     }
 }
 
-SportsmenPageProfile.propTypes = {
-    classes: PropTypes.object.isRequired,
+Profile.propTypes = {
+    classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(SportsmenPageProfile);
+
+export default withStyles(styles)(Profile);
 

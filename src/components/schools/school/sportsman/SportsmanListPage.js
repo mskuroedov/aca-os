@@ -13,7 +13,6 @@ import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Input from "material-ui/es/Input/Input";
 import TilesView from "./tiles/TilesView";
 import {sportsman, sportsmanChampionshipFilters, sportsmanYearFilters} from "../../../../fixtures/sportsman";
-import {schools} from "../../../../fixtures/schools";
 
 
 const styles = theme => ({

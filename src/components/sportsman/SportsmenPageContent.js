@@ -4,7 +4,7 @@ import {withStyles} from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
-import SportsmenPageProfile from "./profile/Profile";
+import Profile from "./profile/Profile";
 import Perfomance from "./profile/Perfomance";
 import Redirect from "react-router-dom/es/Redirect";
 import {history} from "../../routers/AppRouter";
@@ -111,7 +111,6 @@ class SportsmenPageContent extends React.Component {
                             label="Тренировочный план"
                             value="plan"
                             textColor="primary"
-
                             classes={{
                                 label: classes.button,
                                 rootPrimarySelected: classes.bc,
@@ -122,8 +121,6 @@ class SportsmenPageContent extends React.Component {
                             label="Журнал"
                             value="journal"
                             textColor="primary"
-
-
                             classes={{
                                 label: classes.button,
                                 rootPrimarySelected: classes.bc,
@@ -155,7 +152,7 @@ class SportsmenPageContent extends React.Component {
                     </Tabs>
                 </AppBar>
                 <TabContainer>
-                    {view === 'profile' && <SportsmenPageProfile/>}
+                    {view === 'profile' && <Profile sportsmenId={sportsmenId} />}
                     {view === 'plan' && 1}
                     {view === 'journal' && 2}
                     {view === 'perfomance' && <Perfomance/>}

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {withStyles} from 'material-ui/styles';
 import Avatar from 'material-ui/Avatar';
-import SportsmenMenu from "./SportsmenPageContent";
 
 
 const styles = {
@@ -27,7 +26,7 @@ const styles = {
         paddingRight: 165,
         paddingTop: 50,
         backgroundColor: '#fff',
-        display:'flex'
+        display: 'flex'
     },
     sportsmenRightSec: {
         justifyItems: 'flex-end',
@@ -36,18 +35,17 @@ const styles = {
         fontSize: 14
     },
     sportsmenRatingNum: {
-        fontSize:40,
+        fontSize: 40,
         color: '#242421',
-        fontFamily:'AkBarsFont'
+        fontFamily: 'AkBarsFont'
     }
 };
 const SportmenHeader = (props) => {
-    const {classes} = props;
+    const {classes, firstname, secondname} = props;
     return (
-<section className={classNames(classes.sportsmenHeader)}>
-
+        <section className={classNames(classes.sportsmenHeader)}>
             <Grid
-                item  align={'flex-basis'}>
+                item align={'flex-basis'}>
                 <Avatar
                     alt="Adelle Charles"
                     src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
@@ -55,18 +53,18 @@ const SportmenHeader = (props) => {
                 />
             </Grid>
             <Grid item xs={4}>
-                <span className={classNames(classes.sportsmenName)}>Малышев Андрей</span>
+                <span className={classNames(classes.sportsmenName)}>{secondname} {firstname}</span>
             </Grid>
             <Grid item xs={6} className={classNames(classes.sportsmenRightSec)}>
                 <span>Рейтинг</span><br/>
                 <span className={classNames(classes.sportsmenRatingNum)}>140</span>
             </Grid>
-</section>
+        </section>
     );
 
 };
 SportmenHeader.propTypes = {
-    classes: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(SportmenHeader);

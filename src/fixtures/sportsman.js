@@ -39,6 +39,6 @@ export const sportsmanChampionshipFilters = [
     },
     {
         'id': 3,
-        'title': 'Чемпионат Поволжья'
+        'title': 'Чемпионат Поволь'
     }
 ];

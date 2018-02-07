@@ -10,6 +10,7 @@ import MoreVertIcon from 'material-ui-icons/MoreVert';
 import Input from 'material-ui/Input';
 import teal from 'material-ui/colors/teal';
 import {NavLink} from "react-router-dom";
+import {routes} from "../../routers/AppRouter";
 
 
 const styles = theme => ({
@@ -99,7 +100,7 @@ class PublicHeader extends React.Component {
                         <Input id="name-simple" value={this.state.name} onChange={this.handleChange}
                                className="header__input" placeholder="Поиск"/>
                         <NavLink activeClassName="active" to="/" exact={true} style={{marginLeft:'auto'}}>Рабочий стол</NavLink>
-                        <NavLink activeClassName="active" to="/schools">Школы</NavLink>
+                        <NavLink activeClassName="active" to={routes.schoolsPage()}>Школы</NavLink>
                         <NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>
                         <NavLink activeClassName="active" to="#">Календарь</NavLink>
                         <NavLink activeClassName="active" to="#">Статистика и аналитика</NavLink>
