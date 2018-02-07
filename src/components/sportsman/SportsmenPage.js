@@ -1,6 +1,6 @@
 import React from 'react';
-import SportsmenHeader from "./profile/SportsmenHeader";
-import SportsmenMenu from "./profile/SportsmenMenu";
+import SportsmenHeader from "./SportsmenHeader";
+import SportsmenPageContent from "./SportsmenPageContent";
 import Header from "../headers/Header";
 import Subheader from "../headers/Subheader";
 
@@ -15,7 +15,7 @@ const SportsmenPage = (props) => (
             ]}
         />
         <SportsmenHeader />
-        <SportsmenMenu {...props.match.params} />
+        <SportsmenPageContent {...props.match.params} />
     </div>
 );
 

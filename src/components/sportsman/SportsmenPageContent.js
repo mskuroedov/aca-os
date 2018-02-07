@@ -4,10 +4,10 @@ import {withStyles} from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
-import SportsmenPageProfile from "./SportsmenPageProfile";
-import Perfomance from "./Perfomance";
+import SportsmenPageProfile from "./profile/Profile";
+import Perfomance from "./profile/Perfomance";
 import Redirect from "react-router-dom/es/Redirect";
-import {history} from "../../../routers/AppRouter";
+import {history} from "../../routers/AppRouter";
 
 function TabContainer(props) {
     return (
@@ -67,7 +67,7 @@ const styles = theme => ({
 
 });
 
-class SportsmenMenu extends React.Component {
+class SportsmenPageContent extends React.Component {
 
     handleChange = (event, value) => {
         history.push(`/sportsman/${this.props.sportsmenId}/${value}`);
@@ -78,19 +78,22 @@ class SportsmenMenu extends React.Component {
 
         return view ? (
             <section>
-                <AppBar position="static" className={classes.appBar}
-                        style={{paddingRight: 168, paddingLeft: 168, backgroundColor: '#fff'}}>
-                    <Tabs value={view}
-                          onChange={this.handleChange}
-                          className={classes.tabs}
-                          indicatorColor="primary"
-                          textColor="primary"
-                          classes={{
-                              root: classes.rootInherit,
-                              buttonAuto: classes.button, // className, e.g. `OverridesClasses-root-X`
-                              flexContainer: classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
+                <AppBar
+                    position="static" className={classes.appBar}
+                    style={{paddingRight: 168, paddingLeft: 168, backgroundColor: '#fff'}}
+                >
+                    <Tabs
+                        value={view}
+                        onChange={this.handleChange}
+                        className={classes.tabs}
+                        indicatorColor="primary"
+                        textColor="primary"
+                        classes={{
+                            root: classes.rootInherit,
+                            buttonAuto: classes.button, // className, e.g. `OverridesClasses-root-X`
+                            flexContainer: classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
 
-                          }}
+                        }}
                     >
                         <Tab
                             label="Профиль"
@@ -165,8 +168,8 @@ class SportsmenMenu extends React.Component {
     }
 }
 
-SportsmenMenu.propTypes = {
+SportsmenPageContent.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SportsmenMenu);
+export default withStyles(styles)(SportsmenPageContent);

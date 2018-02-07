@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from "../../headers/Header";
 import Subheader from "../../headers/Subheader";
-import SchoolHeader from "./common/SchoolHeader";
+import SchoolHeader from "./SchoolHeader";
 import SchoolPageContent from "./SchoolPageContent";
 
 export default class SchoolPage extends React.Component {
