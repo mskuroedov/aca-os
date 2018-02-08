@@ -52,7 +52,7 @@ const styles = theme => ({
     button: {
         fontSize: 14,
         fontWeight: 'bold',
-        fontFamily: 'BlissPro',
+        fontFamily: '"BlissPro",sans-serif',
     },
     bc: {
         color: "#000 !important"

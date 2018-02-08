@@ -49,7 +49,7 @@ const styles = theme => ({
         fontSize: 13,
         marginLeft: 'auto',
         marginRight: 20,
-        fontFamily: 'BlissPro',
+        fontFamily: '"BlissPro",sans-serif',
     }
 
 });

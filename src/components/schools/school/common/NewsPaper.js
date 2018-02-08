@@ -16,11 +16,11 @@ const styles = theme => ({
         marginBottom: 10,
         border: '1px solid rgba(0,0,0,0.1);',
         fontSize: 16,
-        fontFamily: 'BlissPro',
+        fontFamily: '"BlissPro",sans-serif',
     },
     primaryText: {
         fontSize: 14,
-        fontFamily: 'BlissPro',
+        fontFamily: '"BlissPro",sans-serif',
         textOverflow: 'ellipsis',
         maxHeight: 136,
         overflow: 'hidden',
@@ -28,7 +28,7 @@ const styles = theme => ({
     },
     primaryBigText: {
         fontSize: 18,
-        fontFamily: 'BlissPro',
+        fontFamily: '"BlissPro",sans-serif',
         fontWeight: 'bold'
     },
     avatar: {

@@ -8,13 +8,3 @@
     font-stretch: normal;
     unicode-range: U+0020-0039;
 }
-
-
-@font-face {
-    font-family: 'BlissPro';
-    src:    url('https://nomail.com.ua/files/eot/d87a682804b2683168a2ec95ee178a1b.eot?#iefix') format('embedded-opentype'),
-    url('https://nomail.com.ua/files/woff/d87a682804b2683168a2ec95ee178a1b.woff') format('woff'),
-    url('https://nomail.com.ua/files/woff2/d87a682804b2683168a2ec95ee178a1b.woff2') format('woff2');
-}
-
-@font-face { font-family: 'BlissPro';  src: local('BlissPro'), url('https://nomail.com.ua/files/woff/d87a682804b2683168a2ec95ee178a1b.woff') format('woff'); }

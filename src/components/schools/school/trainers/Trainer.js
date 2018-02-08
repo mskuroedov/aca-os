@@ -21,7 +21,7 @@ const styles = theme => ({
         marginBottom: 10,
         border: '1px solid rgba(0,0,0,0.1);',
         fontSize: 16,
-        fontFamily: 'BlissPro',
+        fontFamily: '"BlissPro",sans-serif',
     },
     title: {
         marginBottom: 11,

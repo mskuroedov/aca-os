@@ -16,7 +16,7 @@ const styles = {
     },
     sportsmenName: {
         fontSize: 24,
-        fontFamily: 'BlissPro',
+        fontFamily: '"BlissPro",sans-serif',
         color: 'black',
         fontWeight: 'bold'
     },

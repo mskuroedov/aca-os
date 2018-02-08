@@ -17,7 +17,7 @@ const styles = theme => ({
         marginLeft: 'auto',
         fontWeight:'bold',
         marginRight: 20,
-        fontFamily: 'BlissPro',
+        fontFamily: '"BlissPro",sans-serif',
     },
     paper: {
         boxShadow: 'none',
@@ -29,7 +29,7 @@ const styles = theme => ({
         marginBottom:10,
         border: '1px solid rgba(0,0,0,0.1);',
         fontSize: 16,
-        fontFamily: 'BlissPro'
+        fontFamily: '"BlissPro",sans-serif !important'
 
     },
     title: {

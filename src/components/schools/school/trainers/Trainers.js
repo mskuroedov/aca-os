@@ -20,7 +20,7 @@ const styles = theme => ({
         fontSize: 13,
         marginRight: 20,
         fontWeight: 'bold',
-        fontFamily: 'BlissPro',
+        fontFamily: '"BlissPro",sans-serif',
     },
     gray: {
         color: 'rgba(36,36,33,0.3)'

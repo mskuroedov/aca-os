@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'BlissPro', sans-serif;
 }
 
 html {
@@ -8,7 +9,7 @@ html {
 
 body {
   color: $dark-grey;
-  font-family: BlissPro;
+  font-family: 'BlissPro', sans-serif !important;
   font-size: $m-size;
   line-height: 1.6;
 }
@@ -25,14 +26,20 @@ button:disabled {
   font-weight: bold;
 }
 
-h1,h2,h3,h4,h5,h6{
-  margin:0;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
-a,a:hover{
+
+a, a:hover {
   text-decoration: none;
 }
-i{
+
+i {
   vertical-align: middle;
   display: initial;
   cursor: none;
+}
+
+p {
+  font-family: "BlissPro", sans-serif !important;
 }

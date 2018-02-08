@@ -19,7 +19,7 @@ const styles = {
     },
     schoolName: {
         fontSize: 24,
-        fontFamily: 'BlissPro',
+        fontFamily: '"BlissPro",sans-serif',
         color: 'black',
         fontWeight: 'bold'
     },
