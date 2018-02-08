@@ -83,12 +83,9 @@ const styles = theme => ({
 });
 
 class NewsItem extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
-        const {classes} = this.props;
+        const {classes, video, paid, album, gallery, authors} = this.props;
 
         return (
             <Paper className={classes.paper}>
@@ -112,6 +109,7 @@ class NewsItem extends React.Component {
                 </Grid>
 
                 {/*Платный материал*/}
+                {paid &&
                 <Grid container alignItems='center'>
                     <Grid item>
                         <Icon className={classes.icon}>lock</Icon>
@@ -120,6 +118,7 @@ class NewsItem extends React.Component {
                         <Typography className={classes.iconText}>Платный материал</Typography>
                     </Grid>
                 </Grid>
+                }
 
                 {/*заголовок и начало текста*/}
                 <Grid container style={{marginBottom:20}}>
@@ -134,36 +133,43 @@ class NewsItem extends React.Component {
 
 
                 {/*ютуб*/}
-                <Grid container style={{marginBottom:20}}>
+                {video &&
+                <Grid container style={{marginBottom: 20}}>
                     <Grid item xs={12}>
                         <iframe src="https://www.youtube.com/embed/Y3ZKmi2SO9U" className={classes.video}></iframe>
                     </Grid>
                 </Grid>
+                }
 
                 {/*картинка*/}
+                {album &&
                 <Grid container style={{marginBottom:20}}>
                     <Grid item xs={12}>
                         <img src="https://s00.yaplakal.com/pics/pics_original/3/0/9/9484903.jpg" alt=""
                              className={classes.promo}/>
                     </Grid>
                 </Grid>
+                }
 
                 {/*авторы*/}
+                {authors &&
                 <Grid container alignItems='center'>
-                    <Grid     item>
+                    <Grid item>
                         <Typography className={classes.iconText}>Авторы:
-                        <Link to='#' className={classes.link}>123</Link>,
-                        <Link to='#' className={classes.link}>123</Link>,
-                        <Link to='#' className={classes.link}>123</Link>,
-                        <Link to='#' className={classes.link}>123</Link>,
-                        <Link to='#' className={classes.link}>123</Link>
+                            <Link to='#' className={classes.link}>123</Link>,
+                            <Link to='#' className={classes.link}>123</Link>,
+                            <Link to='#' className={classes.link}>123</Link>,
+                            <Link to='#' className={classes.link}>123</Link>,
+                            <Link to='#' className={classes.link}>123</Link>
                             , еще n
                         </Typography>
                     </Grid>
                 </Grid>
+                }
 
                 {/*галерея*/}
-                <Grid container style={{marginBottom:20}}>
+                {gallery &&
+                <Grid container style={{marginBottom: 20}}>
                     <Grid item className={classes.itemGallery}>
                         <img src="https://s00.yaplakal.com/pics/pics_original/3/0/9/9484903.jpg" alt=""
                         />
@@ -188,6 +194,7 @@ class NewsItem extends React.Component {
                         <Link to='#' className={classes.link}>Все фотографии (12)</Link>
                     </Grid>
                 </Grid>
+                }
 
                 {/*тэг*/}
                 <Grid container alignItems='center' style={{marginBottom:20}}>
@@ -195,7 +202,7 @@ class NewsItem extends React.Component {
                         <Icon>bookmark_border</Icon>
                     </Grid>
                     <Grid item>
-                        <Typography className={classes.iconText}>Платный материал</Typography>
+                        <Typography className={classes.iconText}>Чемпионат России</Typography>
                     </Grid>
                 </Grid>
 
@@ -206,15 +213,15 @@ class NewsItem extends React.Component {
                     </Grid>
 
                     <Grid item>
-                        <Chip label="asdjkfa;lsdkjfl" className={classes.buttonChip} />
+                        <Chip label="1" className={classes.buttonChip} />
                     </Grid>
 
                     <Grid item>
-                        <Chip label="laksdjf" className={classes.buttonChip} />
+                        <Chip label="middle chip" className={classes.buttonChip} />
                     </Grid>
 
                     <Grid item>
-                        <Chip label="1239810928310" className={classes.buttonChip} />
+                        <Chip label="another chip" className={classes.buttonChip} />
                     </Grid>
                 </Grid>
             </Paper>

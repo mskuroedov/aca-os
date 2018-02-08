@@ -60,6 +60,15 @@ class AllMaterials extends React.Component {
         super(props);
     }
 
+    items = [
+        {video: false, paid: false, album: false, gallery: true, authors: true},
+        {video: true, paid: true, album: true, gallery: true, authors: false},
+        {video: true, paid: true, album: true, gallery: true, authors: false},
+        {video: false, paid: false, album: false, gallery: false, authors: true},
+        {video: true, paid: true, album: false, gallery: false, authors: true},
+        {video: false, paid: false, album: true, gallery: true, authors: false},
+    ];
+
     render() {
         const {classes} = this.props;
 
@@ -87,12 +96,19 @@ class AllMaterials extends React.Component {
                         />
                     </FormControl>
                 </Grid>
-
                 <Grid item xs={6}>
-                    <NewsItem/>
+                {
+                    this.items.map((item, i) => (
+                        i % 2 === 0 ? <NewsItem {...item} /> : ''
+                    ))
+                }
                 </Grid>
                 <Grid item xs={6}>
-                    <NewsItem/>
+                    {
+                        this.items.map((item, i) => (
+                            i % 2 !== 0 ? <NewsItem {...item} /> : ''
+                        ))
+                    }
                 </Grid>
                 <Grid item xs={12} style={{marginTop:34}}>
                     <Grid container justify='center'>
