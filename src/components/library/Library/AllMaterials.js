@@ -43,6 +43,13 @@ const styles = theme => ({
         color: 'rgba(145,143,138,1)',
         position: 'relative',
         top: 8
+    },
+    button: {
+        margin: theme.spacing.unit,
+        fontSize: 13,
+        marginLeft: 'auto',
+        marginRight: 20,
+        fontFamily: 'BlissPro',
     }
 
 });
@@ -85,7 +92,13 @@ class AllMaterials extends React.Component {
                     <NewsItem/>
                 </Grid>
                 <Grid item xs={6}>
+                    <NewsItem/>
+                </Grid>
+                <Grid item xs={12} style={{marginTop:34}}>
+                    <Grid container justify='center'>
+                        <Button raised color='primary'>Загрузить еще</Button>
 
+                    </Grid>
                 </Grid>
             </Grid>
         )

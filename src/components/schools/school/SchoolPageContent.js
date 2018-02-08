@@ -5,7 +5,6 @@ import AppBar from 'material-ui/AppBar';
 import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 import SchoolInfo from "./common/SchoolInfo";
-import SportsmenPageProfile from "../../sportsman/profile/Profile";
 import Sportsman from "./sportsman/SportsmanListPage";
 import {history} from "../../../routers/AppRouter";
 import {Redirect} from "react-router-dom";
@@ -177,7 +176,7 @@ class SchoolMenu extends React.Component {
 
                 <TabContainer>
                     {view === 'common' && <SchoolInfo/>}
-                    {view === 'schedule' && <SportsmenPageProfile/>}
+                    {view === 'schedule' && "schedule"}
                     {view === 'statistics' && 'statistics'}
                     {view === 'groups' && 'groups'}
                     {view === 'sportsman' && <Sportsman/>}
