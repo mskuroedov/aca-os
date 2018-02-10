@@ -36,6 +36,7 @@
     "raf": "3.3.2",
     "react": "16.0.0-rc.3",
     "react-addons-shallow-compare": "15.6.0",
+    "react-big-calendar-like-google": "^0.0.3",
     "react-dates": "12.3.0",
     "react-dom": "16.0.0-rc.3",
     "react-modal": "2.2.2",

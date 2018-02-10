@@ -10,6 +10,7 @@ import {history} from "../../../routers/AppRouter";
 import {Redirect} from "react-router-dom";
 import Trainers from "./trainers/Trainers";
 import Contacts from "./contacts/Contacts";
+import Calendar from "./Calendar"
 
 function TabContainer(props) {
     return (
@@ -176,7 +177,7 @@ class SchoolMenu extends React.Component {
 
                 <TabContainer>
                     {view === 'common' && <SchoolInfo/>}
-                    {view === 'schedule' && "schedule"}
+                    {view === 'schedule' && <Calendar/>}
                     {view === 'statistics' && 'statistics'}
                     {view === 'groups' && 'groups'}
                     {view === 'sportsman' && <Sportsman/>}
