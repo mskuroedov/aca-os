@@ -19,7 +19,7 @@ const theme = createMuiTheme({
 
 const store = configureStore();
 
-// store.dispatch(login('USERNAME', 'PASSWORD'));
+store.dispatch(login('USERNAME', 'PASSWORD'));
 // store.dispatch(logout());
 
 const jsx = (
