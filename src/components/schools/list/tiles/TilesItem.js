@@ -63,52 +63,55 @@ class TilesItem extends React.Component {
         const {classes, title, sportsman_count, trainers_count, groups_count, director} = this.props;
         return (
             <Grid item xs={4}>
-                <Paper className={classes.paper}>
-                    <Typography className={classes.name}>
-                        {title}
-                    </Typography>
-                    <Typography className={classes.infoTitle}>
-                        Директор
-                    </Typography>
-                    <Link to="#" className={classes.link}>
-                        {director.secondname} {director.firstname} {director.middlename}
-                    </Link>
-                    <Typography className={classes.infoTitle}>
-                        Город
-                    </Typography>
-                    <Typography className={classes.infoVal}>
-                        Набережные челны
-                    </Typography>
-                    <hr style={{borderColor: 'rgba(36,36,33,0.1)', color: 'white',width:'calc(100% + 48px)',marginLeft:-24, borderBottom: 0}}/>
-                    <Grid container className={classes.infoContainer}>
-                        <Grid item>
-                            <Typography className={classes.infoTitle}>
-                                Спортсмены
-                            </Typography>
-                            <Typography className={classes.infoVal}>
-                                {sportsman_count}
-                            </Typography>
-                        </Grid>
-                        <Grid item>
-                            <Typography className={classes.infoTitle}>
-                                Тренеры
-                            </Typography>
-                            <Typography className={classes.infoVal}>
-                                {trainers_count}
-                            </Typography>
-                        </Grid>
-                        <Grid item>
-                            <Typography className={classes.infoTitle}>
-                                Группы
-                            </Typography>
-                            <Typography className={classes.infoVal}>
-                                {groups_count}
-                            </Typography>
+                <Link to="/schools/1">
+                    <Paper className={classes.paper}>
+                        <Typography className={classes.name}>
+                            {title}
+                        </Typography>
+                        <Typography className={classes.infoTitle}>
+                            Директор
+                        </Typography>
+                        <Link to="#" className={classes.link}>
+                            {director.secondname} {director.firstname} {director.middlename}
+                        </Link>
+                        <Typography className={classes.infoTitle}>
+                            Город
+                        </Typography>
+                        <Typography className={classes.infoVal}>
+                            Набережные челны
+                        </Typography>
+                        <hr style={{borderColor: 'rgba(36,36,33,0.1)', color: 'white',width:'calc(100% + 48px)',marginLeft:-24, borderBottom: 0}}/>
+                        <Grid container className={classes.infoContainer}>
+                            <Grid item>
+                                <Typography className={classes.infoTitle}>
+                                    Спортсмены
+                                </Typography>
+                                <Typography className={classes.infoVal}>
+                                    {sportsman_count}
+                                </Typography>
+                            </Grid>
+                            <Grid item>
+                                <Typography className={classes.infoTitle}>
+                                    Тренеры
+                                </Typography>
+                                <Typography className={classes.infoVal}>
+                                    {trainers_count}
+                                </Typography>
+                            </Grid>
+                            <Grid item>
+                                <Typography className={classes.infoTitle}>
+                                    Группы
+                                </Typography>
+                                <Typography className={classes.infoVal}>
+                                    {groups_count}
+                                </Typography>
+                            </Grid>
+
                         </Grid>
 
-                    </Grid>
+                    </Paper>
 
-                </Paper>
+                </Link>
             </Grid>
         )
     }
