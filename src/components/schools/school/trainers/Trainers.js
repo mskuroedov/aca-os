@@ -87,11 +87,8 @@ class Trainers extends React.Component {
         return (
             <div>
                 <Grid container>
-                    <Grid item xs={7}>
-                        <Typography className={classes.title}>Тренеры</Typography>
-                        <Trainer />
-                    </Grid>
-                    <Grid item xs={5}>
+
+                    <Grid item xs={12}>
                         <FormControl className={classes.formControl}>
                             <Input classes={{
                                 root: classes.searchInput,
@@ -109,6 +106,15 @@ class Trainers extends React.Component {
                                    }
                             />
                         </FormControl>
+                    </Grid>
+                    <Grid item xs={7}>
+                        <Typography className={classes.title}>Тренеры</Typography>
+                        <Trainer />
+                        <Trainer />
+                        <Trainer />
+                        <Trainer />
+                        <Trainer />
+                        <Trainer />
                     </Grid>
                 </Grid>
             </div>
