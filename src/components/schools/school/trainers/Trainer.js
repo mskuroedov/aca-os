@@ -5,6 +5,7 @@ import {withStyles} from 'material-ui/styles';
 import Paper from "material-ui/es/Paper/Paper";
 import Avatar from "material-ui/es/Avatar/Avatar";
 import Typography from "material-ui/es/Typography/Typography";
+import Link from "react-router-dom/es/Link";
 
 
 const styles = theme => ({
@@ -71,6 +72,17 @@ const styles = theme => ({
     trainLevel:{
         color:'rgba(36,36,33,0.6)',
         fontSize:14
+    },
+    link:{
+        lineHeight:1.6,
+        color:'rgba(36,36,33,1);',
+        transition:'all 0.4s',
+        borderBottom: ' 1px solid rgba(36,36,33,0.2)',
+        fontSize:16,
+        '&:hover':{
+            transition:'all 0.4s',
+            borderBottomColor:'rgba(36,36,33,.5)'
+        }
     }
 });
 
@@ -112,7 +124,7 @@ class Trainer extends React.Component {
 
                         </Grid>
                         <Grid item>
-                            <Typography className={classes.fio}>Ягупов Анатолий Павлович </Typography>
+                            <Link to='#' className={classes.link}>Ягупов Анатолий Павлович </Link>
                             <Typography className={classes.trainLevel}>Тренер-преподаватель высшей категории</Typography>
                         </Grid>
                     </Grid>

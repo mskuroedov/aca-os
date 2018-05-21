@@ -101,10 +101,8 @@ class SportsmenPageContent extends React.Component {
                             textColor="primary"
                             classes={{
                                 label: classes.button,
-                                labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
-                                wrapper: classes.button,
-                                rootPrimarySelected: classes.bc,// className, e.g. `OverridesClasses-label-X`
-                                rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                rootPrimarySelected: classes.bc,
+                                rootPrimary: classes.rootTabPrimary
                             }}
                         />
                         <Tab

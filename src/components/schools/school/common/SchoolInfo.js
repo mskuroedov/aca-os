@@ -184,7 +184,9 @@ class SchoolInfo extends React.Component {
                             <NewsPaper />
                             <NewsPaper />
                             <NewsPaper />
-
+                            <Grid item xs={12} style={{textAlign:'center'}}>
+                                <Button raised color='primary' className={classes.button} >Загрузить ещё</Button>
+                            </Grid>
                         </Grid>
 
                     </Grid>
