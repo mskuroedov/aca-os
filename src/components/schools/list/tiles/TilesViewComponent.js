@@ -24,7 +24,7 @@ class TilesView extends React.Component {
         const {classes, schoolType, schools} = this.props;
 
         return (
-            <Grid container>
+            <Grid container spacing={16}>
                 <Grid item xs={6}>
                     <Typography className={classes.title}>{schoolType}</Typography>
                 </Grid>
@@ -32,7 +32,7 @@ class TilesView extends React.Component {
                     <Button color="primary" className={classes.button}>показать все</Button>
                 </Grid>
                 <Grid item xs={12}>
-                    <Grid container>
+                    <Grid container spacing={16}>
                         {
                             schools.map((item) => {
                                 return <TilesItem key={item.id} {...item} />

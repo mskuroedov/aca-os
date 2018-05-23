@@ -42,7 +42,7 @@ const styles = theme => ({
     searchInputIcon: {
         color: 'rgba(145,143,138,1)',
         position: 'relative',
-        top: 8
+        top: 3
     },
     button: {
         margin: theme.spacing.unit,
@@ -73,14 +73,14 @@ class AllMaterials extends React.Component {
         const {classes} = this.props;
 
         return (
-            <Grid container
+            <Grid container spacing={16}
             >
                 <Grid item xs={12} className={classes.mlauto}>
                     <FormControl>
                         <Input
                             classes={{
                                 root: classes.searchInput,
-                                inkbar: classes.searchInkbar
+                                underline: classes.searchInkbar
                             }}
                             onChange={this.onSearchChange}
                             placeholder="Поиск по названию"
@@ -88,7 +88,7 @@ class AllMaterials extends React.Component {
                                 <InputAdornment position="end">
                                     <Icon classes={{
                                         root: classes.searchInputIcon
-                                    }}>
+                                    }} style={{fontSize:18}}>
                                         search
                                     </Icon>
                                 </InputAdornment>
@@ -111,8 +111,8 @@ class AllMaterials extends React.Component {
                     }
                 </Grid>
                 <Grid item xs={12} style={{marginTop:34}}>
-                    <Grid container justify='center'>
-                        <Button raised color='primary'>Загрузить еще</Button>
+                    <Grid container spacing={16} justify='center'>
+                        <Button variant="raised" color='primary'>Загрузить еще</Button>
 
                     </Grid>
                 </Grid>

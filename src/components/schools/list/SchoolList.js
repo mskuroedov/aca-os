@@ -29,6 +29,7 @@ const styles = theme => ({
         backgroundColor: 'rgba(36,36,33,0.1)',
         paddingLeft: 17,
         paddingBottom: 10,
+        paddingTop: 16,
         paddingRight: 40,
         fontSize: 16,
         color: '#242421',
@@ -38,7 +39,7 @@ const styles = theme => ({
     },
     selectIcon: {
         color: '#6D6D6D',
-        marginTop: 3
+        marginTop: 0
     },
     selectLine: {
         color: 'transparent'
@@ -106,7 +107,7 @@ class SchoolList extends React.Component {
         const {schools} = this.state;
         return (
             <div>
-                <Grid container style={{paddingLeft: 168, paddingRight: 168, paddingTop: 24}}>
+                <Grid container spacing={16} style={{paddingLeft: 168, paddingRight: 168, paddingTop: 24}}>
                     <Grid item>
                         <FormControl>
                             <Select
@@ -128,28 +129,29 @@ class SchoolList extends React.Component {
                         </FormControl>
                     </Grid>
 
-
-                    <FormControl className={classes.formControl}>
-                        <Input
-                            classes={{
-                                root: classes.searchInput,
-                                inkbar: classes.searchInkbar
-                            }}
-                            onChange={this.onSearchChange}
-                            placeholder="Поиск по названию"
-                            endAdornment={
-                                <InputAdornment position="end">
-                                    <Icon classes={{
-                                        root: classes.searchInputIcon
-                                    }}>
-                                    </Icon>
-                                </InputAdornment>
-                            }
-                        />
-                    </FormControl>
-                    <IconButton className={classes.iconbtn} onClick={this.onViewChange}>
-                        {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
-                    </IconButton>
+                    <Grid item style={{marginLeft:'auto'}}>
+                        <FormControl className={classes.formControl}>
+                            <Input
+                                classes={{
+                                    root: classes.searchInput,
+                                    inkbar: classes.searchInkbar
+                                }}
+                                onChange={this.onSearchChange}
+                                placeholder="Поиск по названию"
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <Icon classes={{
+                                            root: classes.searchInputIcon
+                                        }}>
+                                        </Icon>
+                                    </InputAdornment>
+                                }
+                            />
+                        </FormControl>
+                        <IconButton className={classes.iconbtn} onClick={this.onViewChange}>
+                            {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
+                        </IconButton>
+                    </Grid>
 
                     <Grid item xs={12} className="paper_w_table">
                         {

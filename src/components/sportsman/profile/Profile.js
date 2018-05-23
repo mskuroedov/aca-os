@@ -29,9 +29,9 @@ class Profile extends React.Component {
         const {sportsmen} = this.props;
         return (
             <div>
-                <Grid container
+                <Grid container spacing={16}
                 >
-                    <Button raised color="primary" className={this.props.classes.button}>
+                    <Button variant="raised" color="primary" className={this.props.classes.button}>
                         редактировать информацию
                     </Button>
                     <TableTitle title="Общая инфомация"/>

@@ -7,22 +7,22 @@ const Career = () => (
             <Table className="table">
                 <TableHead>
                     <TableRow>
-                        <TableCell>Период</TableCell>
-                        <TableCell>Амплуа</TableCell>
-                        <TableCell>Команда</TableCell>
-                        <TableCell numeric>Игры</TableCell>
-                        <TableCell numeric>Выигрыши</TableCell>
-                        <TableCell >Тренер</TableCell>
+                        <TableCell >Период</TableCell>
+                        <TableCell >Амплуа</TableCell>
+                        <TableCell >Команда</TableCell>
+                        <TableCell  numeric>Игры</TableCell>
+                        <TableCell  numeric>Выигрыши</TableCell>
+                        <TableCell  >Тренер</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     <TableRow>
-                        <TableCell>2010-2017</TableCell>
-                        <TableCell>Нападающий</TableCell>
-                        <TableCell>АкБарс</TableCell>
-                        <TableCell numeric>36</TableCell>
-                        <TableCell numeric>14</TableCell>
-                        <TableCell ><span className='trainer'>Саяпов Ренат Маратович</span></TableCell>
+                        <TableCell style={{borderBottom:0}}>2010-2017</TableCell>
+                        <TableCell style={{borderBottom:0}}>Нападающий</TableCell>
+                        <TableCell style={{borderBottom:0}}>АкБарс</TableCell>
+                        <TableCell style={{borderBottom:0}} numeric>36</TableCell>
+                        <TableCell style={{borderBottom:0}} numeric>14</TableCell>
+                        <TableCell style={{borderBottom:0}} ><span className='trainer'>Саяпов Ренат Маратович</span></TableCell>
                     </TableRow>
                 </TableBody>
             </Table>

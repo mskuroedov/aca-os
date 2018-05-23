@@ -112,7 +112,7 @@ class Trainer extends React.Component {
         return (
             <div>
                 <Paper className={classes.paper}>
-                    <Grid container alignItems="center">
+                    <Grid container alignItems="center" spacing={8}>
                         <Grid item>
                             <Avatar
                                 alt="Adelle Charles"

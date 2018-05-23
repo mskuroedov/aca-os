@@ -11,7 +11,7 @@ const styles = theme => ({
         borderRadius: 12,
         paddingTop: 23,
         paddingLeft: 24,
-        paddingRight: 25,
+        paddingRight: 24,
         paddingBottom: 26,
         marginBottom: 10,
         border: '1px solid rgba(0,0,0,0.1);',
@@ -22,14 +22,15 @@ const styles = theme => ({
         fontSize: 14,
         fontFamily: '"BlissPro",sans-serif',
         textOverflow: 'ellipsis',
-        maxHeight: 136,
+        maxHeight: 140,
         overflow: 'hidden',
 
     },
     primaryBigText: {
         fontSize: 18,
         fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        display:'block'
     },
     avatar: {
         width: 30,
@@ -67,8 +68,8 @@ class NewsPaper extends React.Component {
                     <Typography className={classes.date}>10.01.2018</Typography>
 
                     <Typography className={classes.primaryText}>
-                        <Typography className={classes.primaryBigText}>Воспитанники академии получили бесплатные
-                            комплекты экипировки</Typography>
+                        <span className={classes.primaryBigText}>Воспитанники академии получили бесплатные
+                            комплекты экипировки</span>
                         В этом сезоне «Академия хоккея Ак Барс» при
                         наборе мальчиков 5 лет создала специальные условия для льготных... категорий семей — нуждающиеся
                         в

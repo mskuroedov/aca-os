@@ -5,9 +5,9 @@ import NotFoundPage from '../components/NotFoundPage';
 import IndexPage from "../components/IndexPage";
 import SportsmenPage from "../components/sportsman/SportsmenPage";
 import SchoolPage from "../components/schools/school/SchoolPage";
-import Reboot from "material-ui/es/Reboot/Reboot";
 import SchoolListPage from "../components/schools/list/SchoolListPage";
 import LibrariesPage from "../components/library/LibrariesPage";
+import CssBaseline from "@material-ui/core/es/CssBaseline/CssBaseline";
 
 export const history = createHistory();
 
@@ -23,7 +23,7 @@ export const routes = {
 const AppRouter = () => (
     <Router history={history}>
         <div>
-            <Reboot/>
+            <CssBaseline/>
             <Switch>
                 <Route path="/" component={IndexPage} exact={true}/>
                 <Route path="/sportsman/:sportsmenId/:view?" exact={true} component={SportsmenPage}/>

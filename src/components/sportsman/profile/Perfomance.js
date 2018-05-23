@@ -20,7 +20,6 @@ const styles = theme => ({
         margin: theme.spacing.unit,
         fontSize: 13,
         marginLeft: 'auto',
-        marginRight: 20,
         fontFamily: 'BlissPro',
     },
     select: {
@@ -63,7 +62,7 @@ class Perfomance extends React.Component {
         const {classes} = this.props;
         return (
             <div>
-                <Grid container
+                <Grid container spacing={8}
                 >
                     <Grid item >
 
@@ -109,7 +108,7 @@ class Perfomance extends React.Component {
                             </Select>
                         </FormControl>
                     </Grid>
-                    <Button raised color="primary" className={this.props.classes.button}>
+                    <Button variant="raised" color="primary" className={this.props.classes.button}>
                         редактировать информацию
                     </Button>
 

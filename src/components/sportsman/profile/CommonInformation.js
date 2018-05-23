@@ -20,15 +20,15 @@ const CommonInformation = (props) => (
                     </TableHead>
                     <TableBody>
                         <TableRow>
-                            <TableCell>{props.date_of_birth}</TableCell>
-                            <TableCell>{props.recruitment_year}</TableCell>
-                            <TableCell>{props.gender}</TableCell>
-                            <TableCell>{props.role}</TableCell>
-                            <TableCell>{props.stage_of_preparation}</TableCell>
-                            <TableCell>{props.rank}</TableCell>
-                            <TableCell>{props.hold}</TableCell>
-                            <TableCell>{props.growth}</TableCell>
-                            <TableCell>{props.weight}</TableCell>
+                            <TableCell style={{borderBottom:0}}>{props.date_of_birth}</TableCell>
+                            <TableCell style={{borderBottom:0}}>{props.recruitment_year}</TableCell>
+                            <TableCell style={{borderBottom:0}}>{props.gender}</TableCell>
+                            <TableCell style={{borderBottom:0}}>{props.role}</TableCell>
+                            <TableCell style={{borderBottom:0}}>{props.stage_of_preparation}</TableCell>
+                            <TableCell style={{borderBottom:0}}>{props.rank}</TableCell>
+                            <TableCell style={{borderBottom:0}}>{props.hold}</TableCell>
+                            <TableCell style={{borderBottom:0}}>{props.growth}</TableCell>
+                            <TableCell style={{borderBottom:0}}>{props.weight}</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>

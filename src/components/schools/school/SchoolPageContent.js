@@ -11,6 +11,7 @@ import {Redirect} from "react-router-dom";
 import Trainers from "./trainers/Trainers";
 import Contacts from "./contacts/Contacts";
 import Calendar from "./Calendar"
+import Grid from "@material-ui/core/es/Grid/Grid";
 
 function TabContainer(props) {
     return (
@@ -28,12 +29,10 @@ TabContainer.propTypes = {
 
 const styles = theme => ({
     root: {
-        flexGrow: 1,
-        marginTop: theme.spacing.unit * 3,
-        marginLeft: 'auto',
         color: '#00755E',
         fontSize: 1.4,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        opacity: 1
     },
     rootPrimarySelected: {
         color: '#000',
@@ -54,20 +53,21 @@ const styles = theme => ({
         fontWeight: 'bold'
     },
     button: {
-        // color: '#00755E',
         fontSize: 14,
         fontWeight: 'bold',
         fontFamily: '"BlissPro",sans-serif',
+        opacity: '1 !important'
     },
     bc: {
         color: "#000 !important"
     },
     rootTabPrimary: {
         minWidth: 0,
-        color: '#00755E'
+        color: '#00755E',
+        opacity: 1
     },
     menuFlexContainer: {
-        justifyContent: 'center'
+        justifyContent: 'center',
     }
 
 });
@@ -83,101 +83,102 @@ class SchoolMenu extends React.Component {
         const {view, schoolId} = this.props;
 
         return view ? (
-            <section>
-                <AppBar
-                    position="static" className={classes.appBar}
-                    style={{paddingRight: 168, paddingLeft: 168, backgroundColor: '#fff'}}
-                >
-                    <Tabs
-                        value={view}
-                        onChange={this.handleChange}
-                        className={classes.tabs}
-                        indicatorColor="primary"
-                        textColor="primary"
-                        classes={{
-                            root: classes.rootInherit,
-                            buttonAuto: classes.button, // className, e.g. `OverridesClasses-root-X`
-                            flexContainer: classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
-                        }}
-                    >
-                        <Tab
-                            label="Общее"
-                            value="common"
-                            textColor="primary"
+            <section style={{backgroundColor:'white'}}>
+                <Grid container>
+                    <Grid item xs={12}>
+                        <Tabs
+                            value={view}
+                            onChange={this.handleChange}
+                            className={classes.tabs}
+                            indicatorColor="primary"
                             classes={{
-                                label: classes.button,
-                                labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
-                                wrapper: classes.button,
-                                rootPrimarySelected: classes.bc,// className, e.g. `OverridesClasses-label-X`
-                                rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                root: classes.root,
+                                flexContainer: classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
                             }}
-                        />
-                        <Tab
-                            label="Расписание"
-                            value="schedule"
-                            textColor="primary"
-                            classes={{
-                                label: classes.button,
-                                rootPrimarySelected: classes.bc,
-                                rootPrimary: classes.rootTabPrimary
+                            style={{
+                                backgroundColor: 'white'
                             }}
-                        />
-                        <Tab
-                            label="Статистика"
-                            value="statistics"
-                             textColor="primary"
-                             classes={{
-                                 label: classes.button,
-                                 rootPrimarySelected: classes.bc,
-                                 rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-                             }}
-                        />
-                        <Tab
-                            label="Группы"
-                            value="groups"
-                            textColor="primary"
-                            classes={{
-                                label: classes.button,
-                                rootPrimarySelected: classes.bc,
-                                rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-                            }}
-                        />
-                        <Tab
-                            label="Спортсмены"
-                            value="sportsman"
-                            textColor="primary"
-                            classes={{
-                                label: classes.button,
-                                rootPrimarySelected: classes.bc,
-                                rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-                            }}
-                        />
-                        <Tab
-                            label="Тренеры"
-                            value="trainers"
-                            textColor="primary"
-                            classes={{
-                                label: classes.button,
-                                rootPrimarySelected: classes.bc,
-                                rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-                            }}
-                        />
-                        <Tab
-                            label="Контакты"
-                            value="contacts"
-                            textColor="primary"
-                            classes={{
-                                label: classes.button,
-                                rootPrimarySelected: classes.bc,
-                                rootPrimary: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-                            }}
-                        />
-                    </Tabs>
-                </AppBar>
+                        >
+                            <Tab
+                                label="Общее"
+                                value="common"
+                                textColor="primary"
+                                classes={{
 
-                <TabContainer>
+                                    label: classes.button,
+                                    labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
+                                    wrapper: classes.button,
+                                    selected: classes.bc,// className, e.g. `OverridesClasses-label-X`
+                                    root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                }}
+                            />
+                            <Tab
+                                label="Расписание"
+                                value="schedule"
+                                textColor="primary"
+                                classes={{
+                                    label: classes.button,
+                                    selected: classes.bc,
+                                    root: classes.rootTabPrimary
+                                }}
+                            />
+                            <Tab
+                                label="Статистика"
+                                value="statistics"
+                                textColor="primary"
+                                classes={{
+                                    label: classes.button,
+                                    selected: classes.bc,
+                                    root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                }}
+                            />
+                            <Tab
+                                label="Группы"
+                                value="groups"
+                                textColor="primary"
+                                classes={{
+                                    label: classes.button,
+                                    selected: classes.bc,
+                                    root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                }}
+                            />
+                            <Tab
+                                label="Спортсмены"
+                                value="sportsman"
+                                textColor="primary"
+                                classes={{
+                                    label: classes.button,
+                                    selected: classes.bc,
+                                    root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                }}
+                            />
+                            <Tab
+                                label="Тренеры"
+                                value="trainers"
+                                textColor="primary"
+                                classes={{
+                                    label: classes.button,
+                                    selected: classes.bc,
+                                    root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                }}
+                            />
+                            <Tab
+                                label="Контакты"
+                                value="contacts"
+                                textColor="primary"
+                                classes={{
+                                    label: classes.button,
+                                    selected: classes.bc,
+                                    root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                }}
+                            />
+                        </Tabs>
+                    </Grid>
+                </Grid>
+                <TabContainer style={{paddingTop: 30}}>
                     {view === 'common' && <SchoolInfo/>}
-                    {view === 'schedule' && <Calendar/>}
+                    {/*{view === 'schedule' && <Calendar/>}*/}
+                    {view === 'schedule' && 'calendar'}
                     {view === 'statistics' && 'statistics'}
                     {view === 'groups' && 'groups'}
                     {view === 'sportsman' && <Sportsman/>}

@@ -8,7 +8,7 @@ class TilesView extends React.Component {
 
     render() {
         return (
-            <Grid container>
+            <Grid container spacing={16}>
                 {
                     this.props.sportsman.map((item) => {
                         return <TilesItem key={item.id} {...item} />

@@ -7,7 +7,7 @@ import MoreVertIcon from 'material-ui-icons/MoreVert';
 const ParentContacts = (props) => (
     <Grid item xs={12}>
         <Paper className="paper paper__info" align={'start'} style={{padding: 15}}>
-            <Grid container>
+            <Grid container spacing={16}>
                 <Grid item xs={1}>
                     <img width="50" height="50" alt=""/>
                 </Grid>

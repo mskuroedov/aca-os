@@ -14,13 +14,13 @@ const Achievements = () => (
                 </TableHead>
                 <TableBody>
                     <TableRow>
-                        <TableCell className="table_w_icon">
+                        <TableCell style={{borderBottom:0}} className="table_w_icon">
                             21.07.2016
                         </TableCell>
-                        <TableCell>
+                        <TableCell style={{borderBottom:0}}>
                             Чемпионат мира 2016
                         </TableCell>
-                        <TableCell numeric>
+                        <TableCell style={{borderBottom:0}} numeric>
                             47
                         </TableCell>
                     </TableRow>

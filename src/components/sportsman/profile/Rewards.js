@@ -7,16 +7,16 @@ const Rewards = () => (
             <Table className="table">
                 <TableHead>
                     <TableRow>
-                        <TableCell >Название</TableCell>
-                        <TableCell numeric>Дата</TableCell>
+                        <TableCell  >Название</TableCell>
+                        <TableCell  numeric>Дата</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     <TableRow>
-                        <TableCell>
+                        <TableCell style={{borderBottom:0}}>
                             Диплом за 1 место в сезоне 2016
                         </TableCell>
-                        <TableCell numeric>
+                        <TableCell style={{borderBottom:0}} numeric>
                             21.07.2016
                         </TableCell>
                     </TableRow>

@@ -11,7 +11,10 @@ const styles = {
       color:'white',
       fontSize:'48px !important',
       backgroundColor:'#00755E',
-      borderRadius:'100%', padding:24
+      borderRadius:'100%',
+      padding:24,
+        width:96,
+        height:96
     },
     bigAvatar: {
         width: 90,
@@ -61,7 +64,6 @@ const SchoolHeader = (props) => {
 
             <Grid
                 item  align={'flex-basis'}>
-                {/*<LocationCityIcon />*/}
                 <Icon className={classes.building} classes={{
                     root:classes.building
                 }}>location_city</Icon>

@@ -32,7 +32,7 @@ const styles = theme => ({
     select: {
         backgroundColor: 'rgba(36,36,33,0.1)',
         paddingLeft: 17,
-        paddingTop: 13,
+        paddingTop: 16,
         paddingBottom: 10,
         paddingRight: 40,
         fontSize: 16,
@@ -43,7 +43,6 @@ const styles = theme => ({
     },
     selectIcon: {
         color: '#6D6D6D',
-        marginTop: 3
     },
     selectLine: {
         color: 'transparent'
@@ -114,7 +113,7 @@ class Sportsman extends React.Component {
         const {sportsman} = this.state;
         return (
             <div>
-                <Grid container>
+                <Grid container spacing={8}>
                     <Grid item>
                         <FormControl>
                             <Select
@@ -167,7 +166,7 @@ class Sportsman extends React.Component {
                         <FormControl className={classes.formControl}>
                             <Input classes={{
                                 root: classes.searchInput,
-                                inkbar: classes.searchInkbar
+                                underline: classes.searchInkbar
                             }}
                                    placeholder="Поиск по имени..."
                                    onChange={this.onSearchChange}

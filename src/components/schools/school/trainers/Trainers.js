@@ -11,9 +11,9 @@ import Typography from "material-ui/es/Typography/Typography";
 
 
 const styles = theme => ({
-    formControl:{
-        marginTop:'-5px',
-        float:'right'
+    formControl: {
+        marginTop: '-5px',
+        marginBottom: 24
     },
     button: {
         margin: theme.spacing.unit,
@@ -28,6 +28,7 @@ const styles = theme => ({
     searchInput: {
         fontSize: 14,
         color: 'rgba(36,36,33,1)',
+
         marginTop: 11,
         paddingBottom: 5,
         minWidth: 267,
@@ -57,10 +58,10 @@ const styles = theme => ({
     searchInputIcon: {
         color: 'rgba(145,143,138,1)',
         position: 'relative',
-        top: 8
+        fontSize: 16,
+        top: 3,
     }
 });
-
 
 
 class Trainers extends React.Component {
@@ -86,35 +87,37 @@ class Trainers extends React.Component {
         const {classes} = this.props;
         return (
             <div>
-                <Grid container>
+                <Grid container spacing={16}>
 
                     <Grid item xs={12}>
                         <FormControl className={classes.formControl}>
                             <Input classes={{
                                 root: classes.searchInput,
-                                inkbar: classes.searchInkbar
+                                underline: classes.searchInkbar
                             }}
-                                   placeholder="Поиск по имени..."
                                    endAdornment={
-                                       <InputAdornment position="end">
-                                           <Icon classes={{
-                                               root: classes.searchInputIcon
-                                           }}>
-                                               search
-                                           </Icon>
-                                       </InputAdornment>
+                                       <InputAdornment position="end"><Icon classes={{
+                                       root: classes.searchInputIcon
+                                   }}
+                                       style={{
+                                        fontSize:18
+                                       }}>
+                                       search
+                                   </Icon></InputAdornment>
                                    }
+                                   placeholder="Поиск по имени..."
+
                             />
                         </FormControl>
                     </Grid>
                     <Grid item xs={7}>
                         <Typography className={classes.title}>Тренеры</Typography>
-                        <Trainer />
-                        <Trainer />
-                        <Trainer />
-                        <Trainer />
-                        <Trainer />
-                        <Trainer />
+                        <Trainer/>
+                        <Trainer/>
+                        <Trainer/>
+                        <Trainer/>
+                        <Trainer/>
+                        <Trainer/>
                     </Grid>
                 </Grid>
             </div>

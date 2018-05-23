@@ -24,6 +24,8 @@ store.dispatch(logout());
 
 const jsx = (
     <MuiThemeProvider theme={theme}>
+
+
         <Provider store={store}>
             <AppRouter/>
         </Provider>

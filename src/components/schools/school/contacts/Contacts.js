@@ -35,7 +35,7 @@ const styles = theme => ({
         zIndex: 1,
         boxShadow: 'none',
         borderRadius: 12,
-        minHeight: 368
+        minHeight: 372
     },
     mainText:{
         color:'rgba(36,36,33,1)',
@@ -74,18 +74,18 @@ class Contacts extends React.Component {
         const {classes} = this.props;
         return (
             <div>
-                <Grid container>
+                <Grid container spacing={16}>
                     <Grid item xs={6}>
                         <Typography className={classes.title}>Контакты</Typography>
-                        <Paper className={classes.paper}>
-                            <Grid container>
+                        <Paper className={classes.paper} style={{marginBottom:24}}>
+                            <Grid container spacing={16}>
                                 <Grid item xs={1}><Icon className={classes.iconGray}>location_on</Icon></Grid>
                                 <Grid item xs={11}>
                                     <Typography className={classes.mainText}>г. Казань, ул. Петербургская, д. 37, РТ, 420107</Typography>
                                 </Grid>
                                 <Grid item xs={1}><Icon className={classes.iconGray}>phone</Icon></Grid>
                                 <Grid item xs={11}>
-                                    <Typography className={classes.mainText}> (+7 843) 221-81-10</Typography>
+                                    <Typography className={classes.mainText} > (+7 843) 221-81-10</Typography>
                                 </Grid>
                                 <Grid item xs={1}><Icon className={classes.iconGray}>email</Icon></Grid>
                                 <Grid item xs={11}>
@@ -99,17 +99,17 @@ class Contacts extends React.Component {
                                 </Grid>
                             </Grid>
                         </Paper>
-                        <Typography className={classes.title} style={{marginTop:20}}>Режим работы</Typography>
+                        <Typography className={classes.title} >Режим работы</Typography>
                         <Paper className={classes.paper}>
-                            <Grid container>
+                            <Grid container spacing={8}>
                                 <Grid item xs={6}>
-                                    <Typography className={classes.secondaryText}>Администрация</Typography>
+                                    <Typography className={classes.secondaryText} >Администрация</Typography>
                                     <Typography className={classes.mainText}>Пн — Пт: 8:00–18:00 <br/>
                                         Сб, Вс — выходной</Typography>
 
                                 </Grid>
                                 <Grid item xs={6}>
-                                    <Typography className={classes.secondaryText}>Тренеры</Typography>
+                                    <Typography className={classes.secondaryText} style={{marginBottom:5}}>Тренеры</Typography>
                                     <Link to='#' className={classes.link}>По расписанию</Link>
                                 </Grid>
                             </Grid>
@@ -124,7 +124,7 @@ class Contacts extends React.Component {
                     <Grid item xs={8}>
                         <Typography className={classes.title}>Реквизиты</Typography>
                         <Paper className={classes.paper}>
-                            <Grid container>
+                            <Grid container spacing={8}>
                                 <Grid item xs={12} style={{marginBottom:8}}>
                                     <Typography className={classes.mainText}>ООО «Академия хоккея Ак Барс» имени Ю. И. Моисеева</Typography>
                                 </Grid>

@@ -84,7 +84,6 @@ class LibraryMenu extends React.Component {
                           textColor="primary"
                           classes={{
                               root: classes.rootInherit,
-                              buttonAuto: classes.button, // className, e.g. `OverridesClasses-root-X`
                           }}
                     >
                         <Tab label="Все материалы"
@@ -93,16 +92,16 @@ class LibraryMenu extends React.Component {
                                  label: classes.button,
                                  labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
                                  wrapper: classes.button,
-                                 rootPrimarySelected:classes.bc,// className, e.g. `OverridesClasses-label-X`
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                 selected:classes.bc,// className, e.g. `OverridesClasses-label-X`
+                                 root:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
                         <Tab label="Новости"
                              textColor="primary"
 
                              classes={{
                                  label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary
+                                 selected:classes.bc,
+                                 root:classes.rootTabPrimary
                              }}
                         />
                         <Tab label="Популярное"
@@ -111,16 +110,16 @@ class LibraryMenu extends React.Component {
 
                              classes={{
                                  label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                 selected:classes.bc,
+                                 root:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
                         <Tab label="Авторы"
                              textColor="primary"
 
                              classes={{
                                  label: classes.button,
-                                 rootPrimarySelected:classes.bc,
-                                 rootPrimary:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                 selected:classes.bc,
+                                 root:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
                     </Tabs>
                 </AppBar>

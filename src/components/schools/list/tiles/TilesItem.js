@@ -81,7 +81,7 @@ class TilesItem extends React.Component {
                             Набережные челны
                         </Typography>
                         <hr style={{borderColor: 'rgba(36,36,33,0.1)', color: 'white',width:'calc(100% + 48px)',marginLeft:-24, borderBottom: 0}}/>
-                        <Grid container className={classes.infoContainer}>
+                        <Grid container spacing={16} className={classes.infoContainer}>
                             <Grid item>
                                 <Typography className={classes.infoTitle}>
                                     Спортсмены
