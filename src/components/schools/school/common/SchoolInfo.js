@@ -208,9 +208,18 @@ class SchoolInfo extends React.Component {
                     <Grid item xs={12}>
                         <h3 className={classes.title}>{this.titles[3]}</h3>
                         <Grid container spacing={16}>
-                            <NewsPaper/>
-                            <NewsPaper/>
-                            <NewsPaper/>
+                            <Grid item xs={4}>
+                                <NewsPaper/>
+
+                            </Grid>
+                            <Grid item xs={4}>
+                                <NewsPaper/>
+
+                            </Grid>
+                            <Grid item xs={4}>
+                                <NewsPaper/>
+
+                            </Grid>
                             <Grid item xs={12} style={{textAlign: 'center'}}>
                                 <Button variant="raised" color='primary' className={classes.button}>Загрузить ещё</Button>
                             </Grid>

@@ -12,7 +12,7 @@ import IconButton from "material-ui/es/IconButton/IconButton";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Input from "material-ui/es/Input/Input";
 import TilesView from "./tiles/TilesView";
-import {sportsman, sportsmanChampionshipFilters, sportsmanYearFilters} from "../../../../fixtures/sportsman";
+import {sportsman, sportsmanGroupFilters, sportsmanPositionFilters} from "../../../../fixtures/sportsman";
 
 
 const styles = theme => ({
@@ -79,10 +79,10 @@ const styles = theme => ({
 
 class Sportsman extends React.Component {
     state = {
-        tableView: true,
+        tableView: false,
         sportsman,
-        sportsmanYearFilters,
-        sportsmanChampionshipFilters,
+        sportsmanPositionFilters,
+        sportsmanGroupFilters,
         selectedYearFilter: 1,
         selectedChampionshipFilter: 1,
     };
@@ -127,7 +127,7 @@ class Sportsman extends React.Component {
                                 autoWidth
                             >
                                 {
-                                    this.state.sportsmanYearFilters.map((item) => (
+                                    this.state.sportsmanGroupFilters.map((item) => (
                                         <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
                                     ))
                                 }
@@ -147,7 +147,7 @@ class Sportsman extends React.Component {
                                 autoWidth
                             >
                                 {
-                                    this.state.sportsmanChampionshipFilters.map((item) => (
+                                    this.state.sportsmanPositionFilters.map((item) => (
                                         <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
                                     ))
                                 }

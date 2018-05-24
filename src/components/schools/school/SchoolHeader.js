@@ -74,18 +74,18 @@ const SchoolHeader = (props) => {
                 <span className={classNames(classes.schoolAdress)}>г. Казань, ул. Петербургская, д. 37</span>
             </Grid>
             <Grid item className={classNames(classes.schoolRightSec,classes.mlauto)}>
-                <span>Вратари</span><br/>
-                <span className={classNames(classes.schoolRatingNum)}>12</span>
+                <span>Спортсмены</span><br/>
+                <span className={classNames(classes.schoolRatingNum)}>100</span>
             </Grid>
 
             <Grid item className={classNames(classes.schoolRightSec)}>
-                <span>Защитники</span><br/>
-                <span className={classNames(classes.schoolRatingNum)}>44</span>
+                <span>Тренеры</span><br/>
+                <span className={classNames(classes.schoolRatingNum)}>20</span>
             </Grid>
 
             <Grid item className={classNames(classes.schoolRightSec)}>
-                <span>Нападающие</span><br/>
-                <span className={classNames(classes.schoolRatingNum)}>53</span>
+                <span>Группы</span><br/>
+                <span className={classNames(classes.schoolRatingNum)}>15</span>
             </Grid>
         </section>
     );

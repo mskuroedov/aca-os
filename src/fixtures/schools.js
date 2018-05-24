@@ -99,17 +99,32 @@ export const schools = [
     }
 ];
 
-export const schoolFilters = [
+export const schoolCityFilters = [
     {
         'id': 1,
-        'title': '2016'
+        'title': 'Альметьевск'
     },
     {
         'id': 2,
-        'title': '2017'
+        'title': 'Казань'
     },
     {
         'id': 3,
-        'title': '2018'
+        'title': 'Набережные Челны'
+    }
+];
+
+export const schoolFilters = [
+    {
+        'id': 1,
+        'title': 'Все школы'
+    },
+    {
+        'id': 2,
+        'title': 'Школа 1'
+    },
+    {
+        'id': 3,
+        'title': 'Школа 2'
     }
 ];

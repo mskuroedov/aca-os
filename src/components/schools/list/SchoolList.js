@@ -11,10 +11,17 @@ import IconButton from "material-ui/es/IconButton/IconButton";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Input from "material-ui/es/Input/Input";
 import TilesView from "./tiles/TilesView";
-import {schools, schoolFilters} from "../../../fixtures/schools";
+import {schools, schoolFilters, schoolCityFilters} from "../../../fixtures/schools";
+import Button from "@material-ui/core/es/Button/Button";
 
 
 const styles = theme => ({
+    button: {
+        fontSize: 13,
+        fontWeight: 'bold',
+        marginRight: 10,
+        height: 45
+    },
     formControl: {
         marginLeft: 'auto'
     },
@@ -81,6 +88,7 @@ class SchoolList extends React.Component {
         tableView: false,
         schools,
         schoolFilters,
+        schoolCityFilters,
         selectedFilter: schoolFilters[0].id,
     };
 
@@ -121,6 +129,26 @@ class SchoolList extends React.Component {
                                 autoWidth
                             >
                                 {
+                                    this.state.schoolCityFilters.map((item) => (
+                                        <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
+                                    ))
+                                }
+                            </Select>
+                        </FormControl>
+                    </Grid>
+                    <Grid item>
+                        <FormControl>
+                            <Select
+                                value={this.state.selectedFilter}
+                                onChange={this.onFilterChange}
+                                disableUnderline={true}
+                                classes={{
+                                    select: classes.select,
+                                    icon: classes.selectIcon,
+                                }}
+                                autoWidth
+                            >
+                                {
                                     this.state.schoolFilters.map((item) => (
                                         <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
                                     ))
@@ -128,13 +156,20 @@ class SchoolList extends React.Component {
                             </Select>
                         </FormControl>
                     </Grid>
-
-                    <Grid item style={{marginLeft:'auto'}}>
+                    <Grid item>
+                        <Button classes={{
+                            root: classes.button,
+                            label: classes.gray
+                        }}>
+                            Сбросить
+                        </Button>
+                    </Grid>
+                    <Grid item>
                         <FormControl className={classes.formControl}>
                             <Input
                                 classes={{
                                     root: classes.searchInput,
-                                    inkbar: classes.searchInkbar
+                                    underline: classes.searchInkbar
                                 }}
                                 onChange={this.onSearchChange}
                                 placeholder="Поиск по названию"

@@ -61,9 +61,6 @@ class NewsPaper extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-            < Grid
-                item
-                xs={4}>
                 <Paper className={classes.paper}>
                     <Typography className={classes.date}>10.01.2018</Typography>
 
@@ -91,11 +88,11 @@ class NewsPaper extends React.Component {
                         </Grid>
                     </Grid>
                 </Paper>
-            </Grid>
+
         )
 
     }
-};
+}
 
 // NewsPaper.propTypes = {
 //     classes: NewsPaper.object.isRequired,

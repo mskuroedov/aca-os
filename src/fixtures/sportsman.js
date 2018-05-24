@@ -281,6 +281,34 @@ export const sportsmanYearFilters = [
         'title': '2018'
     }
 ];
+export const sportsmanPositionFilters = [
+    {
+        'id': 1,
+        'title': 'Все амлуа'
+    },
+    {
+        'id': 2,
+        'title': 'Амплуа 1'
+    },
+    {
+        'id': 3,
+        'title': 'Амплуа 2'
+    }
+];
+export const sportsmanGroupFilters = [
+    {
+        'id': 1,
+        'title': 'Все группы'
+    },
+    {
+        'id': 2,
+        'title': 'Группа 1'
+    },
+    {
+        'id': 3,
+        'title': 'Группа 2'
+    }
+];
 
 export const sportsmanChampionshipFilters = [
     {
