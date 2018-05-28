@@ -60,59 +60,60 @@ const styles = theme => ({
 });
 
 
-class
-TilesView extends React.Component {
+class TilesView extends React.Component {
 
     render() {
         const {classes} = this.props;
         const {firstname, secondname, middlename} = this.props;
         return (
             <Grid item xs={4}>
-                <Paper className={classes.paper}>
-                    <Avatar
-                        alt="Adelle Charles"
-                        src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
-                        classes={{
-                            root: classes.avatar
-                        }}
-                    />
-                    <Typography className={classes.name}>
-                        {secondname} <br/>
-                        {firstname} {middlename}
-                    </Typography>
-                    <hr style={{borderColor: 'rgba(36,36,33,0.1)', color: 'white', borderBottom: 0}}/>
-                    <Grid container className={classes.infoContainer}>
-                        <Grid item className={classes.info}>
-                            <Typography className={classes.infoTitle}>
-                                Год рождения
-                            </Typography>
-                            <Typography className={classes.infoVal}>
-                                2000
-                            </Typography>
-                            <Typography className={classes.infoTitle}>
-                                Год набора
-                            </Typography>
-                            <Typography className={classes.infoVal}>
-                                2016
-                            </Typography>
-                            <Typography className={classes.infoTitle}>
-                                Группа
-                            </Typography>
-                            <Typography className={classes.infoVal}>
-                                <Link to='#' className={classes.link}>Группа 1</Link>
-                            </Typography>
+                <Link to="/sportsman/1">
+                    <Paper className={classes.paper}>
+                        <Avatar
+                            alt="Adelle Charles"
+                            src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
+                            classes={{
+                                root: classes.avatar
+                            }}
+                        />
+                        <Typography className={classes.name}>
+                            {secondname} <br/>
+                            {firstname} {middlename}
+                        </Typography>
+                        <hr style={{borderColor: 'rgba(36,36,33,0.1)', color: 'white', borderBottom: 0}}/>
+                        <Grid container className={classes.infoContainer}>
+                            <Grid item className={classes.info}>
+                                <Typography className={classes.infoTitle}>
+                                    Год рождения
+                                </Typography>
+                                <Typography className={classes.infoVal}>
+                                    2000
+                                </Typography>
+                                <Typography className={classes.infoTitle}>
+                                    Год набора
+                                </Typography>
+                                <Typography className={classes.infoVal}>
+                                    2016
+                                </Typography>
+                                <Typography className={classes.infoTitle}>
+                                    Группа
+                                </Typography>
+                                <Typography className={classes.infoVal}>
+                                    <Link to='#' className={classes.link}>Группа 1</Link>
+                                </Typography>
+                            </Grid>
+                            <Grid item>
+                                <Typography className={classes.infoTitle}>
+                                    Амплуа
+                                </Typography>
+                                <Typography className={classes.infoVal}>
+                                    Вратарь
+                                </Typography>
+                            </Grid>
                         </Grid>
-                        <Grid item>
-                            <Typography className={classes.infoTitle}>
-                                Амплуа
-                            </Typography>
-                            <Typography className={classes.infoVal}>
-                                Вратарь
-                            </Typography>
-                        </Grid>
-                    </Grid>
 
-                </Paper>
+                    </Paper>
+                </Link>
             </Grid>
         )
     }

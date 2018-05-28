@@ -76,87 +76,11 @@ class SportsmenPageContent extends React.Component {
     render() {
         const {classes, view, sportsmenId, sportsmen} = this.props;
 
-        return view ? (
-            <section style={{backgroundColor:'white'}}>
-                <Grid container>
-                    <Grid item xs={12}>
-                        <Tabs
-                            value={view}
-                            onChange={this.handleChange}
-                            className={classes.tabs}
-                            indicatorColor="primary"
-                            textColor="primary"
-                            classes={{
-                                root: classes.root,
-                                flexContainer: classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
-                            }}
-                        >
-                            <Tab
-                                label="Профиль"
-                                value="profile"
-                                textColor="primary"
-                                classes={{
-                                    label: classes.button,
-                                    selected: classes.bc,
-                                    root: classes.rootTabPrimary
-                                }}
-                            />
-                            <Tab
-                                label="Тренировочный план"
-                                value="plan"
-                                textColor="primary"
-                                classes={{
-                                    label: classes.button,
-                                    selected: classes.bc,
-                                    root: classes.rootTabPrimary
-                                }}
-                            />
-                            <Tab
-                                label="Журнал"
-                                value="journal"
-                                textColor="primary"
-                                classes={{
-                                    label: classes.button,
-                                    selected: classes.bc,
-                                    root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-                                }}
-                            />
-                            <Tab
-                                label="Спортивные показатели"
-                                value="perfomance"
-                                textColor="primary"
+        return (
+            <section style={{paddingLeft:168,paddingRight:168,paddingTop:24}}>
+                <Profile sportsmen={sportsmen}/>
 
-                                classes={{
-                                    label: classes.button,
-                                    selected: classes.bc,
-                                    root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-                                }}
-                            />
-                            <Tab
-                                label="Медицинские показатели"
-                                value="medical"
-                                textColor="primary"
-
-                                classes={{
-                                    label: classes.button,
-                                    selected: classes.bc,
-                                    root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
-                                }}
-                            />
-                        </Tabs>
-
-                    </Grid>
-                </Grid>
-                <TabContainer style={{paddingTop: 30}}>
-                    {view === 'profile' && <Profile sportsmen={sportsmen}/>}
-                    {view === 'plan' && 1}
-                    {view === 'journal' && 2}
-                    {view === 'perfomance' && <Perfomance/>}
-                    {view === 'medical' && 4}
-                </TabContainer>
             </section>
-        ) : (
-            <Redirect to={`/sportsman/${sportsmenId}/profile`}/>
         )
     }
 }
@@ -166,3 +90,90 @@ SportsmenPageContent.propTypes = {
 };
 
 export default withStyles(styles)(SportsmenPageContent);
+
+// render() {
+//     const {classes, view, sportsmenId, sportsmen} = this.props;
+//
+//     return view ? (
+//         <section style={{backgroundColor:'white'}}>
+//             <Grid container>
+//                 <Grid item xs={12}>
+//                     <Tabs
+//                         value={view}
+//                         onChange={this.handleChange}
+//                         className={classes.tabs}
+//                         indicatorColor="primary"
+//                         textColor="primary"
+//                         classes={{
+//                             root: classes.root,
+//                             flexContainer: classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
+//                         }}
+//                     >
+//                         <Tab
+//                             label="Профиль"
+//                             value="profile"
+//                             textColor="primary"
+//                             classes={{
+//                                 label: classes.button,
+//                                 selected: classes.bc,
+//                                 root: classes.rootTabPrimary
+//                             }}
+//                         />
+//                         <Tab
+//                             label="Тренировочный план"
+//                             value="plan"
+//                             textColor="primary"
+//                             classes={{
+//                                 label: classes.button,
+//                                 selected: classes.bc,
+//                                 root: classes.rootTabPrimary
+//                             }}
+//                         />
+//                         <Tab
+//                             label="Журнал"
+//                             value="journal"
+//                             textColor="primary"
+//                             classes={{
+//                                 label: classes.button,
+//                                 selected: classes.bc,
+//                                 root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+//                             }}
+//                         />
+//                         <Tab
+//                             label="Спортивные показатели"
+//                             value="perfomance"
+//                             textColor="primary"
+//
+//                             classes={{
+//                                 label: classes.button,
+//                                 selected: classes.bc,
+//                                 root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+//                             }}
+//                         />
+//                         <Tab
+//                             label="Медицинские показатели"
+//                             value="medical"
+//                             textColor="primary"
+//
+//                             classes={{
+//                                 label: classes.button,
+//                                 selected: classes.bc,
+//                                 root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+//                             }}
+//                         />
+//                     </Tabs>
+//
+//                 </Grid>
+//             </Grid>
+//             <TabContainer style={{paddingTop: 30}}>
+//                 {view === 'profile' && <Profile sportsmen={sportsmen}/>}
+//                 {view === 'plan' && 1}
+//                 {view === 'journal' && 2}
+//                 {view === 'perfomance' && <Perfomance/>}
+//                 {view === 'medical' && 4}
+//             </TabContainer>
+//         </section>
+//     ) : (
+//         <Redirect to={`/sportsman/${sportsmenId}/profile`}/>
+//     )
+// }
