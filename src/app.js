@@ -24,8 +24,6 @@ store.dispatch(logout());
 
 const jsx = (
     <MuiThemeProvider theme={theme}>
-
-
         <Provider store={store}>
             <AppRouter/>
         </Provider>
@@ -39,7 +37,7 @@ const renderApp = () => {
     }
 };
 
-ReactDOM.render(<LoadingPage/>, document.getElementById('app'));
+// ReactDOM.render(<LoadingPage/>, document.getElementById('app'));
 
 setTimeout(() => {
     renderApp();
