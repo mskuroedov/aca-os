@@ -9,7 +9,9 @@
   }
 
 }
-
+.d-none{
+  display: none;
+}
 .paper_w_table {
   padding-top: 11px !important;
 }
@@ -59,6 +61,45 @@
      font-size: 14px;
      color: #242421;
    }
+   .table_w_icon i{
+     width: 10px;
+     color:#918F8A
+   }
+  button{
+    font-size: 24px !important;
+    color:rgba(36,36,33,0.54);
+  }
+ }
+.table_stats {
+   font-family: "BlissPro",sans-serif;
+   background-color: #fff;
+   border-radius: 12px;
+   th {
+     padding: 30px 10px 22px 12px;
+     color: #918F8A;
+     height: 55px;
+     white-space: nowrap;
+     font-size: 14px;
+     &:first-of-type {
+      padding-left: 24px;
+     }
+   }
+   td {
+     padding: 8px 10px 8px 12px;
+     font-size: 14px;
+     color: #242421;
+     &:first-of-type {
+       padding-left: 24px;
+     }
+   }
+
+  &.no-bottom tbody{
+    tr:last-of-type{
+      td{
+        border-bottom: none;
+      }
+    }
+  }
    .table_w_icon i{
      width: 10px;
      color:#918F8A

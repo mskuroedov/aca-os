@@ -12,6 +12,7 @@ import Trainers from "./trainers/Trainers";
 import Contacts from "./contacts/Contacts";
 import Calendar from "./Calendar"
 import Grid from "@material-ui/core/es/Grid/Grid";
+import StatsPage from "./statistic/StatsPage";
 
 function TabContainer(props) {
     return (
@@ -179,7 +180,7 @@ class SchoolMenu extends React.Component {
                     {view === 'common' && <SchoolInfo/>}
                     {/*{view === 'schedule' && <Calendar/>}*/}
                     {view === 'schedule' && 'calendar'}
-                    {view === 'statistics' && 'statistics'}
+                    {view === 'statistics' && <StatsPage/>}
                     {view === 'groups' && 'groups'}
                     {view === 'sportsman' && <Sportsman/>}
                     {view === 'trainers' && <Trainers/>}

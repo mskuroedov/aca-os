@@ -102,14 +102,18 @@ export const schools = [
 export const schoolCityFilters = [
     {
         'id': 1,
-        'title': 'Альметьевск'
+        'title': 'Все города'
     },
     {
         'id': 2,
-        'title': 'Казань'
+        'title': 'Альметьевск'
     },
     {
         'id': 3,
+        'title': 'Казань'
+    },
+    {
+        'id': 4,
         'title': 'Набережные Челны'
     }
 ];

@@ -238,4 +238,3 @@ SchoolInfo.propTypes = {
 };
 
 export default withStyles(styles)(SchoolInfo);
-
