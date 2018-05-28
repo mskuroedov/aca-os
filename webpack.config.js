@@ -52,7 +52,7 @@ module.exports = (env) => {
             CSSExtract,
             new webpack.DefinePlugin({
                 'process.env.SECRET': JSON.stringify(process.env.SECRET),
-            })
+            }),
         ],
         devtool: isProduction ? 'source-map' : 'inline-source-map',
         devServer: {
