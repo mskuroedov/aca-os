@@ -10,8 +10,6 @@ import LoadingPage from './components/LoadingPage';
 import {createMuiTheme, MuiThemeProvider} from 'material-ui/styles';
 import {login, logout} from "./actions/auth";
 
-document.getElementById('loader-9').remove();
-
 const theme = createMuiTheme({
     palette: {
         primary: {main: '#00755E', secondary: '#000'},
