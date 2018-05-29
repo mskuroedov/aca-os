@@ -51,7 +51,7 @@ class TrainerView extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-            <Link to='/worker'>
+            <Link to='/worker/1'>
                 <Paper className={classes.paper}>
                     <Avatar
                         alt="Adelle Charles"
