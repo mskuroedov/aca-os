@@ -17,27 +17,32 @@ const styles = theme => ({
 class SelfTableItem extends React.Component {
     render () {
         const {classes} = this.props;
-        const {number, FIO, amplua, group,totalGames,wonGames,scores,GSR,p,o,oi,gp,gB,sH} = this.props;
+        const {number, FIO, amplua, group,totalGames,wonGames,scores,GSR,p,o,oi,gp,gB,sH,pm,shtrf,BV,percent,iv} = this.props;
         return (
             <TableRow>
                 <TableCell >
                     {number}
                 </TableCell>
-                <TableCell >
-                    <Link to="/sportsman/1" className={classes.link}>{FIO}</Link>
-                </TableCell>
+                {/*<TableCell >*/}
+                    {/*<Link to="/sportsman/1" className={classes.link}>{FIO}</Link>*/}
+                {/*</TableCell>*/}
                 <TableCell ><Link to="#" className={classes.link}>{group}</Link></TableCell>
-                <TableCell>{amplua}</TableCell>
+                {/*<TableCell>{amplua}</TableCell>*/}
                 <TableCell numeric>{totalGames}</TableCell>
-                <TableCell numeric>{wonGames}</TableCell>
+                {/*<TableCell numeric>{wonGames}</TableCell>*/}
                 <TableCell numeric>{scores}</TableCell>
-                <TableCell numeric>{GSR}</TableCell>
+                {/*<TableCell numeric>{GSR}</TableCell>*/}
                 <TableCell numeric>{p}</TableCell>
                 <TableCell numeric>{o}</TableCell>
-                <TableCell numeric>{oi}</TableCell>
-                <TableCell numeric>{gp}</TableCell>
-                <TableCell numeric>{gB}</TableCell>
-                <TableCell numeric>{sH}</TableCell>
+                <TableCell numeric>{pm}</TableCell>
+                <TableCell numeric>{shtrf}</TableCell>
+                <TableCell numeric>{BV}</TableCell>
+                <TableCell numeric>{percent}</TableCell>
+                <TableCell numeric>{iv}</TableCell>
+                {/*<TableCell numeric>{oi}</TableCell>*/}
+                {/*<TableCell numeric>{gp}</TableCell>*/}
+                {/*<TableCell numeric>{gB}</TableCell>*/}
+                {/*<TableCell numeric>{sH}</TableCell>*/}
             </TableRow>
         )
     }

@@ -181,9 +181,6 @@ class Sportsman extends React.Component {
                             />
                         </FormControl>
                     </Grid>
-                    <IconButton className={classes.iconbtn} onClick={this.onViewChange}>
-                        {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
-                    </IconButton>
 
                     <Grid item xs={12} className="paper_w_table">
                         {
@@ -205,3 +202,7 @@ Sportsman.propTypes = {
 
 export default withStyles(styles)(Sportsman);
 
+
+//<IconButton className={classes.iconbtn} onClick={this.onViewChange}>
+  //  {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
+//</IconButton>

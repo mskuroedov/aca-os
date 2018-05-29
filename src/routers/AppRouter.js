@@ -9,6 +9,7 @@ import SchoolListPage from "../components/schools/list/SchoolListPage";
 import LibrariesPage from "../components/library/LibrariesPage";
 import CssBaseline from "@material-ui/core/es/CssBaseline/CssBaseline";
 import GroupPage from "../components/groups/GroupPage";
+import WorkerPage from "../components/schools/school/workers/WorkerPage";
 
 export const history = createHistory();
 
@@ -32,6 +33,7 @@ const AppRouter = () => (
                 <Route path="/schools" exact={true} component={SchoolListPage}/>
                 <Route path="/libraries" exact={true} component={LibrariesPage}/>
                 <Route path="/groups/" exact={true} component={GroupPage}/>
+                <Route path="/worker/:workerId" exact={true} component={WorkerPage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>

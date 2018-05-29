@@ -31,19 +31,11 @@ class Profile extends React.Component {
             <div>
                 <Grid container spacing={16}
                 >
-                    <Button variant="raised" color="primary" className={this.props.classes.button}>
-                        редактировать информацию
-                    </Button>
+                    {/*<Button variant="raised" color="primary" className={this.props.classes.button}>*/}
+                        {/*редактировать информацию*/}
+                    {/*</Button>*/}
                     <TableTitle title="Общая инфомация"/>
                     <CommonInformation {...sportsmen.common} />
-                    <TableTitle title="Контакты спортсмена"/>
-                    <ContactsOfSportsmen {...sportsmen.contacts}/>
-                    <TableTitle title="Контакты родителей или законных представителей"/>
-                    {
-                        sportsmen.parents.map((item) => (
-                            <ParentContacts key={item.id} {...item}/>
-                        ))
-                    }
                     <TableTitle title="Спортивная карьера"/>
                     <Career/>
                     <TableTitle title="Награды и достижения"/>
@@ -63,3 +55,11 @@ Profile.propTypes = {
 
 export default withStyles(styles)(Profile);
 
+//<TableTitle title="Контакты спортсмена"/>
+//<ContactsOfSportsmen {...sportsmen.contacts}/>
+//<TableTitle title="Контакты родителей или законных представителей"/>
+//{
+ //   sportsmen.parents.map((item) => (
+   //     <ParentContacts key={item.id} {...item}/>
+    //))
+//}

@@ -67,20 +67,25 @@ class SelfTableView extends React.Component {
                         <Table className="table_stats">
                             <TableHead>
                                 <TableRow>
-                                    <TableCell>№</TableCell>
-                                    <TableCell>Фамилия, имя</TableCell>
+                                    <TableCell>Номер</TableCell>
+                                    {/*<TableCell>Фамилия, имя</TableCell>*/}
                                     <TableCell>Группа</TableCell>
-                                    <TableCell>А</TableCell>
+                                    {/*<TableCell>А</TableCell>*/}
                                     <TableCell numeric>И</TableCell>
-                                    <TableCell numeric>В</TableCell>
+                                    {/*<TableCell numeric>В</TableCell>*/}
                                     <TableCell numeric>Г</TableCell>
-                                    <TableCell numeric>Гср</TableCell>
+                                    {/*<TableCell numeric>Гср</TableCell>*/}
                                     <TableCell numeric>П</TableCell>
                                     <TableCell numeric>О</TableCell>
-                                    <TableCell numeric>ОИ</TableCell>
-                                    <TableCell numeric>ГП</TableCell>
-                                    <TableCell numeric>ГБ</TableCell>
-                                    <TableCell numeric>Ш</TableCell>
+                                    <TableCell numeric>+/-</TableCell>
+                                    <TableCell numeric>Штр</TableCell>
+                                    <TableCell numeric>БВ</TableCell>
+                                    <TableCell numeric>%Вбр</TableCell>
+                                    <TableCell numeric>ИВ</TableCell>
+                                    {/*<TableCell numeric>ОИ</TableCell>*/}
+                                    {/*<TableCell numeric>ГП</TableCell>*/}
+                                    {/*<TableCell numeric>ГБ</TableCell>*/}
+                                    {/*<TableCell numeric>Ш</TableCell>*/}
 
                                 </TableRow>
                             </TableHead>

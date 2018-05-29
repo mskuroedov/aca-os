@@ -13,6 +13,7 @@ const styles = {
     bigAvatar: {
         width: 90,
         height: 90,
+        marginBottom:32
     },
     sportsmenName: {
         fontSize: 24,

@@ -35,11 +35,28 @@
     padding: 22px 0px 20px 12px;
     font-size: 14px;
     color: #242421;
+    a{
+      color: #242421;
+      border-bottom: 1px solid #918F8A;
+      transition: all .2s;
+      &:hover{
+        color: #00755E;
+        text-decoration: none;
+        border-bottom: 1px solid #00755E;
+      }
+    }
   }
   .table_w_icon i{
     width: 10px;
     color:#918F8A
   }
+  &.no-bottom tbody{
+     tr:last-of-type{
+       td{
+         border-bottom: none;
+       }
+     }
+   }
 }
 .table_sportsman {
    font-family: "BlissPro",sans-serif;

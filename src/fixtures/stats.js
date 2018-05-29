@@ -14,7 +14,12 @@ export const SelfStats = [
         oi: 0.0,
         gp: 0,
         gB: 0,
-        sH: 14
+        sH: 14,
+        pm:6,
+        shtrf:8,
+        BV:73,
+        percent:'61,5',
+        iv:'19:17'
     },
     {
         id: 2,
@@ -31,7 +36,12 @@ export const SelfStats = [
         oi: 0.0,
         gp: 0,
         gB: 0,
-        sH: 14
+        sH: 14,
+        pm:6,
+        shtrf:8,
+        BV:73,
+        percent:'61,5',
+        iv:'19:17'
     }
 ];
 export const SelfUnnamedStats = [
@@ -257,6 +267,6 @@ export const statsAmplua = [
     },
     {
         'id': 3,
-        'title': 'Защитники'
+        'title': 'Вратари'
     }
 ];

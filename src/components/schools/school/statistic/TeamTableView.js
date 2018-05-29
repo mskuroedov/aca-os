@@ -71,10 +71,12 @@ class TeamTableView extends React.Component {
                                     <TableCell style={{width:350,paddingLeft:24}}>Команда</TableCell>
                                     <TableCell numeric>И</TableCell>
                                     <TableCell numeric>В</TableCell>
+                                    <TableCell numeric>ВО</TableCell>
+                                    <TableCell numeric>ВБ</TableCell>
+                                    <TableCell numeric>ПБ</TableCell>
+                                    <TableCell numeric>ПО</TableCell>
                                     <TableCell numeric>П</TableCell>
-                                    <TableCell numeric>По/б</TableCell>
-                                    <TableCell numeric>ЗШ</TableCell>
-                                    <TableCell numeric>ПШ</TableCell>
+                                    <TableCell numeric>Ш</TableCell>
                                     <TableCell numeric>О</TableCell>
                                     <TableCell style={{width:10,padding:0}}></TableCell>
                                 </TableRow>

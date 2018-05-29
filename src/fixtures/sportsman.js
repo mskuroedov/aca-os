@@ -5,7 +5,7 @@ export const sportsman = [
         secondname: 'Красильников',
         middlename: 'Васильевич',
         common: {
-            date_of_birth: '01.10.1995',
+            date_of_birth: '1995',
             recruitment_year: '2000',
             gender: 'Мужской',
             role: 'Нападающий',
@@ -43,7 +43,7 @@ export const sportsman = [
         secondname: 'Гайнутдинов',
         middlename: 'Ильгизович',
         common: {
-            date_of_birth: '01.10.2010',
+            date_of_birth: '2010',
             recruitment_year: '2000',
             gender: 'Мужской',
             role: 'Нападающий',
@@ -81,7 +81,7 @@ export const sportsman = [
         secondname: 'Мокшин',
         middlename: 'Генадьевич',
         common: {
-            date_of_birth: '01.10.1995',
+            date_of_birth: '1995',
             recruitment_year: '2000',
             gender: 'Мужской',
             role: 'Нападающий',
@@ -119,7 +119,7 @@ export const sportsman = [
         secondname: 'Мокшин',
         middlename: 'Генадьевич',
         common: {
-            date_of_birth: '01.10.1995',
+            date_of_birth: '1995',
             recruitment_year: '2000',
             gender: 'Мужской',
             role: 'Нападающий',
@@ -157,7 +157,7 @@ export const sportsman = [
         secondname: 'Мокшин',
         middlename: 'Генадьевич',
         common: {
-            date_of_birth: '01.10.1995',
+            date_of_birth: '1995',
             recruitment_year: '2000',
             gender: 'Мужской',
             role: 'Нападающий',
@@ -195,7 +195,7 @@ export const sportsman = [
         secondname: 'Мокшин',
         middlename: 'Генадьевич',
         common: {
-            date_of_birth: '01.10.1995',
+            date_of_birth: '1995',
             recruitment_year: '2000',
             gender: 'Мужской',
             role: 'Нападающий',
@@ -233,7 +233,7 @@ export const sportsman = [
         secondname: 'Мокшин',
         middlename: 'Генадьевич',
         common: {
-            date_of_birth: '01.10.1995',
+            date_of_birth: '1995',
             recruitment_year: '2000',
             gender: 'Мужской',
             role: 'Нападающий',
@@ -281,6 +281,7 @@ export const sportsmanYearFilters = [
         'title': '2018'
     }
 ];
+
 export const sportsmanPositionFilters = [
     {
         'id': 1,
@@ -295,6 +296,7 @@ export const sportsmanPositionFilters = [
         'title': 'Амплуа 2'
     }
 ];
+
 export const sportsmanGroupFilters = [
     {
         'id': 1,

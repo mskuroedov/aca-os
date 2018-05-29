@@ -183,18 +183,11 @@ class SchoolList extends React.Component {
                                 }
                             />
                         </FormControl>
-                        <IconButton className={classes.iconbtn} onClick={this.onViewChange}>
-                            {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
-                        </IconButton>
                     </Grid>
 
                     <Grid item xs={12} className="paper_w_table">
-                        {
-                            this.state.tableView ?
-                                <TableView schools={schools}/>
-                                :
-                                <TilesView schools={schools}/>
-                        }
+                        <TilesView schools={schools}/>
+
                     </Grid>
                 </Grid>
             </div>
@@ -208,3 +201,13 @@ SchoolList.propTypes = {
 
 export default withStyles(styles)(SchoolList);
 
+// {
+//     this.state.tableView ?
+//         <TableView schools={schools}/>
+//         :
+//         <TilesView schools={schools}/>
+// }
+
+//<IconButton className={classes.iconbtn} onClick={this.onViewChange}>
+  //  {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
+//</IconButton>

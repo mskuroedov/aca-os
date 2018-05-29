@@ -7,7 +7,7 @@ const CommonInformation = (props) => (
                 <Table className="table">
                     <TableHead>
                         <TableRow>
-                            <TableCell>Дата рождения</TableCell>
+                            <TableCell>Год рождения</TableCell>
                             <TableCell >Год набора</TableCell>
                             <TableCell >Пол</TableCell>
                             <TableCell >Амплуа</TableCell>
