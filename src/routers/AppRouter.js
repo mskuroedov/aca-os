@@ -10,6 +10,8 @@ import LibrariesPage from "../components/library/LibrariesPage";
 import CssBaseline from "@material-ui/core/es/CssBaseline/CssBaseline";
 import GroupPage from "../components/groups/GroupPage";
 import WorkerPage from "../components/schools/school/workers/WorkerPage";
+import NewsPage from "../components/news/NewsPage";
+import ShowNewsPage from "../components/news/ShowNewsPage";
 
 export const history = createHistory();
 
@@ -34,6 +36,8 @@ const AppRouter = () => (
                 <Route path="/libraries" exact={true} component={LibrariesPage}/>
                 <Route path="/groups/" exact={true} component={GroupPage}/>
                 <Route path="/worker/:workerId" exact={true} component={WorkerPage}/>
+                <Route path="/news" exact={true} component={NewsPage}/>
+                <Route path="/news/1" exact={true} component={ShowNewsPage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>

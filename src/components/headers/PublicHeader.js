@@ -101,7 +101,7 @@ class PublicHeader extends React.Component {
 
                         <NavLink activeClassName="active" to="/" exact={true}
                                  style={{marginLeft: 'auto'}}>Портал</NavLink>
-                        <NavLink activeClassName="active" to="#">Новости</NavLink>
+                        <NavLink activeClassName="active" to="/news">Новости</NavLink>
                         <NavLink activeClassName="active" to="/schools">Школы</NavLink>
                         {/*<NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>*/}
                         <NavLink activeClassName="active" to="#">Календарь</NavLink>

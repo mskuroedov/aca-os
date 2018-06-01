@@ -4,6 +4,7 @@ import Paper from "material-ui/es/Paper/Paper";
 import Typography from "material-ui/es/Typography/Typography";
 import Avatar from "material-ui/es/Avatar/Avatar";
 import {withStyles} from 'material-ui/styles';
+import Link from "react-router-dom/es/Link";
 
 const styles = theme => ({
     paper: {
@@ -61,6 +62,7 @@ class NewsPaper extends React.Component {
     render() {
         const {classes} = this.props;
         return (
+            <Link to='/news/1'>
                 <Paper className={classes.paper}>
                     <Typography className={classes.date}>10.01.2018</Typography>
 
@@ -88,6 +90,7 @@ class NewsPaper extends React.Component {
                         </Grid>
                     </Grid>
                 </Paper>
+            </Link>
 
         )
 
