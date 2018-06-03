@@ -12,6 +12,8 @@ import GroupPage from "../components/groups/GroupPage";
 import WorkerPage from "../components/schools/school/workers/WorkerPage";
 import NewsPage from "../components/news/NewsPage";
 import ShowNewsPage from "../components/news/ShowNewsPage";
+import CalendarPage from "../components/calendar/CalendarPage";
+import DatePage from "../components/calendar/date/DatePage";
 
 export const history = createHistory();
 
@@ -38,6 +40,8 @@ const AppRouter = () => (
                 <Route path="/worker/:workerId" exact={true} component={WorkerPage}/>
                 <Route path="/news" exact={true} component={NewsPage}/>
                 <Route path="/news/1" exact={true} component={ShowNewsPage}/>
+                <Route path="/calendar" exact={true} component={CalendarPage}/>
+                <Route path="/calendar/1" exact={true} component={DatePage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>
