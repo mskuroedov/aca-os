@@ -41,7 +41,9 @@ class SportCareer extends React.Component {
                                 <TableCell >Вид спорта</TableCell>
                                 <TableCell >Амплуа</TableCell>
                                 <TableCell >Клуб</TableCell>
-                                <TableCell >Тренер</TableCell>
+                                <TableCell numeric>Игровой номер</TableCell>
+                                <TableCell numeric>Спортивный разряд</TableCell>
+
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -50,21 +52,27 @@ class SportCareer extends React.Component {
                                 <TableCell >Хоккей</TableCell>
                                 <TableCell >Нападающий</TableCell>
                                 <TableCell >«Нефтехимик»</TableCell>
-                                <TableCell >Канарейкин Фёдор Леонидович</TableCell>
+                                {/*<TableCell >Канарейкин Фёдор Леонидович</TableCell>*/}
+                                <TableCell numeric>13</TableCell>
+                                <TableCell numeric>2</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell >1976-1981</TableCell>
                                 <TableCell >Хоккей</TableCell>
                                 <TableCell >Нападающий</TableCell>
                                 <TableCell >«Спартак» Москва</TableCell>
-                                <TableCell >Кудашов Алексей Николаевич</TableCell>
+                                {/*<TableCell >Кудашов Алексей Николаевич</TableCell>*/}
+                                <TableCell numeric>13</TableCell>
+                                <TableCell numeric>2</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell >1981-1999</TableCell>
                                 <TableCell >Хоккей</TableCell>
                                 <TableCell >Нападающий</TableCell>
                                 <TableCell >«Ак Барс»</TableCell>
-                                <TableCell >Саяпов Ренат Хайдярович</TableCell>
+                                {/*<TableCell >Саяпов Ренат Хайдярович</TableCell>*/}
+                                <TableCell numeric>13</TableCell>
+                                <TableCell numeric>2</TableCell>
                             </TableRow>
                         </TableBody>
                     </Table>

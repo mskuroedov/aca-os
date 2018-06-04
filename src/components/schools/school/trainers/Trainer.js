@@ -124,7 +124,7 @@ class Trainer extends React.Component {
 
                         </Grid>
                         <Grid item>
-                            <Link to='#' className={classes.link}>Ягупов Анатолий Павлович </Link>
+                            <Link to='/worker/1' className={classes.link}>Ягупов Анатолий Павлович </Link>
                             <Typography className={classes.trainLevel}>Тренер-преподаватель высшей категории</Typography>
                         </Grid>
                     </Grid>

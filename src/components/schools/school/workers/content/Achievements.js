@@ -38,7 +38,7 @@ class Achievements extends React.Component {
                         <TableHead>
                             <TableRow>
                                 <TableCell >Дата</TableCell>
-                                <TableCell >Соревнования</TableCell>
+                                <TableCell >Мероприятие</TableCell>
                                 <TableCell >Достижение</TableCell>
                             </TableRow>
                         </TableHead>
