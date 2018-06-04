@@ -4,9 +4,16 @@ import {withStyles} from 'material-ui/styles';
 import classNames from 'classnames';
 import Grid from "@material-ui/core/es/Grid/Grid";
 import NewsPaper from "../schools/school/common/NewsPaper";
+import Button from "material-ui/es/Button/Button";
 
 const styles = theme => ({
 
+    button: {
+        margin: theme.spacing.unit,
+        fontSize: 13,
+        fontWeight: 'bold',
+        fontFamily: '"BlissPro",sans-serif',
+    }
 
 });
 
@@ -28,6 +35,10 @@ class NewsPageContent extends React.Component {
                     <Grid item xs={4}><NewsPaper/></Grid>
                     <Grid item xs={4}><NewsPaper/></Grid>
                     <Grid item xs={4}><NewsPaper/></Grid>
+                    <Grid item xs={12} style={{textAlign:'center'}}>
+                        <Button variant="raised" color='primary' className={classes.button}>Загрузить ещё</Button>
+
+                    </Grid>
                 </Grid>
             </section>
         )

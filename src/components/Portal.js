@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/es/Grid/Grid";
 import NewsPaper from "./schools/school/common/NewsPaper";
 import Paper from "@material-ui/core/es/Paper/Paper";
 import Button from "@material-ui/core/es/Button/Button";
+import Link from "react-router-dom/es/Link";
 
 function TabContainer(props) {
     return (
@@ -102,7 +103,7 @@ class Portal extends React.Component {
                         </Grid>
                     </Grid>
                     <Grid item xs={12} style={{textAlign:'center'}}>
-                        <Button variant="raised" color='primary' className={classes.button}>Загрузить ещё</Button>
+                        <Button variant="raised" color='primary' className={classes.button} component={Link} to="/news">Все новости</Button>
                     </Grid>
                 </Grid>
             </section>
