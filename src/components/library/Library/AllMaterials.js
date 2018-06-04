@@ -45,10 +45,9 @@ const styles = theme => ({
     button: {
         margin: theme.spacing.unit,
         fontSize: 13,
-        marginLeft: 'auto',
-        marginRight: 20,
+        fontWeight: 'bold',
         fontFamily: '"BlissPro",sans-serif',
-    }
+    },
 
 });
 
@@ -108,11 +107,10 @@ class AllMaterials extends React.Component {
                         ))
                     }
                 </Grid>
-                <Grid item xs={12} style={{marginTop:34}}>
-                    <Grid container spacing={16} justify='center'>
-                        <Button variant="raised" color='primary'>Загрузить еще</Button>
+                <Grid item xs={12} style={{marginTop:34,textAlign:'center'}}>
+                        <Button variant="raised" color='primary' className={classes.button}>Загрузить ещё</Button>
 
-                    </Grid>
+
                 </Grid>
             </Grid>
         )

@@ -23,9 +23,13 @@ class SelfTableItem extends React.Component {
                 <TableCell >
                     {number}
                 </TableCell>
-                {/*<TableCell >*/}
-                    {/*<Link to="/sportsman/1" className={classes.link}>{FIO}</Link>*/}
-                {/*</TableCell>*/}
+                <TableCell >
+                    {
+                        common ? <Link to="/sportsman/1" className={classes.link}>{FIO}</Link> : <span>Игрок {number}</span>
+
+                    }
+
+                </TableCell>
                 {
                     common ? <TableCell ><Link to="#" className={classes.link}>{school}</Link></TableCell> : <TableCell ><Link to="#" className={classes.link}>{group}</Link></TableCell>
                 }

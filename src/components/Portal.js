@@ -48,9 +48,7 @@ const styles = theme => ({
     button: {
         margin: theme.spacing.unit,
         fontSize: 13,
-        marginLeft: 'auto',
         fontWeight: 'bold',
-        marginRight: 20,
         fontFamily: '"BlissPro",sans-serif',
     },
 
@@ -102,6 +100,9 @@ class Portal extends React.Component {
 
                             </Grid>
                         </Grid>
+                    </Grid>
+                    <Grid item xs={12} style={{textAlign:'center'}}>
+                        <Button variant="raised" color='primary' className={classes.button}>Загрузить ещё</Button>
                     </Grid>
                 </Grid>
             </section>
