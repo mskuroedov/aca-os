@@ -78,7 +78,6 @@ class TeamTableView extends React.Component {
                                     <TableCell numeric>П</TableCell>
                                     <TableCell numeric>Ш</TableCell>
                                     <TableCell numeric>О</TableCell>
-                                    <TableCell style={{width:10,padding:0}}></TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>

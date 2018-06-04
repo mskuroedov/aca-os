@@ -37,11 +37,11 @@ class TeamTableItem extends React.Component {
                 <TableCell numeric>{o}</TableCell>
                 <TableCell numeric>{o}</TableCell>
                 <TableCell numeric>{o}</TableCell>
-                <TableCell style={{width:10,padding:0}}>
-                    <IconButton aria-label="Delete">
-                        <MoreVertIcon/>
-                    </IconButton>
-                </TableCell>
+                {/*<TableCell style={{width:10,padding:0}}>*/}
+                    {/*<IconButton aria-label="Delete">*/}
+                        {/*<MoreVertIcon/>*/}
+                    {/*</IconButton>*/}
+                {/*</TableCell>*/}
             </TableRow>
         )
     }

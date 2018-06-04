@@ -59,7 +59,7 @@ class SelfTableView extends React.Component {
 
     render() {
         const {rowsPerPage, count, page, SelfStats} = this.state;
-
+        const {common} = this.props;
         return (
             <Grid container>
                 <Grid item xs={12}>
@@ -69,7 +69,11 @@ class SelfTableView extends React.Component {
                                 <TableRow>
                                     <TableCell>Номер</TableCell>
                                     {/*<TableCell>Фамилия, имя</TableCell>*/}
-                                    <TableCell>Группа</TableCell>
+                                    <TableCell>
+                                        {
+                                            common ? 'Школа' : 'Группа'
+                                        }
+                                    </TableCell>
                                     {/*<TableCell>А</TableCell>*/}
                                     <TableCell numeric>И</TableCell>
                                     {/*<TableCell numeric>В</TableCell>*/}
@@ -92,7 +96,7 @@ class SelfTableView extends React.Component {
                             <TableBody>
                                 {
                                     SelfStats.map((item) => {
-                                        return <SelfTableItem key={item.id} {...item} />
+                                        return <SelfTableItem common={common} key={item.id} {...item} />
                                     })
                                 }
                             </TableBody>

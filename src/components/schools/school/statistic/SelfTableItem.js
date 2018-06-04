@@ -16,8 +16,8 @@ const styles = theme => ({
 
 class SelfTableItem extends React.Component {
     render () {
-        const {classes} = this.props;
-        const {number, FIO, amplua, group,totalGames,wonGames,scores,GSR,p,o,oi,gp,gB,sH,pm,shtrf,BV,percent,iv} = this.props;
+        const {classes,common} = this.props;
+        const {number, FIO, amplua,school ,group,totalGames,wonGames,scores,GSR,p,o,oi,gp,gB,sH,pm,shtrf,BV,percent,iv} = this.props;
         return (
             <TableRow>
                 <TableCell >
@@ -26,7 +26,9 @@ class SelfTableItem extends React.Component {
                 {/*<TableCell >*/}
                     {/*<Link to="/sportsman/1" className={classes.link}>{FIO}</Link>*/}
                 {/*</TableCell>*/}
-                <TableCell ><Link to="#" className={classes.link}>{group}</Link></TableCell>
+                {
+                    common ? <TableCell ><Link to="#" className={classes.link}>{school}</Link></TableCell> : <TableCell ><Link to="#" className={classes.link}>{group}</Link></TableCell>
+                }
                 {/*<TableCell>{amplua}</TableCell>*/}
                 <TableCell numeric>{totalGames}</TableCell>
                 {/*<TableCell numeric>{wonGames}</TableCell>*/}

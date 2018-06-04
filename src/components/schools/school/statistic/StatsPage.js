@@ -92,7 +92,7 @@ class StatsPage extends React.Component {
     };
 
     render() {
-        const {classes} = this.props;
+        const {classes,common} = this.props;
         const {SelfStats,TeamStats} = this.state;
         return (
             <Grid container spacing={8}>
@@ -189,7 +189,7 @@ class StatsPage extends React.Component {
                 <Grid item xs={12} style={{paddingBottom:64,marginTop:20}}>
                     {
                         this.state.selfView ?
-                            <SelfTableView SelfStats={SelfStats}/>
+                            <SelfTableView SelfStats={SelfStats} common={common}/>
                             :
                             <TeamTableView TeamStats={TeamStats}/>
                     }
