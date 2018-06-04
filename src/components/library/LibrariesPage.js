@@ -12,7 +12,7 @@ const LibrariesPage = () => (
                 {title: 'Библиотека', link: '#3'},
             ]}
         />
-        <LibraryHeader />
+        {/*<LibraryHeader />*/}
         <LibraryMenu />
     </div>
 );

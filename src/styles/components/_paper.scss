@@ -51,3 +51,22 @@
 .sportsmen_contact{
   font-size: 14px;
 }
+.main-section{
+  padding: 32px 168px 64px;
+}
+.quoting{
+  font-style: italic;
+  font-size: 16px !important;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 32px !important;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    height:100%;
+    left:0;
+    width:2px;
+    background-color:#00755E
+  }
+}

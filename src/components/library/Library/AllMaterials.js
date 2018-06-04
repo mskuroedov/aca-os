@@ -13,8 +13,7 @@ import NewsItem from "./NewsItem";
 
 const styles = theme => ({
     mlauto: {
-        display: 'flex',
-        justifyContent: 'flex-end'
+        display: 'flex'
     },
     searchInput: {
         fontSize: 14,
@@ -22,7 +21,6 @@ const styles = theme => ({
         marginTop: 11,
         paddingBottom: 5,
         minWidth: 267,
-        marginLeft: 'auto',
         '&:before': {
             backgroundColor: 'rgba(0,0,0,0.2)'
         },
@@ -61,12 +59,12 @@ class AllMaterials extends React.Component {
     }
 
     items = [
-        {video: false, paid: false, album: false, gallery: true, authors: true},
-        {video: true, paid: true, album: true, gallery: true, authors: false},
-        {video: true, paid: true, album: true, gallery: true, authors: false},
-        {video: false, paid: false, album: false, gallery: false, authors: true},
-        {video: true, paid: true, album: false, gallery: false, authors: true},
-        {video: false, paid: false, album: true, gallery: true, authors: false},
+        {text:true, video: false, paid: false, album: false, gallery: false, authors: true},
+        {text:false, video: true, paid: false, album: false, gallery: false, authors: false},
+        {text:false, video: false, paid: false, album: false, gallery: true, authors: false},
+        {text:true,video: false, paid: false, album: true, gallery: false, authors: false},
+        {text:true,video: false, paid: false, album: true, gallery: false, authors: false},
+        {text:true, video: false, paid: false, album: false, gallery: false, authors: false},
     ];
 
     render() {

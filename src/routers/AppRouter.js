@@ -15,6 +15,8 @@ import ShowNewsPage from "../components/news/ShowNewsPage";
 import CalendarPage from "../components/calendar/CalendarPage";
 import DatePage from "../components/calendar/date/DatePage";
 import CommonStatsPage from "../components/stats/CommonStatsPage";
+import AuthorPage from "../components/library/Author/AuthorPage";
+import LibraryItemPage from "../components/library/Item/LibraryItemPage";
 
 export const history = createHistory();
 
@@ -44,6 +46,8 @@ const AppRouter = () => (
                 <Route path="/calendar" exact={true} component={CalendarPage}/>
                 <Route path="/calendar/1" exact={true} component={DatePage}/>
                 <Route path="/stats" exact={true} component={CommonStatsPage}/>
+                <Route path="/author/1" exact={true} component={AuthorPage}/>
+                <Route path="/libraries/1" exact={true} component={LibraryItemPage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>

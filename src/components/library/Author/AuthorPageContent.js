@@ -1,0 +1,59 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import {withStyles} from 'material-ui/styles';
+import classNames from 'classnames';
+import Grid from "material-ui/es/Grid/Grid";
+import Typography from "@material-ui/core/es/Typography/Typography";
+import NewsItem from "../Library/NewsItem";
+
+const styles = theme => ({
+    title:{
+        color:'rgba(36,36,36,.6)',
+        fontSize:20
+    }
+
+});
+
+
+class AuthorPageContent extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    items = [
+        {text:true, video: false, paid: false, album: false, gallery: false, authors: true},
+        {text:true, video: false, paid: false, album: false, gallery: false, authors: false},
+    ];
+
+    render() {
+        const {classes} = this.props;
+        return (
+            <section className='main-section'>
+                <Grid container spacing={16}>
+                    <Grid item xs={12}>
+                        <Typography className={classes.title}>Материалы</Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                        {
+                            this.items.map((item, i) => (
+                                i % 2 === 0 ? <NewsItem {...item} /> : ''
+                            ))
+                        }
+                    </Grid>
+                    <Grid item xs={6}>
+                        {
+                            this.items.map((item, i) => (
+                                i % 2 !== 0 ? <NewsItem {...item} /> : ''
+                            ))
+                        }
+                    </Grid>
+                </Grid>
+            </section>
+        )
+    }
+}
+
+AuthorPageContent.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(AuthorPageContent);

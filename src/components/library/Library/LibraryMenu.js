@@ -5,10 +5,12 @@ import AppBar from 'material-ui/AppBar';
 import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 import AllMaterials from "./AllMaterials";
+import Authors from "./Authors";
 
 function TabContainer(props) {
     return (
-        <Typography component="div" style={{paddingTop:24,backgroundColor:"#f6f6f6",paddingRight: 168,paddingLeft:168}}>
+        <Typography component="div"
+                    style={{paddingTop: 24, backgroundColor: "#f6f6f6", paddingRight: 168, paddingLeft: 168}}>
             {props.children}
         </Typography>
     );
@@ -44,15 +46,15 @@ const styles = theme => ({
     },
     button: {
         fontSize: 14,
-        fontWeight:'bold',
-        fontFamily:'"BlissPro",sans-serif',
+        fontWeight: 'bold',
+        fontFamily: '"BlissPro",sans-serif',
     },
-    bc:{
-        color:"#000 !important"
+    bc: {
+        color: "#000 !important"
     },
-    rootTabPrimary:{
-        minWidth:0,
-        color:'#00755E'
+    rootTabPrimary: {
+        minWidth: 0,
+        color: '#00755E'
     }
 
 });
@@ -63,7 +65,7 @@ class LibraryMenu extends React.Component {
     }
 
     state = {
-        value: 0,
+        value: 3,
     };
 
     handleChange = (event, value) => {
@@ -75,8 +77,9 @@ class LibraryMenu extends React.Component {
         const {value} = this.state;
 
         return (
-            <section >
-                <AppBar position="static" className={classes.appBar} style={{paddingRight: 168,paddingLeft:264,backgroundColor:'#fff'}}>
+            <section>
+                <AppBar position="static" className={classes.appBar}
+                        style={{paddingRight: 168, paddingLeft: 168, backgroundColor: '#fff'}}>
                     <Tabs value={value}
                           onChange={this.handleChange}
                           className={classes.tabs}
@@ -92,16 +95,16 @@ class LibraryMenu extends React.Component {
                                  label: classes.button,
                                  labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
                                  wrapper: classes.button,
-                                 selected:classes.bc,// className, e.g. `OverridesClasses-label-X`
-                                 root:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                 selected: classes.bc,// className, e.g. `OverridesClasses-label-X`
+                                 root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
-                        <Tab label="Новости"
+                        <Tab label="Новое"
                              textColor="primary"
 
                              classes={{
                                  label: classes.button,
-                                 selected:classes.bc,
-                                 root:classes.rootTabPrimary
+                                 selected: classes.bc,
+                                 root: classes.rootTabPrimary
                              }}
                         />
                         <Tab label="Популярное"
@@ -110,32 +113,32 @@ class LibraryMenu extends React.Component {
 
                              classes={{
                                  label: classes.button,
-                                 selected:classes.bc,
-                                 root:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                 selected: classes.bc,
+                                 root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
                         <Tab label="Авторы"
                              textColor="primary"
 
                              classes={{
                                  label: classes.button,
-                                 selected:classes.bc,
-                                 root:classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                 selected: classes.bc,
+                                 root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
                     </Tabs>
                 </AppBar>
                 {value === 0 && <TabContainer>
-                    <AllMaterials />
+                    <AllMaterials/>
                 </TabContainer>}
                 {value === 1 && <TabContainer>
-                    <AllMaterials />
+                    <AllMaterials/>
 
                 </TabContainer>}
                 {value === 2 && <TabContainer>
-                    <AllMaterials />
+                    <AllMaterials/>
 
                 </TabContainer>}
                 {value === 3 && <TabContainer>
-                    <AllMaterials />
+                    <Authors/>
                 </TabContainer>}
             </section>
         );
