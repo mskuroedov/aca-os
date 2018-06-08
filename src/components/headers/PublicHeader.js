@@ -107,7 +107,7 @@ class PublicHeader extends React.Component {
                         <NavLink activeClassName="active" to="/calendar">Календарь</NavLink>
                         <NavLink activeClassName="active" to="/stats">Статистика</NavLink>
                         <NavLink activeClassName="active" to="/libraries">Библиотека</NavLink>
-                        <NavLink activeClassName="active" to="#">Пользователям</NavLink>
+                        <NavLink activeClassName="active" to="/users_info">Пользователям</NavLink>
                         <div>
                             <IconButton
                                 aria-label="More"
