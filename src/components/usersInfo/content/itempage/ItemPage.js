@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
 import classNames from 'classnames';
-import Header from "../headers/Header";
-import Subheader from "../headers/Subheader";
-import UsersInfoMenu from "./UsersInfoMenu";
+import Header from "../../../headers/Header";
+import Subheader from "../../../headers/Subheader";
+import UsersBuySmt from "../UsersBuySmt";
 
 const styles = theme => ({});
 
 
-class UsersInfoPage extends React.Component {
+class ItemPage extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -21,14 +21,16 @@ class UsersInfoPage extends React.Component {
             <div>
                 <Header/>
                 <Subheader title='Пользователям' cart/>
-                <UsersInfoMenu/>
+                <section style={{paddingLeft:168,paddingRight:168,paddingTop:32,paddingBottom:64}}>
+                    <UsersBuySmt/>
+                </section>
             </div>
         )
     }
 }
 
-UsersInfoPage.propTypes = {
+ItemPage.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(UsersInfoPage);
+export default withStyles(styles)(ItemPage);

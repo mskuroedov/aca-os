@@ -18,6 +18,8 @@ import CommonStatsPage from "../components/stats/CommonStatsPage";
 import AuthorPage from "../components/library/Author/AuthorPage";
 import LibraryItemPage from "../components/library/Item/LibraryItemPage";
 import UsersInfoPage from "../components/usersInfo/UsersInfoPage";
+import CartPage from "../components/cart/CartPage";
+import ItemPage from "../components/usersInfo/content/itempage/ItemPage";
 
 export const history = createHistory();
 
@@ -50,6 +52,8 @@ const AppRouter = () => (
                 <Route path="/author/1" exact={true} component={AuthorPage}/>
                 <Route path="/libraries/1" exact={true} component={LibraryItemPage}/>
                 <Route path="/users_info" exact={true} component={UsersInfoPage}/>
+                <Route path="/users_info/1" exact={true} component={ItemPage}/>
+                <Route path="/cart" exact={true} component={CartPage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>

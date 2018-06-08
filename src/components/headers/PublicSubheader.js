@@ -16,7 +16,7 @@ class Subheader extends React.Component {
     };
 
     render() {
-        const {title, breadcrumbs} = this.props;
+        const {title, breadcrumbs, cart} = this.props;
         return (
             <div>
                 <Grid container spacing={0} className="subheader">
@@ -46,6 +46,7 @@ class Subheader extends React.Component {
                     </Grid>
                     <Grid item xs={6} style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}>
                         <Icon style={{marginLeft: 24}}>account_circle</Icon>
+                        {cart && <Link to='/cart' style={{color:'white',lineHeight:.7}} className='cart'><span className='cart-items'>2</span><Icon style={{marginLeft: 24}}>shopping_cart</Icon></Link>}
                     </Grid>
                 </Grid>
             </div>

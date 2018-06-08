@@ -4,12 +4,12 @@ import {withStyles} from 'material-ui/styles';
 import classNames from 'classnames';
 import Header from "../headers/Header";
 import Subheader from "../headers/Subheader";
-import UsersInfoMenu from "./UsersInfoMenu";
+import CartPageContent from "./CartPageContent";
 
 const styles = theme => ({});
 
 
-class UsersInfoPage extends React.Component {
+class CartPage extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -20,15 +20,15 @@ class UsersInfoPage extends React.Component {
         return (
             <div>
                 <Header/>
-                <Subheader title='Пользователям' cart/>
-                <UsersInfoMenu/>
+                <Subheader title='Корзина' cart/>
+                <CartPageContent/>
             </div>
         )
     }
 }
 
-UsersInfoPage.propTypes = {
+CartPage.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(UsersInfoPage);
+export default withStyles(styles)(CartPage);

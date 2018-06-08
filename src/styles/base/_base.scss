@@ -43,3 +43,21 @@ i {
 p {
   font-family: "BlissPro", sans-serif !important;
 }
+
+.cart{
+  position: relative;
+  .cart-items{
+    position: absolute;
+    width:20px;
+    height:20px;
+    background-color: #005945;
+    color: white;
+    font-size: 12px;
+    border-radius: 100%;
+    right: -10px;
+    top: -10px;
+    line-height: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+}

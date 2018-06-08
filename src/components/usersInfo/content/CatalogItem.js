@@ -56,7 +56,7 @@ class CatalogItem extends React.Component {
         const {classes,cart,option} = this.props;
         return (
             <Paper className='paper' style={{height:232,paddingLeft:24,paddingRight:44,paddingTop:24,paddingBottom:16}}>
-                <Link to='#'>
+                <Link to='/users_info/1'>
                     <Grid container spacing={8} className={classes.flexCol}>
                         <Grid item xs={8} style={{maxWidth:'100%'}}>
                             <Typography className={classes.title}>Теория и методика хоккея</Typography>

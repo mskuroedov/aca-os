@@ -94,7 +94,7 @@ class Catalog extends React.Component {
                     <CatalogItem cart/>
                 </Grid>
                 <Grid item xs={4}>
-                    <CatalogItem cart/>
+                    <CatalogItem />
                 </Grid>
                 <Grid item xs={12}>
                     <Typography className={classes.title}>Пакетные предложения</Typography>
