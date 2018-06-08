@@ -8,6 +8,8 @@ import Grid from "@material-ui/core/es/Grid/Grid";
 import ParentsInfo from "./content/ParentsInfo";
 import {history} from "../../routers/AppRouter";
 import UsersBuySmt from "./content/UsersBuySmt";
+import PaymentHistory from "./content/PaymentHistory";
+import Catalog from "./content/Catalog";
 
 function TabContainer(props) {
     return (
@@ -112,15 +114,15 @@ class UsersInfoMenu extends React.Component {
                                     root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                                 }}
                             />
-                            <Tab
-                                label="История покупок"
-                                textColor="primary"
-                                classes={{
-                                    label: classes.button,
-                                    selected: classes.bc,
-                                    root: classes.rootTabPrimary
-                                }}
-                            />
+                            {/*<Tab*/}
+                                {/*label="История покупок"*/}
+                                {/*textColor="primary"*/}
+                                {/*classes={{*/}
+                                    {/*label: classes.button,*/}
+                                    {/*selected: classes.bc,*/}
+                                    {/*root: classes.rootTabPrimary*/}
+                                {/*}}*/}
+                            {/*/>*/}
                             <Tab
                                 label="Родителям"
                                 textColor="primary"
@@ -134,9 +136,9 @@ class UsersInfoMenu extends React.Component {
                     </Grid>
                 </Grid>
                 <TabContainer style={{paddingTop: 32,paddingLeft:168,paddingRight:168}}>
-                    {value === 0 && <UsersBuySmt/>}
-                    {value === 1 && '2'}
-                    {value === 2 && <ParentsInfo/> }
+                    {value === 0 && <Catalog/>}
+                    {/*{value === 1 && <PaymentHistory/>}*/}
+                    {value === 1 && <ParentsInfo/> }
                 </TabContainer>
             </section>
         )
