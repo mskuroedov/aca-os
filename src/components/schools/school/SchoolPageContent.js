@@ -179,8 +179,8 @@ class SchoolMenu extends React.Component {
                 </Grid>
                 <TabContainer style={{paddingTop: 30}}>
                     {view === 'common' && <SchoolInfo/>}
-                    {/*{view === 'schedule' && <Calendar/>}*/}
-                    {view === 'schedule' && 'calendar'}
+                    {view === 'schedule' && <Calendar/>}
+                    {/*{view === 'schedule' && 'calendar'}*/}
                     {view === 'statistics' && <StatsPage/>}
                     {view === 'groups' && <GroupsPage/>}
                     {view === 'sportsman' && <Sportsman/>}

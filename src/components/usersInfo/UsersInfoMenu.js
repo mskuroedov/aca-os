@@ -10,6 +10,7 @@ import {history} from "../../routers/AppRouter";
 import UsersBuySmt from "./content/UsersBuySmt";
 import PaymentHistory from "./content/PaymentHistory";
 import Catalog from "./content/Catalog";
+import { withRouter } from 'react-router-dom'
 
 function TabContainer(props) {
     return (
@@ -31,9 +32,9 @@ const styles = theme => ({
         fontSize: 1.4,
         fontWeight: 'bold',
         opacity: 1,
-        paddingLeft:168,
-        paddingRight:168,
-        paddingTop:32,
+        paddingLeft: 168,
+        paddingRight: 168,
+        paddingTop: 32,
     },
     rootPrimarySelected: {
         color: '#000',
@@ -74,19 +75,24 @@ const styles = theme => ({
 });
 
 class UsersInfoMenu extends React.Component {
-    state = {
-        value: 0,
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: parseInt(this.props.value),
+            nocontent: props.nocontent
+        };
+    }
 
     handleChange = (event, value) => {
-        this.setState({value});
+        this.props.history.push('/users_info/'+value);
+        this.setState({value, nocontent: false});
     };
 
     render() {
         const {classes} = this.props;
-        const {value} = this.state;
+        const {value, nocontent} = this.state;
         return (
-            <section style={{backgroundColor:'white'}}>
+            <section style={{backgroundColor: 'white'}}>
                 <Grid container>
                     <Grid item xs={12}>
                         <Tabs
@@ -115,13 +121,13 @@ class UsersInfoMenu extends React.Component {
                                 }}
                             />
                             {/*<Tab*/}
-                                {/*label="История покупок"*/}
-                                {/*textColor="primary"*/}
-                                {/*classes={{*/}
-                                    {/*label: classes.button,*/}
-                                    {/*selected: classes.bc,*/}
-                                    {/*root: classes.rootTabPrimary*/}
-                                {/*}}*/}
+                            {/*label="История покупок"*/}
+                            {/*textColor="primary"*/}
+                            {/*classes={{*/}
+                            {/*label: classes.button,*/}
+                            {/*selected: classes.bc,*/}
+                            {/*root: classes.rootTabPrimary*/}
+                            {/*}}*/}
                             {/*/>*/}
                             <Tab
                                 label="Родителям"
@@ -135,11 +141,12 @@ class UsersInfoMenu extends React.Component {
                         </Tabs>
                     </Grid>
                 </Grid>
-                <TabContainer style={{paddingTop: 32,paddingLeft:168,paddingRight:168}}>
-                    {value === 0 && <Catalog/>}
-                    {/*{value === 1 && <PaymentHistory/>}*/}
-                    {value === 1 && <ParentsInfo/> }
-                </TabContainer>
+                {!nocontent && <TabContainer style={{paddingTop: 32, paddingLeft: 168, paddingRight: 168}}>
+                                    {parseInt(value) === 0 && <Catalog/>}
+                                    {/*{value === 1 && <PaymentHistory/>}*/}
+                                    {parseInt(value) === 1 && <ParentsInfo/>}
+                                </TabContainer>
+                }
             </section>
         )
     }
@@ -149,4 +156,4 @@ UsersInfoMenu.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(UsersInfoMenu);
+export default withRouter(withStyles(styles)(UsersInfoMenu));

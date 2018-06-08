@@ -51,8 +51,8 @@ const AppRouter = () => (
                 <Route path="/stats" exact={true} component={CommonStatsPage}/>
                 <Route path="/author/1" exact={true} component={AuthorPage}/>
                 <Route path="/libraries/1" exact={true} component={LibraryItemPage}/>
-                <Route path="/users_info" exact={true} component={UsersInfoPage}/>
-                <Route path="/users_info/1" exact={true} component={ItemPage}/>
+                <Route path="/users_info/item" exact={true} component={ItemPage}/>
+                <Route path="/users_info/:value" exact={true} component={UsersInfoPage}/>
                 <Route path="/cart" exact={true} component={CartPage}/>
                 <Route component={NotFoundPage}/>
             </Switch>

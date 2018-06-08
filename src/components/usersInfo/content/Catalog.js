@@ -59,50 +59,51 @@ class Catalog extends React.Component {
         const {classes} = this.props;
         return (
             <div>
-            <Grid container spacing={16}>
-                <Grid item xs={12}>
-                    <FormControl className={classes.formControl}>
-                        <Input classes={{
-                            root: classes.searchInput,
-                            underline: classes.searchInkbar
-                        }}
-                               endAdornment={
-                                   <InputAdornment position="end"><Icon classes={{
-                                       root: classes.searchInputIcon
-                                   }}
-                                                                        style={{
-                                                                            fontSize: 18
-                                                                        }}>
-                                       search
-                                   </Icon></InputAdornment>
-                               }
-                               placeholder="Поиск по названию..."
+                <Grid container spacing={16}>
+                    <Grid item xs={12}>
+                        <FormControl className={classes.formControl}>
+                            <Input classes={{
+                                root: classes.searchInput,
+                                underline: classes.searchInkbar
+                            }}
+                                   endAdornment={
+                                       <InputAdornment position="end">
+                                           <Icon classes={{
+                                               root: classes.searchInputIcon
+                                           }}
+                                                 style={{
+                                                     fontSize: 18
+                                                 }}>
+                                               search
+                                           </Icon></InputAdornment>
+                                   }
+                                   placeholder="Поиск по названию..."
 
-                        />
-                    </FormControl>
+                            />
+                        </FormControl>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <CatalogItem cart/>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <CatalogItem cart/>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <CatalogItem cart/>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <CatalogItem cart/>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <CatalogItem/>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Typography className={classes.title}>Пакетные предложения</Typography>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <CatalogItem cart option='6 месяцев'/>
+                    </Grid>
                 </Grid>
-                <Grid item xs={4}>
-                    <CatalogItem cart/>
-                </Grid>
-                <Grid item xs={4}>
-                    <CatalogItem cart/>
-                </Grid>
-                <Grid item xs={4}>
-                    <CatalogItem cart/>
-                </Grid>
-                <Grid item xs={4}>
-                    <CatalogItem cart/>
-                </Grid>
-                <Grid item xs={4}>
-                    <CatalogItem />
-                </Grid>
-                <Grid item xs={12}>
-                    <Typography className={classes.title}>Пакетные предложения</Typography>
-                </Grid>
-                <Grid item xs={4}>
-                    <CatalogItem cart option='6 месяцев'/>
-                </Grid>
-            </Grid>
             </div>
         )
     }

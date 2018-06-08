@@ -21,7 +21,7 @@ class UsersInfoPage extends React.Component {
             <div>
                 <Header/>
                 <Subheader title='Пользователям' cart/>
-                <UsersInfoMenu/>
+                <UsersInfoMenu value={this.props.match.params.value}/>
             </div>
         )
     }

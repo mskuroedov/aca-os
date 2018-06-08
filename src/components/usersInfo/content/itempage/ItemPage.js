@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import Header from "../../../headers/Header";
 import Subheader from "../../../headers/Subheader";
 import UsersBuySmt from "../UsersBuySmt";
+import UsersInfoMenu from "../../UsersInfoMenu";
 
 const styles = theme => ({});
 
@@ -21,6 +22,8 @@ class ItemPage extends React.Component {
             <div>
                 <Header/>
                 <Subheader title='Пользователям' cart/>
+                <UsersInfoMenu nocontent/>
+
                 <section style={{paddingLeft:168,paddingRight:168,paddingTop:32,paddingBottom:64}}>
                     <UsersBuySmt/>
                 </section>
