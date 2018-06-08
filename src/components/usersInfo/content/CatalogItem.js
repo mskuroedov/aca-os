@@ -37,6 +37,11 @@ const styles = theme => ({
     price:{
         fontWeight:'bold',
         fontSize:19
+    },
+    secondary:{
+        fontSize:13,
+        color:'rgba(36,36,33,.3)',
+
     }
 });
 
@@ -48,7 +53,7 @@ class CatalogItem extends React.Component {
 
 
     render() {
-        const {classes} = this.props;
+        const {classes,cart,option} = this.props;
         return (
             <Paper className='paper' style={{height:232,paddingLeft:24,paddingRight:44,paddingTop:24,paddingBottom:16}}>
                 <Link to='#'>
@@ -61,9 +66,17 @@ class CatalogItem extends React.Component {
                             <Grid container alignItems='center'>
                                 <Grid item xs={5}>
                                     <Typography className={classes.price}>456 руб.</Typography>
+                                    {
+                                        option &&
+                                            <Typography className={classes.secondary}>{option}</Typography>
+                                    }
                                 </Grid>
                                 <Grid item xs={7}>
-                                    <Button  color='primary' className={classes.button}>в корзину</Button>
+                                    { cart ?
+                                        <Button  color='primary' className={classes.button}>в корзину</Button>
+                                        :
+                                        <Button variant='raised'  color='primary' className={classes.button}>оформить</Button>
+                                    }
                                 </Grid>
                             </Grid>
                         </Grid>
