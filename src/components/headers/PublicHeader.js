@@ -7,6 +7,7 @@ import IconButton from 'material-ui/IconButton';
 import SearchIcon from 'material-ui-icons/Search';
 import Menu, {MenuItem} from 'material-ui/Menu';
 import MoreVertIcon from 'material-ui-icons/MoreVert';
+import MenuIcon from 'material-ui-icons/Menu';
 import Input from 'material-ui/Input';
 import teal from 'material-ui/colors/teal';
 import {NavLink} from "react-router-dom";
@@ -99,17 +100,17 @@ class PublicHeader extends React.Component {
                         <Input id="name-simple" value={this.state.name} onChange={this.handleChange}
                                className="header__input" placeholder="Поиск"/>
                         <div className='xs-hidden ml-auto'>
-                        <NavLink activeClassName="active" to="/" exact={true}
-                                 style={{marginLeft: 'auto'}}>Портал</NavLink>
-                        <NavLink activeClassName="active" to="/news">Новости</NavLink>
-                        <NavLink activeClassName="active" to="/schools">Школы</NavLink>
-                        {/*<NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>*/}
-                        <NavLink activeClassName="active" to="/calendar">Календарь</NavLink>
-                        <NavLink activeClassName="active" to="/stats">Статистика</NavLink>
-                        <NavLink activeClassName="active" to="/libraries">Библиотека</NavLink>
-                        <NavLink activeClassName="active" to="/users_info/0">Пользователям</NavLink>
+                            <NavLink activeClassName="active" to="/" exact={true}
+                                     style={{marginLeft: 'auto'}}>Портал</NavLink>
+                            <NavLink activeClassName="active" to="/news">Новости</NavLink>
+                            <NavLink activeClassName="active" to="/schools">Школы</NavLink>
+                            {/*<NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>*/}
+                            <NavLink activeClassName="active" to="/calendar">Календарь</NavLink>
+                            <NavLink activeClassName="active" to="/stats">Статистика</NavLink>
+                            <NavLink activeClassName="active" to="/libraries">Библиотека</NavLink>
+                            <NavLink activeClassName="active" to="/users_info/0">Пользователям</NavLink>
                         </div>
-                        <div>
+                        <div className='xs-hidden'>
                             <IconButton
                                 aria-label="More"
                                 aria-owns={anchorEl ? 'long-menu' : null}
@@ -137,6 +138,17 @@ class PublicHeader extends React.Component {
                                     </MenuItem>
                                 ))}
                             </Menu>
+                        </div>
+                        <div className='lg-hidden ml-auto'>
+                            <IconButton
+                                aria-label="More"
+                                aria-owns={anchorEl ? 'long-menu' : null}
+                                aria-haspopup="true"
+                                color="inherit"
+                                onClick={this.handleClick}
+                            >
+                                <MenuIcon/>
+                            </IconButton>
                         </div>
                     </Toolbar>
                 </AppBar>

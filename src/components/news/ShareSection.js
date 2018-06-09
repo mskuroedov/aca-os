@@ -23,8 +23,9 @@ class ShareSection extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-            <div style={{display: 'flex',alignItems:'center',marginTop:40}}>
+            <div style={{display: 'flex',alignItems:'center',marginTop:40,flexWrap:'wrap'}}>
                 <span className={classes.grayText} style={{marginRight:16}}>Поделиться</span>
+                <div style={{width:'100%',marginBottom:16}} className='lg-hidden'></div>
                 <button style={{border:'1px solid #dae0ec',borderRadius:'20px',minWidth:40,height:40,marginRight:5,backgroundColor:'white',color:'#385899'}}><FontAwesome name='facebook' size='lg'/></button>
                 <button style={{border:'1px solid ##dae0e9',borderRadius:'20px',minWidth:40,height:40,marginRight:5,backgroundColor:'white',color:'#42668f'}}><FontAwesome name='vk' size='lg'/></button>
                 <button style={{border:'1px solid #fcf1e9',borderRadius:'20px',minWidth:40,height:40,marginRight:5,backgroundColor:'white',color:'#ee8128'}}><FontAwesome name='odnoklassniki' size='lg'/></button>

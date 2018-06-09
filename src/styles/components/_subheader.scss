@@ -33,4 +33,13 @@
       border-bottom: 1px solid rgba(255,255,255,0.2);
     }
   }
+  @media (max-width: 1023px) {
+    padding: 10px 15px;
+    > div:first-of-type{
+      order: 2;
+    }
+    > div:nth-of-type(2){
+      order: 1;
+    }
+  }
 }

@@ -3,6 +3,11 @@
     display: none;
   }
 }
+.lg-hidden{
+  @media (min-width:1024px) {
+    display: none;
+  }
+}
 .ml-auto{
   margin-left: auto;
 }

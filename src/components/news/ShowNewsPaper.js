@@ -66,10 +66,10 @@ class ShowNewsPaper extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-            <section style={{paddingLeft:168,paddingRight:168,paddingTop:32,paddingBottom:64}}>
+            <section className='main-section'>
                 <Grid container>
                     <Grid item xs={12}>
-                       <Paper className={classes.paper}>
+                       <Paper className='paper paper-news'>
                             <Typography className={classes.header}>
                                 В Казани пройдёт учебно-тренировочный лагерь «Эффективное катание»
                             </Typography>

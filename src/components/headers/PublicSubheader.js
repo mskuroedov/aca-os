@@ -19,8 +19,8 @@ class Subheader extends React.Component {
         const {title, breadcrumbs, cart} = this.props;
         return (
             <div>
-                <Grid container spacing={0} className="subheader">
-                    <Grid item xs={6}>
+                <Grid container spacing={0} className="subheader ">
+                    <Grid item xs={12} lg={6}>
                         {
                             breadcrumbs && breadcrumbs.map((val, i) => (
                                     breadcrumbs.length - 1 !== i ?
@@ -44,7 +44,7 @@ class Subheader extends React.Component {
                             </span>
                         }
                     </Grid>
-                    <Grid item xs={6} style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}>
+                    <Grid item xs={12} lg={6} style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}>
                         <Icon style={{marginLeft: 24}}>account_circle</Icon>
                         {cart && <Link to='/cart' style={{color:'white',lineHeight:.7}} className='cart'><span className='cart-items'>2</span><Icon style={{marginLeft: 24}}>shopping_cart</Icon></Link>}
                     </Grid>
