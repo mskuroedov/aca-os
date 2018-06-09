@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
+import classNames from 'classnames';
 import Typography from 'material-ui/Typography';
 import Grid from "@material-ui/core/es/Grid/Grid";
 import NewsPaper from "./schools/school/common/NewsPaper";
@@ -29,6 +30,7 @@ const styles = theme => ({
         paddingTop: 16,
         paddingLeft: 24,
         paddingBottom: 16,
+        paddingRight:16,
         marginBottom: 10,
         border: '1px solid rgba(0,0,0,0.1);',
         fontSize: 16,
@@ -52,7 +54,11 @@ const styles = theme => ({
         fontWeight: 'bold',
         fontFamily: '"BlissPro",sans-serif',
     },
-
+    xsh:{
+        [theme.breakpoints.down('lg')]: {
+            display:'none',
+        },
+    }
 });
 
 class Portal extends React.Component {
@@ -62,7 +68,7 @@ class Portal extends React.Component {
         const {classes} = this.props;
 
         return (
-            <section style={{paddingLeft: 168, paddingRight: 168,paddingTop:24}}>
+            <section className='main-section'>
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
                         <h3 className={classes.title}>О портале</h3>
@@ -74,7 +80,7 @@ class Portal extends React.Component {
                                 сегодняшний день Академия объединяет 3 детско-юношеские спортивные школы: СДЮСШ «Ак
                                 Барс» (Казань), СДЮСШ «Нефтяник» (Альметьевск) и ДЮСШ «Динамо» (Казань). Более 1300 юных
                                 хоккеистов тренируются в системе Академии «Ак Барс». </Typography>
-                            <Typography className={classes.primaryText}>Деятельность Академии направлена на всестороннее развитие юных хоккеистов: мы
+                            <Typography className={classNames(classes.primaryText,classes.xsh)}>Деятельность Академии направлена на всестороннее развитие юных хоккеистов: мы
                                 заботимся не только о развитии технических навыков молодых игроков, но и о гармоничном
                                 развитии личности в физическом, психологическом и социальном аспектах.</Typography>
 
@@ -88,15 +94,15 @@ class Portal extends React.Component {
                     </Grid>
                     <Grid item xs={12}>
                         <Grid container spacing={16}>
-                            <Grid item xs={4}>
+                            <Grid item xs={12} lg={4}>
                                 <NewsPaper/>
 
                             </Grid>
-                            <Grid item xs={4}>
+                            <Grid item xs={12} lg={4}>
                                 <NewsPaper/>
 
                             </Grid>
-                            <Grid item xs={4}>
+                            <Grid item xs={12} lg={4}>
                                 <NewsPaper/>
 
                             </Grid>
