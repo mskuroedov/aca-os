@@ -1,5 +1,5 @@
 .subheader{
-  padding-top: 55px;
+  padding-top: 16px;
   padding-left: 168px;
   padding-right: 168px;
   padding-bottom: 16px;
@@ -27,7 +27,7 @@
       font-size: 14px;
       margin-right:5px;
     }
-    &:last-child{
+    &.big{
       font-size: 32px;
       margin-top: 15px;
       border-bottom: 1px solid rgba(255,255,255,0.2);

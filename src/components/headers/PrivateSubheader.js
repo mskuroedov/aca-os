@@ -50,7 +50,7 @@ class Subheader extends React.Component {
         return (
             <div>
                 <Grid container spacing={0} className="subheader">
-                    <Grid item xs={6}>
+                    <Grid item xs={12}>
                         {
                             breadcrumbs && breadcrumbs.map((val, i) => (
                                     breadcrumbs.length - 1 !== i ?
@@ -60,7 +60,7 @@ class Subheader extends React.Component {
                                         </span>
                                         :
                                         <span key={val.link} className="path">
-                                            {React.createElement('br')}
+                                            {/*{React.createElement('br')}*/}
                                             <Link to={val.link}>{val.title}</Link>
                                         </span>
                                 )
@@ -68,37 +68,37 @@ class Subheader extends React.Component {
                         }
                         {
                             title &&
-                            <span className="path">
-                                {React.createElement('br')}
+                            <span className="path big">
+                                {/*{React.createElement('br')}*/}
                                 {title}
                             </span>
                         }
                     </Grid>
-                    <Grid item xs={6} style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}>
-
-                        <FormControl>
-                            <Select
-                                value={this.state.selectedFilter}
-                                onChange={this.handleChange}
-                                disableUnderline={true}
-                                classes={{
-                                    select: classes.select,
-                                    icon: classes.selectIcon,
-                                }}
-                            >
-                                <MenuItem value={1}>
-                                    ДЮСШ №43
-                                </MenuItem>
-                                <MenuItem value={10}>Ten</MenuItem>
-                                <MenuItem value={20}>Twenty</MenuItem>
-                                <MenuItem value={30}>Thirty</MenuItem>
-                            </Select>
-                        </FormControl>
-                        <Icon style={{marginLeft: 41}}>email</Icon>
-                        <Icon style={{marginLeft: 24}}>notifications</Icon>
-                        <Icon style={{marginLeft: 24}}>account_circle</Icon>
-
-                    </Grid>
+                    {/*<Grid item xs={6} style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end'}}>*/}
+                    {/**/}
+                        {/*<FormControl>*/}
+                            {/*<Select*/}
+                                {/*value={this.state.selectedFilter}*/}
+                                {/*onChange={this.handleChange}*/}
+                                {/*disableUnderline={true}*/}
+                                {/*classes={{*/}
+                                    {/*select: classes.select,*/}
+                                    {/*icon: classes.selectIcon,*/}
+                                {/*}}*/}
+                            {/*>*/}
+                                {/*<MenuItem value={1}>*/}
+                                    {/*ДЮСШ №43*/}
+                                {/*</MenuItem>*/}
+                                {/*<MenuItem value={10}>Ten</MenuItem>*/}
+                                {/*<MenuItem value={20}>Twenty</MenuItem>*/}
+                                {/*<MenuItem value={30}>Thirty</MenuItem>*/}
+                            {/*</Select>*/}
+                        {/*</FormControl>*/}
+                        {/*<Icon style={{marginLeft: 41}}>email</Icon>*/}
+                        {/*<Icon style={{marginLeft: 24}}>notifications</Icon>*/}
+                        {/*<Icon style={{marginLeft: 24}}>account_circle</Icon>*/}
+                    {/**/}
+                    {/*</Grid>*/}
                 </Grid>
             </div>
         );

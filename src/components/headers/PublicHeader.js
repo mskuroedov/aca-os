@@ -4,7 +4,7 @@ import {withStyles} from 'material-ui/styles';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import IconButton from 'material-ui/IconButton';
-import SearchIcon from 'material-ui-icons/Search';
+import ShoppingBasketIcon from 'material-ui-icons/ShoppingBasket';
 import Menu, {MenuItem} from 'material-ui/Menu';
 import MoreVertIcon from 'material-ui-icons/MoreVert';
 import MenuIcon from 'material-ui-icons/Menu';
@@ -94,23 +94,33 @@ class PublicHeader extends React.Component {
             <div>
                 <AppBar position="static">
                     <Toolbar className="header">
-                        <IconButton color="inherit" aria-label="Search">
-                            <SearchIcon/>
-                        </IconButton>
-                        <Input id="name-simple" value={this.state.name} onChange={this.handleChange}
-                               className="header__input" placeholder="Поиск"/>
+                        <NavLink activeClassName="active" to="/" exact={true} style={{fontWeight: 'bold'}}>ИАС «АКАДЕМИЯ
+                            ХОККЕЯ АК БАРС»</NavLink>
                         <div className='xs-hidden ml-auto'>
-                            <NavLink activeClassName="active" to="/" exact={true}
-                                     style={{marginLeft: 'auto'}}>Портал</NavLink>
-                            <NavLink activeClassName="active" to="/news">Новости</NavLink>
-                            <NavLink activeClassName="active" to="/schools">Школы</NavLink>
-                            {/*<NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>*/}
-                            <NavLink activeClassName="active" to="/calendar">Календарь</NavLink>
-                            <NavLink activeClassName="active" to="/stats">Статистика</NavLink>
-                            <NavLink activeClassName="active" to="/libraries">Библиотека</NavLink>
-                            <NavLink activeClassName="active" to="/users_info/0">Пользователям</NavLink>
+                            {/*<NavLink activeClassName="active" to="/" exact={true}*/}
+                            {/*style={{marginLeft: 'auto'}}>Портал</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="/news">Новости</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="/schools">Школы</NavLink>*/}
+                            {/*/!*<NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>*!/*/}
+                            {/*<NavLink activeClassName="active" to="/calendar">Календарь</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="/stats">Статистика</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="/libraries">Библиотека</NavLink>*/}
+                            {/*<NavLink activeClassName="active" to="/users_info/0">Пользователям</NavLink>*/}
                         </div>
-                        <div className='xs-hidden'>
+                        <div className='xs-hidden' style={{display:'flex',alignItems:'center'}}>
+                            <IconButton
+                                aria-label="More"
+                                aria-owns={anchorEl ? 'long-menu' : null}
+                                aria-haspopup="true"
+                                color="inherit"
+                                onClick={this.handleClick}
+                            >
+                                <ShoppingBasketIcon/>
+                            </IconButton>
+                            <NavLink activeClassName="" to="/" style={{fontSize:15}}>Войти</NavLink>
+
+                        </div>
+                        <div className='lg-hidden ml-auto'>
                             <IconButton
                                 aria-label="More"
                                 aria-owns={anchorEl ? 'long-menu' : null}
@@ -139,6 +149,20 @@ class PublicHeader extends React.Component {
                                 ))}
                             </Menu>
                         </div>
+                    </Toolbar>
+                    <Toolbar className="header">
+
+                        <div className='header__nav'>
+                            <NavLink activeClassName="active" to="/" exact={true}>Портал</NavLink>
+                            <NavLink activeClassName="active" to="/news">Новости</NavLink>
+                            <NavLink activeClassName="active" to="/schools">Школы</NavLink>
+                            {/*<NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>*/}
+                            <NavLink activeClassName="active" to="/calendar">Календарь</NavLink>
+                            <NavLink activeClassName="active" to="/stats">Статистика</NavLink>
+                            <NavLink activeClassName="active" to="/libraries">Библиотека</NavLink>
+                            <NavLink activeClassName="active" to="/users_info/0">Пользователям</NavLink>
+                        </div>
+
                         <div className='lg-hidden ml-auto'>
                             <IconButton
                                 aria-label="More"

@@ -11,7 +11,7 @@ BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
 
 function Event({event}) {
     return (
-        <span style={{fontSize:13,color:'white'}}>
+        <span style={{fontSize:13,color:'white'}} >
             {   moment(event.start).format('hh:mm') }
             <strong style={{fontWeight:'bold'}}> {event.title}</strong>
 
