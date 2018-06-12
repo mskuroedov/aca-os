@@ -63,13 +63,40 @@ const styles = theme => ({
         fontSize: 18,
     },
 });
-const options = [
-    'None',
-    'Atria',
-    'Callisto',
-    'Dione',
-    'Ganymede'
-];
+const options = [{
+    id:1,
+        link: '/',
+        name: 'Портал'
+    }, {
+    id:2,
+        link: '/news',
+        name: 'Новости'
+    }, {
+    id:3,
+        link: '/schools',
+        name: 'Школы'
+    }, {
+    id:4,
+        link: '/tournaments',
+        name: 'Турниры'
+    }, {
+    id:5,
+        link: '/calendar',
+        name: 'Календарь'
+    }, {
+    id:6,
+        link: '/stats',
+        name: 'Статистика'
+    }, {
+    id:7,
+        link: '/libraries',
+        name: 'Библиотека'
+    }, {
+    id:8,
+        link: '/users_info/0',
+        name: 'Пользователям'
+    }]
+;
 
 const ITEM_HEIGHT = 48;
 
@@ -95,7 +122,8 @@ class PublicHeader extends React.Component {
             <div>
                 <AppBar position="static">
                     <Toolbar className="header">
-                        <NavLink activeClassName="" className='xs-hidden' to="/" exact={true} style={{fontWeight: 'bold'}}>ИАС «АКАДЕМИЯ
+                        <NavLink activeClassName="" className='xs-hidden' to="/" exact={true}
+                                 style={{fontWeight: 'bold'}}>ИАС «АКАДЕМИЯ
                             ХОККЕЯ АК БАРС»</NavLink>
                         <div className='xs-hidden ml-auto'>
                             {/*<NavLink activeClassName="active" to="/" exact={true}*/}
@@ -108,13 +136,13 @@ class PublicHeader extends React.Component {
                             {/*<NavLink activeClassName="active" to="/libraries">Библиотека</NavLink>*/}
                             {/*<NavLink activeClassName="active" to="/users_info/0">Пользователям</NavLink>*/}
                         </div>
-                        <div className='' style={{display:'flex',alignItems:'center'}}>
+                        <div className='' style={{display: 'flex', alignItems: 'center'}}>
                             <Link
                                 to='/cart'
                             >
                                 <ShoppingBasketIcon/>
                             </Link>
-                            <NavLink activeClassName="" to="/" style={{fontSize:15}}>Войти</NavLink>
+                            <NavLink activeClassName="" to="/" style={{fontSize: 15}}>Войти</NavLink>
 
                         </div>
                         <div className='lg-hidden ml-auto'>
@@ -134,14 +162,13 @@ class PublicHeader extends React.Component {
                                 onClose={this.handleClose}
                                 PaperProps={{
                                     style: {
-                                        maxHeight: ITEM_HEIGHT * 4.5,
                                         width: 200,
                                     },
                                 }}
                             >
                                 {options.map(option => (
-                                    <MenuItem key={option} selected={option === 'Pyxis'} onClick={this.handleClose}>
-                                        {option}
+                                    <MenuItem key={option.id}  onClick={this.handleClose}>
+                                        <Link to={option.link} style={{color:'#242421',fontSize:15}}>{option.name}</Link>
                                     </MenuItem>
                                 ))}
                             </Menu>
