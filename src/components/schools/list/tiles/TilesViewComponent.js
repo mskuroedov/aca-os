@@ -25,10 +25,10 @@ class TilesView extends React.Component {
 
         return (
             <Grid container spacing={16}>
-                <Grid item xs={6}>
+                <Grid item xs={6} className='xs-hidden'>
                     <Typography className={classes.title}>{schoolType}</Typography>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} className='xs-hidden'>
                     <Button color="primary" className={classes.button}>показать все</Button>
                 </Grid>
                 <Grid item xs={12}>

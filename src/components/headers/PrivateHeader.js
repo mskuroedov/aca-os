@@ -138,15 +138,11 @@ class PublicHeader extends React.Component {
                         <NavLink activeClassName="" to="/" exact={true} style={{fontWeight: 'bold'}}>ИАС «АКАДЕМИЯ
                             ХОККЕЯ АК БАРС»</NavLink>
                         <div className='xs-hidden' style={{display:'flex',alignItems:'center',marginLeft:'auto',marginRight:'4rem'}}>
-                            <IconButton
-                                aria-label="More"
-                                aria-owns={anchorEl ? 'long-menu' : null}
-                                aria-haspopup="true"
-                                color="inherit"
-                                onClick={this.handleClick}
+                            <Link
+                                to='/cart'
                             >
                                 <ShoppingBasketIcon/>
-                            </IconButton>
+                            </Link>
                             <IconButton
                                 aria-label="More"
                                 aria-owns={anchorEl ? 'long-menu' : null}

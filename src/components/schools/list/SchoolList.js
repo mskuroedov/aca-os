@@ -114,8 +114,8 @@ class SchoolList extends React.Component {
         const {classes} = this.props;
         const {schools} = this.state;
         return (
-            <div>
-                <Grid container spacing={16} style={{paddingLeft: 168, paddingRight: 168, paddingTop: 24}}>
+            <div className='main-section'>
+                <Grid container spacing={16} >
                     <Grid item>
                         <FormControl>
                             <Select

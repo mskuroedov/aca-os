@@ -62,7 +62,7 @@ class TilesItem extends React.Component {
     render() {
         const {classes, title, sportsman_count, trainers_count, groups_count, director} = this.props;
         return (
-            <Grid item xs={4}>
+            <Grid item xs={12} lg={4}>
                 <Link to="/schools/1">
                     <Paper className={classes.paper}>
                         <Typography className={classes.name}>
@@ -80,9 +80,9 @@ class TilesItem extends React.Component {
                         <Typography className={classes.infoVal}>
                             Набережные челны
                         </Typography>
-                        <hr style={{borderColor: 'rgba(36,36,33,0.1)', color: 'white',width:'calc(100% + 48px)',marginLeft:-24, borderBottom: 0}}/>
+                        <hr style={{borderColor: 'rgba(36,36,33,0.1)', color: 'white',width:'calc(100% + 48px)',marginLeft:-24, borderBottom: 0}} className='xs-hidden'/>
                         <Grid container spacing={16} className={classes.infoContainer}>
-                            <Grid item>
+                            <Grid item xs={12} lg>
                                 <Typography className={classes.infoTitle}>
                                     Спортсмены
                                 </Typography>
@@ -90,7 +90,7 @@ class TilesItem extends React.Component {
                                     {sportsman_count}
                                 </Typography>
                             </Grid>
-                            <Grid item>
+                            <Grid item xs={12} lg>
                                 <Typography className={classes.infoTitle}>
                                     Тренеры
                                 </Typography>
@@ -98,7 +98,7 @@ class TilesItem extends React.Component {
                                     {trainers_count}
                                 </Typography>
                             </Grid>
-                            <Grid item>
+                            <Grid item xs={12} lg>
                                 <Typography className={classes.infoTitle}>
                                     Группы
                                 </Typography>

@@ -11,6 +11,7 @@ import MenuIcon from 'material-ui-icons/Menu';
 import Input from 'material-ui/Input';
 import teal from 'material-ui/colors/teal';
 import {NavLink} from "react-router-dom";
+import Link from "react-router-dom/es/Link";
 
 
 const styles = theme => ({
@@ -108,15 +109,11 @@ class PublicHeader extends React.Component {
                             {/*<NavLink activeClassName="active" to="/users_info/0">Пользователям</NavLink>*/}
                         </div>
                         <div className='' style={{display:'flex',alignItems:'center'}}>
-                            <IconButton
-                                aria-label="More"
-                                aria-owns={anchorEl ? 'long-menu' : null}
-                                aria-haspopup="true"
-                                color="inherit"
-                                onClick={this.handleClick}
+                            <Link
+                                to='/cart'
                             >
                                 <ShoppingBasketIcon/>
-                            </IconButton>
+                            </Link>
                             <NavLink activeClassName="" to="/" style={{fontSize:15}}>Войти</NavLink>
 
                         </div>
