@@ -101,7 +101,7 @@ class SchoolInfo extends React.Component {
             <div>
                 <Grid container spacing={16}
                 >
-                    <Grid item xs={8}>
+                    <Grid item xs={12} lg={8}>
                         <h3 className={classes.title}>{this.titles[0]}</h3>
                         <Paper classes={{
                             root: classes.paper
@@ -140,7 +140,7 @@ class SchoolInfo extends React.Component {
                                        onClose={this.handleClose}/>
                         </Paper>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} lg={4}>
                         <h3 className={classes.title}>{this.titles[1]}</h3>
 
                         <Paper className={classNames(classes.textCentered, classes.paper)}
@@ -208,15 +208,15 @@ class SchoolInfo extends React.Component {
                     <Grid item xs={12}>
                         <h3 className={classes.title}>{this.titles[3]}</h3>
                         <Grid container spacing={16}>
-                            <Grid item xs={4}>
+                            <Grid item xs={12} lg={4}>
                                 <NewsPaper/>
 
                             </Grid>
-                            <Grid item xs={4}>
+                            <Grid item xs={12} lg={4}>
                                 <NewsPaper/>
 
                             </Grid>
-                            <Grid item xs={4}>
+                            <Grid item xs={12} lg={4}>
                                 <NewsPaper/>
 
                             </Grid>

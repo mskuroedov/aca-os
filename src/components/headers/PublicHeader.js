@@ -168,7 +168,7 @@ class PublicHeader extends React.Component {
                             >
                                 {options.map(option => (
                                     <MenuItem key={option.id}  onClick={this.handleClose}>
-                                        <Link to={option.link} style={{color:'#242421',fontSize:15}}>{option.name}</Link>
+                                        <Link to={option.link} style={{color:'#242421',fontSize:15,width:'100%'}}>{option.name}</Link>
                                     </MenuItem>
                                 ))}
                             </Menu>

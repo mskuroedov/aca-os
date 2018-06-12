@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import {withStyles} from 'material-ui/styles';
 import Icon from 'material-ui/Icon';
 
-const styles = {
+const styles = theme => ({
 
     building:{
       color:'white',
@@ -28,9 +28,16 @@ const styles = {
     },
     schoolHeader: {
         alignItems: 'center',
-        paddingLeft: 165,
-        paddingRight: 165,
-        paddingTop: 50,
+        [theme.breakpoints.down('lg')]: {
+            paddingLeft: 16,
+            paddingRight: 16,
+            paddingTop: 16,
+        },
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: 165,
+            paddingRight: 165,
+            paddingTop: 50,
+        },
         backgroundColor: '#fff',
         display:'flex'
     },
@@ -55,15 +62,23 @@ const styles = {
         color:'rgba(36,36,33,1)',
         position:'relative',
         top:-5
+    },
+    xsh:{
+        [theme.breakpoints.down('lg')]: {
+            display:'none',
+        },
+        [theme.breakpoints.up('lg')]: {
+            display:'block',
+        },
     }
-};
+});
 const SchoolHeader = (props) => {
     const {classes} = props;
     return (
         <section className={classNames(classes.schoolHeader)}>
 
             <Grid
-                item  align={'flex-basis'}>
+                item  align={'flex-basis'} className='xs-hidden'>
                 <Icon className={classes.building} classes={{
                     root:classes.building
                 }}>location_city</Icon>
@@ -73,17 +88,17 @@ const SchoolHeader = (props) => {
                 <span className={classNames(classes.schoolName)}>ДЮСШ №1</span><br/>
                 <span className={classNames(classes.schoolAdress)}>г. Казань, ул. Петербургская, д. 37</span>
             </Grid>
-            <Grid item className={classNames(classes.schoolRightSec,classes.mlauto)}>
+            <Grid item className={classNames(classes.schoolRightSec,classes.mlauto,classes.xsh)}>
                 <span>Спортсмены</span><br/>
                 <span className={classNames(classes.schoolRatingNum)}>100</span>
             </Grid>
 
-            <Grid item className={classNames(classes.schoolRightSec)}>
+            <Grid item className={classNames(classes.schoolRightSec,classes.xsh)}>
                 <span>Тренеры</span><br/>
                 <span className={classNames(classes.schoolRatingNum)}>20</span>
             </Grid>
 
-            <Grid item className={classNames(classes.schoolRightSec)}>
+            <Grid item className={classNames(classes.schoolRightSec,classes.xsh)}>
                 <span>Группы</span><br/>
                 <span className={classNames(classes.schoolRatingNum)}>15</span>
             </Grid>

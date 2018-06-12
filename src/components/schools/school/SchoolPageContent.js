@@ -17,11 +17,11 @@ import GroupsPage from "./groups/GroupsPage";
 
 function TabContainer(props) {
     return (
-        <Typography
-            component="div"
-            style={{paddingTop: 24, backgroundColor: "#f6f6f6", paddingRight: 168, paddingLeft: 168}}>
+        <div
+            className='main-section'
+            style={{paddingTop: 24, backgroundColor: "#f6f6f6"}}>
             {props.children}
-        </Typography>
+        </div>
     );
 }
 
@@ -69,7 +69,19 @@ const styles = theme => ({
         opacity: 1
     },
     menuFlexContainer: {
-        justifyContent: 'center',
+        [theme.breakpoints.down('lg')]: {
+            justifyContent: 'start',
+            paddingLeft:16,
+            paddingRight:16
+
+        },
+        [theme.breakpoints.up('lg')]: {
+            justifyContent: 'center',
+
+        },
+    },
+    tabScroller:{
+        overflowX:'scroll'
     }
 
 });
@@ -93,6 +105,7 @@ class SchoolMenu extends React.Component {
                             onChange={this.handleChange}
                             className={classes.tabs}
                             indicatorColor="primary"
+                            scrollable={true}
                             classes={{
                                 root: classes.root,
                                 flexContainer: classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
@@ -177,7 +190,9 @@ class SchoolMenu extends React.Component {
                         </Tabs>
                     </Grid>
                 </Grid>
-                <TabContainer style={{paddingTop: 30}}>
+                <TabContainer style={{paddingTop: 30}} classes={{
+                    scroller:classes.tabScroller
+                }}>
                     {view === 'common' && <SchoolInfo/>}
                     {view === 'schedule' && <Calendar/>}
                     {/*{view === 'schedule' && 'calendar'}*/}
