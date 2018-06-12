@@ -23,19 +23,18 @@ const styles = theme => ({
     },
     name: {
         color: 'rgba(36,36,33,1)',
-        fontSize: 18,
+        fontSize: 17,
         fontWeight:'bold',
         marginTop: 36,
         marginBottom: 9,
     },
     infoTitle: {
         color: 'rgba(36,36,33,0.6)',
-        fontSize: 14,
-        marginTop: 16
+        fontSize: 13,
     },
     infoVal: {
         color: 'rgba(36,36,33,1)',
-        fontSize: 16,
+        fontSize: 15,
         marginTop: 5,
         fontWeight:'bold'
     },
@@ -45,6 +44,8 @@ const styles = theme => ({
         margin: 'auto'
     },
     link: {
+        marginBottom:16,
+        fontSize:15,
         borderBottom: '1px solid rgba(36,36,33,0.2)',
         color: 'rgba(36,36,33,1)',
         '&:hover': {
@@ -74,10 +75,10 @@ class TilesItem extends React.Component {
                         <Link to="#" className={classes.link}>
                             {director.secondname} {director.firstname} {director.middlename}
                         </Link>
-                        <Typography className={classes.infoTitle}>
+                        <Typography className={classes.infoTitle} style={{marginTop:16}}>
                             Город
                         </Typography>
-                        <Typography className={classes.infoVal}>
+                        <Typography className={classes.infoVal} style={{marginBottom:16}}>
                             Набережные челны
                         </Typography>
                         <hr style={{borderColor: 'rgba(36,36,33,0.1)', color: 'white',width:'calc(100% + 48px)',marginLeft:-24, borderBottom: 0}} className='xs-hidden'/>

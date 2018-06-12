@@ -13,6 +13,7 @@ import Input from "material-ui/es/Input/Input";
 import TilesView from "./tiles/TilesView";
 import {schools, schoolFilters, schoolCityFilters} from "../../../fixtures/schools";
 import Button from "@material-ui/core/es/Button/Button";
+import SchoolFiltersModal from "./SchoolFiltersModal";
 
 
 const styles = theme => ({
@@ -20,10 +21,11 @@ const styles = theme => ({
         fontSize: 13,
         fontWeight: 'bold',
         marginRight: 10,
-        height: 45
+        height: 45,
     },
     formControl: {
-        marginLeft: 'auto'
+        marginLeft: 'auto',
+        width:'100%'
     },
     iconbtn: {
         marginTop: 5,
@@ -56,7 +58,7 @@ const styles = theme => ({
         color: 'rgba(36,36,33,1)',
         marginTop: 11,
         paddingBottom: 5,
-        minWidth: 267,
+        width:'100%',
         marginLeft: 'auto',
         '&:before': {
             backgroundColor: 'rgba(0,0,0,0.2)'
@@ -115,7 +117,7 @@ class SchoolList extends React.Component {
         const {schools} = this.state;
         return (
             <div className='main-section'>
-                <Grid container spacing={16} >
+                <Grid container spacing={16} className='xs-hidden'>
                     <Grid item>
                         <FormControl>
                             <Select
@@ -184,7 +186,35 @@ class SchoolList extends React.Component {
                             />
                         </FormControl>
                     </Grid>
+                </Grid>
+                <Grid container spacing={16} className='lg-hidden'>
 
+                    <Grid item xs={10}>
+                        <FormControl className={classes.formControl}>
+                            <Input
+                                classes={{
+                                    root: classes.searchInput,
+                                    underline: classes.searchInkbar
+                                }}
+                                onChange={this.onSearchChange}
+                                placeholder="Поиск по названию"
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <Icon classes={{
+                                            root: classes.searchInputIcon
+                                        }}>
+                                        </Icon>
+                                    </InputAdornment>
+                                }
+                            />
+                        </FormControl>
+                    </Grid>
+                    <Grid item xs={2}>
+                        <SchoolFiltersModal/>
+                    </Grid>
+                </Grid>
+
+                <Grid container spacing={16}>
                     <Grid item xs={12} className="paper_w_table">
                         <TilesView schools={schools}/>
 

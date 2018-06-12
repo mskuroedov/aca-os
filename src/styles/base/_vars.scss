@@ -11,3 +11,16 @@
 .ml-auto{
   margin-left: auto !important;
 }
+.has-updates-yellow{
+  position: relative;
+  &:after{
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #ffea31;
+    border-radius: 100%;
+    top: -5px;
+    right:8px;
+  }
+}
