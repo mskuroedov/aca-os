@@ -20,6 +20,7 @@ import LibraryItemPage from "../components/library/Item/LibraryItemPage";
 import UsersInfoPage from "../components/usersInfo/UsersInfoPage";
 import CartPage from "../components/cart/CartPage";
 import ItemPage from "../components/usersInfo/content/itempage/ItemPage";
+import TournamentsPage from "../components/tournaments/TournamentsPage";
 
 export const history = createHistory();
 
@@ -47,6 +48,7 @@ const AppRouter = () => (
                 <Route path="/news" exact={true} component={NewsPage}/>
                 <Route path="/news/1" exact={true} component={ShowNewsPage}/>
                 <Route path="/calendar" exact={true} component={CalendarPage}/>
+                <Route path="/tournaments" exact={true} component={TournamentsPage}/>
                 <Route path="/calendar/1" exact={true} component={DatePage}/>
                 <Route path="/stats" exact={true} component={CommonStatsPage}/>
                 <Route path="/author/1" exact={true} component={AuthorPage}/>

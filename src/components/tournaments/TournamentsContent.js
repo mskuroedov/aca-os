@@ -11,7 +11,7 @@ import {calendar, seasonFilter, stagesFilter, statusFilter, leaguesFilter} from 
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import CloseIcon from '@material-ui/icons/Close';
 import Input from "@material-ui/core/es/Input/Input";
-import CalendarTableView from "./CalendarTableView";
+import TournamentTableView from "./TournamentTableView";
 import Calendar from "./Calendar";
 
 const styles = theme => ({
@@ -77,7 +77,7 @@ const styles = theme => ({
 });
 
 
-class CalendarView extends React.Component {
+class TournamentsContent extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -252,7 +252,7 @@ class CalendarView extends React.Component {
                         </Grid>
                     </Grid>
                     <Grid item xs={12}>
-                        {this.state.CalendarView ? <CalendarTableView calendar={calendar}/> : <Calendar/>}
+                        {this.state.CalendarView ? <TournamentTableView calendar={calendar}/> : <Calendar/>}
 
                     </Grid>
                 </Grid>
@@ -261,8 +261,8 @@ class CalendarView extends React.Component {
     }
 }
 
-CalendarView.propTypes = {
+TournamentsContent.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(CalendarView);
+export default withStyles(styles)(TournamentsContent);

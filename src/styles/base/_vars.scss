@@ -1,13 +1,13 @@
 .xs-hidden{
   @media(max-width: 1023px){
-    display: none;
+    display: none !important;
   }
 }
 .lg-hidden{
   @media (min-width:1024px) {
-    display: none;
+    display: none !important;
   }
 }
 .ml-auto{
-  margin-left: auto;
+  margin-left: auto !important;
 }

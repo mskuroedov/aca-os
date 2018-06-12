@@ -94,7 +94,7 @@ class PublicHeader extends React.Component {
             <div>
                 <AppBar position="static">
                     <Toolbar className="header">
-                        <NavLink activeClassName="active" to="/" exact={true} style={{fontWeight: 'bold'}}>ИАС «АКАДЕМИЯ
+                        <NavLink activeClassName="" className='xs-hidden' to="/" exact={true} style={{fontWeight: 'bold'}}>ИАС «АКАДЕМИЯ
                             ХОККЕЯ АК БАРС»</NavLink>
                         <div className='xs-hidden ml-auto'>
                             {/*<NavLink activeClassName="active" to="/" exact={true}*/}
@@ -107,7 +107,7 @@ class PublicHeader extends React.Component {
                             {/*<NavLink activeClassName="active" to="/libraries">Библиотека</NavLink>*/}
                             {/*<NavLink activeClassName="active" to="/users_info/0">Пользователям</NavLink>*/}
                         </div>
-                        <div className='xs-hidden' style={{display:'flex',alignItems:'center'}}>
+                        <div className='' style={{display:'flex',alignItems:'center'}}>
                             <IconButton
                                 aria-label="More"
                                 aria-owns={anchorEl ? 'long-menu' : null}
@@ -128,7 +128,7 @@ class PublicHeader extends React.Component {
                                 color="inherit"
                                 onClick={this.handleClick}
                             >
-                                <MoreVertIcon/>
+                                <MenuIcon/>
                             </IconButton>
                             <Menu
                                 id="long-menu"
@@ -150,13 +150,14 @@ class PublicHeader extends React.Component {
                             </Menu>
                         </div>
                     </Toolbar>
-                    <Toolbar className="header">
+                    <Toolbar className="header xs-hidden">
 
                         <div className='header__nav'>
                             <NavLink activeClassName="active" to="/" exact={true}>Портал</NavLink>
                             <NavLink activeClassName="active" to="/news">Новости</NavLink>
                             <NavLink activeClassName="active" to="/schools">Школы</NavLink>
                             {/*<NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>*/}
+                            <NavLink activeClassName="active" to="/tournaments">Турниры</NavLink>
                             <NavLink activeClassName="active" to="/calendar">Календарь</NavLink>
                             <NavLink activeClassName="active" to="/stats">Статистика</NavLink>
                             <NavLink activeClassName="active" to="/libraries">Библиотека</NavLink>
@@ -164,15 +165,7 @@ class PublicHeader extends React.Component {
                         </div>
 
                         <div className='lg-hidden ml-auto'>
-                            <IconButton
-                                aria-label="More"
-                                aria-owns={anchorEl ? 'long-menu' : null}
-                                aria-haspopup="true"
-                                color="inherit"
-                                onClick={this.handleClick}
-                            >
-                                <MenuIcon/>
-                            </IconButton>
+
                         </div>
                     </Toolbar>
                 </AppBar>
