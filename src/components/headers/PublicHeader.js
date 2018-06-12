@@ -12,6 +12,9 @@ import Input from 'material-ui/Input';
 import teal from 'material-ui/colors/teal';
 import {NavLink} from "react-router-dom";
 import Link from "react-router-dom/es/Link";
+import Button from "material-ui/es/Button/Button";
+import {connect} from "react-redux";
+import {login} from "../../actions/auth";
 
 
 const styles = theme => ({
@@ -138,11 +141,11 @@ class PublicHeader extends React.Component {
                         </div>
                         <div className='' style={{display: 'flex', alignItems: 'center'}}>
                             <Link
-                                to='/cart'
+                                to='/cart' style={{lineHeight:0.6}}
                             >
                                 <ShoppingBasketIcon/>
                             </Link>
-                            <NavLink activeClassName="" to="/" style={{fontSize: 15}}>Войти</NavLink>
+                            <Button onClick={this.props.login} style={{fontSize: 15,color:'white',textTransform:'capitalize'}}>Войти</Button>
 
                         </div>
                         <div className='lg-hidden ml-auto'>
@@ -202,4 +205,8 @@ PublicHeader.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(PublicHeader);
+const mapDispatchToProps = (dispatch) => ({
+    login: () => dispatch(login('Maxim', '1'))
+});
+
+export default connect(undefined, mapDispatchToProps)(withStyles(styles)(PublicHeader));

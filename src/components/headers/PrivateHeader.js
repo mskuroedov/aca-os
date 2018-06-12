@@ -18,6 +18,8 @@ import Link from "react-router-dom/es/Link";
 import Avatar from "@material-ui/core/es/Avatar/Avatar";
 import Button from "@material-ui/core/es/Button/Button";
 import Popover from "material-ui/es/Popover/Popover";
+import {login, logout} from "../../actions/auth";
+import {connect} from "react-redux";
 
 
 const styles = theme => ({
@@ -55,8 +57,8 @@ const styles = theme => ({
     avatar: {
         width: 32,
         height: 32,
-        marginLeft:8,
-        marginRight:4
+        marginLeft: 8,
+        marginRight: 4
     },
     textFieldInput: {
         borderRadius: 4,
@@ -74,31 +76,31 @@ const styles = theme => ({
     textFieldFormLabel: {
         fontSize: 18,
     },
-    lkBtn:{
-        display:'flex',
-        alignItems:'center',
-        color:'white',
-        fontSize:14,
-        textTransform:'capitalize'
+    lkBtn: {
+        display: 'flex',
+        alignItems: 'center',
+        color: 'white',
+        fontSize: 14,
+        textTransform: 'capitalize'
     },
-    lkpopover:{
-        marginTop:40,
+    lkpopover: {
+        marginTop: 40,
     },
-    lkpaper:{
-        width:150,
-        borderRadius:5,
-        boxShadow:'none',
-        border:'1px solid rgba(0,0,0,.2)',
+    lkpaper: {
+        width: 150,
+        borderRadius: 5,
+        boxShadow: 'none',
+        border: '1px solid rgba(0,0,0,.2)',
     },
-    menuItem:{
-        padding:'8px 8px',
-        fontSize:14,
-        color:'rgba(36,36,33)',
-        '&:first-of-type':{
-            borderBottom:'1px solid rgba(36,36,33,.1)'
+    menuItem: {
+        padding: '8px 8px',
+        fontSize: 14,
+        color: 'rgba(36,36,33)',
+        '&:first-of-type': {
+            borderBottom: '1px solid rgba(36,36,33,.1)'
         },
-        '&:last-of-type':{
-            borderTop:'1px solid rgba(36,36,33,.1)'
+        '&:last-of-type': {
+            borderTop: '1px solid rgba(36,36,33,.1)'
         }
     }
 });
@@ -113,7 +115,7 @@ class PublicHeader extends React.Component {
     state = {
         auth: true,
         anchorEl: null,
-        open:false
+        open: false
     };
     handleClick = event => {
         this.setState({
@@ -137,10 +139,10 @@ class PublicHeader extends React.Component {
                     <Toolbar className="header">
                         <NavLink activeClassName="" to="/" exact={true} style={{fontWeight: 'bold'}}>ИАС «АКАДЕМИЯ
                             ХОККЕЯ АК БАРС»</NavLink>
-                        <div className='xs-hidden' style={{display:'flex',alignItems:'center',marginLeft:'auto',marginRight:'4rem'}}>
+                        <div className='xs-hidden'
+                             style={{display: 'flex', alignItems: 'center', marginLeft: 'auto', marginRight: '4rem'}}>
                             <Link
-                                to='/cart'
-                            >
+                                to='/cart' style={{lineHeight:0.6}}>
                                 <ShoppingBasketIcon/>
                             </Link>
                             <IconButton
@@ -165,13 +167,13 @@ class PublicHeader extends React.Component {
                         </div>
 
                         <div>
-                            <Button onClick={this.handleClick} className={classes.lkBtn} >Константин <Avatar
+                            <Button onClick={this.handleClick} className={classes.lkBtn}>{this.props.username} <Avatar
                                 alt="Adelle Charles"
                                 src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
                                 classes={{
                                     root: classes.avatar
                                 }}
-                            /> <KeyboardArrowDownIcon style={{fontSize:14,marginTop:3}}/></Button>
+                            /> <KeyboardArrowDownIcon style={{fontSize: 14, marginTop: 3}}/></Button>
                             <Popover
                                 open={open}
                                 anchorOrigin={{
@@ -186,24 +188,27 @@ class PublicHeader extends React.Component {
                                 onClose={this.handleClose}
                                 className={classes.lkpopover}
                                 classes={{
-                                    paper:classes.lkpaper
+                                    paper: classes.lkpaper
                                 }}
                             >
 
                                 <MenuItem key={9998} onClick={this.handleClose} classes={{
-                                    root:classes.menuItem
+                                    root: classes.menuItem
                                 }}>
                                     Мой профиль
                                 </MenuItem>
                                 {options.map(option => (
                                     <MenuItem key={option} onClick={this.handleClose} classes={{
-                                        root:classes.menuItem
+                                        root: classes.menuItem
                                     }}>
                                         {option}
                                     </MenuItem>
                                 ))}
-                                <MenuItem key={9999}  onClick={this.handleClose} classes={{
-                                    root:classes.menuItem
+                                <MenuItem key={9999} onClick={() => {
+                                    this.handleClose();
+                                    this.props.logout()
+                                }} classes={{
+                                    root: classes.menuItem
                                 }}>
                                     Выйти
                                 </MenuItem>
@@ -235,4 +240,12 @@ PublicHeader.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(PublicHeader);
+const mapStateToProps = (state) => ({
+    username: state.auth.user.username
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    logout: () => dispatch(logout())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(PublicHeader));
