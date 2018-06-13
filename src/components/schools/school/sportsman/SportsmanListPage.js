@@ -13,9 +13,13 @@ import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Input from "material-ui/es/Input/Input";
 import TilesView from "./tiles/TilesView";
 import {sportsman, sportsmanGroupFilters, sportsmanPositionFilters} from "../../../../fixtures/sportsman";
+import SportsmanListPageModalFilters from "./SportsmanListPageModalFilters";
 
 
 const styles = theme => ({
+    formControl:{
+      width:'100%'
+    },
     button: {
         fontSize: 13,
         fontWeight: 'bold',
@@ -52,7 +56,7 @@ const styles = theme => ({
         color: 'rgba(36,36,33,1)',
         marginTop: 11,
         paddingBottom: 5,
-        minWidth: 267,
+        width:'100%',
         '&:before': {
             backgroundColor: 'rgba(0,0,0,0.2)'
         },
@@ -72,7 +76,7 @@ const styles = theme => ({
     searchInputIcon: {
         color: 'rgba(145,143,138,1)',
         position: 'relative',
-        top: 8
+        top: 0
     }
 });
 
@@ -114,7 +118,7 @@ class Sportsman extends React.Component {
         return (
             <div>
                 <Grid container spacing={8}>
-                    <Grid item>
+                    <Grid item className='xs-hidden'>
                         <FormControl>
                             <Select
                                 value={this.state.selectedYearFilter}
@@ -134,7 +138,7 @@ class Sportsman extends React.Component {
                             </Select>
                         </FormControl>
                     </Grid>
-                    <Grid item>
+                    <Grid item className='xs-hidden'>
                         <FormControl>
                             <Select
                                 value={this.state.selectedChampionshipFilter}
@@ -154,7 +158,7 @@ class Sportsman extends React.Component {
                             </Select>
                         </FormControl>
                     </Grid>
-                    <Grid item>
+                    <Grid item className='xs-hidden'>
                         <Button classes={{
                             root: classes.button,
                             label: classes.gray
@@ -162,7 +166,7 @@ class Sportsman extends React.Component {
                             Сбросить
                         </Button>
                     </Grid>
-                    <Grid>
+                    <Grid item xs={10} lg={3}>
                         <FormControl className={classes.formControl}>
                             <Input classes={{
                                 root: classes.searchInput,
@@ -175,11 +179,15 @@ class Sportsman extends React.Component {
                                            <Icon classes={{
                                                root: classes.searchInputIcon
                                            }}>
+                                               search
                                            </Icon>
                                        </InputAdornment>
                                    }
                             />
                         </FormControl>
+                    </Grid>
+                    <Grid item xs={2} className='lg-hidden'>
+                        <SportsmanListPageModalFilters/>
                     </Grid>
 
                     <Grid item xs={12} className="paper_w_table">

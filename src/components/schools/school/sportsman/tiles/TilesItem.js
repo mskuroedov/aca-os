@@ -66,7 +66,7 @@ class TilesView extends React.Component {
         const {classes} = this.props;
         const {firstname, secondname, middlename} = this.props;
         return (
-            <Grid item xs={4}>
+            <Grid item xs={12} lg={4}>
                 <Link to="/sportsman/1">
                     <Paper className={classes.paper}>
                         <Avatar
