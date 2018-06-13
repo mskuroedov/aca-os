@@ -17,12 +17,20 @@ const styles = theme => ({
         boxShadow: 'none',
         borderRadius: 12,
         paddingTop: 16,
-        paddingLeft: 24,
         paddingBottom: 16,
         marginBottom: 10,
         border: '1px solid rgba(0,0,0,0.1);',
-        fontSize: 16,
+        fontSize: 15,
         fontFamily: '"BlissPro",sans-serif',
+        [theme.breakpoints.down('lg')]:{
+
+            paddingLeft: 16,
+            paddingRight:16
+        },
+        [theme.breakpoints.up('lg')]:{
+            paddingLeft: 24,
+            paddingRight:24
+        }
     },
     title: {
         marginBottom: 11,
@@ -34,51 +42,25 @@ const styles = theme => ({
     gray: {
         color: 'rgba(36,36,33,0.3)'
     },
-    searchInput: {
-        fontSize: 14,
-        color: 'rgba(36,36,33,1)',
-        marginTop: 11,
-        paddingBottom: 5,
-        minWidth: 267,
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        }
-    },
-    searchInkbar: {
-        color: 'rgba(36,36,33,1)',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        }
-    },
-    searchInputIcon: {
-        color: 'rgba(145,143,138,1)',
-        position: 'relative',
-        top: 8
-    },
     avatar: {
         width: 56,
         height: 56
     },
     fio:{
         color:'rgba(36,36,33,1)',
-        fontSize:16
+        fontSize:15
     },
     trainLevel:{
         color:'rgba(36,36,33,0.6)',
-        fontSize:14
+        fontSize:13
     },
     link:{
+        marginTop:4,
         lineHeight:1.6,
         color:'rgba(36,36,33,1);',
         transition:'all 0.4s',
         borderBottom: ' 1px solid rgba(36,36,33,0.2)',
-        fontSize:16,
+        fontSize:15,
         '&:hover':{
             transition:'all 0.4s',
             borderBottomColor:'rgba(36,36,33,.5)'
@@ -112,8 +94,8 @@ class Trainer extends React.Component {
         return (
             <div>
                 <Paper className={classes.paper}>
-                    <Grid container alignItems="center" spacing={8}>
-                        <Grid item>
+                    <Grid container alignItems="flex-start" spacing={16} >
+                        <Grid item xs={3}>
                             <Avatar
                                 alt="Adelle Charles"
                                 src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
@@ -123,7 +105,7 @@ class Trainer extends React.Component {
                             />
 
                         </Grid>
-                        <Grid item>
+                        <Grid item xs={9}>
                             <Link to='/worker/1' className={classes.link}>Ягупов Анатолий Павлович </Link>
                             <Typography className={classes.trainLevel}>Тренер-преподаватель высшей категории</Typography>
                         </Grid>

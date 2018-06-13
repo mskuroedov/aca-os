@@ -6,26 +6,48 @@ import {withStyles} from 'material-ui/styles';
 import Avatar from 'material-ui/Avatar';
 
 
-const styles = {
+const styles = theme => ({
     avatar: {
         margin: 10,
     },
     bigAvatar: {
-        width: 90,
-        height: 90,
-        marginBottom:32
+        [theme.breakpoints.down('lg')]: {
+
+            width: 60,
+            height: 60,
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: 90,
+            height: 90,
+        },
     },
     sportsmenName: {
-        fontSize: 24,
+        [theme.breakpoints.down('lg')]: {
+            fontSize: 18,
+
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: 24,
+
+        },
         fontFamily: '"BlissPro",sans-serif',
         color: 'black',
         fontWeight: 'bold'
     },
     sportsmenHeader: {
         alignItems: 'center',
-        paddingLeft: 165,
-        paddingRight: 165,
-        paddingTop: 50,
+        [theme.breakpoints.down('lg')]: {
+            paddingLeft: 16,
+            paddingRight: 16,
+            paddingTop: 16,
+            paddingBottom:16
+        },
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: 165,
+            paddingRight: 165,
+            paddingTop: 50,
+            paddingBottom:32
+        },
         backgroundColor: '#fff',
         display: 'flex'
     },
@@ -33,32 +55,42 @@ const styles = {
         justifyItems: 'flex-end',
         textAlign: 'right',
         color: '#242421',
-        fontSize: 14
+        fontSize: 14,
+
+        [theme.breakpoints.down('lg')]: {
+            display: 'none'
+        },
+        [theme.breakpoints.up('lg')]: {
+            display: 'block'
+        },
     },
     sportsmenRatingNum: {
         fontSize: 40,
         color: '#242421',
         fontFamily: 'AkBarsFont'
     }
-};
+});
 const SportmenHeader = (props) => {
     const {classes, firstname, secondname} = props;
     return (
         <section className={classNames(classes.sportsmenHeader)}>
-            <Grid
-                item align={'flex-basis'}>
-                <Avatar
-                    alt="Adelle Charles"
-                    src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
-                    className={classNames(classes.avatar, classes.bigAvatar)}
-                />
-            </Grid>
-            <Grid item xs={4}>
-                <span className={classNames(classes.sportsmenName)}>{secondname} {firstname}</span>
-            </Grid>
-            <Grid item xs={6} className={classNames(classes.sportsmenRightSec)}>
-                <span>Рейтинг</span><br/>
-                <span className={classNames(classes.sportsmenRatingNum)}>140</span>
+            <Grid container spacing={16} alignItems='center'>
+
+                <Grid
+                    item  align={'flex-basis'}>
+                    <Avatar
+                        alt="Adelle Charles"
+                        src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
+                        className={classNames(classes.avatar, classes.bigAvatar)}
+                    />
+                </Grid>
+                <Grid item xs={8} lg={4}>
+                    <span className={classNames(classes.sportsmenName)}>{secondname} {firstname}</span>
+                </Grid>
+                <Grid item xs className={classNames(classes.sportsmenRightSec)}>
+                    <span>Рейтинг</span><br/>
+                    <span className={classNames(classes.sportsmenRatingNum)}>140</span>
+                </Grid>
             </Grid>
         </section>
     );

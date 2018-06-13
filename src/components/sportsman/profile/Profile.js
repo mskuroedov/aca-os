@@ -35,13 +35,13 @@ class Profile extends React.Component {
                         {/*редактировать информацию*/}
                     {/*</Button>*/}
                     <TableTitle title="Общая инфомация"/>
-                    <CommonInformation {...sportsmen.common} />
+                    <CommonInformation sportsman={sportsmen.common} />
                     <TableTitle title="Спортивная карьера"/>
                     <Career/>
                     <TableTitle title="Награды и достижения"/>
-                    <Rewards/>
+                    <Rewards />
                     <TableTitle title="Образование"/>
-                    <Achievements/>
+                    <Achievements />
                 </Grid>
             </div>
         )

@@ -75,25 +75,25 @@ class Contacts extends React.Component {
         return (
             <div>
                 <Grid container spacing={16}>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} lg={6}>
                         <Typography className={classes.title}>Контакты</Typography>
                         <Paper className={classes.paper} style={{marginBottom:24}}>
                             <Grid container spacing={16}>
-                                <Grid item xs={1}><Icon className={classes.iconGray}>location_on</Icon></Grid>
-                                <Grid item xs={11}>
+                                <Grid item xs={2} lg={1}><Icon className={classes.iconGray}>location_on</Icon></Grid>
+                                <Grid item xs={10} lg={11}>
                                     <Typography className={classes.mainText}>г. Казань, ул. Петербургская, д. 37, РТ, 420107</Typography>
                                 </Grid>
-                                <Grid item xs={1}><Icon className={classes.iconGray}>phone</Icon></Grid>
-                                <Grid item xs={11}>
+                                <Grid item xs={2} lg={1}><Icon className={classes.iconGray}>phone</Icon></Grid>
+                                <Grid item xs={10} lg={11}>
                                     <Typography className={classes.mainText} > (+7 843) 221-81-10</Typography>
                                 </Grid>
-                                <Grid item xs={1}><Icon className={classes.iconGray}>email</Icon></Grid>
-                                <Grid item xs={11}>
+                                <Grid item xs={2} lg={1}><Icon className={classes.iconGray}>email</Icon></Grid>
+                                <Grid item xs={10} lg={11}>
                                     <Link to='#' className={classes.link}>info@akbars.academy</Link>
 
                                 </Grid>
-                                <Grid item xs={1}><Icon className={classes.iconGray}>link</Icon></Grid>
-                                <Grid item xs={11}>
+                                <Grid item xs={2} lg={1}><Icon className={classes.iconGray}>link</Icon></Grid>
+                                <Grid item xs={10} lg={11}>
                                     <Link to='#' className={classes.link}>akbars.academy</Link>
 
                                 </Grid>
@@ -102,26 +102,26 @@ class Contacts extends React.Component {
                         <Typography className={classes.title} >Режим работы</Typography>
                         <Paper className={classes.paper}>
                             <Grid container spacing={8}>
-                                <Grid item xs={6}>
+                                <Grid item xs={12} lg={6}>
                                     <Typography className={classes.secondaryText} >Администрация</Typography>
                                     <Typography className={classes.mainText}>Пн — Пт: 8:00–18:00 <br/>
                                         Сб, Вс — выходной</Typography>
 
                                 </Grid>
-                                <Grid item xs={6}>
+                                <Grid item xs={12} lg={6}>
                                     <Typography className={classes.secondaryText} style={{marginBottom:5}}>Тренеры</Typography>
                                     <Link to='#' className={classes.link}>По расписанию</Link>
                                 </Grid>
                             </Grid>
                         </Paper>
                     </Grid>
-                    <Grid item xs={6} style={{marginTop:40}}>
+                    <Grid item xs={12} lg={6} style={{marginTop:16}}>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.769646348371!2d49.13627801561383!3d55.77987249737175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead08319bc063%3A0xbfe42899bd5dc4cf!2z0YPQuy4g0J_QtdGC0LXRgNCx0YPRgNCz0YHQutCw0Y8sIDU3LCDQmtCw0LfQsNC90YwsINCg0LXRgdC_LiDQotCw0YLQsNGA0YHRgtCw0L0sIDQyMDAxMQ!5e0!3m2!1sru!2sru!4v1517557063831"
                             className={classes.map}></iframe>
 
                     </Grid>
-                    <Grid item xs={8}>
+                    <Grid item xs={12} lg={8}>
                         <Typography className={classes.title}>Реквизиты</Typography>
                         <Paper className={classes.paper}>
                             <Grid container spacing={8}>
@@ -143,9 +143,6 @@ class Contacts extends React.Component {
                                 </Grid>
                             </Grid>
                         </Paper>
-                    </Grid>
-                    <Grid item xs={6}>
-
                     </Grid>
 
                 </Grid>

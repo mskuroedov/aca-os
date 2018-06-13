@@ -134,7 +134,7 @@ class StatsPageContent extends React.Component {
                         </Grid>
                     </Grid>
                     <Grid item xs={12}>
-                        <TeamTableView TeamStats={TeamStats}/>
+                        <TeamTableView TeamStats={TeamStats} />
                     </Grid>
                 </Grid>
             </section>

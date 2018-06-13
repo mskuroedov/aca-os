@@ -13,7 +13,8 @@ import Typography from "material-ui/es/Typography/Typography";
 const styles = theme => ({
     formControl: {
         marginTop: '-5px',
-        marginBottom: 24
+        marginBottom: 24,
+        width:'100%'
     },
     button: {
         margin: theme.spacing.unit,
@@ -31,7 +32,8 @@ const styles = theme => ({
 
         marginTop: 11,
         paddingBottom: 5,
-        minWidth: 267,
+        maxWidth: 290,
+        width:'100%',
         '&:before': {
             backgroundColor: 'rgba(0,0,0,0.2)'
         },
@@ -98,10 +100,7 @@ class Trainers extends React.Component {
                                    endAdornment={
                                        <InputAdornment position="end"><Icon classes={{
                                        root: classes.searchInputIcon
-                                   }}
-                                       style={{
-                                        fontSize:18
-                                       }}>
+                                   }}>
                                        search
                                    </Icon></InputAdornment>
                                    }
@@ -110,7 +109,7 @@ class Trainers extends React.Component {
                             />
                         </FormControl>
                     </Grid>
-                    <Grid item xs={7}>
+                    <Grid item xs={12} lg={7}>
                         <Typography className={classes.title}>Тренеры</Typography>
                         <Trainer/>
                         <Trainer/>

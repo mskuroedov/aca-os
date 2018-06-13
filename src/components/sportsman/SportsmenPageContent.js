@@ -77,7 +77,7 @@ class SportsmenPageContent extends React.Component {
         const {classes, view, sportsmenId, sportsmen} = this.props;
 
         return (
-            <section style={{paddingLeft:168,paddingRight:168,paddingTop:24}}>
+            <section className='main-section'>
                 <Profile sportsmen={sportsmen}/>
 
             </section>

@@ -17,7 +17,7 @@ class CommonStatsPage extends React.Component {
 
 
     render() {
-        const {classes} = this.props;
+        const {classes,common} = this.props;
         return (
             <div>
                 <Header/>
@@ -26,7 +26,7 @@ class CommonStatsPage extends React.Component {
                 />
                 {/*<StatsPageContent/>*/}
                 <div style={{paddingLeft: 168, paddingRight: 168, paddingTop: 32, paddingBottom: 64}}>
-                    <StatsPage common={true}/>
+                    <StatsPage common={common}/>
                 </div>
             </div>
         )
