@@ -11,10 +11,8 @@
   }
   a{
     color: #fff;
-    margin-right: 13.5px;
-    margin-left: 13.5px;
     font-family: "BlissPro",sans-serif;
-
+    font-size: 13px;
   }
   a:first-of-type{
   }
@@ -23,8 +21,22 @@
   }
   .header__nav{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
+    &:not(.header__nav_small){
+      a{
+
+        margin-right: 13.5px;
+        margin-left: 13.5px;
+      }
+    }
+    &.header__nav_small{
+      padding-left: 153px;
+      padding-right: 153px;
+    }
+    a{
+      text-transform: uppercase;
+    }
   }
   &__input{
     color: #fff !important;

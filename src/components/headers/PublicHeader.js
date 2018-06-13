@@ -179,7 +179,7 @@ class PublicHeader extends React.Component {
                     </Toolbar>
                     <Toolbar className="header xs-hidden">
 
-                        <div className='header__nav'>
+                        <div className='header__nav header__nav_small '>
                             <NavLink activeClassName="active" to="/" exact={true}>Портал</NavLink>
                             <NavLink activeClassName="active" to="/news">Новости</NavLink>
                             <NavLink activeClassName="active" to="/schools">Школы</NavLink>
