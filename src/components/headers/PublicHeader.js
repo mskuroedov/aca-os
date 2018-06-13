@@ -141,7 +141,7 @@ class PublicHeader extends React.Component {
                         </div>
                         <div className='' style={{display: 'flex', alignItems: 'center'}}>
                             <Link
-                                to='/cart' style={{lineHeight:0.6}}
+                                to='/cart' style={{lineHeight:0.6,width:48,textAlign:'center'}}
                             >
                                 <ShoppingBasketIcon/>
                             </Link>

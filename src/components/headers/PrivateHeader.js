@@ -142,7 +142,7 @@ class PublicHeader extends React.Component {
                         <div className='xs-hidden'
                              style={{display: 'flex', alignItems: 'center', marginLeft: 'auto', marginRight: '4rem'}}>
                             <Link
-                                to='/cart' style={{lineHeight:0.6}}>
+                                to='/cart' style={{lineHeight:0.6,width:48,textAlign:'center'}}>
                                 <ShoppingBasketIcon/>
                             </Link>
                             <IconButton
@@ -219,14 +219,16 @@ class PublicHeader extends React.Component {
                     <Toolbar className='header'>
                         <div className='header__nav'>
                             <NavLink activeClassName="active" to="/" exact={true}>Рабочий стол</NavLink>
+                            <NavLink activeClassName="active" to="/news" >Новости</NavLink>
                             <NavLink activeClassName="active" to={routes.schoolsPage()}>Школы</NavLink>
                             <NavLink activeClassName="active" to="/sportsman/1">Спортсмены</NavLink>
-                            <NavLink activeClassName="active" to="#">Календарь</NavLink>
-                            <NavLink activeClassName="active" to="#">Статистика и аналитика</NavLink>
-                            <NavLink activeClassName="active" to="#">Отчёты и документы</NavLink>
+                            <NavLink activeClassName="active" to="/tournaments">Турниры</NavLink>
+                            <NavLink activeClassName="active" to="/calendar">Календарь</NavLink>
                             <NavLink activeClassName="active" to="#">Тренировочные планы</NavLink>
+                            <NavLink activeClassName="active" to="/libraries">Библиотека</NavLink>
+                            <NavLink activeClassName="active" to="/stats">Статистика</NavLink>
+                            <NavLink activeClassName="active" to="#">Документы</NavLink>
                             <NavLink activeClassName="active" to="#">Обучение</NavLink>
-                            <NavLink activeClassName="active" to="#">Аттестация</NavLink>
 
                         </div>
                     </Toolbar>
