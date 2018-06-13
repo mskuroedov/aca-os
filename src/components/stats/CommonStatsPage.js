@@ -25,7 +25,7 @@ class CommonStatsPage extends React.Component {
                     title='Статистика'
                 />
                 {/*<StatsPageContent/>*/}
-                <div style={{paddingLeft: 168, paddingRight: 168, paddingTop: 32, paddingBottom: 64}}>
+                <div className='main-section'>
                     <StatsPage common={common}/>
                 </div>
             </div>
