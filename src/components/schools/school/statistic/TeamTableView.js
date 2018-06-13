@@ -67,7 +67,7 @@ class TeamTableView extends React.Component {
                         <Table className="table_stats no-bottom">
                             <TableHead>
                                 <TableRow>
-                                    <TableCell numeric style={{maxWidth:30,paddingRight:16}}>Место</TableCell>
+                                    <TableCell numeric style={{maxWidth:50,paddingRight:16}}>Место</TableCell>
                                     <TableCell style={{width:350,paddingLeft:24}}>Команда</TableCell>
                                     <TableCell numeric>И</TableCell>
                                     <TableCell numeric>В</TableCell>

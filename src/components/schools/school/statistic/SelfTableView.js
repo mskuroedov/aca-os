@@ -68,8 +68,8 @@ class SelfTableView extends React.Component {
                             <TableHead>
                                 <TableRow>
                                     <TableCell>Номер</TableCell>
-                                    <TableCell>ФИО</TableCell>
-                                    <TableCell>
+                                    <TableCell style={{minWidth:80}}>ФИО</TableCell>
+                                    <TableCell style={{minWidth:80}}>
                                         {
                                             common ? 'Школа' : 'Группа'
                                         }

@@ -11,6 +11,7 @@ import Button from "@material-ui/core/es/Button/Button";
 import Switch from "@material-ui/core/es/Switch/Switch";
 import TeamTableView from "./TeamTableView";
 import SelfTableView from "./SelfTableView";
+import SchoolStatsModalFilter from "./SchoolStatsModalFilter";
 
 const styles = theme => ({
     button: {
@@ -115,7 +116,10 @@ class StatsPage extends React.Component {
                     </Grid>
 
                 </Grid>
-                <Grid item>
+                <Grid item className='lg-hidden ml-auto'>
+                    <SchoolStatsModalFilter selfView={this.state.selfView}/>
+                </Grid>
+                <Grid item className='xs-hidden'>
                     <FormControl>
                         <Select
                             value={this.state.selectedYearFilter}
@@ -135,7 +139,7 @@ class StatsPage extends React.Component {
                         </Select>
                     </FormControl>
                 </Grid>
-                <Grid item>
+                <Grid item className='xs-hidden'>
                     <FormControl>
                         <Select
                             value={this.state.selectedChampionshipFilter}
@@ -157,7 +161,7 @@ class StatsPage extends React.Component {
                 </Grid>
                 {
                     this.state.selfView &&
-                        <Grid item>
+                        <Grid item className='xs-hidden'>
                             <FormControl>
                                 <Select
                                     value={this.state.selectedAmpluaFilter}
@@ -178,7 +182,7 @@ class StatsPage extends React.Component {
                             </FormControl>
                         </Grid>
                 }
-                <Grid item>
+                <Grid item className='xs-hidden'>
                     <Button classes={{
                         root: classes.button,
                         label: classes.gray
