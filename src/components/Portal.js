@@ -8,6 +8,10 @@ import NewsPaper from "./schools/school/common/NewsPaper";
 import Paper from "@material-ui/core/es/Paper/Paper";
 import Button from "@material-ui/core/es/Button/Button";
 import Link from "react-router-dom/es/Link";
+import FormControl from "material-ui/es/Form/FormControl";
+import Input from "material-ui/es/Input/Input";
+import InputAdornment from "material-ui/es/Input/InputAdornment";
+import Icon from "material-ui/es/Icon/Icon";
 
 function TabContainer(props) {
     return (
@@ -58,7 +62,39 @@ const styles = theme => ({
         [theme.breakpoints.down('lg')]: {
             display:'none',
         },
-    }
+    },
+
+    searchInput: {
+        fontSize: 14,
+        color: 'rgba(36,36,33,1)',
+        marginTop: 11,
+        paddingBottom: 5,
+        width:'100%',
+        marginLeft: 'auto',
+        '&:before': {
+            backgroundColor: 'rgba(0,0,0,0.2)'
+        },
+        '&:after': {
+            backgroundColor: 'rgba(0,0,0,0.2)'
+        }
+    },
+    searchInkbar: {
+        color: 'rgba(36,36,33,1)',
+        '&:before': {
+            backgroundColor: 'rgba(0,0,0,0.2) !important'
+        },
+        '&:after': {
+            backgroundColor: 'rgba(0,0,0,0.2) !important'
+        }
+    },
+    searchInputIcon: {
+        color: 'rgba(145,143,138,1)',
+        position: 'relative',
+        top: 0
+    },
+    formControl: {
+        width:'100%'
+    },
 });
 
 class Portal extends React.Component {
@@ -70,6 +106,27 @@ class Portal extends React.Component {
         return (
             <section className='main-section'>
                 <Grid container spacing={16}>
+                    <Grid item xs={12} lg={4}>
+                        <FormControl className={classes.formControl}>
+                            <Input
+                                classes={{
+                                    root: classes.searchInput,
+                                    underline: classes.searchInkbar
+                                }}
+                                onChange={this.onSearchChange}
+                                placeholder="Поиск на портале"
+                                endAdornment={
+                                    <InputAdornment position="end">
+                                        <Icon classes={{
+                                            root: classes.searchInputIcon
+                                        }}>
+                                            search
+                                        </Icon>
+                                    </InputAdornment>
+                                }
+                            />
+                        </FormControl>
+                    </Grid>
                     <Grid item xs={12}>
                         <h3 className={classes.title}>О портале</h3>
 
