@@ -10,7 +10,9 @@ import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Input from "material-ui/es/Input/Input";
 
 const styles = theme => ({
-
+    formControl:{
+      width:'100%'
+    },
     searchInput: {
         fontSize: 14,
         color: 'rgba(36,36,33,1)',
@@ -36,7 +38,7 @@ const styles = theme => ({
     searchInputIcon: {
         color: 'rgba(145,143,138,1)',
         position: 'relative',
-        top: 8
+        top: 0
     }
 
 });
@@ -66,13 +68,14 @@ class GroupsPage extends React.Component {
                                            <Icon classes={{
                                                root: classes.searchInputIcon
                                            }}>
+                                               search
                                            </Icon>
                                        </InputAdornment>
                                    }
                             />
                         </FormControl>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} lg={4}>
                         <GroupItem/>
                     </Grid>
                 </Grid>
