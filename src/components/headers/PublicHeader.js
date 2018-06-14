@@ -125,8 +125,7 @@ class PublicHeader extends React.Component {
             <div>
                 <AppBar position="static">
                     <Toolbar className="header">
-                        <NavLink activeClassName="" className='xs-hidden' to="/" exact={true}
-                                 style={{fontWeight: 'bold'}}>ИАС «АКАДЕМИЯ
+                        <NavLink activeClassName="" className='xs-hidden brand' to="/" exact={true}>ИАС «АКАДЕМИЯ
                             ХОККЕЯ АК БАРС»</NavLink>
                         <div className='xs-hidden ml-auto'>
                             {/*<NavLink activeClassName="active" to="/" exact={true}*/}

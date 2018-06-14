@@ -5,9 +5,11 @@
     border-radius: 2px;
     display: flex;
     align-items: center;
-    padding-bottom: 0;
+    //padding-bottom: 0;
   }
-
+  .rbc-toolbar-label{
+    text-transform: capitalize;
+  }
   .rbc-calendar {
     font-family: "BlissPro", sans-serif;
   }
