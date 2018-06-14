@@ -53,6 +53,9 @@ class Calendar extends React.Component {
                     events={events}
                     step={60}
                     view={this.state.currentView}
+                    onView={(view) => {
+                        this.setState({currentView: view});
+                    }}
                     showMultiDayTimes
                     defaultDate={new Date(2015, 3, 1)}
                     style={{height: 740}}
