@@ -23,7 +23,7 @@ const styles = theme => ({
         paddingTop: 13,
         paddingBottom: 7,
         paddingRight: 40,
-        maxHeight:36,
+        maxHeight: 36,
         fontSize: 14,
         color: '#242421',
         '&:after': {
@@ -44,17 +44,17 @@ const styles = theme => ({
     searchInput: {
         fontSize: 14,
         color: 'rgba(36,36,33,1)',
-        backgroundColor:'red',
+        backgroundColor: 'red',
         paddingBottom: 7,
-        paddingLeft:17,
-        paddingTop:5,
-        paddingRight:5,
+        paddingLeft: 17,
+        paddingTop: 5,
+        paddingRight: 5,
         maxWidth: 103,
-        minHeight:36,
+        minHeight: 36,
         '&:before': {
             backgroundColor: 'rgba(36,36,33,0.1)',
-            maxHeight:36,
-            top:2,
+            maxHeight: 36,
+            top: 2,
 
         },
         '&:after': {
@@ -64,14 +64,14 @@ const styles = theme => ({
     searchInkbar: {
         backgroundColor: 'transparent',
         '&:before': {
-            borderBottom:'none !important'
+            borderBottom: 'none !important'
         },
         '&:after': {
-            borderBottom:'none !important'
+            borderBottom: 'none !important'
         }
     },
-    bgGreen:{
-        backgroundColor:'#005945 !important'
+    bgGreen: {
+        backgroundColor: '#005945 !important'
     }
 
 });
@@ -84,7 +84,7 @@ class CalendarView extends React.Component {
 
     state = {
         calendar,
-        CalendarView: true,
+        CalendarView: false,
         seasonFilter,
         selectedSeasonFilter: 1,
         statusFilter,
@@ -108,13 +108,15 @@ class CalendarView extends React.Component {
         this.setState({selectedSeasonFilter: event.target.value});
     };
 
+
     render() {
         const {classes} = this.props;
         const {calendar} = this.state;
         return (
             <section style={{paddingLeft: 168, paddingRight: 168, paddingTop: 32, paddingBottom: 64}}>
                 <Grid container spacing={16}>
-                    <Grid item xs={12}>
+
+                    <Grid item xs={4}>
                         <Grid container alignItems='center'>
                             <Grid item> <span className={classes.switchName}
                                               style={{color: this.state.CalendarView ? '#00755E' : '#242421'}}>Календарь</span>
@@ -137,6 +139,7 @@ class CalendarView extends React.Component {
                         </Grid>
 
                     </Grid>
+                    {this.state.CalendarView &&
                     <Grid item xs={12}>
                         <Grid container spacing={16} alignItems='center'>
                             <Grid item>
@@ -149,7 +152,7 @@ class CalendarView extends React.Component {
 
                                     />
                                 </FormControl>
-                                <span style={{marginLeft:8,marginRight:8}}>—</span>
+                                <span style={{marginLeft: 8, marginRight: 8}}>—</span>
                                 <FormControl className={classes.formControl}>
                                     <Input classes={{
                                         root: classes.searchInput,
@@ -249,10 +252,14 @@ class CalendarView extends React.Component {
                                     <CloseIcon/>
                                 </IconButton>
                             </Grid>
+
                         </Grid>
                     </Grid>
+                    }
+
+
                     <Grid item xs={12}>
-                        {this.state.CalendarView ? <CalendarTableView calendar={calendar}/> : <Calendar/>}
+                        {this.state.CalendarView ? <CalendarTableView calendar={calendar}/> : <Calendar />}
 
                     </Grid>
                 </Grid>

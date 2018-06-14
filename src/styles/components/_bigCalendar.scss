@@ -13,7 +13,11 @@
   .rbc-calendar {
     font-family: "BlissPro", sans-serif;
   }
-
+  .label-day{
+    font-size: 18px;
+    color:#242421;
+    text-transform: capitalize;
+  }
   .rbc-date-cell {
     font-size: 14px;
     padding-top: 8px;
@@ -83,5 +87,13 @@
       }
     }
   }
+  .toggler{
+    > span > span > span{
+      background-color: #00755E !important;
+    }
+    > span:nth-of-type(2){
+      background-color: #00755E !important;
 
+    }
+  }
 }
