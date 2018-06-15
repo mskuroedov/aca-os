@@ -1,6 +1,7 @@
 import React from 'react';
 import BigCalendar from 'react-big-calendar';
 import Toolbar from 'react-big-calendar';
+import EventCell from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import moment from 'moment';
 import 'moment/locale/ru';
@@ -14,16 +15,6 @@ import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
 import Select from "material-ui/es/Select/Select";
 import FormControl from "material-ui/es/Form/FormControl";
 
-
-function Event({event}) {
-    return (
-        <span style={{fontSize: 13, color: 'white'}}>
-            {moment(event.start).format('hh:mm')}
-            <strong style={{fontWeight: 'bold'}}> {event.title}</strong>
-
-        </span>
-    )
-}
 
 function ShowMore({event}) {
     return (
@@ -60,7 +51,7 @@ class Calendar extends React.Component {
                     defaultDate={new Date(2015, 3, 1)}
                     style={{height: 740}}
                     components={{
-                        event: Event,
+                        event: CustomEvent,
                         toolbar: CustomToolbar
                     }}
                     messages={{
@@ -142,6 +133,20 @@ class CustomToolbar extends Toolbar {
         this.setState({CalendarView: event.target.value});
         this.props.onViewChange(event.target.value)
     };
+}
+
+class CustomEvent extends EventCell {
+
+    render() {
+
+
+        return (
+            <span style={{fontSize: 13, color: 'white'}}>
+            {moment(event.start).format('hh:mm')}
+                <strong style={{fontWeight: 'bold'}}> {event.title}</strong>
+            </span>
+        )
+    }
 }
 
 export default Calendar;
