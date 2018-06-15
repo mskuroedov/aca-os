@@ -6,6 +6,15 @@
   padding: 0 14px 0 14px!important;
   min-height:56px !important;
   box-shadow: none !important;
+  .btn-group{
+    margin-left: 0;
+    margin-right: auto;
+    @media (min-width: 991px) {
+      margin-right: 4rem;
+      margin-left: auto;
+
+    }
+  }
   span{
     //font-size:24px;
   }

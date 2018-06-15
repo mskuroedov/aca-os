@@ -189,8 +189,8 @@ class PublicHeader extends React.Component {
                     <Toolbar className="header">
                         <NavLink activeClassName="" to="/" exact={true} className='xs-hidden brand'>ИАС «АКАДЕМИЯ
                             ХОККЕЯ АК БАРС»</NavLink>
-                        <div className=''
-                             style={{display: 'flex', alignItems: 'center', marginLeft: 'auto', marginRight: '2rem'}}>
+                        <div className='btn-group'
+                             style={{display: 'flex', alignItems: 'center'}}>
                             <Link
                                 to='/cart' style={{lineHeight: 0.6, width: 48, textAlign: 'center'}}>
                                 <ShoppingBasketIcon/>
