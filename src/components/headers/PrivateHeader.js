@@ -313,10 +313,9 @@ class PublicHeader extends React.Component {
                             <NavLink activeClassName="active" to="/calendar">Календарь</NavLink>
                             <NavLink activeClassName="active" to="#">Тренировочные планы</NavLink>
                             <NavLink activeClassName="active" to="/libraries">Библиотека</NavLink>
-                            <NavLink activeClassName="active" to="/stats">Статистика</NavLink>
-                            <NavLink activeClassName="active" to="#">Документы</NavLink>
-                            <NavLink activeClassName="active" to="#">Обучение</NavLink>
-
+                            <NavLink activeClassName="active" to="/stats">Статистика и аналитика</NavLink>
+                            <NavLink activeClassName="active" to="#">Отчёты и документы</NavLink>
+                            <NavLink activeClassName="active" to="#">Обучение и проф. оценка</NavLink>
                         </div>
                     </Toolbar>
                 </AppBar>

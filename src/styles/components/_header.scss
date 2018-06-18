@@ -34,6 +34,8 @@
   .header__nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     width: 100%;
     &.header__nav_small{
       padding-left: 153px;
@@ -41,6 +43,9 @@
     }
     a{
       text-transform: uppercase;
+      margin-left: 10px;
+      margin-right: 10px;
+      text-align: center;
     }
   }
   &__input{
