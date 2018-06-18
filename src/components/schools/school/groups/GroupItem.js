@@ -15,7 +15,6 @@ const styles = theme => ({
         paddingTop: 24,
         paddingLeft: 27,
         paddingBottom: 32,
-        marginBottom: 16,
         border: '1px solid rgba(0,0,0,0.1);',
         fontSize: 16,
         fontFamily: '"BlissPro",sans-serif'
