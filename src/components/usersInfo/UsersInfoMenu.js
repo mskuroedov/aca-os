@@ -14,11 +14,11 @@ import { withRouter } from 'react-router-dom'
 
 function TabContainer(props) {
     return (
-        <Typography
-            component="div"
-            style={{paddingTop: 24, backgroundColor: "#f6f6f6", paddingRight: 168, paddingLeft: 168}}>
+        <div
+         className='main-section'
+            style={{paddingTop: 24, backgroundColor: "#f6f6f6"}}>
             {props.children}
-        </Typography>
+        </div>
     );
 }
 
@@ -29,12 +29,12 @@ TabContainer.propTypes = {
 const styles = theme => ({
     root: {
         color: '#00755E',
-        fontSize: 1.4,
         fontWeight: 'bold',
         opacity: 1,
-        paddingLeft: 168,
-        paddingRight: 168,
         paddingTop: 32,
+        justifyContent: 'flex-end',
+        fontSize: 14,
+        paddingBottom:0
     },
     rootPrimarySelected: {
         color: '#000',
@@ -45,10 +45,6 @@ const styles = theme => ({
         fontWeight: 'bold',
         justifyContent: 'center',
         boxShadow: 'none'
-    },
-    tabs: {
-        justifyContent: 'flex-end',
-        fontSize: 14
     },
     menuItem: {
         fontSize: 14,
@@ -98,7 +94,7 @@ class UsersInfoMenu extends React.Component {
                         <Tabs
                             value={value}
                             onChange={this.handleChange}
-                            className={classes.tabs}
+                            className='main-section'
                             indicatorColor="primary"
                             classes={{
                                 root: classes.root,

@@ -24,7 +24,7 @@ class ItemPage extends React.Component {
                 <Subheader title='Пользователям' cart/>
                 <UsersInfoMenu nocontent/>
 
-                <section style={{paddingLeft:168,paddingRight:168,paddingTop:32,paddingBottom:64}}>
+                <section className='main-section'>
                     <UsersBuySmt/>
                 </section>
             </div>

@@ -8,13 +8,32 @@ import Typography from "@material-ui/core/es/Typography/Typography";
 import Button from "@material-ui/core/es/Button/Button";
 
 const styles = theme => ({
-    paper: {
+    paperFirst: {
         boxShadow: 'none',
         borderRadius: 12,
         paddingTop: 31,
         paddingLeft: 24,
         paddingBottom: 16,
         paddingRight: 64,
+        [theme.breakpoints.down('lg')]: {
+            paddingLeft: 24,
+            paddingRight: 24,
+        },
+        border: '1px solid rgba(0,0,0,0.1);',
+        fontSize: 16,
+        fontFamily: '"BlissPro",sans-serif',
+    },
+    paperSecond: {
+        boxShadow: 'none',
+        borderRadius: 12,
+        paddingTop: 31,
+        paddingLeft: 24,
+        paddingBottom: 16,
+        paddingRight: 64,
+        [theme.breakpoints.down('lg')]: {
+            paddingLeft: 32,
+            paddingRight: 32,
+        },
         border: '1px solid rgba(0,0,0,0.1);',
         fontSize: 16,
         fontFamily: '"BlissPro",sans-serif',
@@ -25,11 +44,11 @@ const styles = theme => ({
         fontFamily: '"BlissPro",sans-serif',
         fontWeight: 'normal'
     },
-    heading:{
-        fontSize:18,
-        color:'#242421',
-        fontWeight:'bold',
-        marginBottom:18
+    heading: {
+        fontSize: 18,
+        color: '#242421',
+        fontWeight: 'bold',
+        marginBottom: 18
     },
     primaryText: {
         fontSize: 14,
@@ -39,11 +58,22 @@ const styles = theme => ({
     firstText: {
         width: 662,
         maxHeight: 62,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        [theme.breakpoints.down('lg')]: {
+
+            width: 'auto',
+            maxHeight: 180
+
+        }
     },
-    secondText:{
-        maxHeight:60,
-        overflow:'hidden'
+    secondText: {
+        maxHeight: 60,
+        overflow: 'hidden',
+        [theme.breakpoints.down('lg')]: {
+
+            maxHeight: 260
+
+        }
     },
     button: {
         margin: theme.spacing.unit,
@@ -52,13 +82,24 @@ const styles = theme => ({
         fontWeight: 'bold',
         fontFamily: '"BlissPro",sans-serif',
     },
-    p0:{
-        padding:0
+    p0: {
+        padding: 0
     },
-    price:{
-        fontSize:24,
-        color:'#242421',
-        fontWeight:'bold'
+    price: {
+        fontSize: 24,
+        color: '#242421',
+        fontWeight: 'bold'
+    },
+    buttonContainer: {
+        [theme.breakpoints.down('lg')]: {
+
+            textAlign: 'left'
+        },
+        [theme.breakpoints.up('lg')]: {
+
+            textAlign: 'center'
+
+        }
     }
 
 });
@@ -78,9 +119,9 @@ class UsersBuySmt extends React.Component {
                     <Typography className={classes.title}>Описание</Typography>
                 </Grid>
                 <Grid item xs={12}>
-                    <Paper className={classes.paper}>
+                    <Paper className={classes.paperFirst}>
                         <Grid container spacing={16}>
-                            <Grid item xs={9}>
+                            <Grid item xs={12} lg={9}>
                                 <Typography className={classes.heading}>Теория и методика хоккея</Typography>
                                 <Typography className={classNames(classes.primaryText, classes.firstText)}> В учебнике
                                     рассматриваются техника и тактика
@@ -90,10 +131,11 @@ class UsersBuySmt extends React.Component {
                                     быть
                                     рекомендован также преподавателям вузов физической культуры, тренерам.
                                 </Typography>
-                                <Button color='primary' className={classNames(classes.button ,classes.p0)}>Подробнее</Button>
+                                <Button color='primary'
+                                        className={classNames(classes.button, classes.p0)}>Подробнее</Button>
 
                             </Grid>
-                            <Grid item xs={3} style={{textAlign:'center'}}>
+                            <Grid item xs={12} lg={3} className={classes.buttonContainer}>
                                 <Typography className={classes.price}>456 руб.</Typography>
                                 <Button variant="raised" color='primary' className={classes.button}>в корзину</Button>
                             </Grid>
@@ -105,13 +147,20 @@ class UsersBuySmt extends React.Component {
                     <Typography className={classes.title}>Условия предоставления</Typography>
                 </Grid>
                 <Grid item xs={12}>
-                    <Paper className={classes.paper}>
-                        <Typography className={classNames(classes.primaryText,classes.secondText)}>Данный материал защищен авторским правом, и любое его несанкционированное использование может повлечь нарушение законодательства об авторском праве, товарных знаках и прочих законов. При нарушении любого из этих Условий вы автоматически лишаетесь права на использование этого Сайта и должны немедленно уничтожить все материалы, которые... были загружены с этого Сайта или распечатаны.
+                    <Paper className={classes.paperSecond}>
+                        <Typography className={classNames(classes.primaryText, classes.secondText)}>Данный материал
+                            защищен авторским правом, и любое его несанкционированное использование может повлечь
+                            нарушение законодательства об авторском праве, товарных знаках и прочих законов. При
+                            нарушении любого из этих Условий вы автоматически лишаетесь права на использование этого
+                            Сайта и должны немедленно уничтожить все материалы, которые... были загружены с этого Сайта
+                            или распечатаны.
                             Права на все материалы, размещенные на сайте akbars.academy принадлежат сайту akbars.academy
-                            Сайт akbars.academy не размещает материалов, авторские и смежные права на которые (в том числе права на распространение) принадлежат другим физическим или юридическим лицам.
-                            Авторские статьи, опубликованные на сайте akbars.academy, являются собственностью akbars.academy.</Typography>
+                            Сайт akbars.academy не размещает материалов, авторские и смежные права на которые (в том
+                            числе права на распространение) принадлежат другим физическим или юридическим лицам.
+                            Авторские статьи, опубликованные на сайте akbars.academy, являются собственностью
+                            akbars.academy.</Typography>
 
-                        <Button color='primary' className={classNames(classes.button ,classes.p0)}>Подробнее</Button>
+                        <Button color='primary' className={classNames(classes.button, classes.p0)}>Подробнее</Button>
 
 
                     </Paper>

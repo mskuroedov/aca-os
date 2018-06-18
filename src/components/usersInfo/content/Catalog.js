@@ -82,25 +82,25 @@ class Catalog extends React.Component {
                             />
                         </FormControl>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} lg={4}>
                         <CatalogItem cart/>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} lg={4}>
                         <CatalogItem cart/>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} lg={4}>
                         <CatalogItem cart/>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} lg={4}>
                         <CatalogItem cart/>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} lg={4}>
                         <CatalogItem/>
                     </Grid>
                     <Grid item xs={12}>
                         <Typography className={classes.title}>Пакетные предложения</Typography>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item xs={12} lg={4}>
                         <CatalogItem cart option='6 месяцев'/>
                     </Grid>
                 </Grid>
