@@ -16,8 +16,8 @@ const styles = theme => ({
         paddingBottom: 16,
         paddingRight: 64,
         [theme.breakpoints.down('lg')]: {
-            paddingLeft: 24,
-            paddingRight: 24,
+            paddingLeft: 20,
+            paddingRight: 25,
         },
         border: '1px solid rgba(0,0,0,0.1);',
         fontSize: 16,
@@ -51,7 +51,7 @@ const styles = theme => ({
         marginBottom: 18
     },
     primaryText: {
-        fontSize: 14,
+        fontSize: 16,
         fontFamily: 'BlissPro',
         marginBottom: 16
     },
@@ -60,18 +60,17 @@ const styles = theme => ({
         maxHeight: 62,
         overflow: 'hidden',
         [theme.breakpoints.down('lg')]: {
-
             width: 'auto',
-            maxHeight: 180
-
+            maxHeight: 255,
         }
+
     },
     secondText: {
         maxHeight: 60,
         overflow: 'hidden',
         [theme.breakpoints.down('lg')]: {
 
-            maxHeight: 260
+            maxHeight: 355
 
         }
     },
@@ -100,6 +99,11 @@ const styles = theme => ({
             textAlign: 'center'
 
         }
+    },
+    hide:{
+        maxHeight:0,
+        maxWidth:0,
+        display:'none'
     }
 
 });
@@ -127,9 +131,9 @@ class UsersBuySmt extends React.Component {
                                     рассматриваются техника и тактика
                                     игры в хоккей, методика обучения и тренировки хоккеистов. Центральное место в книге
                                     занимают вопросы подготовки хоккеистов, в том числе юных, организации тренировочного
-                                    процесса, соревнований, проведения массовой работы по... тому виду спорта. Может
+                                    процесса, соревнований, проведения массовой работы по... <span className={classes.hide}>тому виду спорта. Может
                                     быть
-                                    рекомендован также преподавателям вузов физической культуры, тренерам.
+                                    рекомендован также преподавателям вузов физической культуры, тренерам.</span>
                                 </Typography>
                                 <Button color='primary'
                                         className={classNames(classes.button, classes.p0)}>Подробнее</Button>
@@ -152,13 +156,13 @@ class UsersBuySmt extends React.Component {
                             защищен авторским правом, и любое его несанкционированное использование может повлечь
                             нарушение законодательства об авторском праве, товарных знаках и прочих законов. При
                             нарушении любого из этих Условий вы автоматически лишаетесь права на использование этого
-                            Сайта и должны немедленно уничтожить все материалы, которые... были загружены с этого Сайта
+                            Сайта и должны немедленно уничтожить все материалы, которые... <span className={classes.hide}>были загружены с этого Сайта
                             или распечатаны.
                             Права на все материалы, размещенные на сайте akbars.academy принадлежат сайту akbars.academy
                             Сайт akbars.academy не размещает материалов, авторские и смежные права на которые (в том
                             числе права на распространение) принадлежат другим физическим или юридическим лицам.
                             Авторские статьи, опубликованные на сайте akbars.academy, являются собственностью
-                            akbars.academy.</Typography>
+                            akbars.academy.</span></Typography>
 
                         <Button color='primary' className={classNames(classes.button, classes.p0)}>Подробнее</Button>
 

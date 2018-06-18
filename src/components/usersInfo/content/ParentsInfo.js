@@ -18,6 +18,9 @@ const styles = theme => ({
         border: '1px solid rgba(0,0,0,0.1);',
         fontSize: 16,
         fontFamily: '"BlissPro",sans-serif',
+        [theme.breakpoints.down('lg')]: {
+            paddingRight: 24,
+        }
     },
     title: {
         fontSize: 20,
