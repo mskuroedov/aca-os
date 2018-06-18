@@ -72,7 +72,12 @@ const styles = theme => ({
         fontSize: 14
     },
     img:{
-      maxWidth:'100%'
+      maxWidth:'100%',
+        [theme.breakpoints.down('lg')]:{
+          marginLeft:-16,
+            marginRight:-16,
+            maxWidth:'calc(100% + 32px)'
+        }
     },
     imgDescription:{
         color: 'rgba(36,36,33,0.3)',
@@ -110,7 +115,7 @@ class LibraryItemContent extends React.Component {
             <section className='main-section'>
                 <Grid container>
                     <Grid item xs={12}>
-                        <Paper className={classNames(classes.paper,'paper')}>
+                        <Paper className={classNames(classes.paper,'paper','paper-news')}>
                             <Grid container spacing={16}>
                                 <Grid item>
                                     <Avatar

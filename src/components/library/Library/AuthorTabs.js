@@ -66,7 +66,7 @@ class AuthorTabs extends React.Component {
                     indicatorColor="primary"
                     textColor="primary"
                     scrollable
-                    scrollButtons="auto"
+                    scrollButtons="on"
                     classes={{
                         scroller:classes.TabsRoot,
                         scrollButtons:classes.scrollButtons

@@ -13,7 +13,8 @@ const styles = theme => ({
     avatar: {
         width: 96,
         height: 96,
-        margin: 'auto'
+        margin: 'auto',
+        marginBottom:16
     },
     name: {
         color: '#242421',
@@ -21,7 +22,8 @@ const styles = theme => ({
         textAlign: 'center',
         maxWidth:160,
         margin:'auto',
-        fontWeight:'bold'
+        fontWeight:'bold',
+        marginBottom:16
     },
     subtext:{
         fontSize:14,
@@ -41,7 +43,7 @@ class AuthorCard extends React.Component {
         return (
             <Link to='/author/1'>
                 <Paper className='paper' style={{paddingTop:24,paddingBottom:32}}>
-                    <Grid justify='center' container spacing={16}>
+                    <Grid justify='center' container spacing={0}>
                         <Grid item xs={12}>
                             <Avatar
                                 alt="Adelle Charles"

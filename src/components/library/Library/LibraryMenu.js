@@ -9,10 +9,10 @@ import Authors from "./Authors";
 
 function TabContainer(props) {
     return (
-        <Typography component="div"
-                    style={{paddingTop: 24, backgroundColor: "#f6f6f6", paddingRight: 168, paddingLeft: 168}}>
+        <div className='main-section'
+                    style={{paddingTop: 24, backgroundColor: "#f6f6f6"}}>
             {props.children}
-        </Typography>
+        </div>
     );
 }
 
@@ -78,8 +78,8 @@ class LibraryMenu extends React.Component {
 
         return (
             <section>
-                <AppBar position="static" className={classes.appBar}
-                        style={{paddingRight: 168, paddingLeft: 168, backgroundColor: '#fff'}}>
+                <AppBar position="static" className='main-section'
+                        style={{ backgroundColor: '#fff',paddingBottom:0}}>
                     <Tabs value={value}
                           onChange={this.handleChange}
                           className={classes.tabs}

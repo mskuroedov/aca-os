@@ -21,7 +21,7 @@ class AuthorPageContent extends React.Component {
     }
     items = [
         {text:true, video: false, paid: false, album: false, gallery: false, authors: true},
-        {text:true, video: false, paid: false, album: false, gallery: false, authors: false},
+        {text:true, video: false, paid: false, album: true, gallery: false, authors: false},
     ];
 
     render() {
@@ -32,14 +32,14 @@ class AuthorPageContent extends React.Component {
                     <Grid item xs={12}>
                         <Typography className={classes.title}>Материалы</Typography>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} lg={6}>
                         {
                             this.items.map((item, i) => (
                                 i % 2 === 0 ? <NewsItem {...item} /> : ''
                             ))
                         }
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} lg={6}>
                         {
                             this.items.map((item, i) => (
                                 i % 2 !== 0 ? <NewsItem {...item} /> : ''

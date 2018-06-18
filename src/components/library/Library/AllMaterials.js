@@ -20,7 +20,6 @@ const styles = theme => ({
         color: 'rgba(36,36,33,1)',
         marginTop: 11,
         paddingBottom: 5,
-        minWidth: 267,
         '&:before': {
             backgroundColor: 'rgba(0,0,0,0.2)'
         },
@@ -72,8 +71,8 @@ class AllMaterials extends React.Component {
         return (
             <Grid container spacing={16}
             >
-                <Grid item xs={12} className={classes.mlauto}>
-                    <FormControl>
+                <Grid item xs={12} lg={4} className={classes.mlauto}>
+                    <FormControl style={{width:'100%'}}>
                         <Input
                             classes={{
                                 root: classes.searchInput,
@@ -93,14 +92,14 @@ class AllMaterials extends React.Component {
                         />
                     </FormControl>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} lg={6}>
                 {
                     this.items.map((item, i) => (
                         i % 2 === 0 ? <NewsItem {...item} /> : ''
                     ))
                 }
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} lg={6}>
                     {
                         this.items.map((item, i) => (
                             i % 2 !== 0 ? <NewsItem {...item} /> : ''
