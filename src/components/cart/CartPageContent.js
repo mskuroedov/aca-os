@@ -85,12 +85,14 @@ const styles = theme => ({
         fontWeight: 'bold',
         fontFamily: '"BlissPro",sans-serif',
     },
-    mlXlAuto: {
-        marginLeft: 'auto',
+    mrXlAuto: {
 
-        [theme.breakpoints.down('lg')]: {
-            marginTop: 16,
-            marginLeft:0
+        [theme.breakpoints.up('md')]: {
+            marginRight: 'auto',
+
+        },
+        [theme.breakpoints.down('md')]: {
+            marginBottom: 16,
         },
     },
     promoblock: {
@@ -132,12 +134,12 @@ class CartPageContent extends React.Component {
                                 paddingRight: 20,
                                 borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
                             }}>
-                                <Grid item xs={12} lg={8} style={{marginRight:'auto'}}>
+                                <Grid item xs={12} lg={8} className={classes.mrXlAuto}>
                                     <Link to='/users_info/1' className={classes.link}>Морфологические критерии
                                         спортивного отбора в
                                         хоккее</Link>
                                 </Grid>
-                                <Grid item classname={classes.mlXlAuto}>
+                                <Grid item >
                                     <Typography className={classes.price}>700 руб.</Typography>
                                 </Grid>
                                 <Grid item>
@@ -151,11 +153,11 @@ class CartPageContent extends React.Component {
                                 paddingRight: 20,
                                 borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
                             }}>
-                                <Grid item xs={12} lg={8} style={{marginRight:'auto'}}>
+                                <Grid item xs={12} lg={8} className={classes.mrXlAuto}>
                                     <Link to='#' className={classes.link}>Морфологические критерии спортивного отбора в
                                         хоккее</Link>
                                 </Grid>
-                                <Grid item classname={classes.mlXlAuto}>
+                                <Grid item >
                                     <Typography className={classes.price}>700 руб.</Typography>
                                 </Grid>
                                 <Grid item>
