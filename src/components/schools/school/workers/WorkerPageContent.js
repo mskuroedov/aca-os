@@ -27,12 +27,12 @@ class WorkerPageContent extends React.Component {
     render() {
         const {classes,staff} = this.props;
         return  staff ? (
-            <section style={{paddingLeft:168,paddingRight:168,paddingTop:24,paddingBottom:54}}>
+            <section className='main-section'>
                 <Grid container spacing={16}>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} lg={6}>
                         <CommonInfo/>
                     </Grid>
-                    <Grid item xs={7}>
+                    <Grid item xs={12} lg={7}>
                         <TrainCareer/>
                     </Grid>
                     <Grid item xs={12}>
@@ -41,21 +41,21 @@ class WorkerPageContent extends React.Component {
                     <Grid item xs={12}>
                         <SportCareer/>
                     </Grid>
-                    <Grid item xs={8}>
+                    <Grid item xs={12} lg={8}>
                         <Achievements/>
                     </Grid>
-                    <Grid item xs={8}>
+                    <Grid item xs={12} lg={8}>
                         <Experience/>
                     </Grid>
                 </Grid>
             </section>
         ) : (
-            <section style={{paddingLeft:168,paddingRight:168,paddingTop:24,paddingBottom:54}}>
+            <section className='main-section'>
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
                         <StaffCommonInfo/>
                     </Grid>
-                    <Grid item xs={8}>
+                    <Grid item xs={12} lg={8}>
                         <StaffWork/>
                     </Grid>
                 </Grid>

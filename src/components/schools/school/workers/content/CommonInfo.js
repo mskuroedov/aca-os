@@ -9,6 +9,7 @@ import TableHead from "@material-ui/core/es/TableHead/TableHead";
 import TableRow from "@material-ui/core/es/TableRow/TableRow";
 import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
+import Grid from "material-ui/es/Grid/Grid";
 
 const styles = theme => ({
 
@@ -18,6 +19,16 @@ const styles = theme => ({
         color: ' rgba(36,36,33,0.6);',
         fontFamily: '"BlissPro",sans-serif',
         fontWeight: 'normal'
+    },
+    textMain: {
+        color: '#242421',
+        fontSize: 16,
+        marginBottom: 16
+    },
+    textSecondary: {
+
+        color: 'rgba(36,36,33,0.54)',
+        fontSize: 14
     },
 
 });
@@ -35,7 +46,7 @@ class CommonInfo extends React.Component {
             <div>
             <Typography className={classes.title}>Общая информация</Typography>
                 <Paper className="paper">
-                    <Table className="table no-bottom">
+                    <Table className="table no-bottom xs-hidden">
                         <TableHead>
                             <TableRow>
                                 <TableCell >Дата рождения</TableCell>
@@ -53,6 +64,32 @@ class CommonInfo extends React.Component {
                             </TableRow>
                         </TableBody>
                     </Table>
+                    <div className='lg-hidden'>
+                        <Grid container spacing={0} style={{padding: 16}}>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Год рождения</Typography>
+                                <Typography className={classes.textMain}>1995</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Год набора</Typography>
+                                <Typography className={classes.textMain}>2000</Typography>
+
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Пол</Typography>
+                                <Typography className={classes.textMain}>Мужской</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Амплуа</Typography>
+                                <Typography className={classes.textMain}>Нападающий</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Разряд</Typography>
+                                <Typography className={classes.textMain}>2 юношеский</Typography>
+                            </Grid>
+                        </Grid>
+                    </div>
+
                 </Paper>
 
             </div>

@@ -31,7 +31,7 @@ class Experience extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-            <div>
+            <div className='xs-hidden'>
                 <Typography className={classes.title}>Воспитанники вне «Академии хоккея Ак Барс»</Typography>
                 <Paper className="paper">
                     <Table className="table no-bottom">

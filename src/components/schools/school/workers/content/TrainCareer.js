@@ -9,6 +9,8 @@ import TableHead from "@material-ui/core/es/TableHead/TableHead";
 import TableRow from "@material-ui/core/es/TableRow/TableRow";
 import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
+import Grid from "@material-ui/core/es/Grid/Grid";
+import Link from "react-router-dom/es/Link";
 
 const styles = theme => ({
     title: {
@@ -18,6 +20,7 @@ const styles = theme => ({
         fontFamily: '"BlissPro",sans-serif',
         fontWeight: 'normal'
     },
+
 
 });
 
@@ -31,7 +34,7 @@ class TrainCareer extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-            <div>
+            <div className='xs-hidden'>
                 <Typography className={classes.title}>Тренерская карьера</Typography>
                 <Paper className="paper">
                     <Table className="table no-bottom">
@@ -50,6 +53,7 @@ class TrainCareer extends React.Component {
                             </TableRow>
                         </TableBody>
                     </Table>
+
                 </Paper>
 
             </div>

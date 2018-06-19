@@ -9,6 +9,8 @@ import TableHead from "@material-ui/core/es/TableHead/TableHead";
 import TableRow from "@material-ui/core/es/TableRow/TableRow";
 import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
+import Grid from "material-ui/es/Grid/Grid";
+import Link from "react-router-dom/es/Link";
 
 const styles = theme => ({
     title: {
@@ -18,6 +20,23 @@ const styles = theme => ({
         fontFamily: '"BlissPro",sans-serif',
         fontWeight: 'normal'
     },
+    textMain: {
+        color: '#242421',
+        fontSize: 16,
+        marginBottom: 16
+    },
+    textSecondary: {
+
+        color: 'rgba(36,36,33,0.54)',
+        fontSize: 14
+    },
+    link:{
+        borderBottom:'1px solid rgba(36,36,33,.3)',
+        transition:'all .3s',
+        '&:hover':{
+            borderBottom:'1px solid rgba(36,36,33,.6)'
+        }
+    }
 
 });
 
@@ -34,7 +53,7 @@ class SportCareer extends React.Component {
             <div>
                 <Typography className={classes.title}>Спортивная карьера</Typography>
                 <Paper className="paper">
-                    <Table className="table no-bottom">
+                    <Table className="table no-bottom xs-hidden" >
                         <TableHead>
                             <TableRow>
                                 <TableCell >Период</TableCell>
@@ -76,6 +95,36 @@ class SportCareer extends React.Component {
                             </TableRow>
                         </TableBody>
                     </Table>
+                    <div className='lg-hidden'>
+                        <Grid container spacing={0} style={{padding: 16}}>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Период</Typography>
+                                <Typography className={classes.textMain}>2010-2017</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Амплуа</Typography>
+                                <Typography className={classes.textMain}>Нападающий</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Команда</Typography>
+                                <Typography className={classes.textMain}>АкБарс</Typography>
+
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Игры</Typography>
+                                <Typography className={classes.textMain}>36</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Выигрыши</Typography>
+                                <Typography className={classes.textMain}>14</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Тренер</Typography>
+                                <Link className={classNames(classes.link,classes.textMain)} to='2'>Саяпов Ренат Маратович</Link>
+                            </Grid>
+                        </Grid>
+                    </div>
+
                 </Paper>
 
             </div>

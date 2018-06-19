@@ -5,30 +5,59 @@ import classNames from 'classnames';
 import Grid from "@material-ui/core/es/Grid/Grid";
 import Icon from "material-ui/es/Icon/Icon";
 import Avatar from "material-ui/es/Avatar/Avatar";
+import Typography from "material-ui/es/Typography/Typography";
 
-const styles = {
+const styles = theme  =>( {
 
-    avatar: {
-        margin: 10,
+    header:{
+      [theme.breakpoints.down('lg')]:{
+          alignItems:'start'
+      }  ,
+      [theme.breakpoints.up('lg')]:{
+          alignItems:'center'
+      }
     },
     bigAvatar: {
-        width: 90,
-        height: 90,
+        [theme.breakpoints.down('lg')]: {
+
+            width: 60,
+            height: 60,
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: 90,
+            height: 90,
+        },
     },
     schoolName: {
-        fontSize: 24,
         fontFamily: '"BlissPro",sans-serif',
         color: 'black',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        marginBottom:16,
+        [theme.breakpoints.down('lg')]: {
+            fontSize: 18,
+
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: 24,
+
+        },
     },
     schoolHeader: {
         alignItems: 'center',
-        paddingLeft: 165,
-        paddingRight: 165,
-        paddingTop: 50,
+        [theme.breakpoints.down('lg')]: {
+            paddingLeft: 16,
+            paddingRight: 16,
+            paddingTop: 16,
+            paddingBottom:16
+        },
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: 165,
+            paddingRight: 165,
+            paddingTop: 50,
+            paddingBottom:32
+        },
         backgroundColor: '#fff',
         display:'flex',
-        paddingBottom:40,
         borderBottom:'1px solid lightgray'
     },
     schoolRightSec: {
@@ -48,12 +77,20 @@ const styles = {
         fontFamily:'AkBarsFont'
     },
     schoolAdress:{
+        [theme.breakpoints.down('lg')]: {
+            fontSize: 12,
+
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: 16,
+
+        },
         fontSize:16,
         color:'rgba(36,36,33,1)',
         position:'relative',
         top:-5
     }
-};
+});
 
 
 
@@ -66,19 +103,21 @@ class WorkerHeader extends React.Component {
         const {classes} = this.props;
         return (
             <section className={classNames(classes.schoolHeader)}>
+                <Grid container spacing={16} className={classes.header}>
+                    <Grid
+                        item >
+                        <Avatar
+                            alt="Adelle Charles"
+                            src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
+                            className={classNames(classes.avatar, classes.bigAvatar)}
+                        />
 
-                <Grid
-                    item  align={'flex-basis'}>
-                    <Avatar
-                        alt="Adelle Charles"
-                        src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
-                        className={classNames(classes.avatar, classes.bigAvatar)}
-                    />
+                    </Grid>
+                    <Grid item lg={10} xs={9} >
+                        <Typography className={classNames(classes.schoolName)}>Мирханов Айрат Талгатович</Typography>
+                        <Typography className={classNames(classes.schoolAdress)}>Тренер преподаватель высшей категории</Typography>
+                    </Grid>
 
-                </Grid>
-                <Grid item style={{marginLeft:16}}>
-                    <span className={classNames(classes.schoolName)}>Мирханов Айрат Талгатович</span><br/>
-                    <span className={classNames(classes.schoolAdress)}>Тренер преподаватель высшей категории</span>
                 </Grid>
 
 
