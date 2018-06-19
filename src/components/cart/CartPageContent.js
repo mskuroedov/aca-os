@@ -55,7 +55,7 @@ const styles = theme => ({
 
         marginTop: 11,
         paddingBottom: 5,
-        width:'100%',
+        width: '100%',
         '&:before': {
             backgroundColor: 'rgba(0,0,0,0.2)'
         },
@@ -63,9 +63,9 @@ const styles = theme => ({
             backgroundColor: 'rgba(0,0,0,0.2)'
         }
     },
-    formControl:{
-        width:'100%',
-        marginBottom:24
+    formControl: {
+        width: '100%',
+        marginBottom: 24
     },
     searchInkbar: {
         color: 'rgba(36,36,33,1)',
@@ -76,8 +76,8 @@ const styles = theme => ({
             backgroundColor: 'rgba(0,0,0,0.2) !important'
         }
     },
-    margin:{
-        marginBottom:24
+    margin: {
+        marginBottom: 24
     },
 
     button: {
@@ -85,6 +85,28 @@ const styles = theme => ({
         fontWeight: 'bold',
         fontFamily: '"BlissPro",sans-serif',
     },
+    mlXlAuto: {
+        marginLeft: 'auto',
+
+        [theme.breakpoints.down('lg')]: {
+            marginTop: 16,
+            marginLeft:0
+        },
+    },
+    promoblock: {
+        [theme.breakpoints.down('md')]: {
+            order: 2
+        }
+    },
+    itogoblock: {
+        [theme.breakpoints.down('md')]: {
+            order: 1
+
+        },
+        [theme.breakpoints.up('md')]: {
+            marginLeft: 'auto', marginRight: 22
+        }
+    }
 
 });
 
@@ -98,9 +120,9 @@ class CartPageContent extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-            <section style={{paddingTop: 32, paddingBottom: 64, paddingLeft: 168, paddingRight: 168}}>
+            <section className='main-section'>
                 <Grid container spacing={16}>
-                    <Grid item xs={7}>
+                    <Grid item xs={12} lg={7}>
                         <Typography className={classes.title}>Выбрано</Typography>
                         <Paper className='paper'>
                             <Grid container alignItems='center' style={{
@@ -110,11 +132,12 @@ class CartPageContent extends React.Component {
                                 paddingRight: 20,
                                 borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
                             }}>
-                                <Grid item xs={8}>
-                                    <Link to='/users_info/1' className={classes.link}>Морфологические критерии спортивного отбора в
+                                <Grid item xs={12} lg={8} style={{marginRight:'auto'}}>
+                                    <Link to='/users_info/1' className={classes.link}>Морфологические критерии
+                                        спортивного отбора в
                                         хоккее</Link>
                                 </Grid>
-                                <Grid item style={{marginLeft: 'auto'}}>
+                                <Grid item classname={classes.mlXlAuto}>
                                     <Typography className={classes.price}>700 руб.</Typography>
                                 </Grid>
                                 <Grid item>
@@ -128,11 +151,11 @@ class CartPageContent extends React.Component {
                                 paddingRight: 20,
                                 borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
                             }}>
-                                <Grid item xs={8}>
+                                <Grid item xs={12} lg={8} style={{marginRight:'auto'}}>
                                     <Link to='#' className={classes.link}>Морфологические критерии спортивного отбора в
                                         хоккее</Link>
                                 </Grid>
-                                <Grid item style={{marginLeft: 'auto'}}>
+                                <Grid item classname={classes.mlXlAuto}>
                                     <Typography className={classes.price}>700 руб.</Typography>
                                 </Grid>
                                 <Grid item>
@@ -141,11 +164,11 @@ class CartPageContent extends React.Component {
                             </Grid>
                             <Grid container alignItems='center'
                                   style={{paddingTop: 21, paddingLeft: 24, paddingBottom: 19, paddingRight: 20}}>
-                                <Grid item xs={7}>
+                                <Grid item xs={12} lg={7} className={classes.promoblock}>
                                     <Link to='#' className={classNames(classes.link, classes.borderdashed)}>Есть
                                         промокод</Link>
                                 </Grid>
-                                <Grid item style={{marginLeft: 'auto', marginRight: 22}}>
+                                <Grid item className={classes.itogoblock}>
                                     <Typography className={classes.price}><span className={classes.itogo}>Итого:</span>1400
                                         руб.</Typography>
                                 </Grid>
@@ -153,7 +176,7 @@ class CartPageContent extends React.Component {
                         </Paper>
                     </Grid>
 
-                    <Grid item xs={5}>
+                    <Grid item xs={12} lg={5}>
                         <Typography className={classes.title}> Оформление заказа</Typography>
                         <Paper className='paper'
                                style={{paddingLeft: 40, paddingRight: 40, paddingTop: 16, paddingBottom: 40}}>
@@ -196,15 +219,19 @@ class CartPageContent extends React.Component {
                                     </FormControl>
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <Button variant='raised'  color='primary' className={classes.button}>подтвердить заказ</Button>
+                                    <Button variant='raised' color='primary' className={classes.button}>подтвердить
+                                        заказ</Button>
                                 </Grid>
-                                <Grid item xs={12} style={{marginTop:32}}>
+                                <Grid item xs={12} style={{marginTop: 32}}>
                                     <Typography className={classes.itogo}>Доступные способы оплаты</Typography>
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <span style={{color:'rgba(36,36,33,.5)',marginRight:8}}><FontAwesome name='cc-mastercard' size='lg'/></span>
-                                    <span style={{color:'rgba(36,36,33,.5)',marginRight:8}}><FontAwesome name='cc-visa' size='lg'/></span>
-                                    <span style={{color:'rgba(36,36,33,.5)',marginRight:8}}><FontAwesome name='wallet' size='lg'/></span>
+                                    <span style={{color: 'rgba(36,36,33,.5)', marginRight: 8}}><FontAwesome
+                                        name='cc-mastercard' size='lg'/></span>
+                                    <span style={{color: 'rgba(36,36,33,.5)', marginRight: 8}}><FontAwesome
+                                        name='cc-visa' size='lg'/></span>
+                                    <span style={{color: 'rgba(36,36,33,.5)', marginRight: 8}}><FontAwesome
+                                        name='wallet' size='lg'/></span>
                                 </Grid>
                             </Grid>
                         </Paper>
