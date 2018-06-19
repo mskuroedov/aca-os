@@ -13,6 +13,12 @@ import Button from "@material-ui/core/es/Button/Button";
 import FontAwesome from 'react-fontawesome';
 
 const styles = theme => ({
+    paper: {
+        [theme.breakpoints.up('md')]: {paddingLeft: 40, paddingRight: 40},
+        [theme.breakpoints.down('md')]: {paddingLeft: 16, paddingRight: 16},
+        paddingTop: 16,
+        paddingBottom: 40
+    },
     title: {
         fontSize: 20,
         color: ' rgba(36,36,33,0.6);',
@@ -139,7 +145,7 @@ class CartPageContent extends React.Component {
                                         спортивного отбора в
                                         хоккее</Link>
                                 </Grid>
-                                <Grid item >
+                                <Grid item>
                                     <Typography className={classes.price}>700 руб.</Typography>
                                 </Grid>
                                 <Grid item>
@@ -157,7 +163,7 @@ class CartPageContent extends React.Component {
                                     <Link to='#' className={classes.link}>Морфологические критерии спортивного отбора в
                                         хоккее</Link>
                                 </Grid>
-                                <Grid item >
+                                <Grid item>
                                     <Typography className={classes.price}>700 руб.</Typography>
                                 </Grid>
                                 <Grid item>
@@ -180,8 +186,8 @@ class CartPageContent extends React.Component {
 
                     <Grid item xs={12} lg={5}>
                         <Typography className={classes.title}> Оформление заказа</Typography>
-                        <Paper className='paper'
-                               style={{paddingLeft: 40, paddingRight: 40, paddingTop: 16, paddingBottom: 40}}>
+                        <Paper className={classNames(classes.paper, 'paper')}
+                        >
                             <Grid container spancing={16}>
                                 <Grid item xs={12}>
                                     <FormControl className={classes.formControl}>
