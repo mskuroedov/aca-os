@@ -7,16 +7,23 @@ import Switch from "@material-ui/core/es/Switch/Switch";
 import FormControl from "@material-ui/core/es/FormControl/FormControl";
 import Select from "material-ui/es/Select/Select";
 import MenuItem from "material-ui/es/Menu/MenuItem";
-import {calendar, seasonFilter, stagesFilter, statusFilter, leaguesFilter} from "../../fixtures/calendar";
+import {seasonFilter, tournamentFilter, stageFilter} from "../../fixtures/tournaments";
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import CloseIcon from '@material-ui/icons/Close';
-import Input from "@material-ui/core/es/Input/Input";
-import TournamentTableView from "./TournamentTableView";
-import Calendar from "./Calendar";
+import Button from "@material-ui/core/es/Button/Button";
+import TableTeams from "./content/TableTeams";
+import InputAdornment from "material-ui/es/Input/InputAdornment";
+import Input from "material-ui/es/Input/Input";
+import Icon from "material-ui/es/Icon/Icon";
+import TableChamp from "./content/TableChamp";
+import TableLeads from "./content/TableLeads";
+import TablePrizes from "./content/TablePrizes";
 
 const styles = theme => ({
 
-
+    formControl:{
+      width:'100%'
+    },
     select: {
         backgroundColor: 'rgba(36,36,33,0.1)',
         paddingLeft: 17,
@@ -38,41 +45,44 @@ const styles = theme => ({
     },
     button: {
         color: 'rgba(36,36,33,.3)',
-        padding: 0,
-        fontSize: 24
+        fontSize: 14,
+        fontWeight:'bold'
+
     },
     searchInput: {
         fontSize: 14,
         color: 'rgba(36,36,33,1)',
-        backgroundColor:'red',
-        paddingBottom: 7,
-        paddingLeft:17,
-        paddingTop:5,
-        paddingRight:5,
-        maxWidth: 103,
-        minHeight:36,
-        '&:before': {
-            backgroundColor: 'rgba(36,36,33,0.1)',
-            maxHeight:36,
-            top:2,
 
+        marginTop: 11,
+        paddingBottom: 5,
+        maxWidth: 290,
+        width:'100%',
+        '&:before': {
+            backgroundColor: 'rgba(0,0,0,0.2)'
         },
         '&:after': {
             backgroundColor: 'rgba(0,0,0,0.2)'
         }
     },
     searchInkbar: {
-        backgroundColor: 'transparent',
+        color: 'rgba(36,36,33,1)',
         '&:before': {
-            borderBottom:'none !important'
+            backgroundColor: 'rgba(0,0,0,0.2) !important'
         },
         '&:after': {
-            borderBottom:'none !important'
+            backgroundColor: 'rgba(0,0,0,0.2) !important'
         }
     },
     bgGreen:{
         backgroundColor:'#005945 !important'
+    },
+    searchInputIcon: {
+        color: 'rgba(145,143,138,1)',
+        position: 'relative',
+        fontSize: 16,
+        top: 3,
     }
+
 
 });
 
@@ -83,36 +93,28 @@ class TournamentsContent extends React.Component {
     }
 
     state = {
-        calendar,
-        CalendarView: true,
         seasonFilter,
         selectedSeasonFilter: 1,
-        statusFilter,
-        selectedStatusFilter: 1,
-        leaguesFilter,
-        selectedLeagueFilter: 1,
-        stagesFilter,
+        stageFilter,
         selectedStageFilter: 1,
+        tournamentFilter,
+        selectedTournamentFilter: 1,
     }
 
     onSeasonFilterChange = event => {
         this.setState({selectedSeasonFilter: event.target.value});
     };
-    onStatusFilterChange = event => {
-        this.setState({selectedSeasonFilter: event.target.value});
-    };
-    onLeaguesFilterChange = event => {
-        this.setState({selectedSeasonFilter: event.target.value});
-    };
     onStageFilterChange = event => {
-        this.setState({selectedSeasonFilter: event.target.value});
+        this.setState({selectedStageFilter: event.target.value});
+    };
+    onTournamentFilterChange = event => {
+        this.setState({selectedTournamentFilter: event.target.value});
     };
 
     render() {
         const {classes} = this.props;
-        const {calendar} = this.state;
         return (
-            <section style={{paddingLeft: 168, paddingRight: 168, paddingTop: 32, paddingBottom: 64}}>
+            <section className='main-section'>
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
                         <Grid container alignItems='center'>
@@ -139,27 +141,6 @@ class TournamentsContent extends React.Component {
                     </Grid>
                     <Grid item xs={12}>
                         <Grid container spacing={16} alignItems='center'>
-                            <Grid item>
-                                <FormControl className={classes.formControl}>
-                                    <Input classes={{
-                                        root: classes.searchInput,
-                                        underline: classes.searchInkbar
-                                    }}
-                                           placeholder="C"
-
-                                    />
-                                </FormControl>
-                                <span style={{marginLeft:8,marginRight:8}}>—</span>
-                                <FormControl className={classes.formControl}>
-                                    <Input classes={{
-                                        root: classes.searchInput,
-                                        underline: classes.searchInkbar
-                                    }}
-                                           placeholder="По"
-
-                                    />
-                                </FormControl>
-                            </Grid>
 
                             <Grid item>
                                 <FormControl>
@@ -185,8 +166,8 @@ class TournamentsContent extends React.Component {
                             <Grid item>
                                 <FormControl>
                                     <Select
-                                        value={this.state.selectedStatusFilter}
-                                        onChange={this.onStatusFilterChange}
+                                        value={this.state.selectedTournamentFilter}
+                                        onChange={this.onTournamentFilterChange}
                                         disableUnderline={true}
                                         classes={{
                                             select: classes.select,
@@ -195,28 +176,7 @@ class TournamentsContent extends React.Component {
                                         autoWidth
                                     >
                                         {
-                                            this.state.statusFilter.map((item) => (
-                                                <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
-                                            ))
-                                        }
-                                    </Select>
-                                </FormControl>
-                            </Grid>
-
-                            <Grid item>
-                                <FormControl>
-                                    <Select
-                                        value={this.state.selectedLeagueFilter}
-                                        onChange={this.onLeaguesFilterChange}
-                                        disableUnderline={true}
-                                        classes={{
-                                            select: classes.select,
-                                            icon: classes.selectIcon,
-                                        }}
-                                        autoWidth
-                                    >
-                                        {
-                                            this.state.leaguesFilter.map((item) => (
+                                            this.state.tournamentFilter.map((item) => (
                                                 <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
                                             ))
                                         }
@@ -237,23 +197,50 @@ class TournamentsContent extends React.Component {
                                         autoWidth
                                     >
                                         {
-                                            this.state.stagesFilter.map((item) => (
+                                            this.state.stageFilter.map((item) => (
                                                 <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
                                             ))
                                         }
                                     </Select>
                                 </FormControl>
                             </Grid>
+
                             <Grid item>
-                                <IconButton className={classes.button} aria-label="Delete">
-                                    <CloseIcon/>
-                                </IconButton>
+                                <Button className={classes.button} aria-label="Delete">
+                                    Сбросить
+                                </Button>
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item xs={12}>
-                        {this.state.CalendarView ? <TournamentTableView calendar={calendar}/> : <Calendar/>}
+                    <Grid item xs={12} lg={4}>
+                        <FormControl className={classes.formControl}>
+                            <Input classes={{
+                                root: classes.searchInput,
+                                underline: classes.searchInkbar
+                            }}
+                                   endAdornment={
+                                       <InputAdornment position="end"><Icon classes={{
+                                           root: classes.searchInputIcon
+                                       }}>
+                                           search
+                                       </Icon></InputAdornment>
+                                   }
+                                   placeholder="Поиск по имени..."
 
+                            />
+                        </FormControl>
+                    </Grid>
+                    <Grid item xs={12} style={{marginBottom:16}}>
+                        <TableTeams/>
+                    </Grid>
+                    <Grid item xs={12} style={{marginBottom:16}}>
+                        <TableChamp/>
+                    </Grid>
+                    <Grid item xs={12} style={{marginBottom:16}}>
+                        <TableLeads/>
+                    </Grid>
+                    <Grid item xs={12} style={{marginBottom:16}}>
+                        <TablePrizes/>
                     </Grid>
                 </Grid>
             </section>
