@@ -35,7 +35,7 @@ class StaffWork extends React.Component {
         const {classes} = this.props;
         return (
             <div>
-                <Typography className={classes.title}>Общая информация</Typography>
+                <Typography className={classes.title}>Работа</Typography>
                 <Paper className="paper">
                     <Table className="table no-bottom">
                         <TableHead>
@@ -44,7 +44,7 @@ class StaffWork extends React.Component {
                                 <TableCell >Должность</TableCell>
                                 <TableCell >Школа</TableCell>
                                 <TableCell >Группа</TableCell>
-                                <TableCell style={{width:10,padding:0}}></TableCell>
+                                {/*<TableCell style={{width:10,padding:0}}></TableCell>*/}
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -53,11 +53,11 @@ class StaffWork extends React.Component {
                                 <TableCell >Старший инструктор-методист</TableCell>
                                 <TableCell >ДЮСШ №43</TableCell>
                                 <TableCell >Группа 2012 г.р.</TableCell>
-                                <TableCell style={{width:10,padding:0}}>
-                                    <IconButton aria-label="Delete">
-                                        <MoreVertIcon/>
-                                    </IconButton>
-                                </TableCell>
+                                {/*<TableCell style={{width:10,padding:0}}>*/}
+                                    {/*<IconButton aria-label="Delete">*/}
+                                        {/*<MoreVertIcon/>*/}
+                                    {/*</IconButton>*/}
+                                {/*</TableCell>*/}
                             </TableRow>
                         </TableBody>
                     </Table>
