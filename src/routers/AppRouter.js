@@ -21,6 +21,7 @@ import UsersInfoPage from "../components/usersInfo/UsersInfoPage";
 import CartPage from "../components/cart/CartPage";
 import ItemPage from "../components/usersInfo/content/itempage/ItemPage";
 import TournamentsPage from "../components/tournaments/TournamentsPage";
+import TeamPage from "../components/team/TeamPage";
 
 export const history = createHistory();
 
@@ -56,6 +57,7 @@ const AppRouter = () => (
                 <Route path="/users_info/item" exact={true} component={ItemPage}/>
                 <Route path="/users_info/:value" exact={true} component={UsersInfoPage}/>
                 <Route path="/cart" exact={true} component={CartPage}/>
+                <Route path="/team/1" exact={true} component={TeamPage}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>

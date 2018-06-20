@@ -67,7 +67,7 @@ class TableTeams extends React.Component {
                             {
                                 teams.map((team, i) => (
                                     <div className={classes.teamItem} key={team.id}>
-                                        <Link to='#' className={classes.link}>{team.name}</Link>
+                                        <Link to='team/1' className={classes.link}>{team.name}</Link>
                                     </div>
                                 ))
                             }
