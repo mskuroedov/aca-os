@@ -116,29 +116,29 @@ class TournamentsContent extends React.Component {
         return (
             <section className='main-section'>
                 <Grid container spacing={16}>
-                    <Grid item xs={12}>
-                        <Grid container alignItems='center'>
-                            <Grid item> <span className={classes.switchName}
-                                              style={{color: this.state.CalendarView ? '#00755E' : '#242421'}}>Календарь</span>
-                            </Grid>
-                            <Grid item><Switch
-                                color='primary'
-                                classes={{
-                                    bar: classes.bgGreen,
-                                    icon: classes.bgGreen,
-                                    iconChecked: classes.bgGreen,
-                                }}
-                                checked={this.state.CalendarView}
-                                onChange={() => {
-                                    this.setState({CalendarView: !this.state.CalendarView})
-                                }}
-                            /></Grid>
-                            <Grid item> <span className={classes.switchName}
-                                              style={{color: this.state.CalendarView ? '#242421' : '#00755E'}}>Таблица</span>
-                            </Grid>
-                        </Grid>
+                    {/*<Grid item xs={12}>*/}
+                        {/*<Grid container alignItems='center'>*/}
+                            {/*<Grid item> <span className={classes.switchName}*/}
+                                              {/*style={{color: this.state.CalendarView ? '#00755E' : '#242421'}}>Календарь</span>*/}
+                            {/*</Grid>*/}
+                            {/*<Grid item><Switch*/}
+                                {/*color='primary'*/}
+                                {/*classes={{*/}
+                                    {/*bar: classes.bgGreen,*/}
+                                    {/*icon: classes.bgGreen,*/}
+                                    {/*iconChecked: classes.bgGreen,*/}
+                                {/*}}*/}
+                                {/*checked={this.state.CalendarView}*/}
+                                {/*onChange={() => {*/}
+                                    {/*this.setState({CalendarView: !this.state.CalendarView})*/}
+                                {/*}}*/}
+                            {/*/></Grid>*/}
+                            {/*<Grid item> <span className={classes.switchName}*/}
+                                              {/*style={{color: this.state.CalendarView ? '#242421' : '#00755E'}}>Таблица</span>*/}
+                            {/*</Grid>*/}
+                        {/*</Grid>*/}
 
-                    </Grid>
+                    {/*</Grid>*/}
                     <Grid item xs={12}>
                         <Grid container spacing={16} alignItems='center'>
 
