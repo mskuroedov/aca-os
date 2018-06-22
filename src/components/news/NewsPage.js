@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import Subheader from "../headers/Subheader";
 import Header from "../headers/Header";
 import NewsPageContent from "./NewsPageContent";
+import Footer from "../footer/Footer";
 
 const styles = theme => ({
 
@@ -27,6 +28,7 @@ class NewsPage extends React.Component {
                     title="Новости"
                 />
                 <NewsPageContent/>
+                <Footer/>
             </div>
         )
     }

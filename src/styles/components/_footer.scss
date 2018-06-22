@@ -1,0 +1,75 @@
+.footer {
+  background-color: rgb(36, 36, 33);
+  padding-bottom: 32px;
+  @media (max-width: 990px) {
+    text-align: center;
+  }
+  .icon-container{
+    @media(max-width: 990px){
+      justify-content: center;
+    }
+  }
+  .footer-brand-container{
+    @media (max-width: 990px) {
+      padding: 0 !important;
+      margin-bottom: 16px;
+    }
+  }
+  .menu-container{
+    @media (max-width: 990px) {
+      padding-bottom: 0 !important;
+    }
+    &:nth-last-of-type(2){
+      @media (max-width: 990px) {
+        padding-top: 0 !important;
+        padding-bottom: 8px;
+        margin-bottom: 24px;
+      }
+    }
+
+  }
+  .footer-brand {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-bottom: 16px;
+    @media (max-width: 990px) {
+      text-align: center;
+    }
+  }
+  .app-title {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 1.25;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  .icon-link {
+    font-size: 20px;
+    color: #7c7c7a;
+    line-height: 1;
+    &:hover {
+      .link {
+        border-bottom-color: white;
+      }
+    }
+    .link {
+      position: relative;
+      top: -3px;
+    }
+  }
+  .link-container {
+    margin-bottom: 8px;
+  }
+  .link {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    color: white;
+    font-size: 14px;
+    line-height: 1.429;
+    transition: all .3s;
+    padding-bottom: 1px;
+    &:hover {
+      border-bottom-color: white;
+    }
+  }
+}

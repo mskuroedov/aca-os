@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import Subheader from "../headers/Subheader";
 import Header from "../headers/Header";
 import TournamentsContent from "./TournamentsContent";
+import Footer from "../footer/Footer";
 
 const styles = theme => ({
 
@@ -25,6 +26,7 @@ class TournamentsPage extends React.Component {
             <Header/>
                 <Subheader title='Турниры'/>
                 <TournamentsContent/>
+                <Footer/>
             </div>
         )
     }

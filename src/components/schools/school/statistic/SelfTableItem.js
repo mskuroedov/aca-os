@@ -20,9 +20,9 @@ class SelfTableItem extends React.Component {
         const {number, FIO, amplua,school ,group,totalGames,wonGames,scores,GSR,p,o,oi,gp,gB,sH,pm,shtrf,BV,percent,iv} = this.props;
         return (
             <TableRow>
-                <TableCell >
-                    {number}
-                </TableCell>
+                {/*<TableCell >*/}
+                    {/*{number}*/}
+                {/*</TableCell>*/}
                 <TableCell >
                     {
                         common ? <Link to="/sportsman/1" className={classes.link}>{FIO}</Link> : <span>Игрок {number}</span>
@@ -31,9 +31,10 @@ class SelfTableItem extends React.Component {
 
                 </TableCell>
                 {
-                    common ? <TableCell ><Link to="#" className={classes.link}>{school}</Link></TableCell> : <TableCell ><Link to="#" className={classes.link}>{group}</Link></TableCell>
+                    common ? <TableCell ><Link to="#" className={classes.link}>{school}</Link></TableCell> : <TableCell ><Link to="/team/1" className={classes.link}>{group}</Link></TableCell>
                 }
                 {/*<TableCell>{amplua}</TableCell>*/}
+                <TableCell >Нападающий</TableCell>
                 <TableCell numeric>{totalGames}</TableCell>
                 {/*<TableCell numeric>{wonGames}</TableCell>*/}
                 <TableCell numeric>{scores}</TableCell>

@@ -9,6 +9,11 @@ import 'react-dates/lib/css/_datepicker.css';
 import LoadingPage from './components/LoadingPage';
 import {createMuiTheme, MuiThemeProvider} from 'material-ui/styles';
 import {login, logout} from "./actions/auth";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab,faGooglePlay } from '@fortawesome/free-brands-svg-icons'
+
+library.add(fab, faGooglePlay);
 
 const theme = createMuiTheme({
     palette: {

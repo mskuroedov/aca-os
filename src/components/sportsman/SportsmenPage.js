@@ -6,6 +6,7 @@ import Subheader from "../headers/Subheader";
 import {sportsman} from "../../fixtures/sportsman";
 import NotFoundPage from "../NotFoundPage";
 import {routes} from "../../routers/AppRouter";
+import Footer from "../footer/Footer";
 
 
 class SportsmenPage extends React.Component {
@@ -44,6 +45,7 @@ class SportsmenPage extends React.Component {
                         />
                         <SportsmenHeader {...sportsmen}/>
                         <SportsmenPageContent {...this.props.match.params} sportsmen={sportsmen} />
+                        <Footer/>
                     </div>
                     :
                     <NotFoundPage/>

@@ -6,6 +6,7 @@ import Header from "../../../headers/Header";
 import Subheader from "../../../headers/Subheader";
 import UsersBuySmt from "../UsersBuySmt";
 import UsersInfoMenu from "../../UsersInfoMenu";
+import Footer from "../../../footer/Footer";
 
 const styles = theme => ({});
 
@@ -27,6 +28,7 @@ class ItemPage extends React.Component {
                 <section className='main-section'>
                     <UsersBuySmt/>
                 </section>
+                <Footer/>
             </div>
         )
     }

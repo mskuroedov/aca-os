@@ -12,7 +12,7 @@ import Grid from "@material-ui/core/es/Grid/Grid";
 import Select from 'material-ui/Select';
 import {MenuItem} from 'material-ui/Menu';
 import {FormControl} from 'material-ui/Form';
-import {SelfStats, statsAmplua, statsChamp, statsYear, TeamStats} from "../../../../fixtures/stats";
+import {SelfStats, statsAmplua, statsChamp, statsYear, TeamStats, statsStage} from "../../../../fixtures/stats";
 
 const styles = theme => ({
     button: {
@@ -121,9 +121,11 @@ class SchoolStatsModalFilter extends React.Component {
         statsYear,
         statsAmplua,
         statsChamp,
+        statsStage,
         selectedFilter: 1,
         selectedFilterChamp: 1,
         selectedFilterAmplua: 1,
+        selectedStageFilter: 1,
     };
 
     handleClickOpen = () => {
@@ -142,6 +144,9 @@ class SchoolStatsModalFilter extends React.Component {
     };
     onFiltersChangeAmplua = event => {
         this.setState({selectedFilterAmplua: event.target.value});
+    };
+    onStageFilterChange = event => {
+        this.setState({selectedStageFilter: event.target.value});
     };
 
     render() {
@@ -231,6 +236,29 @@ class SchoolStatsModalFilter extends React.Component {
                                         >
                                             {
                                                 this.state.statsAmplua.map((item) => (
+                                                    <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
+                                                ))
+                                            }
+                                        </Select>
+                                    </FormControl>
+                                </Grid>
+                            }
+                            {
+                                selfView &&
+                                <Grid item xs={12}>
+                                    <FormControl>
+                                        <Select
+                                            value={this.state.selectedStageFilter}
+                                            onChange={this.onStageFilterChange}
+                                            disableUnderline={true}
+                                            classes={{
+                                                select: classes.select,
+                                                icon: classes.selectIcon,
+                                            }}
+                                            autoWidth
+                                        >
+                                            {
+                                                this.state.statsStage.map((item) => (
                                                     <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
                                                 ))
                                             }

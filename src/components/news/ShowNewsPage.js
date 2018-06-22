@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import Header from "../headers/Header";
 import Subheader from "../headers/PublicSubheader";
 import ShowNewsPaper from "./ShowNewsPaper";
+import Footer from "../footer/Footer";
 
 const styles = theme => ({
   
@@ -28,6 +29,7 @@ class ShowNewsPage extends React.Component {
                         title="Новости"
                     />
                     <ShowNewsPaper/>
+                    <Footer/>
                 </div>
             </div>
         )

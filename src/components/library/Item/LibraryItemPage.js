@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import Header from "../../headers/Header";
 import Subheader from "../../headers/Subheader";
 import LibraryItemContent from "./LibraryItemContent";
+import Footer from "../../footer/Footer";
 
 const styles = theme => ({});
 
@@ -22,6 +23,7 @@ class LibraryItemPage extends React.Component {
                 <Header/>
                 <Subheader title='Библиотека'/>
                 <LibraryItemContent/>
+                <Footer/>
             </div>
         )
     }

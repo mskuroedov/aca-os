@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import Header from "../headers/Header";
 import Subheader from "../headers/Subheader";
 import CartPageContent from "./CartPageContent";
+import Footer from "../footer/Footer";
 
 const styles = theme => ({});
 
@@ -22,6 +23,7 @@ class CartPage extends React.Component {
                 <Header/>
                 <Subheader title='Корзина' cart/>
                 <CartPageContent/>
+                <Footer/>
             </div>
         )
     }

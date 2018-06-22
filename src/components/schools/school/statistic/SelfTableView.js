@@ -67,12 +67,15 @@ class SelfTableView extends React.Component {
                         <Table className="table_stats">
                             <TableHead>
                                 <TableRow>
-                                    <TableCell>Номер</TableCell>
+                                    {/*<TableCell>Номер</TableCell>*/}
                                     <TableCell style={{minWidth:80}}>ФИО</TableCell>
                                     <TableCell style={{minWidth:80}}>
                                         {
-                                            common ? 'Школа' : 'Группа'
+                                            common ? 'Школа' : 'Команда'
                                         }
+                                    </TableCell>
+                                    <TableCell>
+                                        Апмлуа
                                     </TableCell>
                                     {/*<TableCell>А</TableCell>*/}
                                     <TableCell numeric>И</TableCell>

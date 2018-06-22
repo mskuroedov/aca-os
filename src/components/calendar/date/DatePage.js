@@ -6,6 +6,7 @@ import Header from "../../headers/Header";
 import Subheader from "../../headers/Subheader";
 import {routes} from "../../../routers/AppRouter";
 import DateView from "./DateView";
+import Footer from "../../footer/Footer";
 
 const styles = theme => ({
 
@@ -31,6 +32,7 @@ class DatePage extends React.Component {
                     ]}
                 />
                 <DateView/>
+                <Footer/>
             </div>
         )
     }

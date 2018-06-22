@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import Header from "../headers/Header";
 import Subheader from "../headers/Subheader";
 import UsersInfoMenu from "./UsersInfoMenu";
+import Footer from "../footer/Footer";
 
 const styles = theme => ({});
 
@@ -22,6 +23,7 @@ class UsersInfoPage extends React.Component {
                 <Header/>
                 <Subheader title='Пользователям' cart/>
                 <UsersInfoMenu value={this.props.match.params.value}/>
+                <Footer/>
             </div>
         )
     }

@@ -7,6 +7,7 @@ import Header from "../../../headers/Header";
 import Subheader from "../../../headers/Subheader";
 import WorkerHeader from "./WorkerHeader";
 import WorkerPageContent from "./WorkerPageContent";
+import Footer from "../../../footer/Footer";
 
 const styles = theme => ({});
 
@@ -32,6 +33,7 @@ class WorkerPage extends React.Component {
                 />
                 <WorkerHeader/>
                 <WorkerPageContent staff={staff}/>
+                <Footer/>
             </div>
         )
     }

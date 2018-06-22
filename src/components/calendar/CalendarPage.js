@@ -6,6 +6,7 @@ import {routes} from "../../routers/AppRouter";
 import Header from "../headers/Header";
 import Subheader from "../headers/Subheader";
 import CalendarView from "./CalendarView";
+import Footer from "../footer/Footer";
 
 const styles = theme => ({
 
@@ -28,6 +29,7 @@ class CalendarPage extends React.Component {
                         title='Календарь'
                     />
                     <CalendarView/>
+                <Footer/>
             </div>
         )
     }

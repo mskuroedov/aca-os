@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import Grid from "@material-ui/core/es/Grid/Grid";
 import FormControl from "@material-ui/core/es/FormControl/FormControl";
 import Select from 'material-ui/Select';
-import {TeamStats,SelfStats, statsYear, statsAmplua, statsChamp} from "../../../../fixtures/stats";
+import {TeamStats,SelfStats, statsYear, statsAmplua, statsChamp, statsStage} from "../../../../fixtures/stats";
 import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
 import Button from "@material-ui/core/es/Button/Button";
 import Switch from "@material-ui/core/es/Switch/Switch";
@@ -75,9 +75,11 @@ class StatsPage extends React.Component {
         statsAmplua,
         statsChamp,
         statsYear,
+        statsStage,
         selectedYearFilter: 1,
         selectedChampionshipFilter: 1,
         selectedAmpluaFilter: 1,
+        selectedStageFilter: 1,
         selfView: true
     };
 
@@ -90,6 +92,9 @@ class StatsPage extends React.Component {
     };
     onAmpluaFilterChange = event => {
         this.setState({selectedChampionshipFilter: event.target.value});
+    };
+    onStageFilterChange = event => {
+        this.setState({selectedStageFilter: event.target.value});
     };
 
     render() {
@@ -164,8 +169,8 @@ class StatsPage extends React.Component {
                         <Grid item className='xs-hidden'>
                             <FormControl>
                                 <Select
-                                    value={this.state.selectedAmpluaFilter}
-                                    onChange={this.onAmpluaFilterChange}
+                                    value={this.state.selectedStageFilter}
+                                    onChange={this.onStageFilterChange}
                                     disableUnderline={true}
                                     classes={{
                                         select: classes.select,
@@ -174,13 +179,36 @@ class StatsPage extends React.Component {
                                     autoWidth
                                 >
                                     {
-                                        this.state.statsAmplua.map((item) => (
+                                        this.state.statsStage.map((item) => (
                                             <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
                                         ))
                                     }
                                 </Select>
                             </FormControl>
                         </Grid>
+                }
+                {
+                    this.state.selfView &&
+                    <Grid item className='xs-hidden'>
+                        <FormControl>
+                            <Select
+                                value={this.state.selectedAmpluaFilter}
+                                onChange={this.onAmpluaFilterChange}
+                                disableUnderline={true}
+                                classes={{
+                                    select: classes.select,
+                                    icon: classes.selectIcon,
+                                }}
+                                autoWidth
+                            >
+                                {
+                                    this.state.statsAmplua.map((item) => (
+                                        <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
+                                    ))
+                                }
+                            </Select>
+                        </FormControl>
+                    </Grid>
                 }
                 <Grid item className='xs-hidden'>
                     <Button classes={{

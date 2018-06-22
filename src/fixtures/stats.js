@@ -4,7 +4,7 @@ export const SelfStats = [
         number: 1,
         FIO: 'Аистов К. А.',
         amplua: 'нап.',
-        group: 'Группа 1',
+        group: 'Ак Барс',
         school: 'Школа 1',
         totalGames: 34,
         wonGames: 34,
@@ -28,7 +28,7 @@ export const SelfStats = [
         FIO: 'Аистов К. А.',
         amplua: 'нап.',
         school: 'Школа 1',
-        group: 'Группа 1',
+        group: 'Ак Барс',
         totalGames: 34,
         wonGames: 34,
         scores: 2,
@@ -53,7 +53,7 @@ export const SelfUnnamedStats = [
         FIO: 'Аистов К. А.',
         amplua: 'нап.',
         school: 'Школа 1',
-        group: 'Группа 1',
+        group: 'Ак Барс',
         totalGames: 34,
         wonGames: 34,
         scores: 2,
@@ -71,7 +71,7 @@ export const SelfUnnamedStats = [
         FIO: 'Аистов К. А.',
         amplua: 'нап.',
         school: 'Школа 1',
-        group: 'Группа 1',
+        group: 'Ак Барс',
         totalGames: 34,
         wonGames: 34,
         scores: 2,
@@ -244,6 +244,21 @@ export const statsYear = [
     {
         'id': 3,
         'title': '2018'
+    }
+];
+
+export const statsStage = [
+    {
+        'id': 1,
+        'title': 'Этап 1'
+    },
+    {
+        'id': 2,
+        'title': 'Этап 2'
+    },
+    {
+        'id': 3,
+        'title': 'Этап 3'
     }
 ];
 export const statsChamp = [

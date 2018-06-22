@@ -6,6 +6,7 @@ import Header from "../headers/Header";
 import Subheader from "../headers/Subheader";
 import {routes} from "../../routers/AppRouter";
 import TeamPageContent from "./TeamPageContent";
+import Footer from "../footer/Footer";
 
 const styles = theme => ({});
 
@@ -26,6 +27,7 @@ class TeamPage extends React.Component {
                     {title: 'Ак Барс Казань', link: ''},
                 ]}/>
                 <TeamPageContent/>
+                <Footer/>
             </div>
         )
     }

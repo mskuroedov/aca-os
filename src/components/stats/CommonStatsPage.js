@@ -6,6 +6,7 @@ import Header from "../headers/Header";
 import Subheader from "../headers/Subheader";
 import StatsPageContent from "./StatsPageContent";
 import StatsPage from "../schools/school/statistic/StatsPage"
+import Footer from "../footer/Footer";
 
 const styles = theme => ({});
 
@@ -28,6 +29,7 @@ class CommonStatsPage extends React.Component {
                 <div className='main-section'>
                     <StatsPage common={common}/>
                 </div>
+                <Footer/>
             </div>
         )
     }
