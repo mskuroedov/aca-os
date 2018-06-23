@@ -5,61 +5,100 @@ import classNames from 'classnames';
 import Grid from "@material-ui/core/es/Grid/Grid";
 import Icon from "material-ui/es/Icon/Icon";
 
-const styles = {
+const styles = theme => ({
 
-    building:{
-        color:'white',
-        fontSize:'48px !important',
-        backgroundColor:'#00755E',
-        borderRadius:'100%',
-        padding:24,
-        width:96,
-        height:96
+    building: {
+        color: 'white',
+        backgroundColor: '#00755E',
+        borderRadius: '100%',
+        [theme.breakpoints.down('lg')]: {
+            width: 60,
+            height: 60,
+            padding: 12,
+            fontSize: '36px !important',
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: 96,
+            height: 96,
+            padding: 24,
+            fontSize: '48px !important',
+        },
     },
-    bigAvatar: {
-        width: 90,
-        height: 90,
-    },
+    bigAvatar: {},
     schoolName: {
-        fontSize: 24,
+        margin:0,
         fontFamily: '"BlissPro",sans-serif',
         color: 'black',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        lineHeight:1.375,
+        [theme.breakpoints.down('lg')]: {
+            fontSize: 18,
+
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: 24,
+
+        },
     },
     schoolHeader: {
-        alignItems: 'center',
-        paddingLeft: 165,
-        paddingRight: 165,
-        paddingTop: 50,
+        [theme.breakpoints.down('lg')]: {
+            paddingLeft: 16,
+            paddingRight: 16,
+            paddingTop: 24,
+            paddingBottom: 24,
+        },
+        [theme.breakpoints.up('lg')]: {
+            alignItems: 'center',
+            paddingLeft: 165,
+            paddingRight: 165,
+            paddingTop: 50,
+        },
         backgroundColor: '#fff',
-        display:'flex',
-        paddingBottom:40,
-        borderBottom:'1px solid lightgray'
+        display: 'flex'
     },
     schoolRightSec: {
         justifyItems: 'flex-end',
         textAlign: 'right',
         color: '#242421',
         fontSize: 14,
-        marginLeft:24
+        marginLeft: 24
     },
-    mlauto:{
-        marginLeft:'auto',
+    mlauto: {
+        marginLeft: 'auto',
     }
     ,
     schoolRatingNum: {
         fontSize: '40px !important',
         color: '#242421',
-        fontFamily:'AkBarsFont'
+        fontFamily: 'AkBarsFont'
     },
-    schoolAdress:{
-        fontSize:16,
-        color:'rgba(36,36,33,1)',
-        position:'relative',
-        top:-5
-    }
-};
+    schoolAdress: {
+        fontSize: 16,
+        color: 'rgba(36,36,33,1)',
+        position: 'relative',
+        top: -5,
+        lineHeight:1.375,
+        marginBottom:0,
+        marginTop:8,
+        [theme.breakpoints.down('lg')]: {
+            fontSize: 14,
 
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: 16,
+
+        },
+
+    },
+    xsh: {
+        [theme.breakpoints.down('lg')]: {
+            display: 'none',
+        },
+        [theme.breakpoints.up('lg')]: {
+            display: 'block',
+        },
+    }
+});
 
 
 class GroupHeader extends React.Component {
@@ -73,22 +112,22 @@ class GroupHeader extends React.Component {
             <section className={classNames(classes.schoolHeader)}>
 
                 <Grid
-                    item  align={'flex-basis'}>
+                    item align={'flex-basis'}>
                     <Icon className={classes.building} classes={{
-                        root:classes.building
+                        root: classes.building
                     }}>group</Icon>
 
                 </Grid>
-                <Grid item style={{marginLeft:16}}>
-                    <span className={classNames(classes.schoolName)}>Группа мальчиков 2010 г. р.</span><br/>
-                    <span className={classNames(classes.schoolAdress)}>2010 год набора</span>
+                <Grid item  xs={7} lg style={{marginLeft: 16}}>
+                    <p className={classNames(classes.schoolName)}>Группа мальчиков 2010 г. р.</p>
+                    <p className={classNames(classes.schoolAdress)}>2010 год набора</p>
                 </Grid>
-                <Grid item className={classNames(classes.schoolRightSec,classes.mlauto)}>
+                <Grid item className={classNames(classes.schoolRightSec, classes.mlauto, classes.xsh)}>
                     <span>Спортсмены</span><br/>
                     <span className={classNames(classes.schoolRatingNum)}>25</span>
                 </Grid>
 
-                <Grid item className={classNames(classes.schoolRightSec)}>
+                <Grid item className={classNames(classes.schoolRightSec, classes.xsh)}>
                     <span>Тренеры</span><br/>
                     <span className={classNames(classes.schoolRatingNum)}>2</span>
                 </Grid>

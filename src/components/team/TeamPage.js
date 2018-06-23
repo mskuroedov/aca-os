@@ -30,7 +30,7 @@ class TeamPage extends React.Component {
                 <Footer/>
             </div>
         )
-    }
+    }π
 }
 
 TeamPage.propTypes = {

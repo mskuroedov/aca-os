@@ -59,7 +59,7 @@ class GroupPageContent extends React.Component {
         const {classes} = this.props;
         const {statsAmplua, sportsman} = this.state;
         return (
-            <section style={{paddingLeft: 168, paddingRight: 168, paddingTop: 24}}>
+            <section className={'main-section'}>
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
                         <FormControl>
@@ -93,7 +93,7 @@ class GroupPageContent extends React.Component {
                     </Grid>
                     <Grid item xs={12}>
                         <Grid container spacing={16}>
-                            <Grid item xs={4}>
+                            <Grid item xs={12} lg={4}>
                                 <TrainerView/>
                             </Grid>
                         </Grid>
