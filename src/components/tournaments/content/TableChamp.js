@@ -17,6 +17,9 @@ const styles = theme => ({
     formControl:{
       [theme.breakpoints.down('md')]:{
           marginRight:'auto'
+      },
+      [theme.breakpoints.up('md')]:{
+          marginLeft:'auto'
       }
     },
     selectRoot: {
@@ -62,7 +65,6 @@ const styles = theme => ({
             marginLeft: 'auto'
         },
         [theme.breakpoints.down('lg')]: {
-            // marginRight: 'auto'
             display:'flex',
             alignItems:'center'
         }

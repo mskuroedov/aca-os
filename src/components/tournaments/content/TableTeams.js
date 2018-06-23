@@ -16,13 +16,19 @@ const styles = theme => ({
         flexWrap: 'wrap'
     },
     teamItem: {
-        marginBottom:16
+        marginBottom:16,
+        [theme.breakpoints.down('md')]:{
+            paddingRight: 32,
+            paddingLeft: 32,
+        }
     },
     paper: {
-        paddingLeft: 32,
         paddingTop: 24,
         paddingBottom: 16,
-        paddingRight: 32
+        [theme.breakpoints.up('md')]:{
+            paddingRight: 32,
+            paddingLeft: 32,
+        }
     },
     title: {
         fontSize: 20,
