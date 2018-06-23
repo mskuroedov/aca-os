@@ -14,6 +14,15 @@ import Typography from "@material-ui/core/es/Typography/Typography";
 import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
 import Select from "material-ui/es/Select/Select";
 import FormControl from "material-ui/es/Form/FormControl";
+import Popover from '@material-ui/core/Popover';
+import Grow from '@material-ui/core/Grow';
+import Paper from '@material-ui/core/Paper';
+import {Manager, Target, Popper} from 'react-popper';
+import {withStyles} from 'material-ui/styles';
+import CustomEvent from './calendarCustom/CustomEvent';
+
+
+import PropTypes from 'prop-types';
 
 
 function ShowMore({event}) {
@@ -28,18 +37,33 @@ moment.locale('ru');
 BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
 
 
+const styles = theme => ({
+    paper: {
+        padding: theme.spacing.unit,
+    },
+    popover: {
+        pointerEvents: 'none',
+    },
+    popperClose: {
+        pointerEvents: 'none',
+    },
+});
+
 class Calendar extends React.Component {
     constructor(props) {
         super(props);
     }
 
     state = {
-        currentView: 'month'
+        currentView: 'month',
     };
+
 
     render() {
         return (
             <div {...this.props}>
+
+
                 <BigCalendar
                     events={events}
                     step={60}
@@ -59,7 +83,7 @@ class Calendar extends React.Component {
                     }}
                     className='common-calendar'
                     selectable
-                    popup
+                    // popup
 
                 />
             </div>
@@ -74,7 +98,7 @@ class CustomToolbar extends Toolbar {
 
 
     render() {
-        let {messages} = this.props
+        let {messages} = this.props;
         return (
             <Grid container alignItems='center' spacing={0} style={{marginBottom: 18}}>
                 <Grid item style={{marginRight: 24}}>
@@ -135,18 +159,9 @@ class CustomToolbar extends Toolbar {
     };
 }
 
-class CustomEvent extends EventCell {
-
-    render() {
 
 
-        return (
-            <span style={{fontSize: 13, color: 'white'}}>
-            {moment(event.start).format('hh:mm')}
-                <strong style={{fontWeight: 'bold'}}> {event.title}</strong>
-            </span>
-        )
-    }
-}
 
-export default Calendar;
+
+
+export default withStyles(styles)(Calendar);

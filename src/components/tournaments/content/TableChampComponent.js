@@ -20,7 +20,7 @@ class TableChampComponent extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-            <Table className="table xs-hidden no-bottom">
+            <Table className="table  no-bottom">
                 <TableHead>
                     <TableRow>
                         <TableCell numeric style={{width:80}}>Место</TableCell>
