@@ -26,7 +26,12 @@ const styles = theme => ({
         paddingBottom: 7,
         paddingRight: 40,
         maxHeight: 36,
-        fontSize: 14,
+        [theme.breakpoints.up('md')]: {
+            fontSize: 14
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: 12
+        },
         color: '#242421',
         '&:after': {
             backgroundColor: '#242421'

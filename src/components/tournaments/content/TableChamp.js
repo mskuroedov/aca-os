@@ -14,10 +14,17 @@ import IconButton from "material-ui/es/IconButton/IconButton";
 import Icon from "material-ui/es/Icon/Icon";
 
 const styles = theme => ({
-    selectRoot:{
-
-        [theme.breakpoints.up('md')]:{
-            marginRight:116
+    formControl:{
+      [theme.breakpoints.down('md')]:{
+          marginRight:'auto'
+      }
+    },
+    selectRoot: {
+        [theme.breakpoints.up('md')]: {
+            marginRight: 116
+        },
+        [theme.breakpoints.down('md')]: {
+            marginRight: 'auto'
         }
     },
     title: {
@@ -32,8 +39,13 @@ const styles = theme => ({
         paddingTop: 13,
         paddingBottom: 7,
         paddingRight: 40,
-        maxHeight:36,
-        fontSize: 14,
+        maxHeight: 36,
+        [theme.breakpoints.up('md')]: {
+            fontSize:14
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize:12
+        },
         color: '#242421',
         '&:after': {
             backgroundColor: '#242421'
@@ -45,6 +57,16 @@ const styles = theme => ({
     selectLine: {
         color: 'transparent'
     },
+    selectContainer: {
+        [theme.breakpoints.up('lg')]: {
+            marginLeft: 'auto'
+        },
+        [theme.breakpoints.down('lg')]: {
+            // marginRight: 'auto'
+            display:'flex',
+            alignItems:'center'
+        }
+    }
 
 });
 
@@ -54,8 +76,8 @@ class TableChamp extends React.Component {
         super(props);
     }
 
-    state={
-        selectedChampFilter:1,
+    state = {
+        selectedChampFilter: 1,
         tournamentFilter
     };
 
@@ -71,14 +93,14 @@ class TableChamp extends React.Component {
                 <Grid item>
                     <Typography className={classes.title}>Чемпионат</Typography>
                 </Grid>
-                <Grid item style={{marginLeft:'auto'}}>
-                    <FormControl>
+                <Grid item xs={12} lg className={classes.selectContainer}>
+                    <FormControl className={classes.formControl}>
                         <Select
                             value={this.state.selectedChampFilter}
                             onChange={this.onChampFilterChange}
                             disableUnderline={true}
                             classes={{
-                                root:classes.selectRoot,
+                                root: classes.selectRoot,
                                 select: classes.select,
                                 icon: classes.selectIcon,
                             }}

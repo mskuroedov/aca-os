@@ -8,7 +8,15 @@ import TableRow from "@material-ui/core/es/TableRow/TableRow";
 import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
 
-const styles = theme => ({});
+const styles = theme => ({
+    name:{
+        [theme.breakpoints.up('lg')]:{
+            minWidht:400
+        },
+        [theme.breakpoints.up('md')]:{
+        },
+    }
+});
 
 
 class TableChampComponent extends React.Component {
@@ -24,7 +32,7 @@ class TableChampComponent extends React.Component {
                 <TableHead>
                     <TableRow>
                         <TableCell numeric style={{width:80}}>Место</TableCell>
-                        <TableCell style={{minWidth:400}}>Команда</TableCell>
+                        <TableCell >Команда</TableCell>
                         <TableCell numeric>И</TableCell>
                         <TableCell numeric>В</TableCell>
                         <TableCell numeric>П</TableCell>

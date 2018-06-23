@@ -28,7 +28,12 @@ const styles = theme => ({
         paddingBottom: 7,
         paddingRight: 40,
         maxHeight: 36,
-        fontSize: 14,
+        [theme.breakpoints.up('md')]: {
+            fontSize:14
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize:12
+        },
         color: '#242421',
         '&:after': {
             backgroundColor: '#242421'
@@ -43,6 +48,17 @@ const styles = theme => ({
     bgGreen: {
         backgroundColor: '#005945 !important'
     },
+    switchName:{
+        color: '#005945',
+        [theme.breakpoints.down('md')]:{
+            fontSize:14
+        }
+    },
+    lgMlAuto:{
+        [theme.breakpoints.up('lg')]:{
+            marginLeft:'auto'
+        }
+    }
 });
 
 
@@ -54,7 +70,7 @@ class TableLeads extends React.Component {
     state = {
         ampluaFilter,
         selectedAmpluaFilter: 1,
-        checked:true
+        checked: true
     }
 
     onAmpluaFilterChange = event => {
@@ -68,8 +84,8 @@ class TableLeads extends React.Component {
                 <Grid item>
                     <Typography className={classes.title}>Лидеры</Typography>
                 </Grid>
-                <Grid item style={{marginLeft: 'auto'}}>
-                    <Grid container spacing={16} alignItems={'center'}>
+                <Grid item className={classes.lgMlAuto}>
+                    <Grid container spacing={0} alignItems={'center'}>
                         <Grid item>
                             <Select
                                 value={this.state.selectedAmpluaFilter}
@@ -93,12 +109,11 @@ class TableLeads extends React.Component {
 
                                 <Switch
                                     color='primary'
-                                    classes={{
-                                    }}
+                                    classes={{}}
                                     checked={this.state.checked}
-                                    onChange={()=>{
+                                    onChange={() => {
                                         this.setState({
-                                            checked:!this.state.checked
+                                            checked: !this.state.checked
                                         })
                                     }}
 
@@ -106,8 +121,7 @@ class TableLeads extends React.Component {
                             </FormControl>
                         </Grid>
                         <Grid item>
-                            <span className={classes.switchName}
-                                         style={{color: '#005945'}}>Плей-офф</span>
+                            <span className={classNames(classes.lgMlAuto,classes.switchName)}>Плей-офф</span>
                         </Grid>
                     </Grid>
 
