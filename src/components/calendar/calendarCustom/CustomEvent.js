@@ -137,7 +137,6 @@ class CustomEvent extends React.Component {
                     classes={{
                         paper: classes.popoverPaper
                     }}
-                    elevation={100}
                 >
                     <Grid container spacing={0} style={{maxWidth:500}} >
                         <Grid item xs={12} className={classes.popoverTopContainer}>
