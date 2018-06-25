@@ -12,6 +12,12 @@ import NewsItem from "./NewsItem";
 
 
 const styles = theme => ({
+    formControl:{
+      [theme.breakpoints.up('lg')]:{
+          maxWidth:'30%',
+          width:'30%'
+      }
+    },
     mlauto: {
         display: 'flex'
     },
@@ -20,6 +26,7 @@ const styles = theme => ({
         color: 'rgba(36,36,33,1)',
         marginTop: 11,
         paddingBottom: 5,
+        width:'100%',
         '&:before': {
             backgroundColor: 'rgba(0,0,0,0.2)'
         },
@@ -71,8 +78,8 @@ class AllMaterials extends React.Component {
         return (
             <Grid container spacing={16}
             >
-                <Grid item xs={12} lg={4} className={classes.mlauto}>
-                    <FormControl style={{width:'100%'}}>
+                <Grid item xs={12} lg={12} className={classes.mlauto}>
+                    <FormControl className={classes.formControl}>
                         <Input
                             classes={{
                                 root: classes.searchInput,

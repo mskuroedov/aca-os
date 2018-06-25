@@ -83,7 +83,7 @@ class Calendar extends React.Component {
                     }}
                     className='common-calendar'
                     selectable
-                    // popup
+                    popup
 
                 />
             </div>
