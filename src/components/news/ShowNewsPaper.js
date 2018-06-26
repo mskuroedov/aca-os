@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/es/Typography/Typography";
 import FontAwesome from "react-fontawesome";
 import Link from "react-router-dom/es/Link";
 import ShareSection from "./ShareSection";
+import Avatar from "@material-ui/core/es/Avatar/Avatar";
 
 const styles = theme => ({
     paper: {
@@ -21,6 +22,10 @@ const styles = theme => ({
         border: '1px solid rgba(0,0,0,0.1);',
         fontSize: 16,
         fontFamily: '"BlissPro",sans-serif',
+    },
+    avatar: {
+        width: 30,
+        height: 30,
     },
     header:{
         fontSize:22,
@@ -88,6 +93,21 @@ class ShowNewsPaper extends React.Component {
                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Typography>
                            <Typography className={classes.subHeader}>Lorem ipsum dolor sit amet,</Typography>
                            <Link to='/' className={classes.link}>Скачать материал</Link>
+                           <Grid container spacing={16} style={{paddingTop: 22, alignItems: 'center'}}>
+                               <Grid item >
+                                   <Avatar
+                                       alt="Adelle Charles"
+                                       src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
+                                       classes={{
+                                           root: classes.avatar
+                                       }}
+                                   />
+
+                               </Grid>
+                               <Grid item xs >
+                                   <Typography><Link to="/author/1" className={classes.link}>Константинопольский Константин</Link></Typography>
+                               </Grid>
+                           </Grid>
                            <ShareSection />
                        </Paper>
                     </Grid>

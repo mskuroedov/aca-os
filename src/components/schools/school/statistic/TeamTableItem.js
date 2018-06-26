@@ -26,7 +26,7 @@ class TeamTableItem extends React.Component {
                     {place}
                 </TableCell>
                 <TableCell style={{width:350,paddingLeft:24}}>
-                    {team}
+                    <Link to="/team/1" className={classes.link}>{team}</Link>
                 </TableCell>
                 <TableCell numeric>{games}</TableCell>
                 <TableCell numeric>{wins}</TableCell>

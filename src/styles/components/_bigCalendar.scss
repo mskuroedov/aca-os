@@ -1,11 +1,21 @@
 .common-calendar {
   .rbc-event {
-    background-color: #E43935;
-    height: 24px;
-    border-radius: 2px;
+    padding:0;
     display: flex;
     align-items: center;
     //padding-bottom: 0;
+    .rbc-event-content{
+      width: 100%;
+      .content{
+        background-color: #E43935;
+        height: 24px;
+        border-radius: 2px;
+        padding: 2px 5px;
+        p{
+          margin:0;
+        }
+      }
+    }
   }
   .rbc-toolbar-label{
     text-transform: capitalize;

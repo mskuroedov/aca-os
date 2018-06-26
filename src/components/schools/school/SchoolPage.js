@@ -11,7 +11,10 @@ export default class SchoolPage extends React.Component {
             <div>
                 <Header/>
                 <Subheader
-                    title="Школы"
+
+                    breadcrumbs={[
+                        {title: 'Школы', link: '/schools'},
+                    ]}
                 />
                 <SchoolHeader/>
                 <SchoolPageContent {...this.props.match.params} />

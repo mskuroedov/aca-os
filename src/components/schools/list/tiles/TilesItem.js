@@ -72,7 +72,7 @@ class TilesItem extends React.Component {
                         <Typography className={classes.infoTitle}>
                             Директор
                         </Typography>
-                        <Link to="#" className={classes.link}>
+                        <Link to="worker/2" className={classes.link}>
                             {director.secondname} {director.firstname} {director.middlename}
                         </Link>
                         <Typography className={classes.infoTitle} style={{marginTop:16}}>

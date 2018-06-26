@@ -93,9 +93,10 @@ class Trainer extends React.Component {
         const {classes} = this.props;
         return (
             <div>
+                <Link to='/worker/1'>
                 <Paper className={classes.paper}>
                     <Grid container alignItems="flex-start" spacing={16} >
-                        <Grid item xs={3}>
+                        <Grid item xs={3} lg={2}>
                             <Avatar
                                 alt="Adelle Charles"
                                 src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
@@ -105,12 +106,13 @@ class Trainer extends React.Component {
                             />
 
                         </Grid>
-                        <Grid item xs={9}>
+                        <Grid item xs={9} lg>
                             <Link to='/worker/1' className={classes.link}>Ягупов Анатолий Павлович </Link>
                             <Typography className={classes.trainLevel}>Тренер-преподаватель высшей категории</Typography>
                         </Grid>
                     </Grid>
                 </Paper>
+                </Link>
             </div>
         )
     }

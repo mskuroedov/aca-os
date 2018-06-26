@@ -10,7 +10,7 @@ const LibrariesPage = () => (
         <Header/>
         <Subheader
             breadcrumbs={[
-                {title: 'Библиотека', link: '#3'},
+                {title: 'Библиотека', link: '/libraries'},
             ]}
         />
         {/*<LibraryHeader />*/}

@@ -21,7 +21,10 @@ class LibraryItemPage extends React.Component {
         return (
             <div>
                 <Header/>
-                <Subheader title='Библиотека'/>
+                <Subheader
+                    breadcrumbs={[
+                        {title: 'Библиотека', link: '/libraries'},
+                    ]}/>
                 <LibraryItemContent/>
                 <Footer/>
             </div>

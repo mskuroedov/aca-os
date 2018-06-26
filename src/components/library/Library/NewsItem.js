@@ -137,11 +137,11 @@ class NewsItem extends React.Component {
                     <Grid container spacing={16} alignItems='center'>
                         <Grid item>
                             <Typography className={classes.iconText}>Авторы:
-                                <Link to='#' className={classes.link}>123</Link>,
-                                <Link to='#' className={classes.link}>123</Link>,
-                                <Link to='#' className={classes.link}>123</Link>,
-                                <Link to='#' className={classes.link}>123</Link>,
-                                <Link to='#' className={classes.link}>123</Link>
+                                <Link to='author/1' className={classes.link}>123</Link>,
+                                <Link to='author/1' className={classes.link}>123</Link>,
+                                <Link to='author/1' className={classes.link}>123</Link>,
+                                <Link to='author/1' className={classes.link}>123</Link>,
+                                <Link to='author/1' className={classes.link}>123</Link>
                                 , еще n
                             </Typography>
                         </Grid>
@@ -217,7 +217,7 @@ class NewsItem extends React.Component {
                             />
                         </Grid>
                         <Grid item>
-                            <Link to='#' className={classes.link}>Родин Алексей</Link>
+                            <Link to='/author/1' className={classes.link}>Родин Алексей</Link>
                         </Grid>
                         <Grid item>
                             <Typography to='#' className={classes.textDate}>12.12.2017</Typography>

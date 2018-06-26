@@ -127,10 +127,10 @@ class LibraryItemContent extends React.Component {
                                     />
                                 </Grid>
                                 <Grid item>
-                                    <Link to='#' className={classes.link}>Родин Алексей</Link>
+                                    <Link to='/author/1' className={classes.link}>Родин Алексей</Link>
                                 </Grid>
                                 <Grid item>
-                                    <Typography to='#' className={classes.textDate}>12.12.2017</Typography>
+                                    <Typography  className={classes.textDate}>12.12.2017</Typography>
                                 </Grid>
                             </Grid>
 

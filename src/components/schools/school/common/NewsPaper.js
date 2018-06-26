@@ -86,7 +86,7 @@ class NewsPaper extends React.Component {
 
                         </Grid>
                         <Grid item xs={10} style={{padding:0}}>
-                            <Typography><a href="#" className={classes.link}>Константинопольский Константин</a></Typography>
+                            <Typography><Link to="/author/1" className={classes.link}>Константинопольский Константин</Link></Typography>
                         </Grid>
                     </Grid>
                 </Paper>

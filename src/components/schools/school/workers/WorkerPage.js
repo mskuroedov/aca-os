@@ -28,7 +28,7 @@ class WorkerPage extends React.Component {
                     breadcrumbs={[
                         {title: 'Школы', link: '/schools'},
                         {title: 'Спортивная школа №43', link: '/schools/1'},
-                        {title: 'Группа мальчиков 2010 г.р.', link: '/schools/1/groups'},
+                        {title: 'Группа мальчиков 2010 г.р.', link: '/groups'},
                     ]}
                 />
                 <WorkerHeader/>

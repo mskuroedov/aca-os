@@ -10,6 +10,7 @@ import Icon from "material-ui/es/Icon/Icon";
 import Typography from "material-ui/es/Typography/Typography";
 import NewsPaper from "./NewsPaper";
 import ContactUs from "./ContactUs";
+import Link from "react-router-dom/es/Link";
 
 const styles = theme => ({
     button: {
@@ -142,7 +143,7 @@ class SchoolInfo extends React.Component {
                     </Grid>
                     <Grid item xs={12} lg={4}>
                         <h3 className={classes.title}>{this.titles[1]}</h3>
-
+                        <Link to="/worker/2">
                         <Paper className={classNames(classes.textCentered, classes.paper)}
                                style={{paddingLeft: 60, paddingRight: 60}}>
                             <Avatar
@@ -186,7 +187,7 @@ class SchoolInfo extends React.Component {
 
 
                         </Paper>
-
+                        </Link>
                     </Grid>
                     <Grid item xs={12}>
                         <h3 className={classes.title}>{this.titles[2]}</h3>

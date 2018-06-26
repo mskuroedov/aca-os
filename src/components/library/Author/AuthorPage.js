@@ -22,7 +22,7 @@ class AuthorPage extends React.Component {
         return (
             <div>
                 <Header/>
-                <Subheader breadcrumbs={[{title:'Библиотека',link:'/libraries'},{title:'Авторы',link:''}]}/>
+                <Subheader breadcrumbs={[{title:'Библиотека',link:'/libraries'},{title:'Авторы',link:'/libraries'}]}/>
                 <AuthorPageHeader/>
                 <AuthorPageContent/>
                 <Footer/>

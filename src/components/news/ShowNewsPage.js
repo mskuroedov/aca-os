@@ -26,7 +26,9 @@ class ShowNewsPage extends React.Component {
                 <div>
                     <Header/>
                     <Subheader
-                        title="Новости"
+                        breadcrumbs={[
+                            {title: 'Новости', link: '/news'},
+                        ]}
                     />
                     <ShowNewsPaper/>
                     <Footer/>

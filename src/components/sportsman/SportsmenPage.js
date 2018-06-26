@@ -40,7 +40,7 @@ class SportsmenPage extends React.Component {
                             breadcrumbs={[
                                 {title: 'Школы', link: routes.schoolsPage()},
                                 {title: 'Спортивная школа №43', link: routes.schoolPage(1)},
-                                {title: 'Группа мальчиков 2010 г. р.', link: '#3'},
+                                {title: 'Группа мальчиков 2010 г. р.', link: '/groups'},
                             ]}
                         />
                         <SportsmenHeader {...sportsmen}/>

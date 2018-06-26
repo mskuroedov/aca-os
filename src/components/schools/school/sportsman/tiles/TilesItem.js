@@ -99,7 +99,7 @@ class TilesView extends React.Component {
                                     Группа
                                 </Typography>
                                 <Typography className={classes.infoVal}>
-                                    <Link to='#' className={classes.link}>Группа 1</Link>
+                                    <Link to='/groups' className={classes.link}>Группа 1</Link>
                                 </Typography>
                             </Grid>
                             <Grid item>
