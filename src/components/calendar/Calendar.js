@@ -1,7 +1,6 @@
 import React from 'react';
 import BigCalendar from 'react-big-calendar';
 import Toolbar from 'react-big-calendar';
-import EventCell from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import moment from 'moment';
 import 'moment/locale/ru';
@@ -14,10 +13,6 @@ import Typography from "@material-ui/core/es/Typography/Typography";
 import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
 import Select from "material-ui/es/Select/Select";
 import FormControl from "material-ui/es/Form/FormControl";
-import Popover from '@material-ui/core/Popover';
-import Grow from '@material-ui/core/Grow';
-import Paper from '@material-ui/core/Paper';
-import {Manager, Target, Popper} from 'react-popper';
 import {withStyles} from 'material-ui/styles';
 import CustomEvent from './calendarCustom/CustomEvent';
 

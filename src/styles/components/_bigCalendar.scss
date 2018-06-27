@@ -1,31 +1,76 @@
 .common-calendar {
-  .rbc-event {
-    padding:0;
-    display: flex;
-    align-items: center;
-    //padding-bottom: 0;
-    .rbc-event-content{
+  .square {
+    width: 16px;
+    height: 16px;
+    display: block;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    margin-right: 8px;
+    &.blue {
+      background-color: #43A5F3;
+    }
+    &.yellow {
+      background: #FEA62A;
+    }
+  }
+  .square-label {
+    color: #242421;
+    font-size: 14px;
+    margin-right: 23px;
+  }
+  .rbc-day-slot {
+    .rbc-events-container {
       width: 100%;
-      .content{
+    }
+    .rbc-timeslot-group:nth-of-type(10) {
+
+      border-bottom: 0;
+
+    }
+
+  }
+  .rbc-day-slot.rbc-time-column {
+    .rbc-timeslot-group:last-of-type {
+      background-color: red;
+    }
+  }
+  .rbc-timeslot-group:last-of-type {
+    border-bottom: 0;
+  }
+  .rbc-event {
+    padding: 0;
+    display: flex;
+    //align-items: center;
+    background-color: transparent;
+    border: 0;
+    //padding-bottom: 0;
+    .rbc-event-label {
+      display: none;
+    }
+    .rbc-event-content {
+      width: 100%;
+      .content {
         background-color: #E43935;
-        height: 24px;
         border-radius: 2px;
         padding: 2px 5px;
-        p{
-          margin:0;
+        height: 100%;
+        p {
+          margin: 0;
+          height: 100%;
         }
       }
     }
   }
-  .rbc-toolbar-label{
+  .rbc-toolbar-label {
     text-transform: capitalize;
   }
   .rbc-calendar {
     font-family: "BlissPro", sans-serif;
   }
-  .label-day{
+  .label-day {
     font-size: 18px;
-    color:#242421;
+    color: #242421;
     text-transform: capitalize;
   }
   .rbc-date-cell {
@@ -47,6 +92,12 @@
   .rbc-month-header {
     height: 50px;
     text-transform: capitalize;
+    .rbc-header{
+      border-bottom: 1px solid lightgray;
+    }
+  }
+  .rbc-time-header-content {
+    border-left: 0;
   }
 
   .rbc-header {
@@ -56,6 +107,7 @@
     font-weight: normal;
     padding-left: 5px;
     color: rgba(36, 36, 33, .54);
+    border-bottom:0;
     + .rbc-header {
       border-left: 0;
     }
@@ -78,12 +130,32 @@
       border-bottom-right-radius: 11px;
     }
   }
-  .rbc-time-slot {
-    .rbc-label {
-      font-size: 13px;
+  .rbc-timeslot-group:first-of-type{
+    .rbc-label{
+      display: none;
     }
   }
-  .rbc-show-more{
+  .rbc-timeslot-group{
+    .rbc-time-slot{
+      .rbc-label{
+        font-family: "BlissPro", sans-serif;
+        color:rgba(36,36,33,.6);
+        background-color: white;
+        position: relative;
+        top: -10px;
+        width: 100%;
+      }
+    }
+  }
+  .rbc-time-slot {
+    display: flex;
+    border-bottom: 0;
+    .rbc-label {
+      font-size: 13px;
+
+    }
+  }
+  .rbc-show-more {
     height: 24px;
     .link {
       color: #242421;
@@ -97,13 +169,16 @@
       }
     }
   }
-  .toggler{
-    > span > span > span{
+  .toggler {
+    > span > span > span {
       background-color: #00755E !important;
     }
-    > span:nth-of-type(2){
+    > span:nth-of-type(2) {
       background-color: #00755E !important;
 
     }
+  }
+  .rbc-allday-cell {
+    display: none;
   }
 }
