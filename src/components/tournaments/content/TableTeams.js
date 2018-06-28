@@ -7,13 +7,21 @@ import Typography from "@material-ui/core/es/Typography/Typography";
 import Paper from "@material-ui/core/es/Paper/Paper";
 import {teams} from '../../../fixtures/tournaments'
 import Link from "react-router-dom/es/Link";
+import Button from "material-ui/es/Button/Button";
 
 const styles = theme => ({
     teamsContainer: {
         display: 'flex',
         flexDirection: 'column',
-        maxHeight: 375,
-        flexWrap: 'wrap'
+        [theme.breakpoints.down('lg')]:{
+            maxHeight:370,
+            overflowY:'hidden'
+        },
+        [theme.breakpoints.up('lg')]:{
+            maxHeight:375,
+            flexWrap: 'wrap'
+
+        },
     },
     teamItem: {
         marginBottom:16,
@@ -44,7 +52,13 @@ const styles = theme => ({
         '&:hover': {
             borderBottom: '1px solid rgba(36,36,33,.6)',
         }
-    }
+    },
+    button: {
+        marginLeft:16,
+        fontSize: 13,
+        fontWeight: 'bold',
+        fontFamily: '"BlissPro",sans-serif',
+    },
 
 });
 
@@ -78,6 +92,7 @@ class TableTeams extends React.Component {
                                 ))
                             }
                         </div>
+                        <Button color='primary' className={classNames(classes.button,'lg-hidden')}>все команды</Button>
                     </Paper>
                 </Grid>
             </Grid>
