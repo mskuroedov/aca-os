@@ -28,6 +28,7 @@ const styles = theme => ({
         fontSize: 1.4,
         fontWeight: 'bold',
         opacity: 1,
+        paddingTop:8,
         [theme.breakpoints.down('lg')]:{
             paddingLeft:16,
             paddingRight:16
