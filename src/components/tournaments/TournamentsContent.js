@@ -1,229 +1,150 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
-import classNames from 'classnames';
+import AppBar from 'material-ui/AppBar';
+import Tabs, {Tab} from 'material-ui/Tabs';
 import Grid from "@material-ui/core/es/Grid/Grid";
-import Switch from "@material-ui/core/es/Switch/Switch";
-import FormControl from "@material-ui/core/es/FormControl/FormControl";
-import Select from "material-ui/es/Select/Select";
-import MenuItem from "material-ui/es/Menu/MenuItem";
-import {seasonFilter, tournamentFilter, stageFilter} from "../../fixtures/tournaments";
-import IconButton from "@material-ui/core/es/IconButton/IconButton";
-import CloseIcon from '@material-ui/icons/Close';
-import Button from "@material-ui/core/es/Button/Button";
-import TableTeams from "./content/TableTeams";
-import InputAdornment from "material-ui/es/Input/InputAdornment";
-import Input from "material-ui/es/Input/Input";
-import Icon from "material-ui/es/Icon/Icon";
-import TableChamp from "./content/TableChamp";
-import TableLeads from "./content/TableLeads";
-import TablePrizes from "./content/TablePrizes";
-import ModalFilters from "./content/ModalFilters";
+import TournamentInfo from "./TournamentInfo";
+import TournamentMatches from "./TournamentMatches";
+import {calendar} from "../../fixtures/calendar";
+
+function TabContainer(props) {
+    return (
+        <div
+            className='main-section'
+            style={{paddingTop: 24, backgroundColor: "#f6f6f6"}}>
+            {props.children}
+        </div>
+    );
+}
+
+TabContainer.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 const styles = theme => ({
-
-    formControl: {
-        width: '100%'
+    root: {
+        color: '#00755E',
+        fontSize: 1.4,
+        fontWeight: 'bold',
+        opacity: 1,
+        [theme.breakpoints.down('lg')]:{
+            paddingLeft:16,
+            paddingRight:16
+        },
+        [theme.breakpoints.up('lg')]:{
+            paddingLeft:168,
+            paddingRight:168
+        },
     },
-    select: {
-        backgroundColor: 'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingTop: 13,
-        paddingBottom: 7,
-        paddingRight: 40,
-        maxHeight: 36,
-        fontSize: 14,
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        }
+    rootPrimarySelected: {
+        color: '#000',
     },
-    selectIcon: {
-        color: '#6D6D6D',
+    appBar: {
+        fontSize: 1.4,
+        backgroundColor: '#fff',
+        fontWeight: 'bold',
+        justifyContent: 'center',
+        boxShadow: 'none'
     },
-    selectLine: {
-        color: 'transparent'
+    tabs: {
+        justifyContent: 'flex-end',
+        fontSize: 14
     },
-    button: {
-        color: 'rgba(36,36,33,.3)',
+    menuItem: {
         fontSize: 14,
         fontWeight: 'bold'
-
     },
-    searchInput: {
+    button: {
         fontSize: 14,
-        color: 'rgba(36,36,33,1)',
+        fontWeight: 'bold',
+        fontFamily: '"BlissPro",sans-serif',
+        opacity: '1 !important'
+    },
+    bc: {
+        color: "#000 !important"
+    },
+    rootTabPrimary: {
+        minWidth: 0,
+        color: '#00755E',
+        opacity: 1
+    },
+    menuFlexContainer: {
+        justifyContent: 'start',
 
-        marginTop: 11,
-        paddingBottom: 5,
-        maxWidth: 290,
-        width: '100%',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        }
     },
-    searchInkbar: {
-        color: 'rgba(36,36,33,1)',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        }
-    },
-    bgGreen: {
-        backgroundColor: '#005945 !important'
-    },
-    searchInputIcon: {
-        color: 'rgba(145,143,138,1)',
-        position: 'relative',
-        fontSize: 16,
-        top: 3,
+    tabScroller: {
+        overflowX: 'scroll'
     }
-
 
 });
 
-
 class TournamentsContent extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     state = {
-        seasonFilter,
-        selectedSeasonFilter: 1,
-        stageFilter,
-        selectedStageFilter: 1,
-        tournamentFilter,
-        selectedTournamentFilter: 1,
-    }
+        value: 'info',
+        calendar,
 
-    onSeasonFilterChange = event => {
-        this.setState({selectedSeasonFilter: event.target.value});
     };
-    onStageFilterChange = event => {
-        this.setState({selectedStageFilter: event.target.value});
-    };
-    onTournamentFilterChange = event => {
-        this.setState({selectedTournamentFilter: event.target.value});
+
+    handleChange = (event, value) => {
+        this.setState({value});
     };
 
     render() {
         const {classes} = this.props;
+        const {value,calendar} = this.state;
+
+
         return (
-            <section className='main-section'>
-                <Grid container spacing={16}>
-                    <Grid item xs={12} className={'xs-hidden'}>
-                        <Grid container spacing={16} alignItems='center'>
-
-                            <Grid item>
-                                <FormControl>
-                                    <Select
-                                        value={this.state.selectedSeasonFilter}
-                                        onChange={this.onSeasonFilterChange}
-                                        disableUnderline={true}
-                                        classes={{
-                                            select: classes.select,
-                                            icon: classes.selectIcon,
-                                        }}
-                                        autoWidth
-                                    >
-                                        {
-                                            this.state.seasonFilter.map((item) => (
-                                                <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
-                                            ))
-                                        }
-                                    </Select>
-                                </FormControl>
-                            </Grid>
-
-                            <Grid item>
-                                <FormControl>
-                                    <Select
-                                        value={this.state.selectedTournamentFilter}
-                                        onChange={this.onTournamentFilterChange}
-                                        disableUnderline={true}
-                                        classes={{
-                                            select: classes.select,
-                                            icon: classes.selectIcon,
-                                        }}
-                                        autoWidth
-                                    >
-                                        {
-                                            this.state.tournamentFilter.map((item) => (
-                                                <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
-                                            ))
-                                        }
-                                    </Select>
-                                </FormControl>
-                            </Grid>
-
-                            <Grid item>
-                                <FormControl>
-                                    <Select
-                                        value={this.state.selectedStageFilter}
-                                        onChange={this.onStageFilterChange}
-                                        disableUnderline={true}
-                                        classes={{
-                                            select: classes.select,
-                                            icon: classes.selectIcon,
-                                        }}
-                                        autoWidth
-                                    >
-                                        {
-                                            this.state.stageFilter.map((item) => (
-                                                <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
-                                            ))
-                                        }
-                                    </Select>
-                                </FormControl>
-                            </Grid>
-
-                            <Grid item>
-                                <Button className={classes.button} aria-label="Delete">
-                                    Сбросить
-                                </Button>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid item xs={10} lg={4}>
-                        <FormControl className={classes.formControl}>
-                            <Input classes={{
-                                root: classes.searchInput,
-                                underline: classes.searchInkbar
+            <section style={{backgroundColor: 'white'}}>
+                <Grid container>
+                    <Grid item xs={12}>
+                        <Tabs
+                            value={value}
+                            onChange={this.handleChange}
+                            className={classes.tabs}
+                            indicatorColor="primary"
+                            classes={{
+                                root: classes.root,
+                                flexContainer: classes.menuFlexContainer
                             }}
-                                   endAdornment={
-                                       <InputAdornment position="end"><Icon classes={{
-                                           root: classes.searchInputIcon
-                                       }}>
-                                           search
-                                       </Icon></InputAdornment>
-                                   }
-                                   placeholder="Поиск по имени..."
+                            style={{
+                                backgroundColor: 'white',
+                            }}
+                        >
+                            <Tab
+                                label="Информация"
+                                value="info"
+                                textColor="primary"
+                                classes={{
 
+                                    label: classes.button,
+                                    labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
+                                    wrapper: classes.button,
+                                    selected: classes.bc,// className, e.g. `OverridesClasses-label-X`
+                                    root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
+                                }}
                             />
-                        </FormControl>
-                    </Grid>
-                    <Grid item xs={2} className={'lg-hidden'}>
-                        <ModalFilters/>
-                    </Grid>
-                    <Grid item xs={12} style={{marginBottom: 16}}>
-                        <TableTeams/>
-                    </Grid>
-                    <Grid item xs={12} style={{marginBottom: 16}}>
-                        <TableChamp/>
-                    </Grid>
-                    <Grid item xs={12} style={{marginBottom: 16}}>
-                        <TableLeads/>
-                    </Grid>
-                    <Grid item xs={12} style={{marginBottom: 16}}>
-                        <TablePrizes/>
+                            <Tab
+                                label="Матчи"
+                                value="matches"
+                                textColor="primary"
+                                classes={{
+                                    label: classes.button,
+                                    selected: classes.bc,
+                                    root: classes.rootTabPrimary
+                                }}
+                            />
+                        </Tabs>
                     </Grid>
                 </Grid>
+                <TabContainer style={{paddingTop: 30}} classes={{
+                    scroller: classes.tabScroller
+                }}>
+                    {value === 'info' && <TournamentInfo/>}
+                    {value === 'matches' && <TournamentMatches calendar={calendar}/>}
+                </TabContainer>
             </section>
         )
     }

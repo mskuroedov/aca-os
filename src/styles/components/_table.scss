@@ -21,6 +21,17 @@
   //height: 104px;
   background-color: #fff;
   border-radius: 12px;
+  &.fs-13{
+
+    th{
+      font-size: 13px;
+
+    }
+    td{
+      font-size: 13px;
+
+    }
+  }
   th {
     padding: 22px 12px 20px 12px;
     color: #918F8A;
@@ -37,12 +48,12 @@
     color: #242421;
     a{
       color: #242421;
-      border-bottom: 1px solid #918F8A;
+      border-bottom: 1px solid rgba(36,36,33,.3);
       transition: all .2s;
       &:hover{
         color: #00755E;
         text-decoration: none;
-        border-bottom: 1px solid #00755E;
+        border-bottom: 1px solid rgba(36,36,33,.6);
       }
     }
   }
