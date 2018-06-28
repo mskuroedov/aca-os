@@ -132,6 +132,11 @@ class SchoolList extends React.Component {
             <div className='main-section'>
                 <Grid container spacing={16} className='xs-hidden'>
                     <Grid item>
+                    <Button variant="raised" color="primary" className={classes.button}>
+                        Добавить
+                    </Button>
+                    </Grid>
+                    <Grid item>
                         <FormControl>
                             <Select
                                 value={this.state.selectedFilter}

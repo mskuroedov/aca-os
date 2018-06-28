@@ -15,6 +15,12 @@ const styles = theme => ({
     title: {
         color: 'rgba(36,36,33,0.6)',
         fontSize: 20
+    },
+    innerList: {
+        marginBottom: 24,
+        [theme.breakpoints.down('sm')]: {
+            marginBottom: 0
+        }
     }
 });
 
@@ -32,10 +38,10 @@ class TilesView extends React.Component {
                     <Button color="primary" className={classes.button}>показать все</Button>
                 </Grid>
                 <Grid item xs={12}>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={16} className={classes.innerList}>
                         {
                             schools.map((item) => {
-                                return <TilesItem key={item.id} {...item} />
+                                return <TilesItem key={item.id} school={item} />
                             })
                         }
                     </Grid>

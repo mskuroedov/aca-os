@@ -129,3 +129,16 @@
 .sportsman_table_footer {
   font-size: 13px !important;
 }
+
+.minicard {
+  @extend .table_stats;
+  tr {
+    height: auto;
+  }
+  th, td {
+    border: 0;
+    height: auto;
+    padding: 2px 12px;
+    vertical-align: top;
+  }
+}
