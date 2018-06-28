@@ -27,7 +27,7 @@ class TournamentsPage extends React.Component {
             <Header/>
                 <Subheader breadcrumbs={[
                     {title: 'Турниры', link: '/tournaments'},
-                    {title: 'Турнир по хоккею им. Геннадия Цыганкова', link: ''},
+                    {title: 'Турнир по хоккею им. Геннадия Цыганкова', link: '#'},
                 ]} />
                 <TournamentsContent/>
                 <Footer/>

@@ -156,7 +156,6 @@ class CustomEvent extends React.Component {
                         <Grid item xs={12} className={classes.popoverTopContainer}
                               style={{background: this.getColor(event)}}>
                             <Grid container style={{marginBottom: 30}} alingItems='center'>
-                                <Grid item><Link className={classes.whiteLink} to={'#'}>№{event.id}</Link></Grid>
                                 <Grid item style={{marginLeft: 'auto'}}>
                                     <IconButton onClick={this.handleClose} className={classes.button}>
                                         <Icon>close</Icon>
@@ -185,20 +184,8 @@ class CustomEvent extends React.Component {
                                     </Typography>
                                 </Grid>
                                 <Grid item className={classes.descriptionContainer}>
-                                    <Typography className={classes.secondaryText}>Лига</Typography>
-                                    <Typography className={classes.description}>{event.league}</Typography>
-                                </Grid>
-                                <Grid item className={classes.descriptionContainer}>
-                                    <Typography className={classes.secondaryText}>Статус</Typography>
-                                    <Typography className={classes.description}>{event.status}</Typography>
-                                </Grid>
-                                <Grid item className={classes.descriptionContainer}>
-                                    <Typography className={classes.secondaryText}>Этап</Typography>
-                                    <Typography className={classes.description}>{event.stage}</Typography>
-                                </Grid>
-                                <Grid item className={classes.descriptionContainer}>
-                                    <Typography className={classes.secondaryText}>Год рождения</Typography>
-                                    <Typography className={classes.description}>{event.yearBirth}</Typography>
+                                    <Typography className={classes.secondaryText}>Помещение</Typography>
+                                    <Typography className={classes.description}>{event.place}</Typography>
                                 </Grid>
                             </Grid>
                         </Grid>

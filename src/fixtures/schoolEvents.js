@@ -9,7 +9,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
     {
         id: 999,
@@ -21,7 +22,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
     {
         id: 1,
@@ -32,7 +34,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
 
     {
@@ -44,7 +47,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
     {
         id: 22,
@@ -55,7 +59,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
 
     {
@@ -67,7 +72,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
     {
         id: 33,
@@ -78,7 +84,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
 
     {
@@ -90,7 +97,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
     {
         id: 5,
@@ -102,7 +110,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
     {
         id: 6,
@@ -114,7 +123,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
     {
         id: 66,
@@ -126,7 +136,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
     {
         id: 7,
@@ -138,7 +149,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
     {
         id: 8,
@@ -149,7 +161,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
     {
         id: 9,
@@ -162,7 +175,8 @@ export default [
         status:'МФЦ Поволжье',
         stage:'Рег.',
         yearBirth:2000,
-        location:'gym'
+        location:'gym',
+        place:'Зал №2'
     },
     {
         id: 10,
@@ -174,7 +188,8 @@ export default [
         status:'МФЦ Поволжье',
         stage:'Рег.',
         yearBirth:2000,
-        location:'gym'
+        location:'gym',
+        place:'Зал №2'
     },
     {
         id: 11,
@@ -185,7 +200,8 @@ export default [
         league:'НМХЛ',
         status:'МФЦ Поволжье',
         stage:'Рег.',
-        yearBirth:2000
+        yearBirth:2000,
+        place:'Зал №2'
     },
     {
         id: 12,
@@ -197,7 +213,8 @@ export default [
         status:'МФЦ Поволжье',
         stage:'Рег.',
         yearBirth:2000,
-        location:'gym'
+        location:'gym',
+        place:'Зал №2'
     },
     {
         id: 13,
@@ -209,7 +226,8 @@ export default [
         status:'МФЦ Поволжье',
         stage:'Рег.',
         yearBirth:2000,
-        location:'ice'
+        location:'ice',
+        place:'Зал №2'
     },
     {
         id: 13,
@@ -221,7 +239,8 @@ export default [
         status:'МФЦ Поволжье',
         stage:'Рег.',
         yearBirth:2000,
-        location:'ice'
+        location:'ice',
+        place:'Зал №2'
     },
     {
         id: 13,
@@ -233,7 +252,8 @@ export default [
         status:'МФЦ Поволжье',
         stage:'Рег.',
         yearBirth:2000,
-        location:'gym'
+        location:'gym',
+        place:'Зал №2'
     },
     {
         id: 13,
@@ -245,7 +265,8 @@ export default [
         status:'МФЦ Поволжье',
         stage:'Рег.',
         yearBirth:2000,
-        location:'ice'
+        location:'ice',
+        place:'Зал №2'
     },
     {
         id: 13,
@@ -257,7 +278,8 @@ export default [
         status:'МФЦ Поволжье',
         stage:'Рег.',
         yearBirth:2000,
-        location:'gym'
+        location:'gym',
+        place:'Зал №2'
     },
     {
         id: 14,
@@ -269,7 +291,8 @@ export default [
         status:'МФЦ Поволжье',
         stage:'Рег.',
         yearBirth:2000,
-        location:'gym'
+        location:'gym',
+        place:'Зал №2'
 
     },
     {
@@ -282,6 +305,7 @@ export default [
         status:'МФЦ Поволжье',
         stage:'Рег.',
         yearBirth:2000,
-        location:'ice'
+        location:'ice',
+        place:'Зал №2'
     },
 ]
