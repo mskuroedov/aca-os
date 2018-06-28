@@ -12,6 +12,7 @@ import TableBody from "@material-ui/core/es/TableBody/TableBody";
 import Link from "react-router-dom/es/Link";
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import MoreVertIcon from 'material-ui-icons/MoreVert';
+import Grid from "@material-ui/core/es/Grid/Grid";
 
 const styles = theme => ({
     title: {
@@ -20,6 +21,16 @@ const styles = theme => ({
         color: ' rgba(36,36,33,0.6);',
         fontFamily: '"BlissPro",sans-serif',
         fontWeight: 'normal'
+    },
+    textMain: {
+        color: '#242421',
+        fontSize: 16,
+        marginBottom: 16
+    },
+    textSecondary: {
+
+        color: 'rgba(36,36,33,0.54)',
+        fontSize: 14
     },
 
 });
@@ -37,7 +48,7 @@ class StaffWork extends React.Component {
             <div>
                 <Typography className={classes.title}>Работа</Typography>
                 <Paper className="paper">
-                    <Table className="table no-bottom">
+                    <Table className="table no-bottom xs-hidden">
                         <TableHead>
                             <TableRow>
                                 <TableCell >Период</TableCell>
@@ -61,6 +72,26 @@ class StaffWork extends React.Component {
                             </TableRow>
                         </TableBody>
                     </Table>
+                    <div className='lg-hidden'>
+                        <Grid container spacing={0} style={{padding: 16}}>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Период</Typography>
+                                <Typography className={classes.textMain}>2015-2018</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Должность</Typography>
+                                <Typography className={classes.textMain}>Старший инструктор-методист</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Школа</Typography>
+                                <Typography className={classes.textMain}>ДЮСШ №43</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Группа</Typography>
+                                <Typography className={classes.textMain}>Группа 2012 г.р.</Typography>
+                            </Grid>
+                        </Grid>
+                    </div>
                 </Paper>
 
             </div>
