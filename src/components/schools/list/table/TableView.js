@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Paper, Table, TableBody, TableCell, TableFooter, TableHead, TablePagination, TableRow} from "material-ui";
 import TableItem from "./TableItem";
-
+import Checkbox from '@material-ui/core/Checkbox';
+import { xor } from 'lodash'
 
 class TableView extends React.Component {
 
@@ -13,7 +14,8 @@ class TableView extends React.Component {
             rowsPerPage: 5,
             count: this.props.schools.length,
             page: 0,
-            schools: []
+            schools: [],
+            selected: []
         };
     }
 
@@ -45,24 +47,60 @@ class TableView extends React.Component {
         this.setTableData(this.props.schools, event.target.value, this.state.page)
     };
 
+    onSelectAll = (event, checked) => {
+        if (checked) {
+            return this.setState(state => ({
+                selected: this.props.schools.map(n => n.id)
+            }));
+        }
+
+        this.setState({ selected: [] });
+    };
+
+    onSelectItem = (id) => {
+        this.setState(state => ({
+            selected: xor(this.state.selected, [id])
+        }));
+    };
+
     render() {
-        const {rowsPerPage, count, page, schools} = this.state;
+        const {rowsPerPage, count, page, schools, selected} = this.state;
+
+        const isAllChecked = (selected.length === count);
+        const isItemChecked = id => !!~selected.indexOf(id);
+        const indeterminate = (selected.length > 0 && selected.length < count);
+
         return (
             <Paper className="paper">
                 <Table className="table_sportsman">
                     <TableHead>
                         <TableRow>
+                            <TableCell>
+                                <Checkbox
+                                    onChange={this.onSelectAll}
+                                    checked={isAllChecked}
+                                    indeterminate={indeterminate}
+                                />
+                            </TableCell>
                             <TableCell>Организация</TableCell>
                             <TableCell>Статус</TableCell>
                             <TableCell>Директор</TableCell>
                             <TableCell>Адрес</TableCell>
+                            <TableCell/>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {
-                            schools.map((item) => {
-                                return <TableItem key={item.id} {...item} />
-                            })
+                            schools.map((item) =>
+                                <TableItem
+                                    key={item.id}
+                                    isChecked={isItemChecked(item.id)}
+                                    onSelectRequest={() =>
+                                        this.onSelectItem(item.id)
+                                    }
+                                    {...item}
+                                />
+                            )
                         }
                     </TableBody>
                     <TableFooter>

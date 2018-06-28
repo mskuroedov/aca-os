@@ -114,7 +114,7 @@ class SchoolList extends React.Component {
 
     render() {
         const {classes} = this.props;
-        const {schools} = this.state;
+        const {schools, tableView} = this.state;
         return (
             <div className='main-section'>
                 <Grid container spacing={16} className='xs-hidden'>
@@ -186,9 +186,13 @@ class SchoolList extends React.Component {
                             />
                         </FormControl>
                     </Grid>
+                    <Grid item>
+                    <IconButton className={classes.iconbtn} onClick={this.onViewChange}>
+                        {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
+                    </IconButton>
+                    </Grid>
                 </Grid>
                 <Grid container spacing={16} className='lg-hidden'>
-
                     <Grid item xs={10}>
                         <FormControl className={classes.formControl}>
                             <Input
@@ -213,11 +217,13 @@ class SchoolList extends React.Component {
                         <SchoolFiltersModal/>
                     </Grid>
                 </Grid>
-
                 <Grid container spacing={16}>
                     <Grid item xs={12} className="paper_w_table">
-                        <TilesView schools={schools}/>
-
+                        {tableView ? (
+                            <TableView schools={schools}/>
+                        ) : (
+                            <TilesView schools={schools}/>
+                        )}
                     </Grid>
                 </Grid>
             </div>
@@ -230,14 +236,3 @@ SchoolList.propTypes = {
 };
 
 export default withStyles(styles)(SchoolList);
-
-// {
-//     this.state.tableView ?
-//         <TableView schools={schools}/>
-//         :
-//         <TilesView schools={schools}/>
-// }
-
-//<IconButton className={classes.iconbtn} onClick={this.onViewChange}>
-  //  {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
-//</IconButton>

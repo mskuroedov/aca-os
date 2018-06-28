@@ -13,6 +13,8 @@
     "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
+    "@babel/cli": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
     "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
     "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
     "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
@@ -23,6 +25,7 @@
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-loader": "7.1.1",
+    "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
     "babel-polyfill": "6.26.0",
@@ -35,6 +38,7 @@
     "extract-text-webpack-plugin": "3.0.0",
     "history": "4.7.2",
     "holderjs": "^2.9.4",
+    "lodash": "^4.17.10",
     "material-ui": "^1.0.0-beta.47",
     "material-ui-icons": "^1.0.0-beta.17",
     "moment": "2.18.1",
