@@ -24,8 +24,7 @@ const styles = theme => ({
         height: 45,
     },
     formControl: {
-        marginLeft: 'auto',
-        width:'100%'
+        marginLeft: 'auto'
     },
     iconbtn: {
         marginTop: 5,
@@ -80,6 +79,20 @@ const styles = theme => ({
         color: 'rgba(145,143,138,1)',
         position: 'relative',
         top: 8
+    },
+    selectContainer: {
+        [theme.breakpoints.up('lg')]: {
+            marginLeft: 'auto'
+        },
+        [theme.breakpoints.down('lg')]: {
+            display:'flex',
+            alignItems:'center'
+        }
+    },
+    iconpublish: {
+        transform: 'rotate(180deg)',
+        position: 'relative',
+        top: '4px'
     }
 });
 
@@ -186,10 +199,15 @@ class SchoolList extends React.Component {
                             />
                         </FormControl>
                     </Grid>
-                    <Grid item>
-                    <IconButton className={classes.iconbtn} onClick={this.onViewChange}>
-                        {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
-                    </IconButton>
+                    <Grid item xs={12} lg className={classes.selectContainer}>
+                        <div className={classes.formControl}>
+                            <IconButton className={classes.iconbtn, classes.iconpublish}>
+                                <Icon>publish</Icon>
+                            </IconButton>
+                            <IconButton className={classes.iconbtn} onClick={this.onViewChange}>
+                                {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
+                            </IconButton>
+                        </div>
                     </Grid>
                 </Grid>
                 <Grid container spacing={16} className='lg-hidden'>

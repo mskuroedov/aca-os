@@ -7,6 +7,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from "material-ui/es/IconButton/IconButton";
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Menu from '@material-ui/core/Menu';
+import Icon from '@material-ui/core/Icon';
 import MenuItem from '@material-ui/core/MenuItem';
 
 const styles = theme => ({
@@ -21,6 +22,13 @@ const styles = theme => ({
         '&:hover': {
             color: 'rgba(0,118,94,1)'
         }
+    },
+    visIcon: {
+        display: 'inline-block',
+        verticalAlign: 'bottom',
+        fontSize: '20px',
+        marginLeft: '0.5em',
+        opacity: 0.54
     }
 });
 
@@ -47,7 +55,10 @@ class TableItem extends React.Component {
                     <Checkbox onChange={onSelectRequest} checked={isChecked}/>
                 </TableCell>
                 <TableCell>
-                    <Link to="/schools/1" className={classes.link}>{title}</Link>
+                    <Link to="/schools/1" className={classes.link}>
+                        {title}
+                    </Link>
+                    <Icon className={classes.visIcon}>visibility</Icon>
                 </TableCell>
                 <TableCell>{type}</TableCell>
                 <TableCell>
