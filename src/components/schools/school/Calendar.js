@@ -47,7 +47,7 @@ class Selectable extends React.Component {
     }
 
     state = {
-        currentView: 'week',
+        currentView: 'month',
     };
 
 

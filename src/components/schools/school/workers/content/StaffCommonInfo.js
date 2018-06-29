@@ -10,6 +10,7 @@ import TableRow from "@material-ui/core/es/TableRow/TableRow";
 import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
 import Link from "react-router-dom/es/Link";
+import Grid from "@material-ui/core/es/Grid/Grid";
 
 const styles = theme => ({
 
@@ -19,6 +20,16 @@ const styles = theme => ({
         color: ' rgba(36,36,33,0.6);',
         fontFamily: '"BlissPro",sans-serif',
         fontWeight: 'normal'
+    },
+    textMain: {
+        color: '#242421',
+        fontSize: 16,
+        marginBottom: 16
+    },
+    textSecondary: {
+
+        color: 'rgba(36,36,33,0.54)',
+        fontSize: 14
     },
 });
 
@@ -35,7 +46,7 @@ class StaffCommonInfo extends React.Component {
             <div>
                 <Typography className={classes.title}>Общая информация</Typography>
                 <Paper className="paper">
-                    <Table className="table no-bottom">
+                    <Table className="table no-bottom xs-hidden">
                         <TableHead>
                             <TableRow>
                                 <TableCell >Дата рождения</TableCell>
@@ -49,7 +60,7 @@ class StaffCommonInfo extends React.Component {
                         <TableBody>
                             <TableRow>
                                 <TableCell >15.03.1996</TableCell>
-                                <TableCell >Мужско</TableCell>
+                                <TableCell >Мужской</TableCell>
                                 <TableCell >8</TableCell>
                                 <TableCell >Россия, Казань</TableCell>
                                 <TableCell >+7 927 729-92-17</TableCell>
@@ -57,6 +68,34 @@ class StaffCommonInfo extends React.Component {
                             </TableRow>
                         </TableBody>
                     </Table>
+                    <div className='lg-hidden'>
+                        <Grid container spacing={0} style={{padding: 16}}>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Дата рождения</Typography>
+                                <Typography className={classes.textMain}>15.03.1966</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Пол</Typography>
+                                <Typography className={classes.textMain}>Мужской</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Стаж</Typography>
+                                <Typography className={classes.textMain}>8</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Адрес</Typography>
+                                <Typography className={classes.textMain}>Россия, Казань</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>Телефон</Typography>
+                                <Typography className={classes.textMain}>+7 927 729-92-1</Typography>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Typography className={classes.textSecondary}>E-mail</Typography>
+                                <Typography className={classes.textMain}><Link to='mailto:mirhanov@yandex.ru' className={'link'}>mirhanov@yandex.ru</Link></Typography>
+                            </Grid>
+                        </Grid>
+                    </div>
                 </Paper>
             </div>
 
