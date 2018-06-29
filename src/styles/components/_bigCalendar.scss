@@ -21,7 +21,7 @@
   }
   .rbc-day-slot {
     .rbc-events-container {
-      width: 100%;
+      width: calc(100% - 2px);
     }
     .rbc-timeslot-group:nth-of-type(10) {
 

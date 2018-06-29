@@ -6,7 +6,6 @@ import moment from 'moment';
 import 'moment/locale/ru';
 import schoolEvents from "../../../fixtures/schoolEvents";
 import CustomEvent from "./customCalendar/CustomEvent";
-import events from "../../../fixtures/events";
 import Grid from "@material-ui/core/es/Grid/Grid";
 import Button from "@material-ui/core/es/Button/Button";
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
@@ -27,18 +26,6 @@ function ShowMore({event}){
         <span className="link">Ещё</span>
     )
 }
-const WeekEvent = ({ event }) => (
-    <div>
-        <div style={{color:'red'}}>i'm done</div>
-        <div style={{color:'red'}}>fuck it</div>
-    </div>
-);
-const DayEvent = ({ event }) => (
-    <div >
-        <div >i'm done</div>
-        <div >fuck it</div>
-    </div>
-);
 
 class Selectable extends React.Component {
 
@@ -47,7 +34,7 @@ class Selectable extends React.Component {
     }
 
     state = {
-        currentView: 'month',
+        currentView: 'week',
     };
 
 
