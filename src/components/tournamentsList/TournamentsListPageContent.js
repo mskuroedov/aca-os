@@ -123,7 +123,7 @@ class TournamentsListPageContent extends React.Component {
                                                    search
                                                </Icon></InputAdornment>
                                            }
-                                           placeholder="Поиск по имени..."
+                                           placeholder="Поиск по названию..."
 
                                     />
                                 </FormControl>

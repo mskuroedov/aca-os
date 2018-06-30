@@ -13,10 +13,22 @@ import Typography from "@material-ui/core/es/Typography/Typography";
 
 const styles = theme => ({
     name:{
-        fontSize:20
+        [theme.breakpoints.down('lg')]:{
+            textAlign:'center',
+            fontSize:18
+        },
+        [theme.breakpoints.up('lg')]:{
+            fontSize:20,
+        }
     },
     imgFluid:{
         maxWidth:'100%'
+    },
+    xsMxAuto:{
+        [theme.breakpoints.down('lg')]:{
+            marginLeft:'auto',
+            marginRight:'auto'
+        }
     }
 
 });
@@ -33,12 +45,12 @@ class TeamPageContent extends React.Component {
         return (
             <section className={'main-section'}>
                 <Grid container spacing={24} alignItems={'center'}>
-                    <Grid item xs={2} lg={2}><img src="https://upload.wikimedia.org/wikipedia/ru/0/09/Ak_Bars_Kazan_Logo.png" alt="test" className={classes.imgFluid}/> </Grid>
-                    <Grid item xs={10} lg={10} ><Typography className={classes.name}>Хоккейный клуб «Ак Барс» г. Казань</Typography> </Grid>
+                    <Grid item xs={8} lg={2} className={classes.xsMxAuto}><img src="https://upload.wikimedia.org/wikipedia/ru/0/09/Ak_Bars_Kazan_Logo.png" alt="test" className={classes.imgFluid}/> </Grid>
+                    <Grid item xs={10} lg={10} className={classes.xsMxAuto}><Typography className={classNames(classes.name)}>Хоккейный клуб «Ак Барс» г. Казань</Typography> </Grid>
                     <Grid item xs={12} style={{marginBottom:16}}>
                         <CommonInfo/>
                     </Grid>
-                    <Grid item xs={10} style={{marginBottom:16}}>
+                    <Grid item xs={12} lg={10} style={{marginBottom:16}}>
                         <Arena/>
                     </Grid>
                     <Grid item xs={12} style={{marginBottom:16}}>
@@ -50,7 +62,7 @@ class TeamPageContent extends React.Component {
                     <Grid item xs={12} style={{marginBottom:16}}>
                         <Forwards/>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} lg={6}>
                         <Personal/>
                     </Grid>
                 </Grid>

@@ -25,14 +25,25 @@ import DescriptionTable from "./infoContent/DescriptionTable";
 
 const styles = theme => ({
     paper:{
-      paddingLeft:32,
-      paddingRight:32,
-      paddingTop:40,
-      paddingBottom:16
+        [theme.breakpoints.up('lg')]:{
+            paddingLeft:32,
+            paddingRight:32,
+            paddingTop:40,
+            paddingBottom:16,
+        },
+        [theme.breakpoints.down('lg')]:{
+            paddingLeft:32,
+            paddingRight:32,
+            paddingTop:24,
+            paddingBottom:16,
+        }
     },
     mainText:{
-      fontSize:18,
-        marginBottom:24
+      fontSize:16,
+        marginBottom:24,
+        [theme.breakpoints.down('lg')]:{
+          fontSize:14
+        }
     },
     formControl: {
         width: '100%'
@@ -67,6 +78,11 @@ const styles = theme => ({
         fontSize: 14,
         fontWeight: 'bold'
 
+    },
+    buttonGreen:{
+      fontSize:14,
+      fontWeight:'bold',
+        transform:'translateX(-16px)'
     },
     searchInput: {
         fontSize: 14,
@@ -149,12 +165,13 @@ class TournamentInfo extends React.Component {
                                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Typography>
-                            <Typography className={classes.mainText}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            <Typography className={classNames(classes.mainText,'xs-hidden')}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                                 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                                 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Typography>
+                            <Button color='primary' className={classNames('lg-hidden',classes.buttonGreen)}>Подробнее</Button>
                         </Paper>
                     </Grid>
                     <Grid item xs={12} className={'xs-hidden'}>

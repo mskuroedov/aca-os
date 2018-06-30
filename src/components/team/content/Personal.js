@@ -18,7 +18,12 @@ const styles = theme => ({
         color: ' rgba(36,36,33,0.6);',
         fontFamily: '"BlissPro",sans-serif',
         fontWeight: 'normal'
-    }
+    },
+    textMain: {
+        color: '#242421',
+        fontSize: 16,
+        marginBottom: 8
+    },
 });
 
 
@@ -37,7 +42,7 @@ class Personal extends React.Component {
                 </Grid>
                 <Grid item xs={12}>
                     <Paper className='paper'>
-                        <Table className='table no-bottom'>
+                        <Table className='table no-bottom xs-hidden'>
                             <TableHead>
                                 <TableRow>
                                     <TableCell >Должность</TableCell>
@@ -83,6 +88,56 @@ class Personal extends React.Component {
                                 </TableRow>
                             </TableBody>
                         </Table>
+                        <div className='lg-hidden'>
+                            <Grid container spacing={0} style={{padding: 16}} className='border-bottom'>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.textMain}>Главный тренер</Typography>
+                                    <Typography className={classes.textMain}>Зинетула Билялетдинов</Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container spacing={0} style={{padding:16}} className='border-bottom'>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.textMain}>Помощник тренера</Typography>
+                                    <Typography className={classes.textMain}>Александр Завьялов</Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container spacing={0} style={{padding:16}} className='border-bottom'>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.textMain}>Тренер вратарей</Typography>
+                                    <Typography className={classes.textMain}>Сергей Абрамов</Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container spacing={0} style={{padding:16}} className='border-bottom'>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.textMain}>Тренер вратарей</Typography>
+                                    <Typography className={classes.textMain}>Ари Мойсанен</Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container spacing={0} style={{padding:16}} className='border-bottom'>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.textMain}>Тренер по физ. подготовке</Typography>
+                                    <Typography className={classes.textMain}>Брендон Бови</Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container spacing={0} style={{padding:16}} className='border-bottom'>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.textMain}>Генеральный менеджер</Typography>
+                                    <Typography className={classes.textMain}>Рафик Якубов</Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container spacing={0} style={{padding:16}} className='border-bottom'>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.textMain}>Директор</Typography>
+                                    <Typography className={classes.textMain}>Шамиль Хуснутдинов</Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container spacing={0} style={{padding:16}}>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.textMain}>Президент</Typography>
+                                    <Typography className={classes.textMain}>Наиль Маганов</Typography>
+                                </Grid>
+                            </Grid>
+                        </div>
                     </Paper>
                 </Grid>
             </Grid>
