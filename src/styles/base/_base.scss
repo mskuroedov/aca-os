@@ -1,15 +1,15 @@
 * {
   box-sizing: border-box;
-  font-family: 'BlissPro', sans-serif;
+  font-family: "BlissPro", sans-serif;
 }
 
 html {
-  font-size: 62.5%;
+  // font-size: 62.5%;
 }
 
 body {
   color: $dark-grey;
-  font-family: 'BlissPro', sans-serif !important;
+  font-family: "BlissPro", sans-serif !important;
   font-size: $m-size;
   line-height: 1.6;
 }
@@ -26,11 +26,17 @@ button:disabled {
   font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
 }
 
@@ -44,12 +50,12 @@ p {
   font-family: "BlissPro", sans-serif !important;
 }
 
-.cart{
+.cart {
   position: relative;
-  .cart-items{
+  .cart-items {
     position: absolute;
-    width:20px;
-    height:20px;
+    width: 20px;
+    height: 20px;
     background-color: #005945;
     color: white;
     font-size: 12px;
@@ -60,4 +66,30 @@ p {
     font-weight: bold;
     text-align: center;
   }
+}
+
+.file-upload {
+  overflow: hidden;
+}
+.file-upload-inner {
+  position: relative;
+}
+.file-upload-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #00765e;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  font-size: 13px;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.file-upload input {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
 }

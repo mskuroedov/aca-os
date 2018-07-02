@@ -14,6 +14,7 @@ import TilesView from "./tiles/TilesView";
 import {schools, schoolFilters, schoolCityFilters} from "../../../fixtures/schools";
 import Button from "@material-ui/core/es/Button/Button";
 import SchoolFiltersModal from "./SchoolFiltersModal";
+import SchoolEditModal from "../school/SchoolEditModal";
 
 
 const styles = theme => ({
@@ -104,6 +105,7 @@ class SchoolList extends React.Component {
         schools,
         schoolFilters,
         schoolCityFilters,
+        editModalOpened: false,
         selectedFilter: schoolFilters[0].id,
     };
 
@@ -125,14 +127,27 @@ class SchoolList extends React.Component {
         })
     };
 
+    openEditModal = () => {
+        this.setState({
+            editModalOpened: true
+        })
+    };
+
+    closeEditModal = () => {
+        this.setState({
+            editModalOpened: false
+        })
+    };
+
     render() {
         const {classes} = this.props;
-        const {schools, tableView} = this.state;
+        const {schools, tableView, editModalOpened} = this.state;
         return (
             <div className='main-section'>
+                <SchoolEditModal handleClose={this.closeEditModal} open={editModalOpened}/>
                 <Grid container spacing={16} className='xs-hidden'>
                     <Grid item>
-                    <Button variant="raised" color="primary" className={classes.button}>
+                    <Button onClick={this.openEditModal} variant="raised" color="primary" className={classes.button}>
                         Добавить
                     </Button>
                     </Grid>
