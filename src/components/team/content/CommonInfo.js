@@ -18,7 +18,17 @@ const styles = theme => ({
         color: ' rgba(36,36,33,0.6);',
         fontFamily: '"BlissPro",sans-serif',
         fontWeight: 'normal'
-    }
+    },
+    textMain: {
+        color: '#242421',
+        fontSize: 16,
+    },
+    textSecondary: {
+
+        color: 'rgba(36,36,33,0.54)',
+        fontSize: 14,
+        marginBottom:8
+    },
 });
 
 
@@ -37,7 +47,7 @@ class CommonInfo extends React.Component {
                 </Grid>
                 <Grid item xs={12}>
                     <Paper className='paper'>
-                        <Table className='table no-bottom'>
+                        <Table className='table no-bottom xs-hidden'>
                             <TableHead>
                                 <TableRow>
                                     <TableCell>Лига</TableCell>
@@ -55,6 +65,33 @@ class CommonInfo extends React.Component {
                                 </TableRow>
                             </TableBody>
                         </Table>
+                        <div className='lg-hidden'>
+                            <Grid container spacing={0} style={{padding: 16}} className='border-bottom'>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.textSecondary}>Лига</Typography>
+                                    <Typography className={classes.textMain}>Континентальная хоккейная лига</Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container spacing={0} style={{padding:16}} className='border-bottom'>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.textSecondary}>Город</Typography>
+                                    <Typography className={classes.textMain}>Казань</Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container spacing={0} style={{padding:16}} className='border-bottom'>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.textSecondary}>Год основания</Typography>
+                                    <Typography className={classes.textMain}>1956</Typography>
+                                </Grid>
+                            </Grid>
+                            <Grid container spacing={0} style={{padding:16}}>
+                                <Grid item xs={12}>
+                                    <Typography className={classes.textSecondary}>Титулы</Typography>
+                                    <Typography className={classes.textMain}>Кубок Гагарина 2009,2010,2018</Typography>
+                                </Grid>
+                            </Grid>
+                        </div>
+
                     </Paper>
                 </Grid>
             </Grid>

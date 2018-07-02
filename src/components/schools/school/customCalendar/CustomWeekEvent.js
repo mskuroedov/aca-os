@@ -136,7 +136,7 @@ class CustomWeekEvent extends React.Component {
             <div className='content' style={{background: this.getColor(event)}}>
                 <p onClick={this.handleClick} className={classes.eventCell}>
                     <span
-                        className={classes.time}>{moment(event.start).format('hh:mm')}-{moment(event.end).format('hh:mm')}</span>
+                        className={classes.time}>{moment(event.start).format('HH:mm')}-{moment(event.end).format('HH:mm')}</span>
                     <br/> {this.props.title}
                 </p>
                 <Popover
@@ -181,7 +181,7 @@ class CustomWeekEvent extends React.Component {
                                 <Grid item xs={6} className={classes.descriptionContainer}>
                                     <Typography className={classes.description}>
                                         <Icon className={classes.icon}>schedule</Icon>
-                                        {moment(event.start).format('hh:mm')}
+                                        {moment(event.start).format('HH:mm')}
                                     </Typography>
                                 </Grid>
                                 <Grid item className={classes.descriptionContainer}>
