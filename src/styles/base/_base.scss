@@ -68,13 +68,13 @@ p {
   }
 }
 
-.file-upload {
+.FileUpload {
   overflow: hidden;
 }
-.file-upload-inner {
+.FileUploadInner {
   position: relative;
 }
-.file-upload-label {
+.FileUploadLabel {
   font-size: 16px;
   font-weight: 600;
   color: #00765e;
@@ -85,11 +85,70 @@ p {
   text-transform: uppercase;
   pointer-events: none;
 }
-.file-upload input {
+.FileUpload input {
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   position: absolute;
   opacity: 0;
+}
+
+.Button {
+  font-size: 13px !important;
+  font-weight: bold !important;
+  height: 45px !important;
+  vertical-align: top !important;
+}
+.Select {
+  height: 45px !important;
+  background-color: rgba(36, 36, 33, 0.1) !important;
+  padding-left: 17px !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-right: 40px !important;
+  font-size: 16px !important;
+  color: #242421 !important;
+  line-height: 45px !important;
+  &:after {
+    background-color: #242421 !important;
+  }
+}
+.SelectIcon {
+  color: #6d6d6d !important;
+  margin-top: 0 !important;
+}
+.FormControl {
+  vertical-align: top !important;
+}
+.Gray {
+  color: rgba(36, 36, 33, 0.3) !important;
+}
+.MenuButton {
+  top: 8px !important;
+  right: 6px !important;
+  position: absolute !important;
+}
+.MainText {
+  color: #242421 !important;
+  font-size: 18px !important;
+  font-weight: bold !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.SecondaryText {
+  color: rgba(36, 36, 33, 0.6) !important;
+  font-size: 14px !important;
+  padding-bottom: 0 !important;
+}
+.Paper {
+  box-shadow: none !important;
+  border-radius: 12px !important;
+  padding-top: 24px !important;
+  padding-left: 27px !important;
+  padding-bottom: 32px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  font-size: 16px !important;
+  font-family: "BlissPro", sans-serif !important;
+  position: relative !important;
 }

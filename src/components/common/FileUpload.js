@@ -4,9 +4,9 @@ import { FormControl } from "@material-ui/core";
 class FileUpload extends React.Component {
   render() {
     return (
-      <FormControl className="file-upload">
-        <div className="file-upload-inner">
-          <div className="file-upload-label">Выбрать файл</div>
+      <FormControl className="FileUpload">
+        <div className="FileUploadInner">
+          <div className="FileUploadLabel">Выбрать файл</div>
           <input type="file" />
         </div>
       </FormControl>
