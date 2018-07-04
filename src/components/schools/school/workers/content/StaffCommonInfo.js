@@ -11,6 +11,7 @@ import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
 import Link from "react-router-dom/es/Link";
 import Grid from "@material-ui/core/es/Grid/Grid";
+import PaperMenu from "../PaperMenu";
 
 const styles = theme => ({
   title: {
@@ -48,6 +49,7 @@ class StaffCommonInfo extends React.Component {
                 <TableCell>Дата рождения</TableCell>
                 <TableCell>Пол</TableCell>
                 <TableCell>Стаж</TableCell>
+                <TableCell />
               </TableRow>
             </TableHead>
             <TableBody>
@@ -55,6 +57,9 @@ class StaffCommonInfo extends React.Component {
                 <TableCell>15.03.1996</TableCell>
                 <TableCell>Мужской</TableCell>
                 <TableCell>8</TableCell>
+                <TableCell className="PaperMenuTrigger">
+                  <PaperMenu relate />
+                </TableCell>
               </TableRow>
             </TableBody>
           </Table>

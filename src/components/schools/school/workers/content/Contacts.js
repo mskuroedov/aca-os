@@ -11,6 +11,7 @@ import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
 import Link from "react-router-dom/es/Link";
 import Grid from "@material-ui/core/es/Grid/Grid";
+import PaperMenu from "../PaperMenu";
 
 const styles = theme => ({
   title: {
@@ -48,6 +49,7 @@ class Contacts extends React.Component {
                 <TableCell>Адрес</TableCell>
                 <TableCell>Телефон</TableCell>
                 <TableCell>E-mail</TableCell>
+                <TableCell />
               </TableRow>
             </TableHead>
             <TableBody>
@@ -56,6 +58,9 @@ class Contacts extends React.Component {
                 <TableCell>+7 927 729-92-17</TableCell>
                 <TableCell>
                   <Link to="mailto:mirhanov@yandex.ru">mirhanov@yandex.ru</Link>
+                </TableCell>
+                <TableCell className="PaperMenuTrigger">
+                  <PaperMenu relate />
                 </TableCell>
               </TableRow>
             </TableBody>
