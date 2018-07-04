@@ -40,7 +40,7 @@ class StaffWork extends React.Component {
     return (
       <div>
         <Typography className={classes.title}>Работа</Typography>
-        <Paper className="paper">
+        <Paper className="paper" style={{ position: "relative" }}>
           <Table className="table no-bottom xs-hidden">
             <TableHead>
               <TableRow>
@@ -92,6 +92,7 @@ class StaffWork extends React.Component {
                 </Typography>
               </Grid>
             </Grid>
+            <PaperMenu />
           </div>
         </Paper>
       </div>

@@ -42,7 +42,7 @@ class Contacts extends React.Component {
     return (
       <div>
         <Typography className={classes.title}>Контактная информация</Typography>
-        <Paper className="paper">
+        <Paper className="paper" style={{ position: "relative" }}>
           <Table className="table no-bottom xs-hidden">
             <TableHead>
               <TableRow>
@@ -82,6 +82,7 @@ class Contacts extends React.Component {
                 </Typography>
               </Grid>
             </Grid>
+            <PaperMenu />
           </div>
         </Paper>
       </div>

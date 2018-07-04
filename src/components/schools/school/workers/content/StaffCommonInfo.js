@@ -42,7 +42,7 @@ class StaffCommonInfo extends React.Component {
     return (
       <div>
         <Typography className={classes.title}>Общая информация</Typography>
-        <Paper className="paper">
+        <Paper className="paper" style={{ position: "relative" }}>
           <Table className="table no-bottom xs-hidden">
             <TableHead>
               <TableRow>
@@ -90,6 +90,7 @@ class StaffCommonInfo extends React.Component {
                 </Typography>
               </Grid>
             </Grid>
+            <PaperMenu />
           </div>
         </Paper>
       </div>
