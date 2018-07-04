@@ -31,7 +31,7 @@ const styles = theme => ({
   }
 });
 
-class StaffCommonInfo extends React.Component {
+class Contacts extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -40,48 +40,40 @@ class StaffCommonInfo extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <Typography className={classes.title}>Общая информация</Typography>
+        <Typography className={classes.title}>Контактная информация</Typography>
         <Paper className="paper">
           <Table className="table no-bottom xs-hidden">
             <TableHead>
               <TableRow>
-                <TableCell>Дата рождения</TableCell>
-                <TableCell>Пол</TableCell>
-                <TableCell>Стаж</TableCell>
+                <TableCell>Адрес</TableCell>
+                <TableCell>Телефон</TableCell>
+                <TableCell>E-mail</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               <TableRow>
-                <TableCell>15.03.1996</TableCell>
-                <TableCell>Мужской</TableCell>
-                <TableCell>8</TableCell>
+                <TableCell>Россия, Казань</TableCell>
+                <TableCell>+7 927 729-92-17</TableCell>
+                <TableCell>
+                  <Link to="mailto:mirhanov@yandex.ru">mirhanov@yandex.ru</Link>
+                </TableCell>
               </TableRow>
             </TableBody>
           </Table>
           <div className="lg-hidden">
             <Grid container spacing={0} style={{ padding: 16 }}>
               <Grid item xs={12}>
-                <Typography className={classes.textSecondary}>
-                  Дата рождения
+                <Typography className={classes.textSecondary}>Адрес</Typography>
+                <Typography className={classes.textMain}>
+                  Россия, Казань
                 </Typography>
-                <Typography className={classes.textMain}>15.03.1966</Typography>
-              </Grid>
-              <Grid item xs={12}>
-                <Typography className={classes.textSecondary}>Пол</Typography>
-                <Typography className={classes.textMain}>Мужской</Typography>
-              </Grid>
-              <Grid item xs={12}>
-                <Typography className={classes.textSecondary}>Стаж</Typography>
-                <Typography className={classes.textMain}>8</Typography>
               </Grid>
               <Grid item xs={12}>
                 <Typography className={classes.textSecondary}>
-                  E-mail
+                  Телефон
                 </Typography>
                 <Typography className={classes.textMain}>
-                  <Link to="mailto:mirhanov@yandex.ru" className={"link"}>
-                    mirhanov@yandex.ru
-                  </Link>
+                  +7 927 729-92-1
                 </Typography>
               </Grid>
             </Grid>
@@ -92,8 +84,4 @@ class StaffCommonInfo extends React.Component {
   }
 }
 
-StaffCommonInfo.propTypes = {
-  classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styles)(StaffCommonInfo);
+export default withStyles(styles)(Contacts);
