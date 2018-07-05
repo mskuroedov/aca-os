@@ -1,34 +1,38 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles";
-import classNames from "classnames";
-import Typography from "@material-ui/core/es/Typography/Typography";
-import Paper from "@material-ui/core/es/Paper/Paper";
-import Table from "@material-ui/core/es/Table/Table";
-import TableHead from "@material-ui/core/es/TableHead/TableHead";
-import TableRow from "@material-ui/core/es/TableRow/TableRow";
-import TableCell from "@material-ui/core/es/TableCell/TableCell";
-import TableBody from "@material-ui/core/es/TableBody/TableBody";
-import Link from "react-router-dom/es/Link";
-import Grid from "@material-ui/core/es/Grid/Grid";
-import PaperMenu from "../PaperMenu";
+import React from 'react';
+import { withStyles } from 'material-ui/styles';
+import Typography from '@material-ui/core/es/Typography/Typography';
+import Paper from '@material-ui/core/es/Paper/Paper';
+import Table from '@material-ui/core/es/Table/Table';
+import TableHead from '@material-ui/core/es/TableHead/TableHead';
+import TableRow from '@material-ui/core/es/TableRow/TableRow';
+import TableCell from '@material-ui/core/es/TableCell/TableCell';
+import TableBody from '@material-ui/core/es/TableBody/TableBody';
+import Link from 'react-router-dom/es/Link';
+import Grid from '@material-ui/core/es/Grid/Grid';
+import PaperMenu from '../PaperMenu';
+import { Icon } from '@material-ui/core';
 
 const styles = theme => ({
   title: {
     marginBottom: 11,
     fontSize: 20,
-    color: " rgba(36,36,33,0.6);",
+    color: ' rgba(36,36,33,0.6);',
     fontFamily: '"BlissPro",sans-serif',
-    fontWeight: "normal"
+    fontWeight: 'normal'
   },
   textMain: {
-    color: "#242421",
+    color: '#242421',
     fontSize: 16,
     marginBottom: 16
   },
   textSecondary: {
-    color: "rgba(36,36,33,0.54)",
+    color: 'rgba(36,36,33,0.54)',
     fontSize: 14
+  },
+  icon: {
+    opacity: 0.5,
+    marginRight: 6,
+    verticalAlign: 'middle'
   }
 });
 
@@ -42,7 +46,7 @@ class Contacts extends React.Component {
     return (
       <div>
         <Typography className={classes.title}>Контактная информация</Typography>
-        <Paper className="paper" style={{ position: "relative" }}>
+        <Paper className="paper" style={{ position: 'relative' }}>
           <Table className="table no-bottom xs-hidden">
             <TableHead>
               <TableRow>
@@ -54,9 +58,16 @@ class Contacts extends React.Component {
             </TableHead>
             <TableBody>
               <TableRow>
-                <TableCell>Россия, Казань</TableCell>
-                <TableCell>+7 927 729-92-17</TableCell>
                 <TableCell>
+                  <Icon className={classes.icon}>location_on</Icon>
+                  Россия, Казань
+                </TableCell>
+                <TableCell>
+                  <Icon className={classes.icon}>phone_iphone</Icon>
+                  +7 927 729-92-17
+                </TableCell>
+                <TableCell>
+                  <Icon className={classes.icon}>email</Icon>
                   <Link to="mailto:mirhanov@yandex.ru">mirhanov@yandex.ru</Link>
                 </TableCell>
                 <TableCell className="PaperMenuTrigger">
@@ -69,17 +80,11 @@ class Contacts extends React.Component {
             <Grid container spacing={0} style={{ padding: 16 }}>
               <Grid item xs={12}>
                 <Typography className={classes.textSecondary}>Адрес</Typography>
-                <Typography className={classes.textMain}>
-                  Россия, Казань
-                </Typography>
+                <Typography className={classes.textMain}>Россия, Казань</Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography className={classes.textSecondary}>
-                  Телефон
-                </Typography>
-                <Typography className={classes.textMain}>
-                  +7 927 729-92-1
-                </Typography>
+                <Typography className={classes.textSecondary}>Телефон</Typography>
+                <Typography className={classes.textMain}>+7 927 729-92-1</Typography>
               </Grid>
             </Grid>
             <PaperMenu />
