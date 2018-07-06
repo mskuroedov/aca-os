@@ -65,7 +65,8 @@ module.exports = env => {
     },
     resolve: {
       alias: {
-        components: path.resolve(__dirname, 'src/components/')
+        components: path.resolve(__dirname, 'src/components/'),
+        fixtures: path.resolve(__dirname, 'src/fixtures/')
       }
     }
   };

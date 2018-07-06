@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Avatar, TableCell, TableRow } from "material-ui";
-import { Link } from "react-router-dom";
-import { withStyles } from "material-ui/styles/index";
-import PaperMenu from "../PaperMenu";
-import Checkbox from "@material-ui/core/Checkbox";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Avatar, TableCell, TableRow } from 'material-ui';
+import { Link } from 'react-router-dom';
+import { withStyles } from 'material-ui/styles/index';
+import PaperMenu from '../PaperMenu';
+import Checkbox from '@material-ui/core/Checkbox';
 
 const styles = theme => ({
   avatar: {
@@ -13,10 +13,10 @@ const styles = theme => ({
     marginLeft: 16
   },
   link: {
-    borderBottom: "1px solid rgba(36,36,33,0.2)",
-    color: "rgba(36,36,33,1)",
-    "&:hover": {
-      color: "rgba(0,118,94,1)"
+    borderBottom: '1px solid rgba(36,36,33,0.2)',
+    color: 'rgba(36,36,33,1)',
+    '&:hover': {
+      color: 'rgba(0,118,94,1)'
     }
   }
 });
@@ -26,16 +26,19 @@ class TableItem extends React.Component {
     const { classes } = this.props;
     const {
       firstname,
+      subdivision,
+      post,
       secondname,
       middlename,
       onSelectRequest,
-      isChecked
+      isChecked,
+      contacts
     } = this.props;
 
     return (
       <TableRow>
         <TableCell style={{ width: 10 }}>
-          <Checkbox onChange={onSelectRequest} checked={isChecked} />
+          <Checkbox color="primary" onChange={onSelectRequest} checked={isChecked} />
         </TableCell>
         <TableCell>
           <Avatar
@@ -47,20 +50,19 @@ class TableItem extends React.Component {
           />
         </TableCell>
         <TableCell>
-          <Link to="/sportsman/1" className={classes.link}>
+          <Link to="/worker/2" className={classes.link}>
             {secondname} {firstname} {middlename}
           </Link>
         </TableCell>
+        <TableCell>{subdivision}</TableCell>
+        <TableCell>{post}</TableCell>
+        <TableCell>{contacts.phone}</TableCell>
         <TableCell>
           <Link to="#" className={classes.link}>
-            Группа 2010 г. р.
+            {contacts.email}
           </Link>
         </TableCell>
-        <TableCell numeric>2010</TableCell>
-        <TableCell numeric>12.03.2012</TableCell>
-        <TableCell>Вратарь</TableCell>
-        <TableCell numeric>42</TableCell>
-        <TableCell>
+        <TableCell className="PaperMenuTrigger">
           <PaperMenu relate />
         </TableCell>
       </TableRow>
