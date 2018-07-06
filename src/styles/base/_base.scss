@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "BlissPro", sans-serif;
+  font-family: 'BlissPro', sans-serif;
 }
 
 html {
@@ -9,7 +9,7 @@ html {
 
 body {
   color: $dark-grey;
-  font-family: "BlissPro", sans-serif !important;
+  font-family: 'BlissPro', sans-serif !important;
   font-size: $m-size;
   line-height: 1.6;
 }
@@ -47,7 +47,7 @@ i {
 }
 
 p {
-  font-family: "BlissPro", sans-serif !important;
+  font-family: 'BlissPro', sans-serif !important;
 }
 
 .cart {
@@ -154,8 +154,15 @@ p {
   padding-bottom: 32px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 16px;
-  font-family: "BlissPro", sans-serif;
+  font-family: 'BlissPro', sans-serif;
   position: relative;
+  a {
+    @extend .PaperLink;
+  }
+}
+.PaperLink {
+  color: #242421;
+  border-bottom: 1px solid rgba(36, 36, 33, 0.3);
 }
 .PaperMenuTrigger {
   width: 55px;
