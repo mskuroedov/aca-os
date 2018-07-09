@@ -267,7 +267,6 @@ class Sportsman extends React.Component {
             <Grid item xs={2} className="lg-hidden">
               <SportsmanListPageModalFilters />
             </Grid>
-
             <Grid item xs={12} className="paper_w_table">
               {this.state.tableView ? (
                 <TableView sportsman={sportsman} />
@@ -286,9 +285,5 @@ class Sportsman extends React.Component {
     );
   }
 }
-
-Sportsman.propTypes = {
-  classes: PropTypes.object.isRequired
-};
 
 export default withStyles(styles)(Sportsman);

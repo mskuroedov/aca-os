@@ -39,25 +39,41 @@ const AppRouter = () => (
       <CssBaseline />
       <Switch>
         <Route path="/" component={IndexPage} exact={true} />
-        <Route path="/sportsman/:sportsmenId/:view?" exact={true} component={SportsmenPage} />
+        <Route
+          path="/sportsman/:sportsmenId/:view?"
+          exact={true}
+          component={SportsmenPage}
+        />
         <Route path="/sportsman" exact={true} component={SportsmenListPage} />
-        <Route path="/schools/:schoolId/:view?" exact={true} component={SchoolPage} />
+        <Route
+          path="/schools/:schoolId/:view?"
+          exact={true}
+          component={SchoolPage}
+        />
         <Route path="/schools" exact={true} component={SchoolListPage} />
         <Route path="/libraries" exact={true} component={LibrariesPage} />
-        <Route path="/groups/" exact={true} component={GroupPage} />
+        <Route path="/groups/:view?" exact={true} component={GroupPage} />
         <Route path="/worker/:workerId" exact={true} component={WorkerPage} />
         <Route path="/medic/:medicId" exact={true} component={MedicPage} />
         <Route path="/news" exact={true} component={NewsPage} />
         <Route path="/news/1" exact={true} component={ShowNewsPage} />
         <Route path="/calendar" exact={true} component={CalendarPage} />
-        <Route path="/tournaments" exact={true} component={TournamentsListPage} />
+        <Route
+          path="/tournaments"
+          exact={true}
+          component={TournamentsListPage}
+        />
         <Route path="/tournaments/1" exact={true} component={TournamentsPage} />
         <Route path="/calendar/1" exact={true} component={DatePage} />
         <Route path="/stats" exact={true} component={CommonStatsPage} />
         <Route path="/author/1" exact={true} component={AuthorPage} />
         <Route path="/libraries/1" exact={true} component={LibraryItemPage} />
         <Route path="/users_info/item" exact={true} component={ItemPage} />
-        <Route path="/users_info/:value" exact={true} component={UsersInfoPage} />
+        <Route
+          path="/users_info/:value"
+          exact={true}
+          component={UsersInfoPage}
+        />
         <Route path="/cart" exact={true} component={CartPage} />
         <Route path="/team/1" exact={true} component={TeamPage} />
         <Route component={NotFoundPage} />
