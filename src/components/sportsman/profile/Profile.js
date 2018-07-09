@@ -2,7 +2,6 @@ import React from 'react';
 import { Grid } from 'material-ui';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-import Button from 'material-ui/Button';
 import CommonInformation from './CommonInformation';
 import ContactsOfSportsmen from './ContactsOfSportsmen';
 import ParentContacts from './ParentContacts';
@@ -11,15 +10,7 @@ import Rewards from './Rewards';
 import Achievements from './Achievements';
 import TableTitle from './TableTitle';
 
-const styles = theme => ({
-  button: {
-    margin: theme.spacing.unit,
-    fontSize: 13,
-    marginLeft: 'auto',
-    marginRight: 20,
-    fontFamily: '"BlissPro",sans-serif'
-  }
-});
+const styles = theme => ({});
 
 class Profile extends React.Component {
   render() {
@@ -52,17 +43,4 @@ class Profile extends React.Component {
   }
 }
 
-Profile.propTypes = {
-  classes: PropTypes.object.isRequired
-};
-
 export default withStyles(styles)(Profile);
-
-//<TableTitle title="Контакты спортсмена"/>
-//<ContactsOfSportsmen {...sportsmen.contacts}/>
-//<TableTitle title="Контакты родителей или законных представителей"/>
-//{
-//   sportsmen.parents.map((item) => (
-//     <ParentContacts key={item.id} {...item}/>
-//))
-//}

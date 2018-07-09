@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Tabs, { Tab } from 'material-ui/Tabs';
-import Typography from 'material-ui/Typography';
 import Profile from './profile/Profile';
 import Perfomance from './profile/Perfomance';
 import { history } from '../../routers/AppRouter';
@@ -80,6 +79,14 @@ const styles = theme => ({
 });
 
 class SportsmenPageContent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  static defaultProps = {
+    view: 'profile'
+  };
+
   handleChange = (event, value) => {
     history.push(`/sportsman/${this.props.sportsmenId}/${value}`);
   };
