@@ -132,7 +132,9 @@ class Sportsman extends React.Component {
   onSearchChange = event => {
     this.setState({
       sportsman: sportsman.filter(sportsmen =>
-        sportsmen.firstname.toLowerCase().includes(event.target.value.toLowerCase().trim())
+        sportsmen.firstname
+          .toLowerCase()
+          .includes(event.target.value.toLowerCase().trim())
       )
     });
   };
@@ -254,7 +256,11 @@ class Sportsman extends React.Component {
                   <Icon>publish</Icon>
                 </IconButton>
                 <IconButton onClick={() => this.onViewChange()}>
-                  {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
+                  {this.state.tableView ? (
+                    <Icon>view_module</Icon>
+                  ) : (
+                    <Icon>view_list</Icon>
+                  )}
                 </IconButton>
               </div>
             </Grid>

@@ -1,15 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Paper from "material-ui/es/Paper/Paper";
-import Table from "material-ui/es/Table/Table";
-import TableRow from "material-ui/es/Table/TableRow";
-import TableCell from "material-ui/es/Table/TableCell";
-import { TableBody, TableHead } from "material-ui";
-import TableItem from "./TableItem";
-import TableFooter from "material-ui/Table/TableFooter";
-import TablePagination from "material-ui/es/Table/TablePagination";
-import Checkbox from "@material-ui/core/Checkbox";
-import { xor } from "lodash";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Paper from 'material-ui/es/Paper/Paper';
+import Table from 'material-ui/es/Table/Table';
+import TableRow from 'material-ui/es/Table/TableRow';
+import TableCell from 'material-ui/es/Table/TableCell';
+import { TableBody, TableHead } from 'material-ui';
+import TableItem from './TableItem';
+import TableFooter from 'material-ui/Table/TableFooter';
+import TablePagination from 'material-ui/es/Table/TablePagination';
+import Checkbox from '@material-ui/core/Checkbox';
+import { xor } from 'lodash';
 
 class TableView extends React.Component {
   constructor(props) {
@@ -122,15 +122,15 @@ class TableView extends React.Component {
             <TableRow>
               <TablePagination
                 classes={{
-                  caption: "sportsman_table_footer",
-                  actions: "1"
+                  caption: 'sportsman_table_footer',
+                  actions: '1'
                 }}
                 colSpan={12}
                 backIconButtonProps={{
-                  "aria-label": "Previous Page"
+                  'aria-label': 'Previous Page'
                 }}
                 nextIconButtonProps={{
-                  "aria-label": "Next Page"
+                  'aria-label': 'Next Page'
                 }}
                 labelDisplayedRows={({ from, to, count }) =>
                   `${from}-${to} из ${count}`

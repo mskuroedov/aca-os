@@ -51,10 +51,10 @@ class WorkerPageContent extends React.Component {
     ) : (
       <section className="main-section">
         <Grid container spacing={16}>
-          <Grid item xs={12}>
+          <Grid item xs={12} lg={7}>
             <StaffCommonInfo />
           </Grid>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12} lg={7}>
             <Contacts />
           </Grid>
           <Grid item xs={12} lg={8}>

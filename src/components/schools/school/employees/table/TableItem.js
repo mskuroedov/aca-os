@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { withStyles } from 'material-ui/styles/index';
 import PaperMenu from '../PaperMenu';
 import Checkbox from '@material-ui/core/Checkbox';
+import Status from 'components/common/Status';
 
 const styles = theme => ({
   avatar: {
@@ -38,7 +39,11 @@ class TableItem extends React.Component {
     return (
       <TableRow>
         <TableCell style={{ width: 10 }}>
-          <Checkbox color="primary" onChange={onSelectRequest} checked={isChecked} />
+          <Checkbox
+            color="primary"
+            onChange={onSelectRequest}
+            checked={isChecked}
+          />
         </TableCell>
         <TableCell>
           <Avatar
@@ -53,6 +58,7 @@ class TableItem extends React.Component {
           <Link to="/worker/2" className={classes.link}>
             {secondname} {firstname} {middlename}
           </Link>
+          <Status />
         </TableCell>
         <TableCell>{subdivision}</TableCell>
         <TableCell>{post}</TableCell>

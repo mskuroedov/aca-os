@@ -1,11 +1,11 @@
 import React from 'react';
 import { Grid } from 'material-ui';
-import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/es/Paper/Paper';
 import Avatar from 'material-ui/es/Avatar/Avatar';
 import Typography from 'material-ui/es/Typography/Typography';
 import Link from 'react-router-dom/es/Link';
+import Status from 'components/common/Status';
 
 const styles = theme => ({
   formControl: {
@@ -89,36 +89,31 @@ class Trainer extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <Link to="/worker/1">
-          <Paper className={classes.paper}>
-            <Grid container alignItems="flex-start" spacing={16}>
-              <Grid item xs={3} lg={2}>
-                <Avatar
-                  alt="Adelle Charles"
-                  src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
-                  classes={{
-                    root: classes.avatar
-                  }}
-                />
-              </Grid>
-              <Grid item xs={9} lg>
-                <Link to="/worker/1" className={classes.link}>
-                  Ягупов Анатолий Павлович{' '}
-                </Link>
-                <Typography className={classes.trainLevel}>
-                  Тренер-преподаватель высшей категории
-                </Typography>
-              </Grid>
+        <Paper className={classes.paper}>
+          <Grid container alignItems="flex-start" spacing={16}>
+            <Grid item xs={3} lg={2}>
+              <Avatar
+                alt="Adelle Charles"
+                src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
+                classes={{
+                  root: classes.avatar
+                }}
+              />
             </Grid>
-          </Paper>
-        </Link>
+            <Grid item xs={9} lg>
+              <Link to="/worker/1" className={classes.link}>
+                Ягупов Анатолий Павлович{' '}
+              </Link>
+              <Status />
+              <Typography className={classes.trainLevel}>
+                Тренер-преподаватель высшей категории
+              </Typography>
+            </Grid>
+          </Grid>
+        </Paper>
       </div>
     );
   }
 }
-
-Trainer.propTypes = {
-  classes: PropTypes.object.isRequired
-};
 
 export default withStyles(styles)(Trainer);

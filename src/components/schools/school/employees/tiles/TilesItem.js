@@ -1,51 +1,52 @@
-import React from "react";
-import { withStyles } from "material-ui/styles";
-import Paper from "material-ui/es/Paper/Paper";
-import Link from "react-router-dom/es/Link";
-import Avatar from "material-ui/es/Avatar/Avatar";
-import Grid from "material-ui/es/Grid/Grid";
-import Typography from "material-ui/es/Typography/Typography";
-import PaperMenu from "../PaperMenu";
-import { withRouter } from "react-router-dom";
-import classnames from "classnames";
+import React from 'react';
+import { withStyles } from 'material-ui/styles';
+import Paper from 'material-ui/es/Paper/Paper';
+import Link from 'react-router-dom/es/Link';
+import Avatar from 'material-ui/es/Avatar/Avatar';
+import Grid from 'material-ui/es/Grid/Grid';
+import Typography from 'material-ui/es/Typography/Typography';
+import PaperMenu from '../PaperMenu';
+import { withRouter } from 'react-router-dom';
+import classnames from 'classnames';
+import Status from 'components/common/Status';
 
 const styles = theme => ({
   name: {
-    color: "rgba(36,36,33,1)",
+    color: 'rgba(36,36,33,1)',
     fontSize: 18,
     marginTop: 19,
     marginBottom: 19,
-    textAlign: "center"
+    textAlign: 'center'
   },
   infoContainer: {
     paddingLeft: 25,
     paddingRight: 25
   },
   info: {
-    minWidth: "50%"
+    minWidth: '50%'
   },
   infoTitle: {
-    color: "rgba(36,36,33,0.6)",
+    color: 'rgba(36,36,33,0.6)',
     fontSize: 14
   },
   infoVal: {
-    color: "rgba(36,36,33,1)",
+    color: 'rgba(36,36,33,1)',
     fontSize: 16
   },
   avatar: {
     width: 56,
     height: 56,
-    margin: "auto"
+    margin: 'auto'
   },
   link: {
-    borderBottom: "1px solid rgba(36,36,33,0.2)",
-    color: "rgba(36,36,33,1)",
-    "&:hover": {
-      color: "rgba(0,118,94,1)"
+    borderBottom: '1px solid rgba(36,36,33,0.2)',
+    color: 'rgba(36,36,33,1)',
+    '&:hover': {
+      color: 'rgba(0,118,94,1)'
     }
   },
   navigate: {
-    cursor: "pointer"
+    cursor: 'pointer'
   },
   Paper: {
     paddingRight: 40
@@ -60,7 +61,7 @@ class TilesView extends React.Component {
     const { classes } = this.props;
     return (
       <Grid item xs={12}>
-        <Paper className={classnames("Paper", classes.Paper)}>
+        <Paper className={classnames('Paper', classes.Paper)}>
           <Grid container alignItems="center" spacing={16}>
             <Grid item>
               <Avatar
@@ -76,6 +77,7 @@ class TilesView extends React.Component {
                 <Link to="/worker/2" className={classes.link}>
                   Панченко Евгений Валерьевич
                 </Link>
+                <Status />
               </Typography>
               <Typography className={classes.infoTitle}>
                 Директор школы
