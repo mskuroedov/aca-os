@@ -1,53 +1,70 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles";
-import Paper from "material-ui/es/Paper/Paper";
-import Link from "react-router-dom/es/Link";
-import Avatar from "material-ui/es/Avatar/Avatar";
-import Grid from "material-ui/es/Grid/Grid";
-import Typography from "material-ui/es/Typography/Typography";
-import PaperMenu from "../PaperMenu";
-import { withRouter } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import Paper from 'material-ui/es/Paper/Paper';
+import Link from 'react-router-dom/es/Link';
+import Avatar from 'material-ui/es/Avatar/Avatar';
+import Grid from 'material-ui/es/Grid/Grid';
+import Typography from 'material-ui/es/Typography/Typography';
+import PaperMenu from '../PaperMenu';
+import { withRouter } from 'react-router-dom';
+import { Icon } from '@material-ui/core';
+import classnames from 'classnames';
 
 const styles = theme => ({
+  paper: {
+    position: 'relative'
+  },
   name: {
-    color: "rgba(36,36,33,1)",
+    color: 'rgba(36,36,33,1)',
     fontSize: 18,
     marginTop: 19,
     marginBottom: 19,
-    textAlign: "center"
+    textAlign: 'center'
   },
   infoContainer: {
     paddingLeft: 25,
     paddingRight: 25
   },
   info: {
-    minWidth: "50%"
+    minWidth: '50%'
   },
   infoTitle: {
-    color: "rgba(36,36,33,0.6)",
+    color: 'rgba(36,36,33,0.6)',
     fontSize: 14,
     marginTop: 16
   },
   infoVal: {
-    color: "rgba(36,36,33,1)",
+    color: 'rgba(36,36,33,1)',
     fontSize: 16,
     marginTop: 5
   },
   avatar: {
     width: 100,
     height: 100,
-    margin: "auto"
+    margin: 'auto'
   },
   link: {
-    borderBottom: "1px solid rgba(36,36,33,0.2)",
-    color: "rgba(36,36,33,1)",
-    "&:hover": {
-      color: "rgba(0,118,94,1)"
+    borderBottom: '1px solid rgba(36,36,33,0.2)',
+    color: 'rgba(36,36,33,1)',
+    '&:hover': {
+      color: 'rgba(0,118,94,1)'
     }
   },
   navigate: {
-    cursor: "pointer"
+    cursor: 'pointer'
+  },
+  visIcon: {
+    display: 'inline-block',
+    verticalAlign: 'bottom',
+    fontSize: '20px',
+    marginLeft: '0.5em',
+    opacity: 0.54
+  },
+  status: {
+    top: 18,
+    left: 10,
+    position: 'absolute'
   }
 });
 
@@ -60,10 +77,13 @@ class TilesView extends React.Component {
     const { firstname, secondname, middlename } = this.props;
     return (
       <Grid item xs={12} lg={4}>
-        <Paper className="Paper">
+        <Paper className={classnames('Paper', classes.paper)}>
+          <span className={classes.status}>
+            <Icon className={classes.visIcon}>visibility</Icon>
+          </span>
           <div
             className={classes.navigate}
-            onClick={() => this.navigate("/sportsman/1")}
+            onClick={() => this.navigate('/sportsman/1')}
           >
             <Avatar
               alt="Adelle Charles"
@@ -79,8 +99,8 @@ class TilesView extends React.Component {
           </div>
           <hr
             style={{
-              borderColor: "rgba(36,36,33,0.1)",
-              color: "white",
+              borderColor: 'rgba(36,36,33,0.1)',
+              color: 'white',
               borderBottom: 0
             }}
           />

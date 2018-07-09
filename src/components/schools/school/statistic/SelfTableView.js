@@ -1,17 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles";
-import classNames from "classnames";
-import Grid from "@material-ui/core/es/Grid/Grid";
-import Paper from "@material-ui/core/es/Paper/Paper";
-import Table from "@material-ui/core/Table/Table";
-import TableHead from "@material-ui/core/TableHead/TableHead";
-import TableRow from "@material-ui/core/TableRow/TableRow";
-import TableCell from "@material-ui/core/TableCell/TableCell";
-import TableBody from "@material-ui/core/TableBody/TableBody";
-import TableFooter from "@material-ui/core/TableFooter/TableFooter";
-import TablePagination from "@material-ui/core/TablePagination/TablePagination";
-import SelfTableItem from "./SelfTableItem";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import classNames from 'classnames';
+import Grid from '@material-ui/core/es/Grid/Grid';
+import Paper from '@material-ui/core/es/Paper/Paper';
+import Table from '@material-ui/core/Table/Table';
+import TableHead from '@material-ui/core/TableHead/TableHead';
+import TableRow from '@material-ui/core/TableRow/TableRow';
+import TableCell from '@material-ui/core/TableCell/TableCell';
+import TableBody from '@material-ui/core/TableBody/TableBody';
+import TableFooter from '@material-ui/core/TableFooter/TableFooter';
+import TablePagination from '@material-ui/core/TablePagination/TablePagination';
+import SelfTableItem from './SelfTableItem';
 
 class SelfTableView extends React.Component {
   constructor(props) {
@@ -74,8 +74,9 @@ class SelfTableView extends React.Component {
                   <TableCell>№</TableCell>
                   <TableCell style={{ minWidth: 80 }}>ФИО</TableCell>
                   <TableCell style={{ minWidth: 80 }}>
-                    {common ? "Школа" : "Группа"}
+                    {common ? 'Школа' : 'Команда'}
                   </TableCell>
+                  <TableCell style={{ minWidth: 80 }}>Группа</TableCell>
                   <TableCell>А</TableCell>
                   {/*<TableCell>А</TableCell>*/}
                   <TableCell numeric>И</TableCell>
@@ -106,17 +107,17 @@ class SelfTableView extends React.Component {
                 <TableRow>
                   <TablePagination
                     classes={{
-                      caption: "sportsman_table_footer",
-                      actions: "1",
-                      selectRoot: "d-none"
+                      caption: 'sportsman_table_footer',
+                      actions: '1',
+                      selectRoot: 'd-none'
                     }}
                     labelRowsPerPage=""
                     colSpan={12}
                     backIconButtonProps={{
-                      "aria-label": "Previous Page"
+                      'aria-label': 'Previous Page'
                     }}
                     nextIconButtonProps={{
-                      "aria-label": "Next Page"
+                      'aria-label': 'Next Page'
                     }}
                     labelDisplayedRows={({ from, to, count }) =>
                       `${from}-${to} из ${count}`

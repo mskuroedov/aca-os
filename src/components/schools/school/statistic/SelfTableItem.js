@@ -1,15 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Avatar, TableCell, TableRow } from "material-ui";
-import { Link } from "react-router-dom";
-import { withStyles } from "material-ui/styles/index";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Avatar, TableCell, TableRow } from 'material-ui';
+import { Link } from 'react-router-dom';
+import { withStyles } from 'material-ui/styles/index';
 
 const styles = theme => ({
   link: {
-    borderBottom: "1px solid rgba(36,36,33,0.2)",
-    color: "rgba(36,36,33,1)",
-    "&:hover": {
-      color: "rgba(0,118,94,1)"
+    borderBottom: '1px solid rgba(36,36,33,0.2)',
+    color: 'rgba(36,36,33,1)',
+    '&:hover': {
+      color: 'rgba(0,118,94,1)'
     }
   }
 });
@@ -60,6 +60,11 @@ class SelfTableItem extends React.Component {
             </Link>
           </TableCell>
         )}
+        <TableCell>
+          <Link to="/groups" className={classes.link}>
+            Группа 2009
+          </Link>
+        </TableCell>
         {/*<TableCell>{amplua}</TableCell>*/}
         <TableCell>Н</TableCell>
         <TableCell numeric>{totalGames}</TableCell>

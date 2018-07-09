@@ -1,20 +1,20 @@
-import React from "react";
-import Button from "material-ui/Button";
-import classNames from "classnames";
-import Dialog from "material-ui/Dialog";
-import DialogActions from "material-ui/Dialog/DialogActions";
-import DialogContent from "material-ui/Dialog/DialogContent";
-import { withStyles } from "material-ui/styles/index";
-import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
-import TuneIcon from "@material-ui/icons/Tune";
-import Grid from "@material-ui/core/es/Grid/Grid";
-import Select from "material-ui/Select";
-import { MenuItem } from "material-ui/Menu";
-import { FormControl } from "material-ui/Form";
-import Icon from "material-ui/es/Icon/Icon";
-import InputAdornment from "material-ui/es/Input/InputAdornment";
-import Input from "material-ui/es/Input/Input";
+import React from 'react';
+import Button from 'material-ui/Button';
+import classNames from 'classnames';
+import Dialog from 'material-ui/Dialog';
+import DialogActions from 'material-ui/Dialog/DialogActions';
+import DialogContent from 'material-ui/Dialog/DialogContent';
+import { withStyles } from 'material-ui/styles/index';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import TuneIcon from '@material-ui/icons/Tune';
+import Grid from '@material-ui/core/es/Grid/Grid';
+import Select from 'material-ui/Select';
+import { MenuItem } from 'material-ui/Menu';
+import { FormControl } from 'material-ui/Form';
+import Icon from 'material-ui/es/Icon/Icon';
+import InputAdornment from 'material-ui/es/Input/InputAdornment';
+import Input from 'material-ui/es/Input/Input';
 
 import {
   SelfStats,
@@ -23,43 +23,43 @@ import {
   statsYear,
   TeamStats,
   statsStage
-} from "../../../../fixtures/stats";
+} from '../../../../fixtures/stats';
 
 const styles = theme => ({
   button: {
     fontSize: 13,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     fontFamily: '"BlissPro",sans-serif',
-    color: "rgba(36,36,33,.5)"
+    color: 'rgba(36,36,33,.5)'
   },
   select: {
-    backgroundColor: "rgba(36,36,33,0.1)",
+    backgroundColor: 'rgba(36,36,33,0.1)',
     paddingLeft: 17,
     paddingBottom: 10,
     paddingTop: 16,
     paddingRight: 40,
     fontSize: 16,
-    color: "#242421",
-    "&:after": {
-      backgroundColor: "#242421"
+    color: '#242421',
+    '&:after': {
+      backgroundColor: '#242421'
     }
   },
   selectIcon: {
-    color: "#6D6D6D",
+    color: '#6D6D6D',
     marginTop: 0
   },
   selectLine: {
-    color: "transparent"
+    color: 'transparent'
   },
   hasUpdates: {
-    position: "relative",
-    "&:after": {
-      content: "",
-      position: "absolute",
+    position: 'relative',
+    '&:after': {
+      content: '',
+      position: 'absolute',
       width: 5,
       height: 5,
-      backgroundColor: "yellow",
-      borderRadius: "100%",
+      backgroundColor: 'yellow',
+      borderRadius: '100%',
       top: 0,
       right: 0
     }
@@ -67,11 +67,11 @@ const styles = theme => ({
   iconbtn: {
     margin: 0,
     fontSize: 24,
-    marginLeft: "auto",
-    fontWeight: "bold",
+    marginLeft: 'auto',
+    fontWeight: 'bold',
     fontFamily: '"BlissPro",sans-serif',
-    color: "rgba(36,36,33,.54)",
-    background: "transparent",
+    color: 'rgba(36,36,33,.54)',
+    background: 'transparent',
     padding: 0,
     width: 24,
     height: 24,
@@ -83,34 +83,34 @@ const styles = theme => ({
     marginBottom: 0
   },
   textGray: {
-    color: "rgba(36,36,33,0.6)"
+    color: 'rgba(36,36,33,0.6)'
   },
   dialogWindow: {
     borderRadius: 12
   },
   dialogTitle: {
-    color: "#242421",
+    color: '#242421',
     fontSize: 20,
-    display: "flex",
-    fontWeight: "bold",
-    justifyContent: "space-between",
-    alignItems: "center",
-    backgroundColor: "rgba(36,36,33,.04)",
+    display: 'flex',
+    fontWeight: 'bold',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: 'rgba(36,36,33,.04)',
     paddingTop: 24,
     paddingBottom: 21
   },
   cssLabel: {
-    color: "rgba(36,36,33,1)",
-    fontWeight: "bold",
-    "&$cssFocused": {
-      color: "#00755E"
+    color: 'rgba(36,36,33,1)',
+    fontWeight: 'bold',
+    '&$cssFocused': {
+      color: '#00755E'
     },
     fontSize: 16
   },
   cssFocused: {},
   cssUnderline: {
-    "&:after": {
-      borderBottomColor: "#00755E"
+    '&:after': {
+      borderBottomColor: '#00755E'
     }
   },
   inputRoot: {
@@ -122,24 +122,24 @@ const styles = theme => ({
   },
   searchInput: {
     fontSize: 14,
-    color: "rgba(36,36,33,1)",
+    color: 'rgba(36,36,33,1)',
     marginTop: 11,
     paddingBottom: 5,
     minWidth: 267,
-    "&:before": {
-      backgroundColor: "rgba(0,0,0,0.2)"
+    '&:before': {
+      backgroundColor: 'rgba(0,0,0,0.2)'
     },
-    "&:after": {
-      backgroundColor: "rgba(0,0,0,0.2)"
+    '&:after': {
+      backgroundColor: 'rgba(0,0,0,0.2)'
     }
   },
   searchInkbar: {
-    color: "rgba(36,36,33,1)",
-    "&:before": {
-      backgroundColor: "rgba(0,0,0,0.2) !important"
+    color: 'rgba(36,36,33,1)',
+    '&:before': {
+      backgroundColor: 'rgba(0,0,0,0.2) !important'
     },
-    "&:after": {
-      backgroundColor: "rgba(0,0,0,0.2) !important"
+    '&:after': {
+      backgroundColor: 'rgba(0,0,0,0.2) !important'
     }
   }
 });
@@ -183,16 +183,16 @@ class SchoolStatsModalFilter extends React.Component {
   render() {
     const { classes, selfView } = this.props;
     const searchLabel = this.state.selfView
-      ? "Поиск на ФИО"
-      : "Поиск по названию";
+      ? 'Поиск на ФИО'
+      : 'Поиск по названию';
 
     return (
-      <div style={{ display: "inline-block" }}>
+      <div style={{ display: 'inline-block' }}>
         <IconButton
           onClick={this.handleClickOpen}
           classes={{
             root: classes.button,
-            label: "has-updates-yellow"
+            label: 'has-updates-yellow'
           }}
         >
           <TuneIcon />
@@ -215,7 +215,7 @@ class SchoolStatsModalFilter extends React.Component {
                 <IconButton
                   onClick={this.handleClose}
                   className={classes.iconbtn}
-                  style={{ float: "right" }}
+                  style={{ float: 'right' }}
                   aria-label="Delete"
                 >
                   <CloseIcon />
@@ -283,28 +283,27 @@ class SchoolStatsModalFilter extends React.Component {
                   </FormControl>
                 </Grid>
               )}
-              {selfView && (
-                <Grid item xs={12}>
-                  <FormControl>
-                    <Select
-                      value={this.state.selectedStageFilter}
-                      onChange={this.onStageFilterChange}
-                      disableUnderline={true}
-                      classes={{
-                        select: classes.select,
-                        icon: classes.selectIcon
-                      }}
-                      autoWidth
-                    >
-                      {this.state.statsStage.map(item => (
-                        <MenuItem key={item.id} value={item.id}>
-                          {item.title}
-                        </MenuItem>
-                      ))}
-                    </Select>
-                  </FormControl>
-                </Grid>
-              )}
+
+              <Grid item xs={12}>
+                <FormControl>
+                  <Select
+                    value={this.state.selectedStageFilter}
+                    onChange={this.onStageFilterChange}
+                    disableUnderline={true}
+                    classes={{
+                      select: classes.select,
+                      icon: classes.selectIcon
+                    }}
+                    autoWidth
+                  >
+                    {this.state.statsStage.map(item => (
+                      <MenuItem key={item.id} value={item.id}>
+                        {item.title}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </Grid>
               <Grid item>
                 <FormControl className={classes.formControl}>
                   <Input
@@ -327,7 +326,7 @@ class SchoolStatsModalFilter extends React.Component {
           </DialogContent>
           <DialogActions
             style={{
-              justifyContent: "end",
+              justifyContent: 'end',
               padding: 14,
               paddingTop: 0
             }}

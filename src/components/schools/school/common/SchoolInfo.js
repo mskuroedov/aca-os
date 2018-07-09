@@ -1,79 +1,80 @@
-import React from "react";
-import { Grid } from "material-ui";
-import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles";
-import Button from "material-ui/Button";
-import classNames from "classnames";
-import Paper from "material-ui/es/Paper/Paper";
-import Avatar from "material-ui/es/Avatar/Avatar";
-import Icon from "material-ui/es/Icon/Icon";
-import Typography from "material-ui/es/Typography/Typography";
-import NewsPaper from "./NewsPaper";
-import ContactUs from "./ContactUs";
-import Link from "react-router-dom/es/Link";
-import PaperMenu from "./PaperMenu";
-import { withRouter } from "react-router-dom";
+import React from 'react';
+import { Grid } from 'material-ui';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import Button from 'material-ui/Button';
+import classNames from 'classnames';
+import Paper from 'material-ui/es/Paper/Paper';
+import Avatar from 'material-ui/es/Avatar/Avatar';
+import Icon from 'material-ui/es/Icon/Icon';
+import Typography from 'material-ui/es/Typography/Typography';
+import NewsPaper from './NewsPaper';
+import ContactUs from './ContactUs';
+import Link from 'react-router-dom/es/Link';
+import PaperMenu from './PaperMenu';
+import { withRouter } from 'react-router-dom';
 
 const styles = theme => ({
   button: {
     margin: theme.spacing.unit,
     fontSize: 13,
-    marginLeft: "auto",
-    fontWeight: "bold",
+    marginLeft: 'auto',
+    fontWeight: 'bold',
     marginRight: 20,
     fontFamily: '"BlissPro",sans-serif'
   },
   paper: {
-    position: "relative",
-    boxShadow: "none",
+    cursor: 'pointer',
+    position: 'relative',
+    boxShadow: 'none',
     borderRadius: 12,
     paddingTop: 28,
     paddingLeft: 25,
     paddingRight: 25,
     paddingBottom: 26,
     marginBottom: 10,
-    border: "1px solid rgba(0,0,0,0.1);",
+    border: '1px solid rgba(0,0,0,0.1);',
     fontSize: 16,
     fontFamily: '"BlissPro",sans-serif !important'
   },
   title: {
     marginBottom: 11,
     fontSize: 20,
-    color: " rgba(36,36,33,0.6);",
+    color: ' rgba(36,36,33,0.6);',
     fontFamily: '"BlissPro",sans-serif',
-    fontWeight: "normal"
+    fontWeight: 'normal'
   },
   primaryText: {
     fontSize: 16,
-    fontFamily: "BlissPro"
+    fontFamily: 'BlissPro'
   },
   primaryBigText: {
     fontSize: 18,
-    fontFamily: "BlissPro"
+    fontFamily: 'BlissPro'
   },
   avatar: {
     width: 100,
     height: 100,
-    margin: "auto"
+    margin: 'auto'
   },
   textCentered: {
-    textAlign: "center"
+    textAlign: 'center'
   },
   icon: {
-    verticalAlign: "bottom",
-    color: "rgba(36,36,33,0.3)",
-    marginLeft: "auto"
+    verticalAlign: 'bottom',
+    color: 'rgba(36,36,33,0.3)',
+    marginLeft: 'auto'
   },
   link: {
     marginLeft: 16,
-    borderBottom: "1px solid rgba(36,36,33,0.2)",
-    color: "rgba(36,36,33,1)",
-    "&:hover": {
-      color: "rgba(0,118,94,1)"
+    borderBottom: '1px solid rgba(36,36,33,0.2)',
+    color: 'rgba(36,36,33,1)',
+    '&:hover': {
+      color: 'rgba(0,118,94,1)'
     }
   },
   textGray: {
-    color: "rgba(36,36,33,0.6)"
+    color: 'rgba(36,36,33,0.6)'
   }
 });
 
@@ -81,16 +82,17 @@ class SchoolInfo extends React.Component {
   constructor(props) {
     super(props);
     this.titles = [
-      "Обучение в школе",
-      "Руководство школы",
-      "История школы",
-      "Новости школы"
+      'Обучение в школе',
+      'Руководство школы',
+      'История школы',
+      'Новости школы'
     ];
   }
 
   state = {
     open: false
   };
+
   handleClickOpen = () => {
     this.setState({
       open: true
@@ -100,6 +102,10 @@ class SchoolInfo extends React.Component {
   handleClose = value => {
     this.setState({ selectedValue: value, open: false });
   };
+
+  navigate(to) {
+    this.props.history.push(to);
+  }
 
   render() {
     const { classes } = this.props;
@@ -184,7 +190,7 @@ class SchoolInfo extends React.Component {
             <h3 className={classes.title}>{this.titles[1]}</h3>
 
             <Paper
-              onClick={e => this.navigate("/worker/2")}
+              onClick={e => this.navigate('/worker/2')}
               className={classNames(classes.textCentered, classes.paper)}
               style={{ paddingLeft: 60, paddingRight: 60 }}
             >
@@ -224,13 +230,13 @@ class SchoolInfo extends React.Component {
                 <Grid
                   item
                   xs={10}
-                  style={{ verticalAlign: "center", paddingTop: 0 }}
+                  style={{ verticalAlign: 'center', paddingTop: 0 }}
                 >
                   <Typography
                     type="body1"
                     gutterBottom
                     className={classes.primaryText}
-                    style={{ textAlign: "left" }}
+                    style={{ textAlign: 'left' }}
                   >
                     +7 920 751-165-53
                   </Typography>
@@ -243,7 +249,7 @@ class SchoolInfo extends React.Component {
                     type="body1"
                     gutterBottom
                     className={classes.primaryText}
-                    style={{ textAlign: "left" }}
+                    style={{ textAlign: 'left' }}
                   >
                     <a
                       href=""
@@ -283,7 +289,7 @@ class SchoolInfo extends React.Component {
             </Paper>
           </Grid>
           <Grid item xs={12}>
-            <Grid style={{ alignItems: "center" }} container spacing={16}>
+            <Grid style={{ alignItems: 'center' }} container spacing={16}>
               <Grid style={{ flex: 1 }} item>
                 <h3 className={classes.title} style={{ marginBottom: 0 }}>
                   {this.titles[3]}
@@ -309,7 +315,7 @@ class SchoolInfo extends React.Component {
               <Grid item xs={12} lg={4}>
                 <NewsPaper />
               </Grid>
-              <Grid item xs={12} style={{ textAlign: "center" }}>
+              <Grid item xs={12} style={{ textAlign: 'center' }}>
                 <Button
                   variant="raised"
                   color="primary"
