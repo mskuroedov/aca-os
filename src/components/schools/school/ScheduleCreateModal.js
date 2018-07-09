@@ -1,6 +1,5 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
-import FileUpload from '../../common/FileUpload';
 import CloseIcon from '@material-ui/icons/Close';
 
 import {
@@ -25,6 +24,7 @@ import {
   formcontrol: {
     display: 'block'
   },
+  timeInput: {},
   dialog: {
     minWidth: 420,
     paddingRight: 90
@@ -43,9 +43,6 @@ import {
   dynamicControl: {
     position: 'relative'
   },
-  dynamicControlForm: {
-    flex: 1
-  },
   dynamicControlButtons: {
     top: 8,
     right: -60,
@@ -57,9 +54,42 @@ import {
   },
   addCircle: {
     cursor: 'pointer'
+  },
+  timesep: {
+    fontSize: 16,
+    fontWeight: 'normal'
+  },
+  timeField: {
+    marginTop: 10,
+    '& > div:before': {
+      display: 'none'
+    },
+    '& > div:after': {
+      display: 'none'
+    }
+  },
+  timeInput: {
+    height: 48,
+    paddingLeft: 8,
+    paddingRight: 8,
+    'background-color': 'rgba(36, 36, 33, 0.1)'
+  },
+  label: {
+    whiteSpace: 'nowrap'
   }
 }))
 class ScheduleCreateModal extends React.Component {
+  state = {
+    days: [
+      'Понедельник',
+      'Вторник',
+      'Среда',
+      'Четверг',
+      'Пятница',
+      'Суббота',
+      'Воскресенье'
+    ]
+  };
   render() {
     return (
       <Dialog onClose={this.props.onClose} open={this.props.open}>
@@ -84,116 +114,88 @@ class ScheduleCreateModal extends React.Component {
               <MenuItem value={1}>Расписание группы 1</MenuItem>
             </Select>
           </FormControl>
-          <Typography className={this.props.classes.subtitle}>
-            Понедельник
-          </Typography>
-          <FormControl className={this.props.classes.formcontrol}>
-            <Grid container className={this.props.classes.dynamicControl}>
-              <Grid className={this.props.classes.dynamicControlForm}>
-                <Select
-                  fullWidth
-                  value={1}
-                  input={<Input name="head" id="head-helper" />}
+          {this.state.days.map(d => {
+            return (
+              <div key={d}>
+                <Typography className={this.props.classes.subtitle}>
+                  {d}
+                </Typography>
+                <Grid
+                  container
+                  spacing={16}
+                  alignItems="center"
+                  className={this.props.classes.dynamicControl}
                 >
-                  <MenuItem value={1}>Красильников Пётр Михайлович</MenuItem>
-                </Select>
-              </Grid>
-              <Grid className={this.props.classes.dynamicControlButtons}>
-                <Icon className={this.props.classes.cancel}>cancel</Icon>
-                <Icon className={this.props.classes.addCircle} color="primary">
-                  add_circle
-                </Icon>
-              </Grid>
-            </Grid>
-          </FormControl>
-          <FormControl className={this.props.classes.formcontrol}>
-            <TextField
-              margin="dense"
-              label="Фамилия руководителя"
-              type="text"
+                  <Grid item>
+                    <FormControl className={this.props.classes.timeInput}>
+                      <TextField
+                        defaultValue="08:00"
+                        margin="dense"
+                        label=""
+                        type="time"
+                        fullWidth
+                        className={this.props.classes.timeField}
+                      />
+                    </FormControl>
+                  </Grid>
+                  <Grid item className={this.props.classes.timesep}>
+                    &ndash;
+                  </Grid>
+                  <Grid item>
+                    <FormControl className={this.props.classes.timeInput}>
+                      <TextField
+                        defaultValue="08:00"
+                        margin="dense"
+                        label=""
+                        type="time"
+                        fullWidth
+                        className={this.props.classes.timeField}
+                      />
+                    </FormControl>
+                  </Grid>
+                  <Grid item style={{ minWidth: 150 }}>
+                    <FormControl className={this.props.classes.formcontrol}>
+                      <InputLabel className={this.props.classes.label}>
+                        Место проведения
+                      </InputLabel>
+                      <Select
+                        fullWidth
+                        value={1}
+                        input={<Input name="status" id="status-helper" />}
+                      >
+                        <MenuItem value={1}>Лед</MenuItem>
+                        <MenuItem value={2}>Зал</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
+                  <Grid
+                    item
+                    className={this.props.classes.dynamicControlButtons}
+                  >
+                    <Icon className={this.props.classes.cancel}>cancel</Icon>
+                    <Icon
+                      className={this.props.classes.addCircle}
+                      color="primary"
+                    >
+                      add_circle
+                    </Icon>
+                  </Grid>
+                </Grid>
+              </div>
+            );
+          })}
+          <FormControl
+            style={{ marginTop: 24 }}
+            className={this.props.classes.formcontrol}
+          >
+            <InputLabel>Выберите повторение расписания</InputLabel>
+            <Select
               fullWidth
-            />
-          </FormControl>
-          <FormControl className={this.props.classes.formcontrol}>
-            <TextField
-              margin="dense"
-              label="Имя руководителя"
-              type="text"
-              fullWidth
-            />
-          </FormControl>
-          <FormControl className={this.props.classes.formcontrol}>
-            <TextField
-              margin="dense"
-              label="Отчество руководителя"
-              type="text"
-              fullWidth
-            />
-          </FormControl>
-          <Typography className={this.props.classes.subtitle}>
-            Добавить фото руководителя
-          </Typography>
-          <FileUpload />
-          <FormControl className={this.props.classes.formcontrol}>
-            <TextField
-              margin="dense"
-              label="Режим работы"
-              type="text"
-              fullWidth
-            />
-          </FormControl>
-          <Typography className={this.props.classes.subtitle}>
-            Реквизиты
-          </Typography>
-          <FormControl className={this.props.classes.formcontrol}>
-            <TextField
-              margin="dense"
-              label="Полное нзвание школы"
-              type="text"
-              fullWidth
-            />
-          </FormControl>
-          <FormControl className={this.props.classes.formcontrol}>
-            <TextField
-              margin="dense"
-              label="Юридический адрес"
-              type="text"
-              fullWidth
-            />
-          </FormControl>
-          <FormControl className={this.props.classes.formcontrol}>
-            <TextField margin="dense" label="ИНН" type="text" fullWidth />
-          </FormControl>
-          <FormControl className={this.props.classes.formcontrol}>
-            <TextField margin="dense" label="ОГРН" type="text" fullWidth />
-          </FormControl>
-          <Typography className={this.props.classes.subtitle}>
-            Группы
-          </Typography>
-          <FormControl className={this.props.classes.formcontrol}>
-            <Grid container className={this.props.classes.dynamicControl}>
-              <Grid className={this.props.classes.dynamicControlForm}>
-                <InputLabel>Выберите группу</InputLabel>
-                <Select
-                  fullWidth
-                  value={1}
-                  input={<Input name="group" id="group-helper" />}
-                >
-                  <MenuItem value={1}>Группа 2012 г. р.</MenuItem>
-                </Select>
-              </Grid>
-              <Grid className={this.props.classes.dynamicControlButtons}>
-                <Icon className={this.props.classes.cancel}>cancel</Icon>
-                <Icon className={this.props.classes.addCircle} color="primary">
-                  add_circle
-                </Icon>
-              </Grid>
-            </Grid>
-          </FormControl>
-          <Typography className={this.props.classes.subtitle}>Залы</Typography>
-          <FormControl className={this.props.classes.formcontrol}>
-            <InputLabel>Выберите зал</InputLabel>
-            <Select fullWidth value="" />
+              value={1}
+              input={<Input name="status" id="status-helper" />}
+            >
+              <MenuItem value={1} />
+            </Select>
           </FormControl>
         </DialogContent>
         <DialogActions>
