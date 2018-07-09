@@ -153,7 +153,7 @@ class GroupPageContent extends React.Component {
                 }}
               />
               <Tab
-                label="Тренировочный план"
+                label="Тренировки"
                 value="training"
                 textColor="primary"
                 classes={{
@@ -165,7 +165,7 @@ class GroupPageContent extends React.Component {
                 }}
               />
               <Tab
-                label="Журнал посещения"
+                label="Журналы"
                 value="journal"
                 textColor="primary"
                 classes={{

@@ -120,7 +120,7 @@ class SportsmenPageContent extends React.Component {
                 }}
               />
               <Tab
-                label="Тренировочный план"
+                label="Тренировки"
                 value="plan"
                 textColor="primary"
                 classes={{
@@ -130,7 +130,7 @@ class SportsmenPageContent extends React.Component {
                 }}
               />
               <Tab
-                label="Журнал"
+                label="Журналы"
                 value="journal"
                 textColor="primary"
                 classes={{
