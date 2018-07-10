@@ -8,6 +8,7 @@ import { Tabs, Tab } from '@material-ui/core';
 import { history } from '../../routers/AppRouter';
 import Common from './content/Common';
 import Stats from './content/statistic/StatsPage';
+import Journal from './content/journal/JournalPage';
 
 const styles = theme => ({
   select: {
@@ -199,6 +200,7 @@ class GroupPageContent extends React.Component {
         >
           {view === 'common' && <Common />}
           {view === 'stats' && <Stats />}
+          {view === 'journal' && <Journal />}
         </TabContainer>
       </section>
     ) : (
