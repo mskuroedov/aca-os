@@ -15,9 +15,9 @@ import styles from '../../../../styles'
 
 
 class SportCareer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+    constructor(props) {
+        super(props);
+    }
 
 
     render() {
@@ -25,7 +25,7 @@ class SportCareer extends React.Component {
         return (
             <div>
                 <Typography className={classes.title}>Спортивная карьера</Typography>
-                <Paper className={classnames('paper', classes.paper)}>
+                <Paper className="paper">
                     <Table className="table no-bottom xs-hidden" >
                         <TableHead>
                             <TableRow>
@@ -35,7 +35,7 @@ class SportCareer extends React.Component {
                                 <TableCell >Клуб</TableCell>
                                 <TableCell numeric>Игровой номер</TableCell>
                                 <TableCell numeric>Спортивный разряд</TableCell>
-<TableCell />
+
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -47,10 +47,7 @@ class SportCareer extends React.Component {
                                 {/*<TableCell >Канарейкин Фёдор Леонидович</TableCell>*/}
                                 <TableCell numeric>13</TableCell>
                                 <TableCell numeric>2</TableCell>
-                            <TableCell className="PaperMenuTrigger">
-                  <PaperMenu relate />
-                </TableCell>
-              </TableRow>
+                            </TableRow>
                             <TableRow>
                                 <TableCell >1976-1981</TableCell>
                                 <TableCell >Хоккей</TableCell>
@@ -59,10 +56,7 @@ class SportCareer extends React.Component {
                                 {/*<TableCell >Кудашов Алексей Николаевич</TableCell>*/}
                                 <TableCell numeric>13</TableCell>
                                 <TableCell numeric>2</TableCell>
-                            <TableCell className="PaperMenuTrigger">
-                  <PaperMenu relate />
-                </TableCell>
-              </TableRow>
+                            </TableRow>
                             <TableRow>
                                 <TableCell >1981-1999</TableCell>
                                 <TableCell >Хоккей</TableCell>
@@ -70,13 +64,11 @@ class SportCareer extends React.Component {
                                 <TableCell >«Ак Барс»</TableCell>
                                 {/*<TableCell >Саяпов Ренат Хайдярович</TableCell>*/}
                                 <TableCell numeric>13</TableCell>
-                                <TableCell numeric>2</TableCell><TableCell className="PaperMenuTrigger">
-                  <PaperMenu relate />
-                </TableCell>
+                                <TableCell numeric>2</TableCell>
                             </TableRow>
                         </TableBody>
                     </Table>
-                    <div className="lg-hidden">
+                    <div className='lg-hidden'>
                         <Grid container spacing={0} style={{padding: 16}}>
                             <Grid item xs={12}>
                                 <Typography className={classes.textSecondary}>Период</Typography>
@@ -101,22 +93,21 @@ class SportCareer extends React.Component {
                             </Grid>
                             <Grid item xs={12}>
                                 <Typography className={classes.textSecondary}>Тренер</Typography>
-                                <Link className={classnames(classes.link,classNames(classes.textMain,classes.mb16))} to="2">Саяпов Ренат Маратович</Link>
+                                <Link className={classNames(classes.link,classNames(classes.textMain,classes.mb16))} to='2'>Саяпов Ренат Маратович</Link>
                             </Grid>
                         </Grid>
-                    <PaperMenu />
-          </div>
+                    </div>
 
                 </Paper>
 
             </div>
-);
 
+        )
     }
 }
 
 SportCareer.propTypes = {
-  classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(SportCareer);

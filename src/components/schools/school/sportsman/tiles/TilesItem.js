@@ -70,7 +70,8 @@ class TilesView extends React.Component {
 }
 
 TilesView.propTypes = {
-  classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
 };
 
-export default withRouter(withStyles(styles)(TilesView));
+export default withStyles(styles)(TilesView);
+

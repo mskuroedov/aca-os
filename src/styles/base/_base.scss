@@ -4,7 +4,7 @@
 }
 
 html {
-  // font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
@@ -26,17 +26,11 @@ button:disabled {
   font-weight: bold;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-a,
-a:hover {
+a, a:hover {
   text-decoration: none;
 }
 
@@ -47,15 +41,15 @@ i {
 }
 
 p {
-  font-family: 'BlissPro', sans-serif !important;
+  font-family: "BlissPro", sans-serif !important;
 }
 
-.cart {
+.cart{
   position: relative;
-  .cart-items {
+  .cart-items{
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width:20px;
+    height:20px;
     background-color: #005945;
     color: white;
     font-size: 12px;
@@ -66,105 +60,4 @@ p {
     font-weight: bold;
     text-align: center;
   }
-}
-
-.FileUpload {
-  overflow: hidden;
-}
-.FileUploadInner {
-  position: relative;
-}
-.FileUploadLabel {
-  font-size: 16px;
-  font-weight: 600;
-  color: #00765e;
-  cursor: pointer;
-  position: relative;
-  z-index: 5;
-  font-size: 13px;
-  text-transform: uppercase;
-  pointer-events: none;
-}
-.FileUpload input {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  opacity: 0;
-}
-
-.Button {
-  font-size: 13px;
-  font-weight: bold;
-  height: 45px;
-  vertical-align: top;
-}
-.Select {
-  height: 45px;
-  background-color: rgba(36, 36, 33, 0.1);
-  padding-left: 17px;
-  padding-bottom: 0;
-  padding-top: 0;
-  padding-right: 40px;
-  font-size: 16px;
-  color: #242421;
-  line-height: 45px;
-  &:after {
-    background-color: #242421;
-  }
-}
-.SelectIcon {
-  color: #6d6d6d;
-  margin-top: 0;
-}
-.FormControl {
-  vertical-align: top;
-}
-.Gray {
-  color: rgba(36, 36, 33, 0.3);
-}
-.MenuButton {
-  top: 8px;
-  right: 6px;
-  position: absolute;
-}
-.MenuButtonRelate {
-  top: 0;
-  right: 0;
-  position: relative;
-}
-.MainText {
-  color: #242421;
-  font-size: 18px;
-  font-weight: bold;
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-.SecondaryText {
-  color: rgba(36, 36, 33, 0.6);
-  font-size: 14px;
-  padding-bottom: 0;
-}
-.Paper {
-  box-shadow: none;
-  border-radius: 12px;
-  padding-top: 24px;
-  padding-left: 27px;
-  padding-bottom: 32px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  font-family: 'BlissPro', sans-serif;
-  position: relative;
-  a {
-    @extend .PaperLink;
-  }
-}
-.PaperLink {
-  color: #242421;
-  border-bottom: 1px solid rgba(36, 36, 33, 0.3);
-}
-.PaperMenuTrigger {
-  width: 55px;
-  padding: 0 !important;
 }

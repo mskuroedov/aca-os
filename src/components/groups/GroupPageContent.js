@@ -14,112 +14,70 @@ import TrainerView from "./TrainerView";
 import styles from '../styles'
 
 class GroupPageContent extends React.Component {
-  state = {
-    tableView: false,
-    statsAmplua,
-    sportsman,
-    selectedAmpluaFilter: 1
-  };
+    state = {
+        tableView: false,
+        statsAmplua,
+        sportsman,
+        selectedAmpluaFilter: 1,
+    };
 
-  constructor(props) {
-    super(props);
-  }
+    constructor(props) {
+        super(props);
+    }
 
-  static defaultProps = {
-    view: 'common'
-  };
 
-  handleChange = (event, value) => {
-    history.push(`/groups/${value}`);
-  };
+    render() {
+        const {classes} = this.props;
+        const {statsAmplua, sportsman} = this.state;
+        return (
+            <section className={'main-section'}>
+                <Grid container spacing={16}>
+                    <Grid item xs={12}>
+                        <FormControl>
+                            <Select
+                                value={this.state.selectedAmpluaFilter}
+                                // onChange={this.onYearFilterChange}
+                                disableUnderline={true}
+                                classes={{
+                                    select: classes.select,
+                                    icon: classes.selectIcon,
+                                }}
+                                autoWidth
+                            >
+                                {
+                                    this.state.statsAmplua.map((item) => (
+                                        <MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>
+                                    ))
+                                }
+                            </Select>
+                        </FormControl>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Typography className={classes.title}>Спортсмены</Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TilesView sportsman={sportsman}/>
+                    </Grid>
+                    <Grid item xs={12}>
 
-  render() {
-    const { classes, view } = this.props;
+                        <Typography className={classes.title}>Тренерский состав</Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Grid container spacing={16}>
+                            <Grid item xs={12} lg={4}>
+                                <TrainerView/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </section>
 
-    return view ? (
-      <section style={{ backgroundColor: 'white' }}>
-        <Grid container>
-          <Grid item xs={12}>
-            <Tabs
-              value={view}
-              onChange={this.handleChange}
-              className={classes.tabs}
-              indicatorColor="primary"
-              scrollable={true}
-              classes={{
-                root: classes.root,
-                flexContainer: classes.menuFlexContainer
-              }}
-              style={{
-                backgroundColor: 'white'
-              }}
-            >
-              <Tab
-                label="Общее"
-                value="common"
-                textColor="primary"
-                classes={{
-                  label: classes.button,
-                  labelContainer: classes.button,
-                  wrapper: classes.button,
-                  selected: classes.bc,
-                  root: classes.rootTabPrimary
-                }}
-              />
-              <Tab
-                label="Тренировки"
-                value="training"
-                textColor="primary"
-                classes={{
-                  label: classes.button,
-                  labelContainer: classes.button,
-                  wrapper: classes.button,
-                  selected: classes.bc,
-                  root: classes.rootTabPrimary
-                }}
-              />
-              <Tab
-                label="Журналы"
-                value="journal"
-                textColor="primary"
-                classes={{
-                  label: classes.button,
-                  labelContainer: classes.button,
-                  wrapper: classes.button,
-                  selected: classes.bc,
-                  root: classes.rootTabPrimary
-                }}
-              />
-              <Tab
-                label="Статистика"
-                value="stats"
-                textColor="primary"
-                classes={{
-                  label: classes.button,
-                  labelContainer: classes.button,
-                  wrapper: classes.button,
-                  selected: classes.bc,
-                  root: classes.rootTabPrimary
-                }}
-              />
-            </Tabs>
-          </Grid>
-        </Grid>
-        <TabContainer
-          style={{ paddingTop: 30 }}
-          classes={{
-            scroller: classes.tabScroller
-          }}
-        >
-          {view === 'common' && <Common />}
-          {view === 'stats' && <Stats />}
-          {view === 'journal' && <Journal />}
-        </TabContainer>
-      </section>
-    ) : (
-      <Redirect to={`/groups/common`} />
-    );
-  }
+        )
+    }
 }
+
+GroupPageContent.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
 
 export default withStyles(styles)(GroupPageContent);

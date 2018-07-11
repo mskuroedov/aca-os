@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
+import {withStyles} from 'material-ui/styles';
 import classNames from 'classnames';
-import Grid from '@material-ui/core/es/Grid/Grid';
-import FormControl from '@material-ui/core/es/FormControl/FormControl';
+import Grid from "@material-ui/core/es/Grid/Grid";
+import FormControl from "@material-ui/core/es/FormControl/FormControl";
 import Select from 'material-ui/Select';
 import {TeamStats,SelfStats, statsYear, statsAmplua, statsChamp, statsStage} from "../../../../fixtures/stats";
 import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
@@ -16,36 +16,34 @@ import styles from '../../../styles'
 
 
 class StatsPage extends React.Component {
-  state = {
-    tableView: false,
-    TeamStats,
-    SelfStats,
-    statsAmplua,
-    statsChamp,
-    statsYear,
-    statsStage,
-    selectedYearFilter: 1,
-    selectedChampionshipFilter: 1,
-    selectedAmpluaFilter: 1,
-    selectedStageFilter: 1,
-    selfView: true
-  };
+    state = {
+        tableView: false,
+        TeamStats,
+        SelfStats,
+        statsAmplua,
+        statsChamp,
+        statsYear,
+        statsStage,
+        selectedYearFilter: 1,
+        selectedChampionshipFilter: 1,
+        selectedAmpluaFilter: 1,
+        selectedStageFilter: 1,
+        selfView: true
+    };
 
-  onYearFilterChange = event => {
-    this.setState({ selectedYearFilter: event.target.value });
-  };
+    onYearFilterChange = event => {
+        this.setState({selectedYearFilter: event.target.value});
+    };
 
-  onChampionshipFilterChange = event => {
-    this.setState({ selectedChampionshipFilter: event.target.value });
-  };
-
-  onAmpluaFilterChange = event => {
-    this.setState({ selectedChampionshipFilter: event.target.value });
-  };
-
-  onStageFilterChange = event => {
-    this.setState({ selectedStageFilter: event.target.value });
-  };
+    onChampionshipFilterChange = event => {
+        this.setState({selectedChampionshipFilter: event.target.value});
+    };
+    onAmpluaFilterChange = event => {
+        this.setState({selectedChampionshipFilter: event.target.value});
+    };
+    onStageFilterChange = event => {
+        this.setState({selectedStageFilter: event.target.value});
+    };
 
     render() {
         const {classes,common} = this.props;
@@ -180,5 +178,9 @@ class StatsPage extends React.Component {
         )
     }
 }
+
+// StatsPage.propTypes = {
+//     classes: PropTypes.object.isRequired,
+// };
 
 export default withStyles(styles)(StatsPage);

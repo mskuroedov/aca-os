@@ -2,25 +2,27 @@
   box-shadow: none !important;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px !important;
-  @media (max-width: 1023px) {
+  @media (max-width:1023px){
     overflow-x: scroll;
   }
-  &.paper-news {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+  &.paper-news{
+
+    border: 1px solid rgba(0,0,0,0.1);
     font-size: 16px;
     box-shadow: none;
-    font-family: 'BlissPro', sans-serif;
+    font-family: "BlissPro",sans-serif;
     border-radius: 12px;
     margin-bottom: 10px;
     padding: 47px 81px 40px;
     @media (max-width: 1023px) {
       padding: 32px 16px;
+
     }
   }
 }
-.trainer {
-  border-bottom: 1px solid rgba(36, 36, 33, 0.2);
-  transition: all 0.2s;
+.trainer{
+  border-bottom:1px solid rgba(36,36,33,0.2);
+  transition:all 0.2s;
   padding-top: 4px;
   padding-bottom: 4px;
   cursor: pointer;
@@ -42,15 +44,16 @@
     line-height: 0.5;
   }
   a {
-    color: rgba(36, 36, 33, 1);
-    border-bottom: 1px solid rgba(36, 36, 33, 0.2);
-    transition: all 0.2s;
+    color: rgba(36,36,33,1);
+    border-bottom:1px solid rgba(36,36,33,0.2);
+    transition:all 0.2s;
     padding-top: 4px;
     padding-bottom: 4px;
-  }
+    }
 
   a:hover {
-    border-bottom: 1px solid rgba(36, 36, 33, 1);
+    border-bottom:1px solid rgba(36,36,33,1)
+
   }
 
   img {
@@ -62,34 +65,29 @@
     align-self: center;
   }
 }
-.sportsmen_contact {
+.sportsmen_contact{
   font-size: 14px;
 }
-.main-section {
+.main-section{
   padding: 32px 16px 64px;
   @media (min-width: 1024px) {
     padding: 32px 168px 64px;
+
   }
 }
-.quoting {
+.quoting{
   font-style: italic;
   font-size: 16px !important;
   padding-left: 16px;
   position: relative;
   margin-bottom: 32px !important;
-  &:before {
+  &:before{
     content: '';
     position: absolute;
     top: 0;
-    height: 100%;
-    left: 0;
-    width: 2px;
-    background-color: #00755e;
-  }
-}
-
-.paper {
-  a {
-    @extend .PaperLink;
+    height:100%;
+    left:0;
+    width:2px;
+    background-color:#00755E
   }
 }

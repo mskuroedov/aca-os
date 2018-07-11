@@ -1344,17 +1344,6 @@ const styles = theme => ({
             borderTop: '1px solid rgba(36,36,33,.1)'
         }
     },
-    paper: {
-        boxShadow: 'none',
-        borderRadius: 12,
-        paddingTop: 24,
-        paddingBottom: 20,
-        marginBottom: 10,
-        border: '1px solid rgba(0,0,0,0.1);',
-        fontSize: 16,
-        fontFamily: '"BlissPro",sans-serif'
-
-    },
     avatarw100: {
         width: 100,
         height: 100,

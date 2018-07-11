@@ -7,86 +7,64 @@ import PropTypes from 'prop-types';
 import styles from '../../styles'
 
 class Career extends React.Component {
-  render() {
-    const { classes } = this.props;
-    return (
-      <Grid item xs={12} className="paper_w_table">
-        <Paper className="paper">
-          <Table className="table xs-hidden">
-            <TableHead>
-              <TableRow>
-                <TableCell>Период</TableCell>
-                <TableCell>Амплуа</TableCell>
-                <TableCell>Команда</TableCell>
-                <TableCell numeric>Игры</TableCell>
-                <TableCell numeric>Выигрыши</TableCell>
-                <TableCell>Тренер</TableCell>
-                <TableCell />
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                <TableCell style={{ borderBottom: 0 }}>2010-2017</TableCell>
-                <TableCell style={{ borderBottom: 0 }}>Нападающий</TableCell>
-                <TableCell style={{ borderBottom: 0 }}>Ак Барс</TableCell>
-                <TableCell style={{ borderBottom: 0 }} numeric>
-                  36
-                </TableCell>
-                <TableCell style={{ borderBottom: 0 }} numeric>
-                  14
-                </TableCell>
-                <TableCell style={{ borderBottom: 0 }}>
-                  <Link to="#">Саяпов Ренат Маратович</Link>
-                </TableCell>
-                <TableCell
-                  style={{ borderBottom: 0 }}
-                  className="PaperMenuTrigger"
-                >
-                  <PaperMenu relate />
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-          <Grid
-            container
-            spacing={0}
-            style={{ padding: 16, position: 'relative' }}
-            className="lg-hidden"
-          >
-            <Grid item xs={12}>
-              <Typography className={classes.textSecondaryfs16}>Период</Typography>
-              <Typography className={classNames(classes.textMain,classes.mb16)}>2010-2017</Typography>
+    render() {
+        const {classes} = this.props;
+        return(
+            <Grid item xs={12} lg={8} className="paper_w_table">
+                <Paper className="paper">
+                    <Table className="table xs-hidden">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell >Вид спорта</TableCell>
+                                <TableCell >Игровой номер</TableCell>
+                                <TableCell >Амплуа</TableCell>
+                                <TableCell  >Команда</TableCell>
+                                <TableCell  numeric>Спортивный разряд</TableCell>
+                                {/*<TableCell  >Тренер</TableCell>*/}
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            <TableRow>
+                                <TableCell style={{borderBottom:0}}>Хоккей</TableCell>
+                                <TableCell style={{borderBottom:0}}>13</TableCell>
+                                <TableCell style={{borderBottom:0}}>Нападающий</TableCell>
+                                <TableCell style={{borderBottom:0}}>Ак Барс</TableCell>
+                                <TableCell style={{borderBottom:0}} numeric>2</TableCell>
+                                {/*<TableCell style={{borderBottom:0}} ><span className='trainer'>Саяпов Ренат Маратович</span></TableCell>*/}
+                            </TableRow>
+                        </TableBody>
+                    </Table>
+                    <Grid container spacing={0} style={{padding:16}} className='lg-hidden'>
+                        <Grid item xs={12}>
+                            <Typography className={classes.textSecondaryfs16}>Вид спорта</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>Хоккей</Typography>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography className={classes.textSecondaryfs16}>Игровой номер</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>13</Typography>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography className={classes.textSecondaryfs16}>Амплуа</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>Нападающий</Typography>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography className={classes.textSecondaryfs16}>Команда</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>Ак Барс</Typography>
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Typography className={classes.textSecondaryfs16}>Спортивный разряд</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}> 2</Typography>
+                        </Grid>
+                    </Grid>
+                </Paper>
             </Grid>
-            <Grid item xs={12}>
-              <Typography className={classes.textSecondaryfs16}>Амплуа</Typography>
-              <Typography className={classNames(classes.textMain,classes.mb16)}>Нападающий</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography className={classes.textSecondaryfs16}>Команда</Typography>
-              <Typography className={classes.textMain}>Ак Барс</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography className={classes.textSecondary}>Игры</Typography>
-              <Typography className={classNames(classes.textMain,classes.mb16)}>36</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography className={classes.textSecondaryfs16}>
-                Выигрыши
-              </Typography>
-              <Typography className={classNames(classes.textMain,classes.mb16)}>14</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography className={classes.textSecondaryfs16}>Тренер</Typography>
-              <Typography className={classNames(classes.textMain,classes.mb16)}>
-                <Link to="#">Саяпов Ренат Маратович</Link>
-              </Typography>
-            </Grid>
-            <PaperMenu />
-          </Grid>
-        </Paper>
-      </Grid>
-    );
-  }
+
+        )
+    }
 }
+
+Career.propTypes = {
+    classes: PropTypes.object.isRequired
+};
 
 export default withStyles(styles)(Career);

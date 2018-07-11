@@ -1,18 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles";
-import Typography from "material-ui/Typography";
-import { Redirect } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import {withStyles} from 'material-ui/styles';
+import Typography from 'material-ui/Typography';
+import {Redirect} from "react-router-dom";
 import Grid from "material-ui/es/Grid/Grid";
-import { Paper } from "material-ui";
+import {Paper} from "material-ui";
 import Icon from "material-ui/es/Icon/Icon";
 import Link from "react-router-dom/es/Link";
 import styles from '../../../styles'
 
 class Contacts extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+    constructor(props) {
+        super(props);
+    }
 
 
     render() {
@@ -105,7 +105,7 @@ class Contacts extends React.Component {
 }
 
 Contacts.propTypes = {
-  classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(Contacts);

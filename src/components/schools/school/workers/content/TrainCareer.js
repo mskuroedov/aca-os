@@ -14,44 +14,44 @@ import Link from "react-router-dom/es/Link";
 import styles from '../../../../styles'
 
 class TrainCareer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+    constructor(props) {
+        super(props);
+    }
 
-  render() {
-    const { classes } = this.props;
-    return (
-      <div className="xs-hidden">
-        <Typography className={classes.title}>Тренерская карьера</Typography>
-        <Paper className={classnames('paper', classes.paper)}>
-          <Table className="table no-bottom">
-            <TableHead>
-              <TableRow>
-                <TableCell>Период</TableCell>
-                <TableCell>Должность</TableCell>
-                <TableCell>Организация</TableCell>
-                <TableCell />
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                <TableCell>2010-2017</TableCell>
-                <TableCell>тренер-преподаватель высшей категории</TableCell>
-                <TableCell>«Ак Барс»</TableCell>
-                <TableCell className="PaperMenuTrigger">
-                  <PaperMenu relate />
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </Paper>
-      </div>
-    );
-  }
+
+    render() {
+        const {classes} = this.props;
+        return (
+            <div className='xs-hidden'>
+                <Typography className={classes.title}>Тренерская карьера</Typography>
+                <Paper className="paper">
+                    <Table className="table no-bottom">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell >Период</TableCell>
+                                <TableCell >Должность</TableCell>
+                                <TableCell >Организация</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            <TableRow>
+                                <TableCell >2010-2017</TableCell>
+                                <TableCell >тренер-преподаватель высшей категории</TableCell>
+                                <TableCell >«Ак Барс»</TableCell>
+                            </TableRow>
+                        </TableBody>
+                    </Table>
+
+                </Paper>
+
+            </div>
+
+        )
+    }
 }
 
 TrainCareer.propTypes = {
-  classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(TrainCareer);
