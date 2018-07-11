@@ -5,14 +5,7 @@ import classNames from 'classnames';
 import Grid from "material-ui/es/Grid/Grid";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import NewsItem from "../Library/NewsItem";
-
-const styles = theme => ({
-    title:{
-        color:'rgba(36,36,36,.6)',
-        fontSize:20
-    }
-
-});
+import styles from '../../styles'
 
 
 class AuthorPageContent extends React.Component {
@@ -30,7 +23,7 @@ class AuthorPageContent extends React.Component {
             <section className='main-section'>
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
-                        <Typography className={classes.title}>Материалы</Typography>
+                        <Typography className={classes.title} style={{marginBottom:0}}>Материалы</Typography>
                     </Grid>
                     <Grid item xs={12} lg={6}>
                         {

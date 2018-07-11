@@ -3,25 +3,8 @@ import {Grid, Paper, Table, TableBody, TableCell, TableHead, TableRow} from "mat
 import {withStyles} from "material-ui/styles/index";
 import PropTypes from 'prop-types';
 import Typography from "@material-ui/core/es/Typography/Typography";
-
-
-const styles = theme => ({
-    textMain: {
-        color: '#242421',
-        fontSize: 16,
-        marginBottom: 16
-    },
-    textSecondary: {
-
-        color: 'rgba(36,36,33,0.54)',
-        fontSize: 16
-    },
-    borderBottom: {
-        '&*:(not-last-of-type)': {
-            borderBottom: '1px soldi red'
-        }
-    }
-});
+import classNames from 'classnames';
+import styles from '../../styles';
 
 class Rewards extends React.Component {
     render() {
@@ -54,36 +37,36 @@ class Rewards extends React.Component {
                     <div className='lg-hidden'>
                         <Grid container spacing={0} style={{padding: 16}} className='border-bottom'>
                             <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Название</Typography>
-                                <Typography className={classes.textMain}>Лучший бомбардир 2016</Typography>
+                                <Typography className={classes.textSecondaryfs16}>Название</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>Лучший бомбардир 2016</Typography>
                             </Grid>
                             <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Дата</Typography>
-                                <Typography className={classes.textMain}>21.12.2017</Typography>
+                                <Typography className={classes.textSecondaryfs16}>Дата</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>21.12.2017</Typography>
 
                             </Grid>
                         </Grid>
                         <Grid container spacing={0} style={{padding: 16}} className='border-bottom'>
                             <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Название</Typography>
-                                <Typography className={classes.textMain}>Лучший бомбардир 2016</Typography>
+                                <Typography className={classes.textSecondaryfs16}>Название</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>Лучший бомбардир 2016</Typography>
 
                             </Grid>
                             <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Дата</Typography>
-                                <Typography className={classes.textMain}>21.12.2017</Typography>
+                                <Typography className={classes.textSecondaryfs16}>Дата</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>21.12.2017</Typography>
 
                             </Grid>
                         </Grid>
                         <Grid container spacing={0} style={{padding: 16}} className='border-bottom'>
                             <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Название</Typography>
-                                <Typography className={classes.textMain}>Лучший бомбардир 2016</Typography>
+                                <Typography className={classes.textSecondaryfs16}>Название</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>Лучший бомбардир 2016</Typography>
 
                             </Grid>
                             <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Дата</Typography>
-                                <Typography className={classes.textMain}>21.12.2017</Typography>
+                                <Typography className={classes.textSecondaryfs16}>Дата</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>21.12.2017</Typography>
 
                             </Grid>
                         </Grid>

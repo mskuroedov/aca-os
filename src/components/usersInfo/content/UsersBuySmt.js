@@ -6,107 +6,7 @@ import Grid from "@material-ui/core/es/Grid/Grid";
 import Paper from "@material-ui/core/es/Paper/Paper";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import Button from "@material-ui/core/es/Button/Button";
-
-const styles = theme => ({
-    paperFirst: {
-        boxShadow: 'none',
-        borderRadius: 12,
-        paddingTop: 31,
-        paddingLeft: 24,
-        paddingBottom: 16,
-        paddingRight: 64,
-        [theme.breakpoints.down('lg')]: {
-            paddingLeft: 20,
-            paddingRight: 25,
-        },
-        border: '1px solid rgba(0,0,0,0.1);',
-        fontSize: 16,
-        fontFamily: '"BlissPro",sans-serif',
-    },
-    paperSecond: {
-        boxShadow: 'none',
-        borderRadius: 12,
-        paddingTop: 31,
-        paddingLeft: 24,
-        paddingBottom: 16,
-        paddingRight: 64,
-        [theme.breakpoints.down('lg')]: {
-            paddingLeft: 32,
-            paddingRight: 32,
-        },
-        border: '1px solid rgba(0,0,0,0.1);',
-        fontSize: 16,
-        fontFamily: '"BlissPro",sans-serif',
-    },
-    title: {
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-    heading: {
-        fontSize: 18,
-        color: '#242421',
-        fontWeight: 'bold',
-        marginBottom: 18
-    },
-    primaryText: {
-        fontSize: 16,
-        fontFamily: 'BlissPro',
-        marginBottom: 16
-    },
-    firstText: {
-        width: 662,
-        maxHeight: 62,
-        overflow: 'hidden',
-        [theme.breakpoints.down('lg')]: {
-            width: 'auto',
-            maxHeight: 255,
-        }
-
-    },
-    secondText: {
-        maxHeight: 60,
-        overflow: 'hidden',
-        [theme.breakpoints.down('lg')]: {
-
-            maxHeight: 355
-
-        }
-    },
-    button: {
-        margin: theme.spacing.unit,
-        fontSize: 13,
-        marginLeft: 'auto',
-        fontWeight: 'bold',
-        fontFamily: '"BlissPro",sans-serif',
-    },
-    p0: {
-        padding: 0
-    },
-    price: {
-        fontSize: 24,
-        color: '#242421',
-        fontWeight: 'bold'
-    },
-    buttonContainer: {
-        [theme.breakpoints.down('lg')]: {
-
-            textAlign: 'left'
-        },
-        [theme.breakpoints.up('lg')]: {
-
-            textAlign: 'center'
-
-        }
-    },
-    hide:{
-        maxHeight:0,
-        maxWidth:0,
-        display:'none'
-    }
-
-});
+import styles from '../../styles'
 
 
 class UsersBuySmt extends React.Component {
@@ -136,11 +36,11 @@ class UsersBuySmt extends React.Component {
                                     рекомендован также преподавателям вузов физической культуры, тренерам.</span>
                                 </Typography>
                                 <Button color='primary'
-                                        className={classNames(classes.button, classes.p0)}>Подробнее</Button>
+                                        className={classNames(classes.button, classes.p0)} style={{marginLeft:'auto'}}>Подробнее</Button>
 
                             </Grid>
                             <Grid item xs={12} lg={3} className={classes.buttonContainer}>
-                                <Typography className={classes.price}>456 руб.</Typography>
+                                <Typography className={classes.UBSprice}>456 руб.</Typography>
                                 <Button variant="raised" color='primary' className={classes.button}>в корзину</Button>
                             </Grid>
                         </Grid>

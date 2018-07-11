@@ -9,39 +9,7 @@ import FormControl from "material-ui/es/Form/FormControl";
 import Input from "material-ui/es/Input/Input";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
 import AuthorGrid from "./AuthorGrid";
-
-const styles = theme => ({
-    mlauto: {
-        display: 'flex'
-    },
-    searchInput: {
-        fontSize: 14,
-        color: 'rgba(36,36,33,1)',
-        marginTop: 11,
-        paddingBottom: 5,
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        }
-    },
-    searchInkbar: {
-        color: 'rgba(36,36,33,1)',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        }
-    },
-    searchInputIcon: {
-        color: 'rgba(145,143,138,1)',
-        position: 'relative',
-        top: 3
-    },
-
-});
+import styles from '../../styles'
 
 
 class Authors extends React.Component {

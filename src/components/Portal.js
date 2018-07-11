@@ -12,6 +12,7 @@ import FormControl from "material-ui/es/Form/FormControl";
 import Input from "material-ui/es/Input/Input";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Icon from "material-ui/es/Icon/Icon";
+import styles from "./styles";
 
 function TabContainer(props) {
     return (
@@ -27,75 +28,6 @@ TabContainer.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-const styles = theme => ({
-    paper: {
-        boxShadow: 'none',
-        borderRadius: 12,
-        paddingTop: 16,
-        paddingLeft: 24,
-        paddingBottom: 16,
-        paddingRight:16,
-        marginBottom: 10,
-        border: '1px solid rgba(0,0,0,0.1);',
-        fontSize: 16,
-        fontFamily: '"BlissPro",sans-serif',
-    },
-    title: {
-        marginBottom: 11,
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-    primaryText: {
-        fontSize: 16,
-        fontFamily: 'BlissPro',
-        marginBottom:16
-    },
-    button: {
-        margin: theme.spacing.unit,
-        fontSize: 13,
-        fontWeight: 'bold',
-        fontFamily: '"BlissPro",sans-serif',
-    },
-    xsh:{
-        [theme.breakpoints.down('lg')]: {
-            display:'none',
-        },
-    },
-
-    searchInput: {
-        fontSize: 14,
-        color: 'rgba(36,36,33,1)',
-        marginTop: 11,
-        paddingBottom: 5,
-        width:'100%',
-        marginLeft: 'auto',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        }
-    },
-    searchInkbar: {
-        color: 'rgba(36,36,33,1)',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        }
-    },
-    searchInputIcon: {
-        color: 'rgba(145,143,138,1)',
-        position: 'relative',
-        top: 0
-    },
-    formControl: {
-        width:'100%'
-    },
-});
 
 class Portal extends React.Component {
 

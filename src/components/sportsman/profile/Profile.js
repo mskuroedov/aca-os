@@ -12,18 +12,6 @@ import Achievements from "./Achievements";
 import TableTitle from "./TableTitle";
 
 
-const styles = theme => ({
-    button: {
-        margin: theme.spacing.unit,
-        fontSize: 13,
-        marginLeft: 'auto',
-        marginRight: 20,
-        fontFamily: '"BlissPro",sans-serif',
-    },
-
-});
-
-
 class Profile extends React.Component {
     render() {
         const {sportsmen} = this.props;
@@ -53,7 +41,7 @@ Profile.propTypes = {
 };
 
 
-export default withStyles(styles)(Profile);
+export default Profile;
 
 //<TableTitle title="Контакты спортсмена"/>
 //<ContactsOfSportsmen {...sportsmen.contacts}/>

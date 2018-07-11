@@ -7,6 +7,8 @@ import Grid from "@material-ui/core/es/Grid/Grid";
 import TournamentInfo from "./TournamentInfo";
 import TournamentMatches from "./TournamentMatches";
 import {calendar} from "../../fixtures/calendar";
+import styles from '../styles'
+
 
 function TabContainer(props) {
     return (
@@ -22,63 +24,6 @@ TabContainer.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-const styles = theme => ({
-    root: {
-        color: '#00755E',
-        fontSize: 1.4,
-        fontWeight: 'bold',
-        opacity: 1,
-        paddingTop:8,
-        [theme.breakpoints.down('lg')]:{
-            paddingLeft:16,
-            paddingRight:16
-        },
-        [theme.breakpoints.up('lg')]:{
-            paddingLeft:168,
-            paddingRight:168
-        },
-    },
-    rootPrimarySelected: {
-        color: '#000',
-    },
-    appBar: {
-        fontSize: 1.4,
-        backgroundColor: '#fff',
-        fontWeight: 'bold',
-        justifyContent: 'center',
-        boxShadow: 'none'
-    },
-    tabs: {
-        justifyContent: 'flex-end',
-        fontSize: 14
-    },
-    menuItem: {
-        fontSize: 14,
-        fontWeight: 'bold'
-    },
-    button: {
-        fontSize: 14,
-        fontWeight: 'bold',
-        fontFamily: '"BlissPro",sans-serif',
-        opacity: '1 !important'
-    },
-    bc: {
-        color: "#000 !important"
-    },
-    rootTabPrimary: {
-        minWidth: 0,
-        color: '#00755E',
-        opacity: 1
-    },
-    menuFlexContainer: {
-        justifyContent: 'start',
-
-    },
-    tabScroller: {
-        overflowX: 'scroll'
-    }
-
-});
 
 class TournamentsContent extends React.Component {
 
@@ -107,7 +52,7 @@ class TournamentsContent extends React.Component {
                             className={classes.tabs}
                             indicatorColor="primary"
                             classes={{
-                                root: classes.root,
+                                root: classes.TournamentContentTabroot,
                                 flexContainer: classes.menuFlexContainer
                             }}
                             style={{
@@ -120,9 +65,9 @@ class TournamentsContent extends React.Component {
                                 textColor="primary"
                                 classes={{
 
-                                    label: classes.button,
-                                    labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
-                                    wrapper: classes.button,
+                                    label: classes.tabButton,
+                                    labelContainer: classes.tabButton,// className, e.g. `OverridesClasses-label-X`
+                                    wrapper: classes.tabButton,
                                     selected: classes.bc,// className, e.g. `OverridesClasses-label-X`
                                     root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                                 }}
@@ -132,7 +77,7 @@ class TournamentsContent extends React.Component {
                                 value="matches"
                                 textColor="primary"
                                 classes={{
-                                    label: classes.button,
+                                    label: classes.tabButton,
                                     selected: classes.bc,
                                     root: classes.rootTabPrimary
                                 }}

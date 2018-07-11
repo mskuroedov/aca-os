@@ -5,11 +5,6 @@ import classNames from 'classnames';
 import Grid from "@material-ui/core/es/Grid/Grid";
 import AuthorCard from "./AuthorCard";
 
-const styles = theme => ({
-  
-
-});
-
 
 class AuthorGrid extends React.Component {
     constructor(props) {
@@ -42,4 +37,4 @@ AuthorGrid.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(AuthorGrid);
+export default AuthorGrid;

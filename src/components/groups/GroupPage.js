@@ -9,10 +9,6 @@ import GroupPageContent from "./GroupPageContent";
 import {routes} from "../../routers/AppRouter";
 import Footer from "../footer/Footer";
 
-const styles = theme => ({
-
-
-});
 
 
 class GroupPage extends React.Component {
@@ -44,4 +40,4 @@ GroupPage.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(GroupPage);
+export default GroupPage;

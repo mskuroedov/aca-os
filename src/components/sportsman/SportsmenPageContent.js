@@ -23,49 +23,6 @@ TabContainer.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-const styles = theme => ({
-    root: {
-        flexGrow: 1,
-        color: '#00755E',
-        fontSize: 1.4,
-        fontWeight: 'bold',
-        opacity: 1
-    },
-    rootPrimarySelected: {
-        color: '#000',
-    },
-    appBar: {
-        fontSize: 1.4,
-        backgroundColor: '#fff',
-        fontWeight: 'bold',
-        justifyContent: 'flex-end',
-        boxShadow: 'none'
-    },
-    tabs: {
-        justifyContent: 'flex-end',
-        fontSize: 14
-    },
-    menuItem: {
-        fontSize: 14,
-        fontWeight: 'bold'
-    },
-    button: {
-        fontSize: 14,
-        fontWeight: 'bold',
-        fontFamily: '"BlissPro",sans-serif',
-    },
-    bc: {
-        color: "#000 !important"
-    },
-    rootTabPrimary: {
-        minWidth: 0,
-        color: '#00755E'
-    },
-    menuFlexContainer: {
-        justifyContent: 'center'
-    }
-
-});
 
 class SportsmenPageContent extends React.Component {
 
@@ -85,11 +42,11 @@ class SportsmenPageContent extends React.Component {
     }
 }
 
-SportsmenPageContent.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
+// SportsmenPageContent.propTypes = {
+//     classes: PropTypes.object.isRequired,
+// };
 
-export default withStyles(styles)(SportsmenPageContent);
+export default SportsmenPageContent;
 
 // render() {
 //     const {classes, view, sportsmenId, sportsmen} = this.props;

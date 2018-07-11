@@ -4,72 +4,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {withStyles} from 'material-ui/styles';
 import Avatar from 'material-ui/Avatar';
+import styles from '../styles'
 
-
-const styles = theme => ({
-    avatar: {
-        margin: 10,
-    },
-    bigAvatar: {
-        [theme.breakpoints.down('lg')]: {
-
-            width: 60,
-            height: 60,
-        },
-        [theme.breakpoints.up('lg')]: {
-            width: 90,
-            height: 90,
-        },
-    },
-    sportsmenName: {
-        [theme.breakpoints.down('lg')]: {
-            fontSize: 18,
-
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: 24,
-
-        },
-        fontFamily: '"BlissPro",sans-serif',
-        color: 'black',
-        fontWeight: 'bold'
-    },
-    sportsmenHeader: {
-        alignItems: 'center',
-        [theme.breakpoints.down('lg')]: {
-            paddingLeft: 16,
-            paddingRight: 16,
-            paddingTop: 16,
-            paddingBottom:16
-        },
-        [theme.breakpoints.up('lg')]: {
-            paddingLeft: 165,
-            paddingRight: 165,
-            paddingTop: 50,
-            paddingBottom:32
-        },
-        backgroundColor: '#fff',
-        display: 'flex'
-    },
-    sportsmenRightSec: {
-        justifyItems: 'flex-end',
-        textAlign: 'right',
-        color: '#242421',
-        fontSize: 14,
-
-        [theme.breakpoints.down('lg')]: {
-            display: 'none'
-        },
-        [theme.breakpoints.up('lg')]: {
-            display: 'block'
-        },
-    },
-    sportsmenRatingNum: {
-        fontSize: 40,
-        color: '#242421',
-        fontFamily: 'AkBarsFont'
-    }
-});
 const SportmenHeader = (props) => {
     const {classes, firstname, secondname} = props;
     return (

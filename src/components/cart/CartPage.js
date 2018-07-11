@@ -7,7 +7,6 @@ import Subheader from "../headers/Subheader";
 import CartPageContent from "./CartPageContent";
 import Footer from "../footer/Footer";
 
-const styles = theme => ({});
 
 
 class CartPage extends React.Component {
@@ -17,7 +16,6 @@ class CartPage extends React.Component {
 
 
     render() {
-        const {classes} = this.props;
         return (
             <div>
                 <Header/>
@@ -29,8 +27,4 @@ class CartPage extends React.Component {
     }
 }
 
-CartPage.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(CartPage);
+export default CartPage;

@@ -12,11 +12,6 @@ import TableFooter from "@material-ui/core/es/TableFooter/TableFooter";
 import TablePagination from "@material-ui/core/es/TablePagination/TablePagination";
 import CalendarTableItem from "./CalendarTableItem";
 
-const styles = theme => ({
-
-
-});
-
 
 class CalendarTableView extends React.Component {
     constructor(props) {
@@ -129,4 +124,4 @@ CalendarTableView.propTypes = {
     calendar: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default withStyles(styles)(CalendarTableView);
+export default CalendarTableView;

@@ -13,9 +13,6 @@ import TableFooter from "@material-ui/core/es/TableFooter/TableFooter";
 import TablePagination from "@material-ui/core/es/TablePagination/TablePagination";
 import TournamentTableItem from "./matchesContent/TournamentTableItem";
 
-const styles = theme => ({});
-
-
 class TournamentMatches extends React.Component {
     constructor(props) {
         super(props);
@@ -132,4 +129,4 @@ TournamentMatches.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TournamentMatches);
+export default TournamentMatches;

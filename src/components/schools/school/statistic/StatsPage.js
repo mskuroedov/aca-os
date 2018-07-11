@@ -12,59 +12,7 @@ import Switch from "@material-ui/core/es/Switch/Switch";
 import TeamTableView from "./TeamTableView";
 import SelfTableView from "./SelfTableView";
 import SchoolStatsModalFilter from "./SchoolStatsModalFilter";
-
-const styles = theme => ({
-    button: {
-        fontSize: 13,
-        fontWeight: 'bold',
-        marginRight: 10,
-        height: '45px'
-    },
-    iconbtn: {
-        marginTop: 5,
-        marginLeft: 'auto'
-    },
-    gray: {
-        color: 'rgba(36,36,33,0.3)'
-    },
-    select: {
-        backgroundColor: 'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingTop: 16,
-        paddingBottom: 10,
-        paddingRight: 40,
-        fontSize: 16,
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        }
-    },
-    selectIcon: {
-        color: '#6D6D6D',
-    },
-    selectLine: {
-        color: 'transparent'
-    },
-    switchName: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: '#242421'
-    },
-    switchBase: {
-        color: '#00755E',
-        '&$checked': {
-            color: '#00755E',
-            '& + $bar': {
-                backgroundColor: '#00755E',
-            },
-        },
-    },
-    switchBar: {
-        backgroundColor: '#00755E',
-
-    }
-
-});
+import styles from '../../../styles'
 
 
 class StatsPage extends React.Component {
@@ -101,11 +49,11 @@ class StatsPage extends React.Component {
         const {classes,common} = this.props;
         const {SelfStats,TeamStats} = this.state;
         return (
-            <Grid container spacing={8}>
+            <Grid container spacing={8} alignItems='center'>
 
                 <Grid item>
                     <Grid container alignItems='center'>
-                        <Grid item >                    <span className={classes.switchName} style={{color: this.state.selfView ? '#00755E' : '#242421'}}>Командная</span>
+                        <Grid item >                    <span className={classes.switchName} style={{fontWeight:'bold',color: this.state.selfView ? '#00755E' : '#242421'}}>Командная</span>
                         </Grid>
                         <Grid item ><Switch
                             color='primary'
@@ -116,7 +64,7 @@ class StatsPage extends React.Component {
                             checked={this.state.selfView}
                             onChange={() => {this.setState({selfView: !this.state.selfView})}}
                         /></Grid>
-                        <Grid item >                    <span className={classes.switchName} style={{color: this.state.selfView ? '#242421' : '#00755E'  }} >Личная</span>
+                        <Grid item >                    <span className={classes.switchName} style={{fontWeight:'bold',color: this.state.selfView ? '#242421' : '#00755E'  }} >Личная</span>
                         </Grid>
                     </Grid>
 
@@ -214,7 +162,7 @@ class StatsPage extends React.Component {
                     <Button classes={{
                         root: classes.button,
                         label: classes.gray
-                    }}>
+                    }} style={{marginRight:10}}>
                         Сбросить
                     </Button>
                 </Grid>

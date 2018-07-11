@@ -9,82 +9,9 @@ import Typography from "material-ui/es/Typography/Typography";
 import Icon from "material-ui/es/Icon/Icon";
 import Button from "material-ui/es/Button/Button";
 import Chip from "material-ui/es/Chip/Chip";
+import styles from '../../styles'
 
 
-const styles = theme => ({
-
-    paper: {
-        boxShadow: 'none',
-        borderRadius: 12,
-        paddingBottom: 16,
-        paddingLeft: 24,
-        paddingRight: 24,
-        paddingTop: 16,
-        marginBottom: 10,
-        border: '1px solid rgba(0,0,0,0.1);',
-        fontSize: 16,
-        fontFamily: '"BlissPro",sans-serif',
-    },
-    avatar: {
-        width: 32,
-        height: 32
-    },
-    link: {
-        borderBottom: '1px solid rgba(36,36,33,0.2)',
-        color: 'rgba(36,36,33,1)',
-        '&:hover': {
-            color: 'rgba(0,118,94,1)'
-        }
-    },
-    video: {
-        width: '100%',
-        minHeight: 234,
-        border: 0
-    },
-    promo: {
-        width: 'calc(100% + 48px)',
-        position: 'relative',
-        left: '-24px'
-    },
-    itemGallery: {
-        width: '20%',
-        '& img': {
-            width: '100%'
-        }
-    },
-    buttonChip: {
-        fontSize: 14,
-        color: 'rgba(36,36,33,0.6)',
-        border: '1px solid rgba(36,36,33,0.3)',
-        maxHeight: 28,
-        backgroundColor: 'white',
-        borderRadius: 2
-    },
-    heading: {
-        fontSize: 20,
-        color: 'rgba(36,36,33,1)',
-        fontWeight: 'bold'
-    },
-    basicText: {
-        fontSize: 16,
-        color: 'rgba(36,36,33,1)',
-        maxHeight: 70,
-        overflow: 'hidden',
-        marginTop: 10,
-        textOverflow: 'ellipsis'
-    },
-    textDate: {
-        fontSize: 12,
-        color: 'rgba(36,36,33,0.6)'
-    },
-    icon: {
-        color: 'rgba(36,36,33,0.3)'
-    },
-    iconText: {
-        fontSize: 14
-    }
-
-});
 
 class NewsItem extends React.Component {
 
@@ -94,12 +21,12 @@ class NewsItem extends React.Component {
         return (
             <Link to='/libraries/1'>
 
-                <Paper className={classes.paper}>
+                <Paper className={classes.NIpaper}>
 
                     {/*заголовок и начало текста*/}
                     <Grid container spacing={16} style={{marginBottom: 20}}>
                         <Grid item xs={12}>
-                            <Typography className={classes.heading}>Как не разубедить ребенка заниматься
+                            <Typography className={classes.NIheading}>Как не разубедить ребенка заниматься
                                 хоккеем</Typography>
                             {text &&
                             <Typography className={classes.basicText}>В первую очередь, когда только ребенок стал
@@ -127,7 +54,7 @@ class NewsItem extends React.Component {
                     <Grid container spacing={16} style={{marginBottom: 20}}>
                         <Grid item xs={12}>
                             <img src="https://s00.yaplakal.com/pics/pics_original/3/0/9/9484903.jpg" alt=""
-                                 className={classes.promo}/>
+                                 className={classes.promoNews}/>
                         </Grid>
                     </Grid>
                     }
@@ -179,7 +106,7 @@ class NewsItem extends React.Component {
 
                     {/*тэг*/}
                     <Grid container spacing={16} alignItems='center' style={{marginBottom: 20}}>
-                        <Grid item className={classes.icon}>
+                        <Grid item className={classes.NIicon}>
                             <Icon>bookmark_border</Icon>
                         </Grid>
                         <Grid item>
@@ -212,7 +139,7 @@ class NewsItem extends React.Component {
                                 alt="Adelle Charles"
                                 src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
                                 classes={{
-                                    root: classes.avatar
+                                    root: classes.avatarw32
                                 }}
                             />
                         </Grid>

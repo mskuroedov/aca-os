@@ -14,6 +14,7 @@ import Calendar from "./Calendar"
 import Grid from "@material-ui/core/es/Grid/Grid";
 import StatsPage from "./statistic/StatsPage";
 import GroupsPage from "./groups/GroupsPage";
+import styles from '../../styles'
 
 function TabContainer(props) {
     return (
@@ -28,63 +29,6 @@ function TabContainer(props) {
 TabContainer.propTypes = {
     children: PropTypes.node.isRequired,
 };
-
-const styles = theme => ({
-    root: {
-        color: '#00755E',
-        fontSize: 1.4,
-        fontWeight: 'bold',
-        opacity: 1
-    },
-    rootPrimarySelected: {
-        color: '#000',
-    },
-    appBar: {
-        fontSize: 1.4,
-        backgroundColor: '#fff',
-        fontWeight: 'bold',
-        justifyContent: 'center',
-        boxShadow: 'none'
-    },
-    tabs: {
-        justifyContent: 'flex-end',
-        fontSize: 14
-    },
-    menuItem: {
-        fontSize: 14,
-        fontWeight: 'bold'
-    },
-    button: {
-        fontSize: 14,
-        fontWeight: 'bold',
-        fontFamily: '"BlissPro",sans-serif',
-        opacity: '1 !important'
-    },
-    bc: {
-        color: "#000 !important"
-    },
-    rootTabPrimary: {
-        minWidth: 0,
-        color: '#00755E',
-        opacity: 1
-    },
-    menuFlexContainer: {
-        [theme.breakpoints.down('lg')]: {
-            justifyContent: 'start',
-            paddingLeft:16,
-            paddingRight:16
-
-        },
-        [theme.breakpoints.up('lg')]: {
-            justifyContent: 'center',
-
-        },
-    },
-    tabScroller:{
-        overflowX:'scroll'
-    }
-
-});
 
 class SchoolMenu extends React.Component {
 
@@ -107,8 +51,8 @@ class SchoolMenu extends React.Component {
                             indicatorColor="primary"
                             scrollable={true}
                             classes={{
-                                root: classes.root,
-                                flexContainer: classes.menuFlexContainer// className, e.g. `OverridesClasses-label-X`
+                                root: classes.SPCroot,
+                                flexContainer: classes.schoolMenuFlexContainer// className, e.g. `OverridesClasses-label-X`
                             }}
                             style={{
                                 backgroundColor: 'white'
@@ -120,9 +64,9 @@ class SchoolMenu extends React.Component {
                                 textColor="primary"
                                 classes={{
 
-                                    label: classes.button,
-                                    labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
-                                    wrapper: classes.button,
+                                    label: classes.tabButton,
+                                    labelContainer: classes.tabButton,// className, e.g. `OverridesClasses-label-X`
+                                    wrapper: classes.tabButton,
                                     selected: classes.bc,// className, e.g. `OverridesClasses-label-X`
                                     root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                                 }}
@@ -132,7 +76,7 @@ class SchoolMenu extends React.Component {
                                 value="schedule"
                                 textColor="primary"
                                 classes={{
-                                    label: classes.button,
+                                    label: classes.tabButton,
                                     selected: classes.bc,
                                     root: classes.rootTabPrimary
                                 }}
@@ -142,7 +86,7 @@ class SchoolMenu extends React.Component {
                                 value="statistics"
                                 textColor="primary"
                                 classes={{
-                                    label: classes.button,
+                                    label: classes.tabButton,
                                     selected: classes.bc,
                                     root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                                 }}
@@ -152,7 +96,7 @@ class SchoolMenu extends React.Component {
                                 value="groups"
                                 textColor="primary"
                                 classes={{
-                                    label: classes.button,
+                                    label: classes.tabButton,
                                     selected: classes.bc,
                                     root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                                 }}
@@ -162,7 +106,7 @@ class SchoolMenu extends React.Component {
                                 value="sportsman"
                                 textColor="primary"
                                 classes={{
-                                    label: classes.button,
+                                    label: classes.tabButton,
                                     selected: classes.bc,
                                     root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                                 }}
@@ -172,7 +116,7 @@ class SchoolMenu extends React.Component {
                                 value="trainers"
                                 textColor="primary"
                                 classes={{
-                                    label: classes.button,
+                                    label: classes.tabButton,
                                     selected: classes.bc,
                                     root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                                 }}
@@ -182,7 +126,7 @@ class SchoolMenu extends React.Component {
                                 value="contacts"
                                 textColor="primary"
                                 classes={{
-                                    label: classes.button,
+                                    label: classes.tabButton,
                                     selected: classes.bc,
                                     root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                                 }}

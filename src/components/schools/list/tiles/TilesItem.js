@@ -5,54 +5,7 @@ import Grid from "material-ui/es/Grid/Grid";
 import Paper from "material-ui/es/Paper/Paper";
 import Typography from "material-ui/es/Typography/Typography";
 import Link from "react-router-dom/es/Link";
-
-
-const styles = theme => ({
-
-    paper: {
-        boxShadow: 'none',
-        borderRadius: 12,
-        paddingBottom: 16,
-        paddingLeft:24,
-        paddingRight:24,
-        marginBottom: 10,
-        border: '1px solid rgba(0,0,0,0.1);',
-        fontSize: 16,
-        fontFamily: '"BlissPro",sans-serif'
-
-    },
-    name: {
-        color: 'rgba(36,36,33,1)',
-        fontSize: 17,
-        fontWeight:'bold',
-        marginTop: 36,
-        marginBottom: 9,
-    },
-    infoTitle: {
-        color: 'rgba(36,36,33,0.6)',
-        fontSize: 13,
-    },
-    infoVal: {
-        color: 'rgba(36,36,33,1)',
-        fontSize: 15,
-        marginTop: 5,
-        fontWeight:'bold'
-    },
-    avatar: {
-        width: 100,
-        height: 100,
-        margin: 'auto'
-    },
-    link: {
-        marginBottom:16,
-        fontSize:15,
-        borderBottom: '1px solid rgba(36,36,33,0.2)',
-        color: 'rgba(36,36,33,1)',
-        '&:hover': {
-            color: 'rgba(0,118,94,1)'
-        }
-    }
-});
+import styles from '../../../styles'
 
 
 class TilesItem extends React.Component {
@@ -65,14 +18,14 @@ class TilesItem extends React.Component {
         return (
             <Grid item xs={12} lg={4}>
                 <Link to="/schools/1">
-                    <Paper className={classes.paper}>
-                        <Typography className={classes.name}>
+                    <Paper className={classes.tilePaper}>
+                        <Typography className={classes.tileName}>
                             {title}
                         </Typography>
                         <Typography className={classes.infoTitle}>
                             Директор
                         </Typography>
-                        <Link to="worker/2" className={classes.link}>
+                        <Link to="worker/2" className={classes.tileLink}>
                             {director.secondname} {director.firstname} {director.middlename}
                         </Link>
                         <Typography className={classes.infoTitle} style={{marginTop:16}}>

@@ -13,35 +13,7 @@ import Select from 'material-ui/Select';
 import {MenuItem} from 'material-ui/Menu';
 import Icon from 'material-ui/Icon';
 import {FormControl, FormHelperText} from 'material-ui/Form';
-
-
-const styles = theme => ({
-    button: {
-        margin: theme.spacing.unit,
-        fontSize: 13,
-        marginLeft: 'auto',
-        fontFamily: 'BlissPro',
-    },
-    select: {
-        backgroundColor:'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingTop:13,
-        paddingBottom:10,
-        paddingRight:40,
-        fontSize: 16,
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        }
-    },
-    selectIcon: {
-        color: '#6D6D6D',
-        marginTop: 3
-    },
-    selectLine: {
-        color: 'transparent'
-    }
-});
+import styles from '../../styles'
 
 
 class Perfomance extends React.Component {

@@ -5,21 +5,7 @@ import classNames from 'classnames';
 import TableRow from "@material-ui/core/es/TableRow/TableRow";
 import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import Link from "react-router-dom/es/Link";
-
-const styles = theme => ({
-    link:{
-        lineHeight:1.6,
-        color:'rgba(36,36,33,1);',
-        transition:'all 0.4s',
-        borderBottom: ' 1px solid rgba(36,36,33,0.2)',
-        fontSize:16,
-        '&:hover':{
-            transition:'all 0.4s',
-            borderBottomColor:'rgba(36,36,33,.5)'
-        }
-    }
-
-});
+import styles from '../styles'
 
 
 class CalendarTableItem extends React.Component {

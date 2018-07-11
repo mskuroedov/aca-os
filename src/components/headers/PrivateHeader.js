@@ -21,90 +21,8 @@ import Button from "@material-ui/core/es/Button/Button";
 import Popover from "material-ui/es/Popover/Popover";
 import {login, logout} from "../../actions/auth";
 import {connect} from "react-redux";
+import styles from '../styles'
 
-
-const styles = theme => ({
-    root: {
-        width: '100%',
-    },
-    flex: {
-        flex: 1,
-    },
-    menuButton: {
-        marginLeft: -12,
-        marginRight: 20,
-    },
-    container: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    formControl: {
-        margin: theme.spacing.unit,
-    },
-    inputLabelFocused: {
-        color: teal[500],
-    },
-    inputInkbar: {
-        '&:after': {
-            backgroundColor: teal[500],
-        },
-    },
-    textFieldRoot: {
-        padding: 0,
-        'label + &': {
-            marginTop: theme.spacing.unit * 3,
-        },
-    },
-    avatar: {
-        width: 32,
-        height: 32,
-        marginLeft: 8,
-        marginRight: 4
-    },
-    textFieldInput: {
-        borderRadius: 4,
-        backgroundColor: theme.palette.common.white,
-        border: '1px solid #ced4da',
-        fontSize: 16,
-        padding: '10px 12px',
-        width: 'calc(100% - 24px)',
-        transition: theme.transitions.create(['border-color', 'box-shadow']),
-        '&:focus': {
-            borderColor: '#80bdff',
-            boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
-        },
-    },
-    textFieldFormLabel: {
-        fontSize: 18,
-    },
-    lkBtn: {
-        display: 'flex',
-        alignItems: 'center',
-        color: 'white',
-        fontSize: 14,
-        textTransform: 'capitalize'
-    },
-    lkpopover: {
-        marginTop: 40,
-    },
-    lkpaper: {
-        width: 150,
-        borderRadius: 5,
-        boxShadow: 'none',
-        border: '1px solid rgba(0,0,0,.2)',
-    },
-    menuItem: {
-        padding: '8px 8px',
-        fontSize: 14,
-        color: 'rgba(36,36,33)',
-        '&:first-of-type': {
-            borderBottom: '1px solid rgba(36,36,33,.1)'
-        },
-        '&:last-of-type': {
-            borderTop: '1px solid rgba(36,36,33,.1)'
-        }
-    }
-});
 const options = [
     'ДЮСШ №34',
     'СДЮШОР №129',
@@ -223,7 +141,11 @@ class PublicHeader extends React.Component {
                                     alt="Adelle Charles"
                                     src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
                                     classes={{
-                                        root: classes.avatar
+                                        root: classes.avatarw32
+                                    }}
+                                    styles={{
+                                        marginLeft: 8,
+                                        marginRight: 4
                                     }}
                                 />
                                 <KeyboardArrowDownIcon style={{fontSize: 14, marginTop: 3}}/>
@@ -243,13 +165,13 @@ class PublicHeader extends React.Component {
                             >
 
                                 <MenuItem key={9998} onClick={this.handleClose} classes={{
-                                    root: classes.menuItem
+                                    root: classes.headerMenuItem
                                 }}>
                                     Мой профиль
                                 </MenuItem>
                                 {options.map(option => (
                                     <MenuItem key={option} onClick={this.handleClose} classes={{
-                                        root: classes.menuItem
+                                        root: classes.headerMenuItem
                                     }}>
                                         {option}
                                     </MenuItem>
@@ -258,7 +180,7 @@ class PublicHeader extends React.Component {
                                     this.handleClose();
                                     this.props.logout()
                                 }} classes={{
-                                    root: classes.menuItem
+                                    root: classes.headerMenuItem
                                 }}>
                                     Выйти
                                 </MenuItem>

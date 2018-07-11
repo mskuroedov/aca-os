@@ -13,53 +13,7 @@ import TableLeadsComponent from "./TableLeadsComponent";
 import MenuItem from "material-ui/es/Menu/MenuItem";
 import {ampluaFilter} from "../../../fixtures/tournaments";
 import Switch from "@material-ui/core/es/Switch/Switch";
-
-const styles = theme => ({
-    title: {
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-    select: {
-        backgroundColor: 'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingTop: 13,
-        paddingBottom: 7,
-        paddingRight: 40,
-        maxHeight: 36,
-        [theme.breakpoints.up('md')]: {
-            fontSize:14
-        },
-        [theme.breakpoints.down('md')]: {
-            fontSize:12
-        },
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        },
-    },
-    selectIcon: {
-        color: '#6D6D6D',
-    },
-    selectLine: {
-        color: 'transparent'
-    },
-    bgGreen: {
-        backgroundColor: '#005945 !important'
-    },
-    switchName:{
-        color: '#005945',
-        [theme.breakpoints.down('md')]:{
-            fontSize:14
-        }
-    },
-    lgMlAuto:{
-        [theme.breakpoints.up('lg')]:{
-            marginLeft:'auto'
-        }
-    }
-});
+import styles from '../../styles'
 
 
 class TableLeads extends React.Component {
@@ -82,7 +36,7 @@ class TableLeads extends React.Component {
         return (
             <Grid container spacing={16} alignItems='center'>
                 <Grid item>
-                    <Typography className={classes.title}>Лидеры</Typography>
+                    <Typography className={classes.title} style={{marginBottom:0}}>Лидеры</Typography>
                 </Grid>
                 <Grid item className={classes.lgMlAuto}>
                     <Grid container spacing={0} alignItems={'center'}>

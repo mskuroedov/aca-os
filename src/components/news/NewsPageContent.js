@@ -7,47 +7,7 @@ import NewsPaper from "../schools/school/common/NewsPaper";
 import Button from "material-ui/es/Button/Button";
 import FormControl from "material-ui/es/Form/FormControl";
 import Input from "material-ui/es/Input/Input";
-
-const styles = theme => ({
-
-    button: {
-        margin: theme.spacing.unit,
-        fontSize: 13,
-        fontWeight: 'bold',
-        fontFamily: '"BlissPro",sans-serif',
-    },
-
-    formControl:{
-        minWidth:280,
-        marginBottom:24
-    },
-    searchInkbar: {
-        color: 'rgba(36,36,33,1)',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        }
-    },
-
-    searchInput: {
-        fontSize: 16,
-        color: 'rgba(36,36,33,1)',
-
-        marginTop: 11,
-        paddingBottom: 5,
-        width:'100%',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        }
-    }
-
-});
-
+import styles from '../styles'
 
 class NewsPageContent extends React.Component {
     constructor(props) {
@@ -61,7 +21,7 @@ class NewsPageContent extends React.Component {
             <section className='main-section'>
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
-                        <FormControl className={classes.formControl}>
+                        <FormControl className={classes.mwformControl}>
                             <Input classes={{
                                 root: classes.searchInput,
                                 underline: classes.searchInkbar

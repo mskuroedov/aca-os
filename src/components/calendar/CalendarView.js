@@ -113,10 +113,10 @@ class CalendarView extends React.Component {
         const {classes} = this.props;
         const {calendar} = this.state;
         return (
-            <section style={{paddingLeft: 168, paddingRight: 168, paddingTop: 32, paddingBottom: 64}}>
+            <section className={'main-section'}>
                 <Grid container spacing={16}>
 
-                    <Grid item xs={4}>
+                    <Grid item xs={12} lg={4}>
                         <Grid container alignItems='center'>
                             <Grid item> <span className={classes.switchName}
                                               style={{color: this.state.CalendarView ? '#00755E' : '#242421'}}>Календарь</span>

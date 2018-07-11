@@ -8,9 +8,6 @@ import TableRow from "@material-ui/core/es/TableRow/TableRow";
 import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
 
-const styles = theme => ({});
-
-
 class TableLeadsComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -168,4 +165,4 @@ TableLeadsComponent.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TableLeadsComponent);
+export default TableLeadsComponent;

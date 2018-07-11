@@ -8,15 +8,6 @@ import TableRow from "@material-ui/core/es/TableRow/TableRow";
 import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
 
-const styles = theme => ({
-    name:{
-        [theme.breakpoints.up('lg')]:{
-            minWidht:400
-        },
-        [theme.breakpoints.up('md')]:{
-        },
-    }
-});
 
 
 class TableChampComponent extends React.Component {
@@ -285,4 +276,4 @@ TableChampComponent.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TableChampComponent);
+export default TableChampComponent;

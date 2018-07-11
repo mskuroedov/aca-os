@@ -15,57 +15,8 @@ import Link from "react-router-dom/es/Link";
 import Button from "material-ui/es/Button/Button";
 import {connect} from "react-redux";
 import {login} from "../../actions/auth";
+import styles from '../styles'
 
-
-const styles = theme => ({
-    root: {
-        width: '100%',
-    },
-    flex: {
-        flex: 1,
-    },
-    menuButton: {
-        marginLeft: -12,
-        marginRight: 20,
-    },
-    container: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    formControl: {
-        margin: theme.spacing.unit,
-    },
-    inputLabelFocused: {
-        color: teal[500],
-    },
-    inputInkbar: {
-        '&:after': {
-            backgroundColor: teal[500],
-        },
-    },
-    textFieldRoot: {
-        padding: 0,
-        'label + &': {
-            marginTop: theme.spacing.unit * 3,
-        },
-    },
-    textFieldInput: {
-        borderRadius: 4,
-        backgroundColor: theme.palette.common.white,
-        border: '1px solid #ced4da',
-        fontSize: 16,
-        padding: '10px 12px',
-        width: 'calc(100% - 24px)',
-        transition: theme.transitions.create(['border-color', 'box-shadow']),
-        '&:focus': {
-            borderColor: '#80bdff',
-            boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
-        },
-    },
-    textFieldFormLabel: {
-        fontSize: 18,
-    },
-});
 const options = [{
     id:1,
         link: '/',

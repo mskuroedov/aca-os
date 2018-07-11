@@ -10,21 +10,7 @@ import TableBody from "material-ui/es/Table/TableBody";
 import Link from "react-router-dom/es/Link";
 import Grid from "@material-ui/core/es/Grid/Grid";
 import Typography from "@material-ui/core/es/Typography/Typography";
-
-const styles = theme => ({
-
-    textMain: {
-        color: '#242421',
-        fontSize: 16,
-    },
-    textSecondary: {
-
-        color: 'rgba(36,36,33,0.54)',
-        fontSize: 14,
-        marginBottom: 8
-    },
-
-});
+import styles from '../styles'
 
 
 class TournamentsTable extends React.Component {

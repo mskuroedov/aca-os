@@ -8,10 +8,6 @@ import TournamentsContent from "./TournamentsContent";
 import Footer from "../footer/Footer";
 import {routes} from "../../routers/AppRouter";
 
-const styles = theme => ({
-
-
-});
 
 
 class TournamentsPage extends React.Component {
@@ -40,4 +36,4 @@ TournamentsPage.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TournamentsPage);
+export default TournamentsPage;

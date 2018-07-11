@@ -18,20 +18,7 @@ import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableRow from "@material-ui/core/es/TableRow/TableRow";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
 import Link from "react-router-dom/es/Link";
-
-const styles = theme => ({
-
-    textMain: {
-        color: '#242421',
-        fontSize: 16,
-    },
-    textSecondary: {
-
-        color: 'rgba(36,36,33,0.54)',
-        fontSize: 14,
-        marginBottom: 8
-    },
-});
+import styles from '../../styles';
 
 
 class DescriptionTable extends React.Component {

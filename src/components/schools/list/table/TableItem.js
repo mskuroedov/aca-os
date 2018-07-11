@@ -3,21 +3,7 @@ import PropTypes from 'prop-types';
 import {TableCell, TableRow} from "material-ui";
 import {Link} from "react-router-dom";
 import {withStyles} from "material-ui/styles/index";
-
-const styles = theme => ({
-    avatar: {
-        width: 36,
-        height: 36,
-        marginLeft: 16
-    },
-    link: {
-        borderBottom: '1px solid rgba(36,36,33,0.2)',
-        color: 'rgba(36,36,33,1)',
-        '&:hover': {
-            color: 'rgba(0,118,94,1)'
-        }
-    }
-});
+import styles from '../../../styles';
 
 class TableItem extends React.Component {
     render() {
@@ -25,11 +11,11 @@ class TableItem extends React.Component {
         return (
             <TableRow>
                 <TableCell>
-                    <Link to="/schools/1" className={classes.link}>{title}</Link>
+                    <Link to="/schools/1" className={classes.schoolLink}>{title}</Link>
                 </TableCell>
                 <TableCell>{type}</TableCell>
                 <TableCell>
-                    <Link to="#" className={classes.link}>
+                    <Link to="#" className={classes.schoolLink}>
                         {director.secondname} {director.firstname} {director.middlename}
                     </Link>
                 </TableCell>

@@ -12,10 +12,6 @@ import TableFooter from "@material-ui/core/es/TableFooter/TableFooter";
 import TablePagination from "@material-ui/core/es/TablePagination/TablePagination";
 import TournamentTableItem from "./TournamentTableItem";
 
-const styles = theme => ({
-
-
-});
 
 
 class TournamentTableView extends React.Component {
@@ -129,4 +125,4 @@ TournamentTableView.propTypes = {
     calendar: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default withStyles(styles)(TournamentTableView);
+export default TournamentTableView;

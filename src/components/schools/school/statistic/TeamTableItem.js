@@ -5,16 +5,7 @@ import {Link} from "react-router-dom";
 import {withStyles} from "material-ui/styles/index";
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import MoreVertIcon from 'material-ui-icons/MoreVert';
-
-const styles = theme => ({
-    link:{
-        borderBottom:'1px solid rgba(36,36,33,0.2)',
-        color:'rgba(36,36,33,1)',
-        '&:hover':{
-            color:'rgba(0,118,94,1)'
-        }
-    }
-});
+import styles from '../../../styles'
 
 class TeamTableItem extends React.Component {
     render () {

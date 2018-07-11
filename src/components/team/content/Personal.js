@@ -10,21 +10,8 @@ import Table from "@material-ui/core/es/Table/Table";
 import Grid from "@material-ui/core/es/Grid/Grid";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
+import styles from'../../styles'
 
-const styles = theme => ({
-
-    title: {
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-    textMain: {
-        color: '#242421',
-        fontSize: 16,
-        marginBottom: 8
-    },
-});
 
 
 class Personal extends React.Component {

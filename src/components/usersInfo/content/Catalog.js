@@ -9,44 +9,8 @@ import Input from "material-ui/es/Input/Input";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Icon from "material-ui/es/Icon/Icon";
 import Typography from "@material-ui/core/es/Typography/Typography";
+import styles from '../../styles'
 
-const styles = theme => ({
-    searchInput: {
-        fontSize: 14,
-        color: 'rgba(36,36,33,1)',
-
-        marginTop: 11,
-        paddingBottom: 5,
-        minWidth: 267,
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        }
-    },
-    searchInkbar: {
-        color: 'rgba(36,36,33,1)',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        }
-    },
-    searchInputIcon: {
-        color: 'rgba(145,143,138,1)',
-        position: 'relative',
-        fontSize: 16,
-        top: 3,
-    },
-    title: {
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-});
 
 
 class Catalog extends React.Component {
@@ -60,7 +24,7 @@ class Catalog extends React.Component {
         return (
             <div>
                 <Grid container spacing={16}>
-                    <Grid item xs={12}>
+                    <Grid item xs={12} lg={4}>
                         <FormControl className={classes.formControl}>
                             <Input classes={{
                                 root: classes.searchInput,
@@ -82,6 +46,7 @@ class Catalog extends React.Component {
                             />
                         </FormControl>
                     </Grid>
+                    <div style={{width:'100%'}}></div>
                     <Grid item xs={12} lg={4}>
                         <CatalogItem cart/>
                     </Grid>

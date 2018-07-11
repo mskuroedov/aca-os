@@ -2,21 +2,9 @@ import React from 'react';
 import {Grid, Paper, Table, TableBody, TableCell, TableHead, TableRow} from "material-ui";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import withStyles from "@material-ui/core/es/styles/withStyles";
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-
-
-const styles = theme => ({
-    textMain: {
-        color: '#242421',
-        fontSize: 16,
-        marginBottom:16
-    },
-    textSecondary: {
-
-        color: 'rgba(36,36,33,0.54)',
-        fontSize: 16
-    }
-});
+import styles from '../../styles'
 
 class Career extends React.Component {
     render() {
@@ -48,24 +36,24 @@ class Career extends React.Component {
                     </Table>
                     <Grid container spacing={0} style={{padding:16}} className='lg-hidden'>
                         <Grid item xs={12}>
-                            <Typography className={classes.textSecondary}>Вид спорта</Typography>
-                            <Typography className={classes.textMain}>Хоккей</Typography>
+                            <Typography className={classes.textSecondaryfs16}>Вид спорта</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>Хоккей</Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <Typography className={classes.textSecondary}>Игровой номер</Typography>
-                            <Typography className={classes.textMain}>13</Typography>
+                            <Typography className={classes.textSecondaryfs16}>Игровой номер</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>13</Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <Typography className={classes.textSecondary}>Амплуа</Typography>
-                            <Typography className={classes.textMain}>Нападающий</Typography>
+                            <Typography className={classes.textSecondaryfs16}>Амплуа</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>Нападающий</Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <Typography className={classes.textSecondary}>Команда</Typography>
-                            <Typography className={classes.textMain}>Ак Барс</Typography>
+                            <Typography className={classes.textSecondaryfs16}>Команда</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>Ак Барс</Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <Typography className={classes.textSecondary}>Спортивный разряд</Typography>
-                            <Typography className={classes.textMain}> 2</Typography>
+                            <Typography className={classes.textSecondaryfs16}>Спортивный разряд</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}> 2</Typography>
                         </Grid>
                     </Grid>
                 </Paper>

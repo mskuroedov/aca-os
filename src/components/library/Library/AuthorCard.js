@@ -7,29 +7,7 @@ import Paper from "@material-ui/core/es/Paper/Paper";
 import Grid from "@material-ui/core/es/Grid/Grid";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import Avatar from "@material-ui/core/es/Avatar/Avatar";
-
-const styles = theme => ({
-
-    avatar: {
-        width: 96,
-        height: 96,
-        margin: 'auto',
-        marginBottom:16
-    },
-    name: {
-        color: '#242421',
-        fontSize: 18,
-        textAlign: 'center',
-        maxWidth:160,
-        margin:'auto',
-        fontWeight:'bold',
-        marginBottom:16
-    },
-    subtext:{
-        fontSize:14,
-        color:'rgba(36,36,33,.6)'
-    }
-});
+import styles from '../../styles'
 
 
 class AuthorCard extends React.Component {
@@ -49,12 +27,12 @@ class AuthorCard extends React.Component {
                                 alt="Adelle Charles"
                                 src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
                                 classes={{
-                                    root: classes.avatar
+                                    root: classes.authoravatar
                                 }}
                             />
                         </Grid>
                         <Grid item xs={12}>
-                            <Typography className={classes.name}>Абдрашитов
+                            <Typography className={classes.authorname}>Абдрашитов
                                 Вадим Юсупович</Typography>
                         </Grid>
                         <Grid item>

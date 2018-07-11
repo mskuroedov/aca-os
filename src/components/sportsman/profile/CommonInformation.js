@@ -3,19 +3,8 @@ import PropTypes from 'prop-types';
 import {Grid, Paper, Table, TableBody, TableCell, TableHead, TableRow} from "material-ui";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import {withStyles} from 'material-ui/styles';
-
-const styles = theme => ({
-    textMain: {
-        color: '#242421',
-        fontSize: 16,
-        marginBottom:16
-    },
-    textSecondary: {
-
-        color: 'rgba(36,36,33,0.54)',
-        fontSize: 16
-    }
-});
+import styles from '../../styles'
+import classNames from 'classnames'
 
 class CommonInformation extends React.Component {
     render() {
@@ -54,24 +43,24 @@ class CommonInformation extends React.Component {
                     </Table>
                     <Grid container className='lg-hidden' spacing={0} style={{padding:16}}>
                         <Grid item xs={12}>
-                            <Typography className={classes.textSecondary}>Год рождения</Typography>
-                            <Typography className={classes.textMain}>{sportsman.date_of_birth}</Typography>
+                            <Typography className={classes.textSecondaryfs16}>Год рождения</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>{sportsman.date_of_birth}</Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <Typography className={classes.textSecondary}>Год набора</Typography>
-                            <Typography className={classes.textMain}>{sportsman.recruitment_year}</Typography>
+                            <Typography className={classes.textSecondaryfs16}>Год набора</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>{sportsman.recruitment_year}</Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <Typography className={classes.textSecondary}>Пол</Typography>
-                            <Typography className={classes.textMain}>{sportsman.gender}</Typography>
+                            <Typography className={classes.textSecondaryfs16}>Пол</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>{sportsman.gender}</Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <Typography className={classes.textSecondary}>Амплуа</Typography>
-                            <Typography className={classes.textMain}>{sportsman.role}</Typography>
+                            <Typography className={classes.textSecondaryfs16}>Амплуа</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>{sportsman.role}</Typography>
                         </Grid>
                         <Grid item xs={12}>
-                            <Typography className={classes.textSecondary}>Разряд</Typography>
-                            <Typography className={classes.textMain}>{sportsman.rank}</Typography>
+                            <Typography className={classes.textSecondaryfs16}>Разряд</Typography>
+                            <Typography className={classNames(classes.textMain,classes.mb16)}>{sportsman.rank}</Typography>
                         </Grid>
                     </Grid>
                 </Paper>

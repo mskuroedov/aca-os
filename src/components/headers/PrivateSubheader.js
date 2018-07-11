@@ -7,32 +7,7 @@ import Icon from 'material-ui/Icon';
 import {FormControl} from 'material-ui/Form';
 import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
-
-const styles = theme => ({
-    container: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    formControl: {
-        minWidth: 120,
-    },
-    selectEmpty: {},
-    select: {
-        paddingLeft: 5,
-        fontSize: 16,
-        color: '#fff',
-        '&:after': {
-            backgroundColor: '#fff'
-        }
-    },
-    selectIcon: {
-        color: '#fff',
-        marginTop: 3
-    },
-    selectLine: {
-        color: 'transparent'
-    }
-});
+import styles from '../styles'
 
 class Subheader extends React.Component {
 

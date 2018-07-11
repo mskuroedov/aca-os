@@ -12,65 +12,7 @@ import MenuItem from "material-ui/es/Menu/MenuItem";
 import {tournamentFilter} from "../../../fixtures/tournaments";
 import IconButton from "material-ui/es/IconButton/IconButton";
 import Icon from "material-ui/es/Icon/Icon";
-
-const styles = theme => ({
-    formControl:{
-      [theme.breakpoints.down('md')]:{
-          marginRight:'auto'
-      },
-      [theme.breakpoints.up('md')]:{
-          marginLeft:'auto'
-      }
-    },
-    selectRoot: {
-        [theme.breakpoints.up('md')]: {
-            marginRight: 116
-        },
-        [theme.breakpoints.down('md')]: {
-            marginRight: 'auto'
-        }
-    },
-    title: {
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-    select: {
-        backgroundColor: 'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingTop: 13,
-        paddingBottom: 7,
-        paddingRight: 40,
-        maxHeight: 36,
-        [theme.breakpoints.up('md')]: {
-            fontSize:14
-        },
-        [theme.breakpoints.down('md')]: {
-            fontSize:12
-        },
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        },
-    },
-    selectIcon: {
-        color: '#6D6D6D',
-    },
-    selectLine: {
-        color: 'transparent'
-    },
-    selectContainer: {
-        [theme.breakpoints.up('lg')]: {
-            marginLeft: 'auto'
-        },
-        [theme.breakpoints.down('lg')]: {
-            display:'flex',
-            alignItems:'center'
-        }
-    }
-
-});
+import styles from'../../styles'
 
 
 class TableChamp extends React.Component {
@@ -93,10 +35,10 @@ class TableChamp extends React.Component {
         return (
             <Grid container spacing={16} alignItems='center'>
                 <Grid item>
-                    <Typography className={classes.title}>Чемпионат</Typography>
+                    <Typography className={classes.title} style={{marginBottom:0}}>Чемпионат</Typography>
                 </Grid>
-                <Grid item xs={12} lg className={classes.selectContainer}>
-                    <FormControl className={classes.formControl}>
+                <Grid item xs={12} lg className={classes.selectContainermlcenter}>
+                    <FormControl className={classes.formControlmlmr}>
                         <Select
                             value={this.state.selectedChampFilter}
                             onChange={this.onChampFilterChange}

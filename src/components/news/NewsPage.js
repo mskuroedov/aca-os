@@ -7,10 +7,6 @@ import Header from "../headers/Header";
 import NewsPageContent from "./NewsPageContent";
 import Footer from "../footer/Footer";
 
-const styles = theme => ({
-
-
-});
 
 
 class NewsPage extends React.Component {
@@ -38,4 +34,4 @@ NewsPage.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(NewsPage);
+export default NewsPage;

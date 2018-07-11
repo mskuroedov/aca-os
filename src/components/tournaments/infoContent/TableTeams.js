@@ -8,59 +8,8 @@ import Paper from "@material-ui/core/es/Paper/Paper";
 import {teams} from '../../../fixtures/tournaments'
 import Link from "react-router-dom/es/Link";
 import Button from "material-ui/es/Button/Button";
+import styles from '../../styles'
 
-const styles = theme => ({
-    teamsContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        [theme.breakpoints.down('lg')]:{
-            maxHeight:370,
-            overflowY:'hidden'
-        },
-        [theme.breakpoints.up('lg')]:{
-            maxHeight:375,
-            flexWrap: 'wrap'
-
-        },
-    },
-    teamItem: {
-        marginBottom:16,
-        [theme.breakpoints.down('md')]:{
-            paddingRight: 32,
-            paddingLeft: 32,
-        }
-    },
-    paper: {
-        paddingTop: 24,
-        paddingBottom: 16,
-        [theme.breakpoints.up('md')]:{
-            paddingRight: 32,
-            paddingLeft: 32,
-        }
-    },
-    title: {
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-    link: {
-        fontSize: 16,
-        color: 'rgb(36,36,33);',
-        borderBottom: '1px solid rgba(36,36,33,.2)',
-        transition: 'all .3s',
-        '&:hover': {
-            borderBottom: '1px solid rgba(36,36,33,.6)',
-        }
-    },
-    button: {
-        marginLeft:16,
-        fontSize: 13,
-        fontWeight: 'bold',
-        fontFamily: '"BlissPro",sans-serif',
-    },
-
-});
 
 
 class TableTeams extends React.Component {
@@ -82,7 +31,7 @@ class TableTeams extends React.Component {
                     <Typography className={classes.title}>Команды</Typography>
                 </Grid>
                 <Grid item xs={12}>
-                    <Paper className={classNames(classes.paper, 'paper')}>
+                    <Paper className={classNames(classes.paperTableTeams, 'paper')}>
                         <div className={classes.teamsContainer}>
                             {
                                 teams.map((team, i) => (
@@ -92,7 +41,7 @@ class TableTeams extends React.Component {
                                 ))
                             }
                         </div>
-                        <Button color='primary' className={classNames(classes.button,'lg-hidden')}>все команды</Button>
+                        <Button color='primary' className={classNames(classes.button,'lg-hidden')} style={{marginLeft:16}}>все команды</Button>
                     </Paper>
                 </Grid>
             </Grid>

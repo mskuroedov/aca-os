@@ -9,7 +9,6 @@ import WorkerHeader from "./WorkerHeader";
 import WorkerPageContent from "./WorkerPageContent";
 import Footer from "../../../footer/Footer";
 
-const styles = theme => ({});
 
 
 class WorkerPage extends React.Component {
@@ -43,4 +42,4 @@ WorkerPage.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(WorkerPage);
+export default WorkerPage;

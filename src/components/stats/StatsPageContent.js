@@ -11,40 +11,8 @@ import MenuItem from "material-ui/es/Menu/MenuItem";
 import HelpIcon from '@material-ui/icons/Help';
 import IconButton from "material-ui/es/IconButton/IconButton";
 import TeamTableView from "../schools/school/statistic/TeamTableView";
+import styles from '../styles'
 
-const styles = theme => ({
-    button: {
-        fontSize: 13,
-        fontWeight: 'bold',
-        marginRight: 10,
-        height: '45px'
-    },
-    iconbtn: {
-        marginTop: 5,
-        marginLeft: 'auto'
-    },
-    gray: {
-        color: 'rgba(36,36,33,0.3)'
-    },
-    select: {
-        backgroundColor: 'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingTop: 16,
-        paddingBottom: 10,
-        paddingRight: 40,
-        fontSize: 16,
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        }
-    },
-    selectIcon: {
-        color: '#6D6D6D',
-    },
-    selectLine: {
-        color: 'transparent'
-    },
-});
 
 
 class StatsPageContent extends React.Component {
@@ -120,7 +88,7 @@ class StatsPageContent extends React.Component {
                             </Grid>
                             <Grid item>
                                 <Button classes={{
-                                    root: classes.button,
+                                    root: classes.buttonStats,
                                     label: classes.gray
                                 }}>
                                     Сбросить

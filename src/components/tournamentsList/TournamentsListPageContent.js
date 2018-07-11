@@ -11,63 +11,7 @@ import MenuItem from "material-ui/es/Menu/MenuItem";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Input from "material-ui/es/Input/Input";
 import Icon from "material-ui/es/Icon/Icon";
-
-
-const styles = theme => ({
-    formControl: {
-        width: '100%'
-    },
-    select: {
-        backgroundColor: 'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingBottom: 10,
-        paddingTop: 16,
-        paddingRight: 40,
-        fontSize: 16,
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        }
-    },
-    selectIcon: {
-        color: '#6D6D6D',
-        marginTop: 0
-    },
-    selectLine: {
-        color: 'transparent'
-    },
-    searchInput: {
-        fontSize: 14,
-        color: 'rgba(36,36,33,1)',
-
-        marginTop: 11,
-        paddingBottom: 5,
-        maxWidth: 290,
-        width: '100%',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        }
-    },
-    searchInkbar: {
-        color: 'rgba(36,36,33,1)',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        }
-    },
-    searchInputIcon: {
-        color: 'rgba(145,143,138,1)',
-        position: 'relative',
-        fontSize: 16,
-        top: 3,
-    }
-
-});
+import styles from '../styles'
 
 
 class TournamentsListPageContent extends React.Component {
@@ -111,7 +55,7 @@ class TournamentsListPageContent extends React.Component {
                                 </FormControl>
                             </Grid>
                             <Grid item xs={12} lg={4}>
-                                <FormControl className={classes.formControl}>
+                                <FormControl className={classes.formControl} style={{marginBottom:0}}>
                                     <Input classes={{
                                         root: classes.searchInput,
                                         underline: classes.searchInkbar

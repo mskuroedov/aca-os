@@ -14,71 +14,7 @@ import Input from "material-ui/es/Input/Input";
 import TilesView from "./tiles/TilesView";
 import {sportsman, sportsmanGroupFilters, sportsmanPositionFilters} from "../../../../fixtures/sportsman";
 import SportsmanListPageModalFilters from "./SportsmanListPageModalFilters";
-
-
-const styles = theme => ({
-    formControl:{
-      width:'100%'
-    },
-    button: {
-        fontSize: 13,
-        fontWeight: 'bold',
-        marginRight: 10,
-        height: '100%'
-    },
-    iconbtn: {
-        marginTop: 5,
-        marginLeft: 'auto'
-    },
-    gray: {
-        color: 'rgba(36,36,33,0.3)'
-    },
-    select: {
-        backgroundColor: 'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingTop: 16,
-        paddingBottom: 10,
-        paddingRight: 40,
-        fontSize: 16,
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        }
-    },
-    selectIcon: {
-        color: '#6D6D6D',
-    },
-    selectLine: {
-        color: 'transparent'
-    },
-    searchInput: {
-        fontSize: 14,
-        color: 'rgba(36,36,33,1)',
-        marginTop: 11,
-        paddingBottom: 5,
-        width:'100%',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        }
-    },
-    searchInkbar: {
-        color: 'rgba(36,36,33,1)',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        }
-    },
-    searchInputIcon: {
-        color: 'rgba(145,143,138,1)',
-        position: 'relative',
-        top: 0
-    }
-});
+import styles from '../../../styles'
 
 
 class Sportsman extends React.Component {
@@ -117,7 +53,7 @@ class Sportsman extends React.Component {
         const {sportsman} = this.state;
         return (
             <div>
-                <Grid container spacing={8}>
+                <Grid container spacing={8} alignItems={'center'}>
                     <Grid item className='xs-hidden'>
                         <FormControl>
                             <Select
@@ -167,7 +103,7 @@ class Sportsman extends React.Component {
                         </Button>
                     </Grid>
                     <Grid item xs={10} lg={3}>
-                        <FormControl className={classes.formControl}>
+                        <FormControl className={classes.formControl} style={{marginBottom:0}}>
                             <Input classes={{
                                 root: classes.searchInput,
                                 underline: classes.searchInkbar

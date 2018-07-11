@@ -22,104 +22,7 @@ import ModalFilters from "./infoContent/ModalFilters";
 import Paper from "material-ui/es/Paper/Paper";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import DescriptionTable from "./infoContent/DescriptionTable";
-
-const styles = theme => ({
-    paper:{
-        [theme.breakpoints.up('lg')]:{
-            paddingLeft:32,
-            paddingRight:32,
-            paddingTop:40,
-            paddingBottom:16,
-        },
-        [theme.breakpoints.down('lg')]:{
-            paddingLeft:32,
-            paddingRight:32,
-            paddingTop:24,
-            paddingBottom:16,
-        }
-    },
-    mainText:{
-      fontSize:16,
-        marginBottom:24,
-        [theme.breakpoints.down('lg')]:{
-          fontSize:14
-        }
-    },
-    formControl: {
-        width: '100%'
-    },
-    title: {
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-    select: {
-        backgroundColor: 'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingTop: 13,
-        paddingBottom: 7,
-        paddingRight: 40,
-        maxHeight: 36,
-        fontSize: 14,
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        }
-    },
-    selectIcon: {
-        color: '#6D6D6D',
-    },
-    selectLine: {
-        color: 'transparent'
-    },
-    button: {
-        color: 'rgba(36,36,33,.3)',
-        fontSize: 14,
-        fontWeight: 'bold'
-
-    },
-    buttonGreen:{
-      fontSize:14,
-      fontWeight:'bold',
-        transform:'translateX(-16px)'
-    },
-    searchInput: {
-        fontSize: 14,
-        color: 'rgba(36,36,33,1)',
-
-        marginTop: 11,
-        paddingBottom: 5,
-        maxWidth: 290,
-        width: '100%',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        }
-    },
-    searchInkbar: {
-        color: 'rgba(36,36,33,1)',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        }
-    },
-    bgGreen: {
-        backgroundColor: '#005945 !important'
-    },
-    searchInputIcon: {
-        color: 'rgba(145,143,138,1)',
-        position: 'relative',
-        fontSize: 16,
-        top: 3,
-    }
-
-
-});
+import styles from'../styles'
 
 
 class TournamentInfo extends React.Component {
@@ -134,7 +37,7 @@ class TournamentInfo extends React.Component {
         selectedStageFilter: 1,
         tournamentFilter,
         selectedTournamentFilter: 1,
-    }
+    };
 
     onSeasonFilterChange = event => {
         this.setState({selectedSeasonFilter: event.target.value});
@@ -241,7 +144,7 @@ class TournamentInfo extends React.Component {
                             </Grid>
 
                             <Grid item>
-                                <Button className={classes.button} aria-label="Delete">
+                                <Button className={classes.button} aria-label="Delete" style={{color:'rgba(36,36,33,.6)'}}>
                                     Сбросить
                                 </Button>
                             </Grid>

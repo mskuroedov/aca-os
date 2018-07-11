@@ -6,11 +6,6 @@ import Subheader from "../headers/Subheader";
 import Header from "../headers/Header";
 import TournamentsListPageContent from "./TournamentsListPageContent";
 
-const styles = theme => ({
-
-
-});
-
 
 class TournamentsListPage extends React.Component {
     constructor(props) {
@@ -34,4 +29,4 @@ TournamentsListPage.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TournamentsListPage);
+export default TournamentsListPage;

@@ -11,70 +11,8 @@ import Typography from "material-ui/es/Typography/Typography";
 import NewsPaper from "./NewsPaper";
 import ContactUs from "./ContactUs";
 import Link from "react-router-dom/es/Link";
+import styles from '../../../styles'
 
-const styles = theme => ({
-    button: {
-        margin: theme.spacing.unit,
-        fontSize: 13,
-        marginLeft: 'auto',
-        fontWeight: 'bold',
-        marginRight: 20,
-        fontFamily: '"BlissPro",sans-serif',
-    },
-    paper: {
-        boxShadow: 'none',
-        borderRadius: 12,
-        paddingTop: 28,
-        paddingLeft: 25,
-        paddingRight: 25,
-        paddingBottom: 26,
-        marginBottom: 10,
-        border: '1px solid rgba(0,0,0,0.1);',
-        fontSize: 16,
-        fontFamily: '"BlissPro",sans-serif !important'
-
-    },
-    title: {
-        marginBottom: 11,
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-    primaryText: {
-        fontSize: 16,
-        fontFamily: 'BlissPro'
-    },
-    primaryBigText: {
-        fontSize: 18,
-        fontFamily: 'BlissPro'
-    },
-    avatar: {
-        width: 100,
-        height: 100,
-        margin: 'auto'
-    },
-    textCentered: {
-        textAlign: 'center'
-    },
-    icon: {
-        verticalAlign: 'bottom',
-        color: 'rgba(36,36,33,0.3)',
-        marginLeft: 'auto'
-    },
-    link: {
-        marginLeft: 16,
-        borderBottom: '1px solid rgba(36,36,33,0.2)',
-        color: 'rgba(36,36,33,1)',
-        '&:hover': {
-            color: 'rgba(0,118,94,1)'
-        }
-    },
-    textGray: {
-        color: 'rgba(36,36,33,0.6)'
-    }
-
-});
 
 
 class SchoolInfo extends React.Component {
@@ -105,7 +43,7 @@ class SchoolInfo extends React.Component {
                     <Grid item xs={12} lg={8}>
                         <h3 className={classes.title}>{this.titles[0]}</h3>
                         <Paper classes={{
-                            root: classes.paper
+                            root: classes.SIpaper
                         }}>
                             <Typography type="body1" gutterBottom className={classes.primaryText}>
                                 Вы можете оформить заявку на обучение в СДЮСШ «Ак Барс» и ДЮСШ «Динамо» на сайте
@@ -114,7 +52,7 @@ class SchoolInfo extends React.Component {
                             <Typography type="body1" gutterBottom className={classes.primaryBigText}
                                         style={{marginTop: 12}}>
                                 <Icon className={classes.icon}>link</Icon><a href="https://akbars.academy"
-                                                                             className={classes.link}>akbars.academy</a>
+                                                                             className={classes.link} style={{marginLeft:16}}>akbars.academy</a>
                             </Typography>
 
                             <Typography type="body1" gutterBottom className={classes.primaryText}
@@ -150,7 +88,10 @@ class SchoolInfo extends React.Component {
                                 alt="Adelle Charles"
                                 src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
                                 classes={{
-                                    root: classes.avatar
+                                    root: classes.bigAvatar
+                                }}
+                                style={{
+                                    margin:'auto'
                                 }}
                             />
                             <Typography type="body1" gutterBottom className={classes.primaryBigText} style={{

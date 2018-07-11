@@ -5,18 +5,7 @@ import {withStyles} from 'material-ui/styles';
 import Grid from "material-ui/es/Grid/Grid";
 import Typography from "material-ui/es/Typography/Typography";
 import Button from "material-ui/es/Button/Button";
-
-const styles = theme => ({
-    button: {
-        float: 'right',
-        fontSize: 13,
-        fontWeight: 'bold'
-    },
-    title: {
-        color: 'rgba(36,36,33,0.6)',
-        fontSize: 20
-    }
-});
+import styles from '../../../styles'
 
 class TilesView extends React.Component {
 
@@ -26,10 +15,10 @@ class TilesView extends React.Component {
         return (
             <Grid container spacing={16}>
                 <Grid item xs={6} className='xs-hidden'>
-                    <Typography className={classes.title}>{schoolType}</Typography>
+                    <Typography className={classes.title} style={{marginBottom:0}}>{schoolType}</Typography>
                 </Grid>
                 <Grid item xs={6} className='xs-hidden'>
-                    <Button color="primary" className={classes.button}>показать все</Button>
+                    <Button color="primary" className={classes.button} style={{float:'right'}}>показать все</Button>
                 </Grid>
                 <Grid item xs={12}>
                     <Grid container spacing={16}>

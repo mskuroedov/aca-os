@@ -10,27 +10,8 @@ import TableRow from "@material-ui/core/es/TableRow/TableRow";
 import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
 import Grid from "material-ui/es/Grid/Grid";
+import styles from '../../../../styles'
 
-const styles = theme => ({
-    title: {
-        marginBottom: 11,
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-    textMain: {
-        color: '#242421',
-        fontSize: 16,
-        marginBottom: 16
-    },
-    textSecondary: {
-
-        color: 'rgba(36,36,33,0.54)',
-        fontSize: 14
-    },
-
-});
 
 
 class Education extends React.Component {
@@ -68,23 +49,23 @@ class Education extends React.Component {
                         <Grid container spacing={0} style={{padding: 16}} className='border-bottom'>
                             <Grid item xs={12}>
                                 <Typography className={classes.textSecondary}>Название</Typography>
-                                <Typography className={classes.textMain}>Курс "Методическая работа в сфере физической
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>Курс "Методическая работа в сфере физической
                                     культуры и спорта"</Typography>
                             </Grid>
                             <Grid item xs={12}>
                                 <Typography className={classes.textSecondary}>Дата</Typography>
-                                <Typography className={classes.textMain}>21.07.2016</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>21.07.2016</Typography>
 
                             </Grid>
                         </Grid>
                         <Grid container spacing={0} style={{padding:16}}>
                             <Grid item xs={12}>
                                 <Typography className={classes.textSecondary}>Название</Typography>
-                                <Typography className={classes.textMain}>Диплом за 1 место в сезоне 2016</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>Диплом за 1 место в сезоне 2016</Typography>
                             </Grid>
                             <Grid item xs={12}>
                                 <Typography className={classes.textSecondary}>Дата</Typography>
-                                <Typography className={classes.textMain}>18.02.2014</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>18.02.2014</Typography>
 
                             </Grid>
                         </Grid>

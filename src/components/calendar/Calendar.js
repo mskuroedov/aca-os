@@ -32,17 +32,6 @@ moment.locale('ru');
 BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
 
 
-const styles = theme => ({
-    paper: {
-        padding: theme.spacing.unit,
-    },
-    popover: {
-        pointerEvents: 'none',
-    },
-    popperClose: {
-        pointerEvents: 'none',
-    },
-});
 
 class Calendar extends React.Component {
     constructor(props) {
@@ -68,7 +57,6 @@ class Calendar extends React.Component {
                     }}
                     showMultiDayTimes
                     defaultDate={new Date(2015, 3, 1)}
-                    style={{height: 740}}
                     components={{
                         event: CustomEvent,
                         toolbar: CustomToolbar
@@ -95,19 +83,19 @@ class CustomToolbar extends Toolbar {
     render() {
         let {messages} = this.props;
         return (
-            <Grid container alignItems='center' spacing={0} style={{marginBottom: 18}}>
-                <Grid item style={{marginRight: 24}}>
+            <Grid container alignItems='center' spacing={0} style={{marginBottom: 18}} className={'rbc-custom-toolbar'}>
+                <Grid item style={{marginRight: 24}} className={'xs-hidden'}>
                     <Button variant="raised" style={{fontWeight: 'bold', fontSize: 12, boxShadow: 'none'}}
                             onClick={() => this.navigate('TODAY')}>Сегодня</Button>
                 </Grid>
-                <Grid item style={{marginRight: 24}}>
+                <Grid item className={'left-arrow-block'}>
                     <IconButton style={{height: 36, width: 36}} onClick={() => this.navigate('PREV')}>
                         <Icon>
                             keyboard_arrow_left
                         </Icon>
                     </IconButton>
                 </Grid>
-                <Grid item style={{marginRight: 16}}>
+                <Grid item  className={'right-arrow-block'}>
                     <IconButton style={{height: 36, width: 36}} onClick={() => this.navigate('NEXT')}>
                         <Icon>
                             keyboard_arrow_right
@@ -117,7 +105,7 @@ class CustomToolbar extends Toolbar {
                 <Grid item>
                     <Typography className='label-day'>{this.props.label}</Typography>
                 </Grid>
-                <Grid item style={{marginLeft: 46}}>
+                <Grid item style={{marginLeft: 46}} className={'xs-hidden'}>
                     <FormControl>
                         <Select style={{
                             fontSize: '12px !important'
@@ -140,6 +128,10 @@ class CustomToolbar extends Toolbar {
 
                     </FormControl>
                 </Grid>
+                <Grid item className={'lg-hidden xs-today'}>
+                    <Button variant="raised" style={{fontWeight: 'bold', fontSize: 12, boxShadow: 'none'}}
+                            onClick={() => this.navigate('TODAY')}>Сегодня</Button>
+                </Grid>
             </Grid>
         );
     }
@@ -159,4 +151,4 @@ class CustomToolbar extends Toolbar {
 
 
 
-export default withStyles(styles)(Calendar);
+export default Calendar;

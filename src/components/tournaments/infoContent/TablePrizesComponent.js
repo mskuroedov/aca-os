@@ -8,8 +8,6 @@ import TableRow from "@material-ui/core/es/TableRow/TableRow";
 import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
 
-const styles = theme => ({});
-
 
 class TablePrizesComponent extends React.Component {
     constructor(props) {
@@ -120,4 +118,4 @@ TablePrizesComponent.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TablePrizesComponent);
+export default TablePrizesComponent;

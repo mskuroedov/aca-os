@@ -14,74 +14,9 @@ import TilesView from "./tiles/TilesView";
 import {schools, schoolFilters, schoolCityFilters} from "../../../fixtures/schools";
 import Button from "@material-ui/core/es/Button/Button";
 import SchoolFiltersModal from "./SchoolFiltersModal";
+import classNames from 'classnames'
+import styles from '../../styles'
 
-
-const styles = theme => ({
-    button: {
-        fontSize: 13,
-        fontWeight: 'bold',
-        marginRight: 10,
-        height: 45,
-    },
-    formControl: {
-        marginLeft: 'auto',
-        width:'100%'
-    },
-    iconbtn: {
-        marginTop: 5,
-        marginLeft: 30
-    },
-    gray: {
-        color: 'rgba(36,36,33,0.3)'
-    },
-    select: {
-        backgroundColor: 'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingBottom: 10,
-        paddingTop: 16,
-        paddingRight: 40,
-        fontSize: 16,
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        }
-    },
-    selectIcon: {
-        color: '#6D6D6D',
-        marginTop: 0
-    },
-    selectLine: {
-        color: 'transparent'
-    },
-    searchInput: {
-        fontSize: 14,
-        color: 'rgba(36,36,33,1)',
-        marginTop: 11,
-        paddingBottom: 5,
-        width:'100%',
-        marginLeft: 'auto',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        }
-    },
-    searchInkbar: {
-        color: 'rgba(36,36,33,1)',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        }
-    },
-    searchInputIcon: {
-        color: 'rgba(145,143,138,1)',
-        position: 'relative',
-        top: 8
-    }
-});
 
 
 class SchoolList extends React.Component {
@@ -159,15 +94,16 @@ class SchoolList extends React.Component {
                         </FormControl>
                     </Grid>
                     <Grid item>
-                        <Button classes={{
+                        <Button color='default' classes={{
                             root: classes.button,
                             label: classes.gray
+                        }} style={{        marginRight: 10,
                         }}>
                             Сбросить
                         </Button>
                     </Grid>
                     <Grid item>
-                        <FormControl className={classes.formControl}>
+                        <FormControl className={classNames(classes.formControl,classes.mlAuto)}>
                             <Input
                                 classes={{
                                     root: classes.searchInput,

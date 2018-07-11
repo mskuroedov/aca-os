@@ -7,11 +7,6 @@ import Subheader from "../headers/PublicSubheader";
 import ShowNewsPaper from "./ShowNewsPaper";
 import Footer from "../footer/Footer";
 
-const styles = theme => ({
-  
-
-});
-
 
 class ShowNewsPage extends React.Component {
     constructor(props) {
@@ -42,4 +37,4 @@ ShowNewsPage.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ShowNewsPage);
+export default ShowNewsPage;

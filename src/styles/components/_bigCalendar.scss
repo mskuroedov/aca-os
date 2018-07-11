@@ -1,4 +1,9 @@
 .common-calendar {
+  height:740px;
+  @media (max-width: 911px){
+    height:294px;
+  }
+
   .square {
     width: 16px;
     height: 16px;
@@ -14,12 +19,30 @@
       background: #FEA62A;
     }
   }
+  .rbc-custom-toolbar{
+    .left-arrow-block{
+      margin-right: 24px;
+      @media (max-width: 911px){
+        margin-right: 0;
+      }
+    }
+    .right-arrow-block{
+      margin-right: 16px;
+      @media (max-width: 911px){
+        margin-right: 8px;
+      }
+    }
+    .xs-today{
+      margin-left: auto;
+    }
+  }
   .square-label {
     color: #242421;
     font-size: 14px;
     margin-right: 23px;
   }
   .rbc-day-slot {
+
     .rbc-events-container {
       width: calc(100% - 2px);
     }
@@ -28,6 +51,9 @@
       border-bottom: 0;
 
     }
+
+  }
+  .rbc-date-cell{
 
   }
   .rbc-day-slot.rbc-time-column {
@@ -70,6 +96,11 @@
   }
   .label-day {
     font-size: 18px;
+    @media ( max-width:911px ){
+      font-size: 16px;
+
+    }
+
     color: #242421;
     text-transform: capitalize;
   }
@@ -82,6 +113,12 @@
     > a {
       float: left;
     }
+    @media (max-width:911px) {
+      text-align: center;
+      > a {
+        float: none;
+      }
+    }
   }
 
   .rbc-month-view, .rbc-time-view, .rbc-day-view {
@@ -91,6 +128,9 @@
 
   .rbc-month-header {
     height: 50px;
+    @media (max-width:911px) {
+      height:44px
+    }
     text-transform: capitalize;
     .rbc-header{
       border-bottom: 1px solid lightgray;
@@ -108,6 +148,12 @@
     padding-left: 5px;
     color: rgba(36, 36, 33, .54);
     border-bottom:0;
+
+    @media (max-width:911px) {
+      padding-top: 10px;
+      text-align: center;
+
+    }
     + .rbc-header {
       border-left: 0;
     }

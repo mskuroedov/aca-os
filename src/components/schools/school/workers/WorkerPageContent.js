@@ -12,10 +12,6 @@ import Experience from "./content/Experience";
 import StaffCommonInfo from "./content/StaffCommonInfo";
 import StaffWork from "./content/StaffWork";
 
-const styles = theme => ({
-
-
-});
 
 
 class WorkerPageContent extends React.Component {
@@ -68,4 +64,4 @@ WorkerPageContent.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(WorkerPageContent);
+export default WorkerPageContent;

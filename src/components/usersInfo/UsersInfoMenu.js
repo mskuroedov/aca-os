@@ -11,6 +11,7 @@ import UsersBuySmt from "./content/UsersBuySmt";
 import PaymentHistory from "./content/PaymentHistory";
 import Catalog from "./content/Catalog";
 import { withRouter } from 'react-router-dom'
+import styles from '../styles'
 
 function TabContainer(props) {
     return (
@@ -26,49 +27,6 @@ TabContainer.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-const styles = theme => ({
-    root: {
-        color: '#00755E',
-        fontWeight: 'bold',
-        opacity: 1,
-        paddingTop: 32,
-        justifyContent: 'flex-end',
-        fontSize: 14,
-        paddingBottom:0
-    },
-    rootPrimarySelected: {
-        color: '#000',
-    },
-    appBar: {
-        fontSize: 1.4,
-        backgroundColor: '#fff',
-        fontWeight: 'bold',
-        justifyContent: 'center',
-        boxShadow: 'none'
-    },
-    menuItem: {
-        fontSize: 14,
-        fontWeight: 'bold'
-    },
-    button: {
-        fontSize: 14,
-        fontWeight: 'bold',
-        fontFamily: '"BlissPro",sans-serif',
-        opacity: '1 !important'
-    },
-    bc: {
-        color: "#000 !important"
-    },
-    rootTabPrimary: {
-        minWidth: 0,
-        color: '#00755E',
-        opacity: 1
-    },
-    menuFlexContainer: {
-        justifyContent: '',
-    }
-
-});
 
 class UsersInfoMenu extends React.Component {
     constructor(props) {
@@ -109,9 +67,9 @@ class UsersInfoMenu extends React.Component {
                                 textColor="primary"
                                 classes={{
 
-                                    label: classes.button,
-                                    labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
-                                    wrapper: classes.button,
+                                    label: classes.tabButton,
+                                    labelContainer: classes.tabButton,// className, e.g. `OverridesClasses-label-X`
+                                    wrapper: classes.tabButton,
                                     selected: classes.bc,// className, e.g. `OverridesClasses-label-X`
                                     root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                                 }}
@@ -120,7 +78,7 @@ class UsersInfoMenu extends React.Component {
                             {/*label="История покупок"*/}
                             {/*textColor="primary"*/}
                             {/*classes={{*/}
-                            {/*label: classes.button,*/}
+                            {/*label: classes.tabButton,*/}
                             {/*selected: classes.bc,*/}
                             {/*root: classes.rootTabPrimary*/}
                             {/*}}*/}
@@ -129,7 +87,7 @@ class UsersInfoMenu extends React.Component {
                                 label="Родителям"
                                 textColor="primary"
                                 classes={{
-                                    label: classes.button,
+                                    label: classes.tabButton,
                                     selected: classes.bc,
                                     root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                                 }}

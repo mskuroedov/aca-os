@@ -9,54 +9,7 @@ import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Icon from "material-ui/es/Icon/Icon";
 import Paper from "material-ui/es/Paper/Paper";
 import NewsItem from "./NewsItem";
-
-
-const styles = theme => ({
-    formControl:{
-      [theme.breakpoints.up('lg')]:{
-          maxWidth:'30%',
-          width:'30%'
-      }
-    },
-    mlauto: {
-        display: 'flex'
-    },
-    searchInput: {
-        fontSize: 14,
-        color: 'rgba(36,36,33,1)',
-        marginTop: 11,
-        paddingBottom: 5,
-        width:'100%',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        }
-    },
-    searchInkbar: {
-        color: 'rgba(36,36,33,1)',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        }
-    },
-    searchInputIcon: {
-        color: 'rgba(145,143,138,1)',
-        position: 'relative',
-        top: 3
-    },
-    button: {
-        margin: theme.spacing.unit,
-        fontSize: 13,
-        fontWeight: 'bold',
-        fontFamily: '"BlissPro",sans-serif',
-    },
-
-});
-
+import styles from '../../styles'
 
 class AllMaterials extends React.Component {
     constructor(props) {
@@ -78,8 +31,8 @@ class AllMaterials extends React.Component {
         return (
             <Grid container spacing={16}
             >
-                <Grid item xs={12} lg={12} className={classes.mlauto}>
-                    <FormControl className={classes.formControl}>
+                <Grid item xs={12} lg={12}>
+                    <FormControl className={classes.libformControl}>
                         <Input
                             classes={{
                                 root: classes.searchInput,

@@ -11,34 +11,7 @@ import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
 import Grid from "material-ui/es/Grid/Grid";
 import Link from "react-router-dom/es/Link";
-
-const styles = theme => ({
-    title: {
-        marginBottom: 11,
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-    textMain: {
-        color: '#242421',
-        fontSize: 16,
-        marginBottom: 16
-    },
-    textSecondary: {
-
-        color: 'rgba(36,36,33,0.54)',
-        fontSize: 14
-    },
-    link:{
-        borderBottom:'1px solid rgba(36,36,33,.3)',
-        transition:'all .3s',
-        '&:hover':{
-            borderBottom:'1px solid rgba(36,36,33,.6)'
-        }
-    }
-
-});
+import styles from '../../../../styles'
 
 
 class SportCareer extends React.Component {
@@ -99,28 +72,28 @@ class SportCareer extends React.Component {
                         <Grid container spacing={0} style={{padding: 16}}>
                             <Grid item xs={12}>
                                 <Typography className={classes.textSecondary}>Период</Typography>
-                                <Typography className={classes.textMain}>2010-2017</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>2010-2017</Typography>
                             </Grid>
                             <Grid item xs={12}>
                                 <Typography className={classes.textSecondary}>Амплуа</Typography>
-                                <Typography className={classes.textMain}>Нападающий</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>Нападающий</Typography>
                             </Grid>
                             <Grid item xs={12}>
                                 <Typography className={classes.textSecondary}>Команда</Typography>
-                                <Typography className={classes.textMain}>АкБарс</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>АкБарс</Typography>
 
                             </Grid>
                             <Grid item xs={12}>
                                 <Typography className={classes.textSecondary}>Игры</Typography>
-                                <Typography className={classes.textMain}>36</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>36</Typography>
                             </Grid>
                             <Grid item xs={12}>
                                 <Typography className={classes.textSecondary}>Выигрыши</Typography>
-                                <Typography className={classes.textMain}>14</Typography>
+                                <Typography className={classNames(classes.textMain,classes.mb16)}>14</Typography>
                             </Grid>
                             <Grid item xs={12}>
                                 <Typography className={classes.textSecondary}>Тренер</Typography>
-                                <Link className={classNames(classes.link,classes.textMain)} to='2'>Саяпов Ренат Маратович</Link>
+                                <Link className={classNames(classes.link,classNames(classes.textMain,classes.mb16))} to='2'>Саяпов Ренат Маратович</Link>
                             </Grid>
                         </Grid>
                     </div>

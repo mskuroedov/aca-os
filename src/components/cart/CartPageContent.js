@@ -11,112 +11,8 @@ import FormControl from "material-ui/es/Form/FormControl";
 import Input from "material-ui/es/Input/Input";
 import Button from "@material-ui/core/es/Button/Button";
 import FontAwesome from 'react-fontawesome';
+import styles from '../styles'
 
-const styles = theme => ({
-    paper: {
-        [theme.breakpoints.up('md')]: {paddingLeft: 40, paddingRight: 40},
-        [theme.breakpoints.down('md')]: {paddingLeft: 16, paddingRight: 16},
-        paddingTop: 16,
-        paddingBottom: 40
-    },
-    title: {
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal',
-        marginBottom: 11
-    },
-    link: {
-        lineHeight: 1.6,
-        color: 'rgba(36,36,33,1);',
-        transition: 'all 0.4s',
-        borderBottom: ' 1px solid rgba(36,36,33,0.2)',
-        fontSize: 15,
-        '&:hover': {
-            transition: 'all 0.4s',
-            borderBottomColor: 'rgba(36,36,33,.5)'
-        }
-    },
-    price: {
-        fontSize: 19,
-        fontWeight: 'bold',
-        marginRight: 28,
-
-    },
-    icon: {
-        color: 'rgba(36,36,33,.54)'
-    },
-    borderdashed: {
-        borderBottom: '1px dashed rgba(36,36,33,0.2)'
-    },
-    itogo: {
-        fontSize: 13,
-        fontWeight: 'normal',
-        marginRight: 9
-    },
-
-    searchInput: {
-        fontSize: 16,
-        color: 'rgba(36,36,33,1)',
-
-        marginTop: 11,
-        paddingBottom: 5,
-        width: '100%',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2)'
-        }
-    },
-    formControl: {
-        width: '100%',
-        marginBottom: 24
-    },
-    searchInkbar: {
-        color: 'rgba(36,36,33,1)',
-        '&:before': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        },
-        '&:after': {
-            backgroundColor: 'rgba(0,0,0,0.2) !important'
-        }
-    },
-    margin: {
-        marginBottom: 24
-    },
-
-    button: {
-        fontSize: 13,
-        fontWeight: 'bold',
-        fontFamily: '"BlissPro",sans-serif',
-    },
-    mrXlAuto: {
-
-        [theme.breakpoints.up('md')]: {
-            marginRight: 'auto',
-
-        },
-        [theme.breakpoints.down('md')]: {
-            marginBottom: 16,
-        },
-    },
-    promoblock: {
-        [theme.breakpoints.down('md')]: {
-            order: 2
-        }
-    },
-    itogoblock: {
-        [theme.breakpoints.down('md')]: {
-            order: 1
-
-        },
-        [theme.breakpoints.up('md')]: {
-            marginLeft: 'auto', marginRight: 22
-        }
-    }
-
-});
 
 
 class CartPageContent extends React.Component {
@@ -186,7 +82,7 @@ class CartPageContent extends React.Component {
 
                     <Grid item xs={12} lg={5}>
                         <Typography className={classes.title}> Оформление заказа</Typography>
-                        <Paper className={classNames(classes.paper, 'paper')}
+                        <Paper className={classNames(classes.paperCart, 'paper')}
                         >
                             <Grid container spancing={16}>
                                 <Grid item xs={12}>
@@ -251,7 +147,7 @@ class CartPageContent extends React.Component {
 }
 
 CartPageContent.propTypes = {
-    classes: PropTypes.object.isRequired,
+    // classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles)(CartPageContent);

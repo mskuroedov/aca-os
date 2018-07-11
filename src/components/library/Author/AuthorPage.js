@@ -8,7 +8,6 @@ import AuthorPageContent from "./AuthorPageContent";
 import AuthorPageHeader from "./AuthorPageHeader";
 import Footer from "../../footer/Footer";
 
-const styles = theme => ({});
 
 
 class AuthorPage extends React.Component {
@@ -35,4 +34,4 @@ AuthorPage.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(AuthorPage);
+export default AuthorPage;

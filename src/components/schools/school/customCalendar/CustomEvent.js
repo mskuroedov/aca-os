@@ -10,84 +10,7 @@ import Grid from "@material-ui/core/es/Grid/Grid";
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import Icon from "@material-ui/core/es/Icon/Icon";
 import Link from "react-router-dom/es/Link";
-
-const styles = theme => ({
-    time: {
-        fontSize: 13,
-        opacity: 0.8,
-        marginRight: 4
-    },
-    eventCell: {
-        fontSize: 13,
-        textOverflow: 'ellipsis',
-        overflowX: 'hidden',
-        maxWidth: '100%'
-    },
-    typography: {
-        margin: theme.spacing.unit * 2,
-    },
-    popoverPaper: {
-        borderRadius: 20,
-    },
-    popoverTopContainer: {
-        padding: 24,
-        backgroundColor: '#E43935',
-        color: 'white'
-    },
-    whiteLink: {
-        color: 'white',
-        fontSize: 16,
-        borderBottom: '1px solid rgba(255,255,255,.3)',
-        transition: 'all .3s',
-        '&:hover': {
-            borderBottom: '1px solid rgba(255,255,255,.6)',
-        }
-    },
-    name: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        lineHeight: '22px',
-        color: 'white',
-        marginBottom: 16
-    },
-    result: {
-        fontSize: 16,
-        lineHeight: '22px',
-        color: 'white'
-    },
-    button: {
-        height: 24,
-        width: 24,
-        color: 'white'
-    },
-    description: {
-        color: '#242421',
-        fontSize: 16,
-        lineHeight: '22px',
-        display: 'flex',
-        alignItems: 'center'
-    },
-    secondaryText: {
-        fontSize: 14,
-        color: 'rgba(36,36,33,.6)',
-        marginBottom: 13
-    },
-    popoverBottomContainer: {
-        padding: 24,
-        paddingLeft: 0,
-        paddingBottom: 6,
-    },
-    descriptionContainer: {
-        // padding:8,
-        paddingLeft: 30,
-        // paddingRight:12,
-        paddingBottom: 24
-    },
-    icon: {
-        color: 'rgba(36,36,33,.3)',
-        marginRight: 16
-    }
-});
+import styles from '../../../styles'
 
 
 class CustomEvent extends React.Component {
@@ -157,7 +80,7 @@ class CustomEvent extends React.Component {
                               style={{background: this.getColor(event)}}>
                             <Grid container style={{marginBottom: 30}} alingItems='center'>
                                 <Grid item style={{marginLeft: 'auto'}}>
-                                    <IconButton onClick={this.handleClose} className={classes.button}>
+                                    <IconButton onClick={this.handleClose} className={classes.calendarbutton}>
                                         <Icon>close</Icon>
                                     </IconButton>
                                 </Grid>
@@ -173,7 +96,7 @@ class CustomEvent extends React.Component {
                                   alignItems='center'>
                                 <Grid item xs={6} className={classes.descriptionContainer}>
                                     <Typography className={classes.description}>
-                                        <Icon className={classes.icon}>calendar_today</Icon>
+                                        <Icon className={classes.calendaricon}>calendar_today</Icon>
                                         {moment(event.start).format('D MMMM, dddd')}
                                     </Typography>
                                 </Grid>
@@ -184,7 +107,7 @@ class CustomEvent extends React.Component {
                                     </Typography>
                                 </Grid>
                                 <Grid item className={classes.descriptionContainer}>
-                                    <Typography className={classes.secondaryText}>Помещение</Typography>
+                                    <Typography className={classes.calendarsecondaryText}>Помещение</Typography>
                                     <Typography className={classes.description}>{event.place}</Typography>
                                 </Grid>
                             </Grid>

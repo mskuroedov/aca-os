@@ -8,7 +8,6 @@ import {routes} from "../../routers/AppRouter";
 import TeamPageContent from "./TeamPageContent";
 import Footer from "../footer/Footer";
 
-const styles = theme => ({});
 
 
 class TeamPage extends React.Component {
@@ -37,4 +36,4 @@ TeamPage.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TeamPage);
+export default TeamPage;

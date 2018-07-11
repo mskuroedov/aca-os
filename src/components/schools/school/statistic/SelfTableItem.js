@@ -3,16 +3,7 @@ import PropTypes from 'prop-types';
 import {Avatar, TableCell, TableRow} from "material-ui";
 import {Link} from "react-router-dom";
 import {withStyles} from "material-ui/styles/index";
-
-const styles = theme => ({
-    link:{
-        borderBottom:'1px solid rgba(36,36,33,0.2)',
-        color:'rgba(36,36,33,1)',
-        '&:hover':{
-            color:'rgba(0,118,94,1)'
-        }
-    }
-});
+import styles from '../../../styles'
 
 class SelfTableItem extends React.Component {
     render () {

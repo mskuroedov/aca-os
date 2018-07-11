@@ -7,74 +7,7 @@ import Grid from "material-ui/es/Grid/Grid";
 import {Paper} from "material-ui";
 import Icon from "material-ui/es/Icon/Icon";
 import Link from "react-router-dom/es/Link";
-
-
-const styles = theme => ({
-    paper: {
-        boxShadow: 'none',
-        borderRadius: 12,
-        paddingTop: 24,
-        paddingLeft: 24,
-        paddingRight: 32,
-        paddingBottom: 21,
-        marginBottom: 10,
-        border: '1px solid rgba(0,0,0,0.1);',
-        fontSize: 16,
-        fontFamily: 'BlissPro',
-        overflow: 'hidden'
-    },
-    title: {
-        marginBottom: 11,
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-    map: {
-        width: '100%',
-        height: '100%',
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        boxShadow: 'none',
-        border:0
-
-    },
-    mapContainer: {
-        border: '1px solid rgba(0,0,0,0.1);',
-        width: '100%',
-        zIndex: 1,
-        borderRadius: 12,
-        overflow: 'hidden',
-        minHeight: 372,
-        position: 'relative'
-    },
-    mainText: {
-        color: 'rgba(36,36,33,1)',
-        fontSize: 16
-    },
-    secondaryText: {
-        color: 'rgba(128,128,128,.6)',
-        fontWeight: 'bold',
-        fontSize: 14
-    },
-    iconGray: {
-        color: 'rgba(191,191,184,1)',
-        fontSize: 24
-    },
-    link: {
-        lineHeight: 1.6,
-        color: 'rgba(36,36,33,1);',
-        transition: 'all 0.4s',
-        borderBottom: ' 1px solid rgba(36,36,33,0.2)',
-        fontSize: 16,
-        '&:hover': {
-            transition: 'all 0.4s',
-            borderBottomColor: 'rgba(36,36,33,.5)'
-        }
-    }
-
-});
+import styles from '../../../styles'
 
 class Contacts extends React.Component {
     constructor(props) {
@@ -89,16 +22,16 @@ class Contacts extends React.Component {
                 <Grid container spacing={16}>
                     <Grid item xs={12} lg={6}>
                         <Typography className={classes.title}>Контакты</Typography>
-                        <Paper className={classes.paper} style={{marginBottom: 24}}>
+                        <Paper className={classes.contactsPaper} style={{marginBottom: 24}}>
                             <Grid container spacing={16}>
                                 <Grid item xs={2} lg={1}><Icon className={classes.iconGray}>location_on</Icon></Grid>
                                 <Grid item xs={10} lg={11}>
-                                    <Typography className={classes.mainText}>г. Казань, ул. Петербургская, д. 37, РТ,
+                                    <Typography className={classes.mainText} style={{marginBottom:0}}>г. Казань, ул. Петербургская, д. 37, РТ,
                                         420107</Typography>
                                 </Grid>
                                 <Grid item xs={2} lg={1}><Icon className={classes.iconGray}>phone</Icon></Grid>
                                 <Grid item xs={10} lg={11}>
-                                    <Typography className={classes.mainText}> (+7 843) 221-81-10</Typography>
+                                    <Typography className={classes.mainText} style={{marginBottom:0}}> (+7 843) 221-81-10</Typography>
                                 </Grid>
                                 <Grid item xs={2} lg={1}><Icon className={classes.iconGray}>email</Icon></Grid>
                                 <Grid item xs={10} lg={11}>
@@ -117,7 +50,7 @@ class Contacts extends React.Component {
                             <Grid container spacing={8}>
                                 <Grid item xs={12} lg={6}>
                                     <Typography className={classes.secondaryText}>Администрация</Typography>
-                                    <Typography className={classes.mainText}>Пн — Пт: 8:00–18:00 <br/>
+                                    <Typography className={classes.mainText} style={{marginBottom:0}}>Пн — Пт: 8:00–18:00 <br/>
                                         Сб, Вс — выходной</Typography>
 
                                 </Grid>
@@ -129,7 +62,7 @@ class Contacts extends React.Component {
                             </Grid>
                         </Paper>
                     </Grid>
-                    <Grid item xs={12} lg={6} style={{marginTop: 16, overflow: 'hidden'}}>
+                    <Grid item xs={12} lg={6} style={{marginTop: 40, overflow: 'hidden'}}>
                         <div className={classes.mapContainer}>
 
                             <iframe
@@ -143,22 +76,22 @@ class Contacts extends React.Component {
                         <Paper className={classes.paper}>
                             <Grid container spacing={8}>
                                 <Grid item xs={12} style={{marginBottom: 8}}>
-                                    <Typography className={classes.mainText}>ООО «Академия хоккея Ак Барс» имени Ю. И.
+                                    <Typography className={classes.mainText} style={{marginBottom:0}}>ООО «Академия хоккея Ак Барс» имени Ю. И.
                                         Моисеева</Typography>
                                 </Grid>
                                 <Grid item style={{marginRight: 55}}>
                                     <Typography className={classes.secondaryText}>Юридический адрес</Typography>
-                                    <Typography className={classes.mainText}>г. Казань, ул. Карла Маркса, д. 71, РТ,
+                                    <Typography className={classes.mainText} style={{marginBottom:0}}>г. Казань, ул. Карла Маркса, д. 71, РТ,
                                         420045</Typography>
 
                                 </Grid>
                                 <Grid item style={{marginRight: 55}}>
                                     <Typography className={classes.secondaryText}>ИНН</Typography>
-                                    <Typography className={classes.mainText}>1655379198</Typography>
+                                    <Typography className={classes.mainText} style={{marginBottom:0}}>1655379198</Typography>
                                 </Grid>
                                 <Grid item style={{marginRight: 55}}>
                                     <Typography className={classes.secondaryText}>ОГРН</Typography>
-                                    <Typography className={classes.mainText}> 1171690003055</Typography>
+                                    <Typography className={classes.mainText} style={{marginBottom:0}}> 1171690003055</Typography>
                                 </Grid>
                             </Grid>
                         </Paper>

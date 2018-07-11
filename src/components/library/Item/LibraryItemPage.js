@@ -7,7 +7,6 @@ import Subheader from "../../headers/Subheader";
 import LibraryItemContent from "./LibraryItemContent";
 import Footer from "../../footer/Footer";
 
-const styles = theme => ({});
 
 
 class LibraryItemPage extends React.Component {
@@ -36,4 +35,4 @@ LibraryItemPage.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(LibraryItemPage);
+export default LibraryItemPage;

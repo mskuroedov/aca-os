@@ -11,36 +11,7 @@ import {sportsman} from "../../fixtures/sportsman";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import TilesView from "../schools/school/sportsman/tiles/TilesView";
 import TrainerView from "./TrainerView";
-
-const styles = theme => ({
-    select: {
-        backgroundColor: 'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingTop: 16,
-        paddingBottom: 10,
-        paddingRight: 40,
-        fontSize: 16,
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        }
-    },
-    selectIcon: {
-        color: '#6D6D6D',
-    },
-    selectLine: {
-        color: 'transparent'
-    },
-    title: {
-        marginBottom: 11,
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-
-});
-
+import styles from '../styles'
 
 class GroupPageContent extends React.Component {
     state = {

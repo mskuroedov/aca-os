@@ -8,7 +8,6 @@ import StatsPageContent from "./StatsPageContent";
 import StatsPage from "../schools/school/statistic/StatsPage"
 import Footer from "../footer/Footer";
 
-const styles = theme => ({});
 
 
 class CommonStatsPage extends React.Component {
@@ -39,4 +38,4 @@ CommonStatsPage.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(CommonStatsPage);
+export default CommonStatsPage;

@@ -3,15 +3,7 @@ import PropTypes from 'prop-types';
 import {withStyles} from 'material-ui/styles';
 import classNames from 'classnames';
 import FontAwesome from 'react-fontawesome';
-
-const styles = theme => ({
-    grayText: {
-        color: 'rgba(128,128,128,.6)',
-        fontWeight: 'bold',
-        fontSize: 14
-    }
-
-});
+import styles from '../styles'
 
 
 class ShareSection extends React.Component {

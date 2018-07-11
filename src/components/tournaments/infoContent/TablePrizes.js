@@ -11,42 +11,8 @@ import MenuItem from "material-ui/es/Menu/MenuItem";
 import {ampluaFilter} from "../../../fixtures/tournaments";
 import Switch from "@material-ui/core/es/Switch/Switch";
 import TablePrizesComponent from "./TablePrizesComponent";
+import styles from '../../styles'
 
-const styles = theme => ({
-    title: {
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-    select: {
-        backgroundColor: 'rgba(36,36,33,0.1)',
-        paddingLeft: 17,
-        paddingTop: 13,
-        paddingBottom: 7,
-        paddingRight: 40,
-        maxHeight: 36,
-        [theme.breakpoints.up('md')]: {
-            fontSize: 14
-        },
-        [theme.breakpoints.down('md')]: {
-            fontSize: 12
-        },
-        color: '#242421',
-        '&:after': {
-            backgroundColor: '#242421'
-        },
-    },
-    selectIcon: {
-        color: '#6D6D6D',
-    },
-    selectLine: {
-        color: 'transparent'
-    },
-    bgGreen: {
-        backgroundColor: '#005945 !important'
-    },
-});
 
 
 class TablePrizes extends React.Component {
@@ -59,7 +25,7 @@ class TablePrizes extends React.Component {
         return (
             <Grid container spacing={16} alignItems='center'>
                 <Grid item>
-                    <Typography className={classes.title}>Призы и награды</Typography>
+                    <Typography className={classes.title} style={{marginBottom:0}}>Призы и награды</Typography>
                 </Grid>
                 <Grid item xs={12}>
                     <Paper className='paper'>

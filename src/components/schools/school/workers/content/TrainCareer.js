@@ -11,19 +11,7 @@ import TableCell from "@material-ui/core/es/TableCell/TableCell";
 import TableBody from "@material-ui/core/es/TableBody/TableBody";
 import Grid from "@material-ui/core/es/Grid/Grid";
 import Link from "react-router-dom/es/Link";
-
-const styles = theme => ({
-    title: {
-        marginBottom: 11,
-        fontSize: 20,
-        color: ' rgba(36,36,33,0.6);',
-        fontFamily: '"BlissPro",sans-serif',
-        fontWeight: 'normal'
-    },
-
-
-});
-
+import styles from '../../../../styles'
 
 class TrainCareer extends React.Component {
     constructor(props) {

@@ -6,7 +6,7 @@ import Tabs, {Tab} from 'material-ui/Tabs';
 import Typography from 'material-ui/Typography';
 import AllMaterials from "./AllMaterials";
 import Authors from "./Authors";
-
+import styles from '../../styles'
 function TabContainer(props) {
     return (
         <div className='main-section'
@@ -20,44 +20,37 @@ TabContainer.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-const styles = theme => ({
-    root: {
-        flexGrow: 1,
-        marginTop: theme.spacing.unit * 3,
-        color: '#00755E',
-        fontSize: 1.4,
-        fontWeight: 'bold'
-    },
-    rootPrimarySelected: {
-        color: '#000',
-    },
-    appBar: {
-        fontSize: 1.4,
-        backgroundColor: '#fff',
-        fontWeight: 'bold',
-        boxShadow: 'none'
-    },
-    tabs: {
-        fontSize: 14
-    },
-    menuItem: {
-        fontSize: 14,
-        fontWeight: 'bold'
-    },
-    button: {
-        fontSize: 14,
-        fontWeight: 'bold',
-        fontFamily: '"BlissPro",sans-serif',
-    },
-    bc: {
-        color: "#000 !important"
-    },
-    rootTabPrimary: {
-        minWidth: 0,
-        color: '#00755E'
-    }
-
-});
+// const styles = theme => ({
+//     rootPrimarySelected: {
+//         color: '#000',
+//     },
+//     appBar: {
+//         fontSize: 1.4,
+//         backgroundColor: '#fff',
+//         fontWeight: 'bold',
+//         boxShadow: 'none'
+//     },
+//     tabs: {
+//         fontSize: 14
+//     },
+//     menuItem: {
+//         fontSize: 14,
+//         fontWeight: 'bold'
+//     },
+//     button: {
+//         fontSize: 14,
+//         fontWeight: 'bold',
+//         fontFamily: '"BlissPro",sans-serif',
+//     },
+//     bc: {
+//         color: "#000 !important"
+//     },
+//     rootTabPrimary: {
+//         minWidth: 0,
+//         color: '#00755E'
+//     }
+//
+// });
 
 class LibraryMenu extends React.Component {
     constructor(props) {
@@ -93,8 +86,8 @@ class LibraryMenu extends React.Component {
                              textColor="primary"
                              classes={{
                                  label: classes.button,
-                                 labelContainer: classes.button,// className, e.g. `OverridesClasses-label-X`
-                                 wrapper: classes.button,
+                                 labelContainer: classes.tabButton,// className, e.g. `OverridesClasses-label-X`
+                                 wrapper: classes.tabButton,
                                  selected: classes.bc,// className, e.g. `OverridesClasses-label-X`
                                  root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
@@ -102,7 +95,7 @@ class LibraryMenu extends React.Component {
                              textColor="primary"
 
                              classes={{
-                                 label: classes.button,
+                                 label: classes.tabButton,
                                  selected: classes.bc,
                                  root: classes.rootTabPrimary
                              }}
@@ -112,7 +105,7 @@ class LibraryMenu extends React.Component {
 
 
                              classes={{
-                                 label: classes.button,
+                                 label: classes.tabButton,
                                  selected: classes.bc,
                                  root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
@@ -120,7 +113,7 @@ class LibraryMenu extends React.Component {
                              textColor="primary"
 
                              classes={{
-                                 label: classes.button,
+                                 label: classes.tabButton,
                                  selected: classes.bc,
                                  root: classes.rootTabPrimary// className, e.g. `OverridesClasses-label-X`
                              }}/>
