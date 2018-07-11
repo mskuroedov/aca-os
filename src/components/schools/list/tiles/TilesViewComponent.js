@@ -21,10 +21,10 @@ class TilesView extends React.Component {
                     <Button color="primary" className={classes.button} style={{float:'right'}}>показать все</Button>
                 </Grid>
                 <Grid item xs={12}>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={16} className={classes.innerList}>
                         {
                             schools.map((item) => {
-                                return <TilesItem key={item.id} {...item} />
+                                return <TilesItem key={item.id} school={item} />
                             })
                         }
                     </Grid>

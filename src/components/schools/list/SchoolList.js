@@ -1,17 +1,21 @@
-import React from 'react';
-import {Grid} from "material-ui";
-import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
-import Select from 'material-ui/Select';
-import {MenuItem} from 'material-ui/Menu';
-import {FormControl} from 'material-ui/Form';
+import React from "react";
+import { Grid } from "material-ui";
+import PropTypes from "prop-types";
+import { withStyles } from "material-ui/styles";
+import Select from "material-ui/Select";
+import { MenuItem } from "material-ui/Menu";
+import { FormControl } from "material-ui/Form";
 import TableView from "./table/TableView";
 import Icon from "material-ui/es/Icon/Icon";
 import IconButton from "material-ui/es/IconButton/IconButton";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Input from "material-ui/es/Input/Input";
 import TilesView from "./tiles/TilesView";
-import {schools, schoolFilters, schoolCityFilters} from "../../../fixtures/schools";
+import {
+  schools,
+  schoolFilters,
+  schoolCityFilters
+} from "../../../fixtures/schools";
 import Button from "@material-ui/core/es/Button/Button";
 import SchoolFiltersModal from "./SchoolFiltersModal";
 import classNames from 'classnames'
@@ -20,32 +24,46 @@ import styles from '../../styles'
 
 
 class SchoolList extends React.Component {
+  state = {
+    tableView: false,
+    schools,
+    schoolFilters,
+    schoolCityFilters,
+    editModalOpened: false,
+    selectedFilter: schoolFilters[0].id
+  };
 
-    state = {
-        tableView: false,
-        schools,
-        schoolFilters,
-        schoolCityFilters,
-        selectedFilter: schoolFilters[0].id,
-    };
+  onViewChange = event => {
+    this.setState({
+      tableView: !this.state.tableView
+    });
+  };
 
-    onViewChange = event => {
-        this.setState({
-            tableView: !(this.state.tableView)
-        });
-    };
+  onFilterChange = event => {
+    this.setState({ selectedFilter: event.target.value });
+  };
 
-    onFilterChange = event => {
-        this.setState({selectedFilter: event.target.value});
-    };
+  onSearchChange = event => {
+    this.setState({
+      schools: schools.filter(school =>
+        school.title
+          .toLowerCase()
+          .includes(event.target.value.toLowerCase().trim())
+      )
+    });
+  };
 
-    onSearchChange = event => {
-        this.setState({
-            schools: schools.filter((school) => (
-                school.title.toLowerCase().includes(event.target.value.toLowerCase().trim())
-            ))
-        })
-    };
+  openEditModal = () => {
+    this.setState({
+      editModalOpened: true
+    });
+  };
+
+  closeEditModal = () => {
+    this.setState({
+      editModalOpened: false
+    });
+  };
 
     render() {
         const {classes} = this.props;
@@ -162,18 +180,7 @@ class SchoolList extends React.Component {
 }
 
 SchoolList.propTypes = {
-    classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(SchoolList);
-
-// {
-//     this.state.tableView ?
-//         <TableView schools={schools}/>
-//         :
-//         <TilesView schools={schools}/>
-// }
-
-//<IconButton className={classes.iconbtn} onClick={this.onViewChange}>
-  //  {this.state.tableView ? <Icon>view_module</Icon> : <Icon>view_list</Icon>}
-//</IconButton>

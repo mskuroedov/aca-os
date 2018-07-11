@@ -15,89 +15,94 @@ import styles from '../../../../styles'
 
 
 class Achievements extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
+  render() {
+    const { classes } = this.props;
+    return (
+      <div>
+        <Typography className={classes.title}>Награды и достижения</Typography>
+        <Paper className={classnames('paper', classes.paper)}>
+          <Table className="table no-bottom xs-hidden">
+            <TableHead>
+              <TableRow>
+                <TableCell>Дата</TableCell>
+                <TableCell>Мероприятие</TableCell>
+                <TableCell>Достижение</TableCell>
+                <TableCell />
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>21.07.1974</TableCell>
+                <TableCell>Чемпионат СССР</TableCell>
+                <TableCell>3 место</TableCell>
+                <TableCell className="PaperMenuTrigger">
+                  <PaperMenu relate />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>08.02.1982</TableCell>
+                <TableCell>Кубок СССР</TableCell>
+                <TableCell>лучший бомбардир</TableCell>
+                <TableCell className="PaperMenuTrigger">
+                  <PaperMenu relate />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>13.12.1994</TableCell>
+                <TableCell>Чемпионат СССР</TableCell>
+                <TableCell>1 место</TableCell>
+                <TableCell className="PaperMenuTrigger">
+                  <PaperMenu relate />
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
 
-    render() {
-        const {classes} = this.props;
-        return (
-            <div>
-                <Typography className={classes.title}>Награды и достижения</Typography>
-                <Paper className="paper">
-                    <Table className="table no-bottom xs-hidden">
-                        <TableHead>
-                            <TableRow>
-                                <TableCell >Дата</TableCell>
-                                <TableCell >Мероприятие</TableCell>
-                                <TableCell >Достижение</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            <TableRow>
-                                <TableCell >21.07.1974</TableCell>
-                                <TableCell >Чемпионат СССР</TableCell>
-                                <TableCell >3 место</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell >08.02.1982</TableCell>
-                                <TableCell >Кубок СССР</TableCell>
-                                <TableCell >лучший бомбардир</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell >13.12.1994</TableCell>
-                                <TableCell >Чемпионат СССР</TableCell>
-                                <TableCell >1 место</TableCell>
-                            </TableRow>
-                        </TableBody>
-                    </Table>
-
-                    <div className='lg-hidden'>
-                        <Grid container spacing={0} style={{padding: 16}} className='border-bottom'>
-                            <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Название</Typography>
-                                <Typography className={classNames(classes.textMain,classes.mb16)}>Лучший бомбардир 2017</Typography>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Дата</Typography>
-                                <Typography className={classNames(classes.textMain,classes.mb16)}>21.12.2017</Typography>
-
-                            </Grid>
-                        </Grid>
-                        <Grid container spacing={0} style={{padding:16}} className='border-bottom'>
-                            <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Название</Typography>
-                                <Typography className={classNames(classes.textMain,classes.mb16)}>Лучший бомбардир сезона 2016</Typography>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Дата</Typography>
-                                <Typography className={classNames(classes.textMain,classes.mb16)}>25.12.2016</Typography>
-
-                            </Grid>
-                        </Grid>
-                        <Grid container spacing={0} style={{padding:16}}>
-                            <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Название</Typography>
-                                <Typography className={classNames(classes.textMain,classes.mb16)}>Обладатель кубка Гагарина</Typography>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Дата</Typography>
-                                <Typography className={classNames(classes.textMain,classes.mb16)}>13.12.2010</Typography>
-
-                            </Grid>
-                        </Grid>
-                    </div>
-                </Paper>
-
-            </div>
-
-        )
-    }
+          <div className="lg-hidden">
+            <Grid container spacing={0} style={{ padding: 16 }} className="border-bottom">
+              <Grid item xs={12}>
+                <Typography className={classes.textSecondary}>Название</Typography>
+                <Typography className={classNames(classes.textMain,classes.mb16)}>Лучший бомбардир 2017</Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <Typography className={classes.textSecondary}>Дата</Typography>
+                <Typography className={classNames(classes.textMain,classes.mb16)}>21.12.2017</Typography>
+              </Grid>
+            </Grid>
+            <Grid container spacing={0} style={{ padding: 16 }} className="border-bottom">
+              <Grid item xs={12}>
+                <Typography className={classes.textSecondary}>Название</Typography>
+                <Typography className={classNames(classes.textMain,classes.mb16)}>Лучший бомбардир сезона 2016</Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <Typography className={classes.textSecondary}>Дата</Typography>
+                <Typography className={classNames(classes.textMain,classes.mb16)}>25.12.2016</Typography>
+              </Grid>
+            </Grid>
+            <Grid container spacing={0} style={{ padding: 16 }}>
+              <Grid item xs={12}>
+                <Typography className={classes.textSecondary}>Название</Typography>
+                <Typography className={classNames(classes.textMain,classes.mb16)}>Обладатель кубка Гагарина</Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <Typography className={classes.textSecondary}>Дата</Typography>
+                <Typography className={classNames(classes.textMain,classes.mb16)}>13.12.2010</Typography>
+              </Grid>
+            </Grid>
+            <PaperMenu />
+          </div>
+        </Paper>
+      </div>
+    );
+  }
 }
 
 Achievements.propTypes = {
-    classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(Achievements);

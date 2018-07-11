@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
-import classNames from 'classnames';
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "material-ui/styles";
+import classNames from "classnames";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import Paper from "@material-ui/core/es/Paper/Paper";
 import Table from "@material-ui/core/es/Table/Table";
@@ -15,9 +15,9 @@ import styles from '../../../../styles'
 
 
 class StaffCommonInfo extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
 
     render() {
@@ -84,7 +84,7 @@ class StaffCommonInfo extends React.Component {
 }
 
 StaffCommonInfo.propTypes = {
-    classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(StaffCommonInfo);

@@ -15,73 +15,80 @@ import styles from '../../../../styles'
 
 
 class Education extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-
-    render() {
-        const {classes} = this.props;
-        return (
-            <div>
-                <Typography className={classes.title}>Образование</Typography>
-                <Paper className="paper">
-                    <Table className="table no-bottom xs-hidden">
-                        <TableHead>
-                            <TableRow>
-                                <TableCell>Название</TableCell>
-                                <TableCell>Дата</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            <TableRow>
-                                <TableCell>Курс «Методическая работа в сфере физической культуры и спорта»</TableCell>
-                                <TableCell>21.07.2016</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>Сертификат «О присвоении аттестационной комиссией ФХР тренерской категории
-                                    ”B”»</TableCell>
-                                <TableCell>08.02.2014</TableCell>
-                            </TableRow>
-                        </TableBody>
-                    </Table>
-                    <div className='lg-hidden'>
-                        <Grid container spacing={0} style={{padding: 16}} className='border-bottom'>
-                            <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Название</Typography>
-                                <Typography className={classNames(classes.textMain,classes.mb16)}>Курс "Методическая работа в сфере физической
-                                    культуры и спорта"</Typography>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Дата</Typography>
-                                <Typography className={classNames(classes.textMain,classes.mb16)}>21.07.2016</Typography>
-
-                            </Grid>
-                        </Grid>
-                        <Grid container spacing={0} style={{padding:16}}>
-                            <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Название</Typography>
-                                <Typography className={classNames(classes.textMain,classes.mb16)}>Диплом за 1 место в сезоне 2016</Typography>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Typography className={classes.textSecondary}>Дата</Typography>
-                                <Typography className={classNames(classes.textMain,classes.mb16)}>18.02.2014</Typography>
-
-                            </Grid>
-                        </Grid>
-                    </div>
-
-                </Paper>
-
-
-            </div>
-
-        )
-    }
+  render() {
+    const { classes } = this.props;
+    return (
+      <div>
+        <Typography className={classes.title}>Образование</Typography>
+        <Paper className={classnames('paper', classes.paper)}>
+          <Table className="table no-bottom xs-hidden">
+            <TableHead>
+              <TableRow>
+                <TableCell>Название</TableCell>
+                <TableCell>Дата</TableCell>
+                <TableCell />
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>
+                  Курс «Методическая работа в сфере физической культуры и спорта»
+                </TableCell>
+                <TableCell>21.07.2016</TableCell>
+                <TableCell className="PaperMenuTrigger">
+                  <PaperMenu relate />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>
+                  Сертификат «О присвоении аттестационной комиссией ФХР тренерской категории ”B”»
+                </TableCell>
+                <TableCell>08.02.2014</TableCell>
+                <TableCell className="PaperMenuTrigger">
+                  <PaperMenu relate />
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+          <div className="lg-hidden">
+            <Grid container spacing={0} style={{ padding: 16 }} className="border-bottom">
+              <Grid item xs={12}>
+                <Typography className={classes.textSecondary}>Название</Typography>
+                <Typography className={classNames(classes.textMain,classes.mb16)}>
+                  Курс "Методическая работа в сфере физической культуры и спорта"
+                </Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <Typography className={classes.textSecondary}>Дата</Typography>
+                <Typography className={classNames(classes.textMain,classes.mb16)}>21.07.2016</Typography>
+              </Grid>
+            </Grid>
+            <Grid container spacing={0} style={{ padding: 16 }}>
+              <Grid item xs={12}>
+                <Typography className={classes.textSecondary}>Название</Typography>
+                <Typography className={classNames(classes.textMain,classes.mb16)}>
+                  Диплом за 1 место в сезоне 2016
+                </Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <Typography className={classes.textSecondary}>Дата</Typography>
+                <Typography className={classNames(classes.textMain,classes.mb16)}>18.02.2014</Typography>
+              </Grid>
+            </Grid>
+            <PaperMenu />
+          </div>
+        </Paper>
+      </div>
+    );
+  }
 }
 
 Education.propTypes = {
-    classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(Education);

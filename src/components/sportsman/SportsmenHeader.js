@@ -1,8 +1,9 @@
 import React from 'react';
-import {Grid} from "material-ui";
+import { Grid } from 'material-ui';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {withStyles} from 'material-ui/styles';
+import { withStyles } from 'material-ui/styles';
+import { Icon } from '@material-ui/core';
 import Avatar from 'material-ui/Avatar';
 import styles from '../styles'
 
@@ -33,7 +34,7 @@ const SportmenHeader = (props) => {
 
 };
 SportmenHeader.propTypes = {
-    classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(SportmenHeader);

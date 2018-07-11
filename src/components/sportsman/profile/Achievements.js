@@ -68,8 +68,4 @@ class Achievements extends React.Component{
     }
 }
 
-Achievements.propTypes = {
-    classes: PropTypes.object.isRequired
-};
-
 export default withStyles(styles)(Achievements);

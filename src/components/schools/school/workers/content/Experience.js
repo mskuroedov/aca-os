@@ -13,58 +13,70 @@ import styles from '../../../../styles'
 
 
 class Experience extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-
-    render() {
-        const {classes} = this.props;
-        return (
-            <div className='xs-hidden'>
-                <Typography className={classes.title}>Воспитанники вне «Академии хоккея Ак Барс»</Typography>
-                <Paper className="paper">
-                    <Table className="table no-bottom">
-                        <TableHead>
-                            <TableRow>
-                                <TableCell >ФИО</TableCell>
-                                <TableCell >Лига</TableCell>
-                                <TableCell numeric>Разряд</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            <TableRow>
-                                <TableCell >Аллаяров Руслан Садуллаевич</TableCell>
-                                <TableCell >Детская хоккейная лига</TableCell>
-                                <TableCell numeric>3</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell >Байдин Никита Константинович</TableCell>
-                                <TableCell >Юношеская хоккейная лига</TableCell>
-                                <TableCell numeric>1</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell >Манкевич Павел Владимирович</TableCell>
-                                <TableCell >Юношеская хоккейная лига</TableCell>
-                                <TableCell numeric>1</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell >Попов Юрий Анатольевич</TableCell>
-                                <TableCell >Детская хоккейная лига</TableCell>
-                                <TableCell numeric>2</TableCell>
-                            </TableRow>
-                        </TableBody>
-                    </Table>
-                </Paper>
-
-            </div>
-
-        )
-    }
+  render() {
+    const { classes } = this.props;
+    return (
+      <div className="xs-hidden">
+        <Typography className={classes.title}>
+          Воспитанники вне «Академии хоккея Ак Барс»
+        </Typography>
+        <Paper className={classnames('paper', classes.paper)}>
+          <Table className="table no-bottom">
+            <TableHead>
+              <TableRow>
+                <TableCell>ФИО</TableCell>
+                <TableCell>Лига</TableCell>
+                <TableCell numeric>Разряд</TableCell>
+                <TableCell />
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>Аллаяров Руслан Садуллаевич</TableCell>
+                <TableCell>Детская хоккейная лига</TableCell>
+                <TableCell numeric>3</TableCell>
+                <TableCell className="PaperMenuTrigger">
+                  <PaperMenu relate />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Байдин Никита Константинович</TableCell>
+                <TableCell>Юношеская хоккейная лига</TableCell>
+                <TableCell numeric>1</TableCell>{' '}
+                <TableCell className="PaperMenuTrigger">
+                  <PaperMenu relate />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Манкевич Павел Владимирович</TableCell>
+                <TableCell>Юношеская хоккейная лига</TableCell>
+                <TableCell numeric>1</TableCell>{' '}
+                <TableCell className="PaperMenuTrigger">
+                  <PaperMenu relate />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Попов Юрий Анатольевич</TableCell>
+                <TableCell>Детская хоккейная лига</TableCell>
+                <TableCell numeric>2</TableCell>{' '}
+                <TableCell className="PaperMenuTrigger">
+                  <PaperMenu relate />
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </Paper>
+      </div>
+    );
+  }
 }
 
 Experience.propTypes = {
-    classes: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(Experience);
