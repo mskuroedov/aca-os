@@ -16,6 +16,7 @@ import Button from "material-ui/es/Button/Button";
 import {connect} from "react-redux";
 import {login} from "../../actions/auth";
 import styles from '../styles'
+import LoginModal from "./LoginModal";
 
 const options = [{
     id:1,
@@ -95,8 +96,7 @@ class PublicHeader extends React.Component {
                             >
                                 <ShoppingBasketIcon/>
                             </Link>
-                            <Button onClick={this.props.login} style={{fontSize: 15,color:'white',textTransform:'capitalize'}}>Войти</Button>
-
+                            <LoginModal/>
                         </div>
                         <div className='lg-hidden ml-auto'>
                             <IconButton

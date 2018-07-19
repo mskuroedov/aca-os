@@ -22,7 +22,9 @@ const styles = theme => ({
         '&:hover': {
             transition: 'all 0.4s',
             borderBottomColor: 'rgba(36,36,33,.5)'
-        }
+        },
+        padding: 0,
+        cursor:'pointer'
     },
     price: {
         fontSize: 19,
@@ -57,7 +59,7 @@ const styles = theme => ({
     },
     formControl: {
         width: '100%',
-        marginBottom: 24
+        marginBottom: 24,
     },
     searchInkbar: {
         color: 'rgba(36,36,33,1)',
@@ -395,7 +397,10 @@ const styles = theme => ({
         color: 'rgba(36,36,33,0.6)'
     },
     dialogWindow: {
-        borderRadius: 12
+        borderRadius: 12,
+    },
+    bgTransparent:{
+      background:'transparent'
     },
     dialogTitle: {
         color: '#242421',
@@ -429,6 +434,68 @@ const styles = theme => ({
     dialogContent: {
         maxWidth: 360,
         paddingBottom: 8
+    },
+    inputLabel: {
+        fontSize: 14,
+        lineHeight: 1,
+    },
+    inputLabelShrink: {
+        fontSize: 13,
+        transform: 'translate(0, 1.5px) scale(1) !important'
+    },
+    radioLabel: {
+        fontSize: 16,
+        color: 'rgba(36,36,33)'
+    },
+    authDialog: {
+        width: 464,
+        height: 272,
+        padding: 0,
+        paddingTop: '0 !important'
+    },
+    thankDialog: {
+        width: 464,
+        height: 224,
+        padding: 0,
+        paddingTop: '0 !important'
+    },
+    regDialog: {
+        width: 464,
+        padding: 0,
+        paddingTop: '0 !important'
+    },
+    authDialogHeader: {
+        paddingLeft: 32,
+        paddingRight: 21,
+        backgroundColor: 'rgba(36, 36, 33,0.039)',
+        paddingTop: 20,
+        paddingBottom: 21
+    },
+    thankText: {
+        fontSize: 40,
+        color: 'white',
+        lineHeight: 1.2,
+        fontWeight: 'bold',
+        textAlign:'center',
+        marginTop:48,
+        marginBottom:39
+    },
+    thankDialogConatiner: {
+        paddingLeft: 32,
+        paddingRight: 21,
+        backgroundColor: 'rgb(0, 118, 94)',
+        paddingTop: 20,
+        paddingBottom: 21
+    },
+    authDialogContent: {
+        paddingLeft: 32,
+        paddingRight: 32,
+        paddingTop: 32,
+    },
+    authTitle: {
+        fontSize: 20,
+        fontWeight: 'bold',
+
     },
     formControlmlmr: {
         [theme.breakpoints.down('md')]: {
@@ -594,13 +661,13 @@ const styles = theme => ({
             paddingLeft: 16,
             paddingRight: 16,
             paddingTop: 16,
-            paddingBottom:16
+            paddingBottom: 16
         },
         [theme.breakpoints.up('lg')]: {
             paddingLeft: 165,
             paddingRight: 165,
             paddingTop: 50,
-            paddingBottom:32
+            paddingBottom: 32
         },
         backgroundColor: '#fff',
         display: 'flex'
@@ -623,8 +690,8 @@ const styles = theme => ({
         color: '#242421',
         fontFamily: 'AkBarsFont'
     },
-    mb16:{
-      marginBottom:16
+    mb16: {
+        marginBottom: 16
     },
     textSecondaryfs16: {
         color: 'rgba(36,36,33,0.54)',
@@ -652,8 +719,8 @@ const styles = theme => ({
         boxShadow: 'none',
         borderRadius: 12,
         paddingBottom: 16,
-        paddingLeft:24,
-        paddingRight:24,
+        paddingLeft: 24,
+        paddingRight: 24,
         marginBottom: 10,
         border: '1px solid rgba(0,0,0,0.1);',
         fontSize: 16,
@@ -663,7 +730,7 @@ const styles = theme => ({
     tileName: {
         color: 'rgba(36,36,33,1)',
         fontSize: 17,
-        fontWeight:'bold',
+        fontWeight: 'bold',
         marginTop: 36,
         marginBottom: 9,
     },
@@ -675,7 +742,7 @@ const styles = theme => ({
         color: 'rgba(36,36,33,1)',
         fontSize: 15,
         marginTop: 5,
-        fontWeight:'bold'
+        fontWeight: 'bold'
     },
     tileAvatar: {
         width: 100,
@@ -683,8 +750,8 @@ const styles = theme => ({
         margin: 'auto'
     },
     tileLink: {
-        marginBottom:16,
-        fontSize:15,
+        marginBottom: 16,
+        fontSize: 15,
         borderBottom: '1px solid rgba(36,36,33,0.2)',
         color: 'rgba(36,36,33,1)',
         '&:hover': {
@@ -701,8 +768,8 @@ const styles = theme => ({
     schoolMenuFlexContainer: {
         [theme.breakpoints.down('lg')]: {
             justifyContent: 'start',
-            paddingLeft:16,
-            paddingRight:16
+            paddingLeft: 16,
+            paddingRight: 16
 
         },
         [theme.breakpoints.up('lg')]: {
@@ -710,37 +777,37 @@ const styles = theme => ({
 
         },
     },
-    building:{
-        color:'white',
-        fontSize:'48px !important',
-        backgroundColor:'#00755E',
-        borderRadius:'100%',
-        padding:24,
-        width:96,
-        height:96
+    building: {
+        color: 'white',
+        fontSize: '48px !important',
+        backgroundColor: '#00755E',
+        borderRadius: '100%',
+        padding: 24,
+        width: 96,
+        height: 96
     },
     schoolRightSec: {
         justifyItems: 'flex-end',
         textAlign: 'right',
         color: '#242421',
         fontSize: 14,
-        marginLeft:24
+        marginLeft: 24
     },
-    mlauto:{
-        marginLeft:'auto',
+    mlauto: {
+        marginLeft: 'auto',
     }
     ,
     schoolRatingNum: {
         fontSize: '40px !important',
         color: '#242421',
-        fontFamily:'AkBarsFont'
+        fontFamily: 'AkBarsFont'
     },
-    xsh:{
+    xsh: {
         [theme.breakpoints.down('lg')]: {
-            display:'none',
+            display: 'none',
         },
         [theme.breakpoints.up('lg')]: {
-            display:'block',
+            display: 'block',
         },
     },
     newsPaper: {
@@ -767,7 +834,7 @@ const styles = theme => ({
         fontSize: 18,
         fontFamily: '"BlissPro",sans-serif',
         fontWeight: 'bold',
-        display:'block'
+        display: 'block'
     },
     avatarw30: {
         width: 30,
@@ -822,7 +889,7 @@ const styles = theme => ({
         left: 0,
         top: 0,
         boxShadow: 'none',
-        border:0
+        border: 0
 
     },
     mapContainer: {
@@ -1005,54 +1072,54 @@ const styles = theme => ({
         border: '1px solid rgba(0,0,0,0.1);',
         fontSize: 15,
         fontFamily: '"BlissPro",sans-serif',
-        [theme.breakpoints.down('lg')]:{
+        [theme.breakpoints.down('lg')]: {
 
             paddingLeft: 16,
-            paddingRight:16
+            paddingRight: 16
         },
-        [theme.breakpoints.up('lg')]:{
+        [theme.breakpoints.up('lg')]: {
             paddingLeft: 24,
-            paddingRight:24
+            paddingRight: 24
         }
     },
     trainerAvatar: {
         width: 56,
         height: 56
     },
-    fio:{
-        color:'rgba(36,36,33,1)',
-        fontSize:15
+    fio: {
+        color: 'rgba(36,36,33,1)',
+        fontSize: 15
     },
-    trainLevel:{
-        color:'rgba(36,36,33,0.6)',
-        fontSize:13
+    trainLevel: {
+        color: 'rgba(36,36,33,0.6)',
+        fontSize: 13
     },
-    trainerLink:{
-        marginTop:4,
-        lineHeight:1.6,
-        color:'rgba(36,36,33,1);',
-        transition:'all 0.4s',
+    trainerLink: {
+        marginTop: 4,
+        lineHeight: 1.6,
+        color: 'rgba(36,36,33,1);',
+        transition: 'all 0.4s',
         borderBottom: ' 1px solid rgba(36,36,33,0.2)',
-        fontSize:15,
-        '&:hover':{
-            transition:'all 0.4s',
-            borderBottomColor:'rgba(36,36,33,.5)'
+        fontSize: 15,
+        '&:hover': {
+            transition: 'all 0.4s',
+            borderBottomColor: 'rgba(36,36,33,.5)'
         }
     },
 
-    header:{
-        [theme.breakpoints.down('lg')]:{
-            alignItems:'start'
-        }  ,
-        [theme.breakpoints.up('lg')]:{
-            alignItems:'center'
+    header: {
+        [theme.breakpoints.down('lg')]: {
+            alignItems: 'start'
+        },
+        [theme.breakpoints.up('lg')]: {
+            alignItems: 'center'
         }
     },
     schoolName: {
         fontFamily: '"BlissPro",sans-serif',
         color: 'black',
         fontWeight: 'bold',
-        marginBottom:16,
+        marginBottom: 16,
         [theme.breakpoints.down('lg')]: {
             fontSize: 18,
 
@@ -1068,19 +1135,19 @@ const styles = theme => ({
             paddingLeft: 16,
             paddingRight: 16,
             paddingTop: 16,
-            paddingBottom:16
+            paddingBottom: 16
         },
         [theme.breakpoints.up('lg')]: {
             paddingLeft: 165,
             paddingRight: 165,
             paddingTop: 50,
-            paddingBottom:32
+            paddingBottom: 32
         },
         backgroundColor: '#fff',
-        display:'flex',
+        display: 'flex',
         // borderBottom:'1px solid lightgray'
     },
-    schoolAdress:{
+    schoolAdress: {
         [theme.breakpoints.down('lg')]: {
             fontSize: 12,
 
@@ -1089,14 +1156,14 @@ const styles = theme => ({
             fontSize: 16,
 
         },
-        fontSize:16,
-        color:'rgba(36,36,33,1)',
-        position:'relative',
-        top:-5
+        fontSize: 16,
+        color: 'rgba(36,36,33,1)',
+        position: 'relative',
+        top: -5
     },
-    mwformControl:{
-        minWidth:280,
-        marginBottom:24
+    mwformControl: {
+        minWidth: 280,
+        marginBottom: 24
     },
     grayText: {
         color: 'rgba(128,128,128,.6)',
@@ -1104,30 +1171,30 @@ const styles = theme => ({
         fontSize: 14
     },
 
-    newsHeading:{
-        fontSize:22,
-        color:'#242421',
-        fontWeight:'bold',
-        marginBottom:40
+    newsHeading: {
+        fontSize: 22,
+        color: '#242421',
+        fontWeight: 'bold',
+        marginBottom: 40
     },
-    newsText:{
-        fontSize:16,
-        color:'#242421',
-        marginBottom:24
+    newsText: {
+        fontSize: 16,
+        color: '#242421',
+        marginBottom: 24
     },
-    subHeader:{
-        fontSize:20,
-        color:'#242421',
-        fontWeight:'bold',
-        marginBottom:24
+    subHeader: {
+        fontSize: 20,
+        color: '#242421',
+        fontWeight: 'bold',
+        marginBottom: 24
     },
-    promo:{
-        width:'100%'
+    promo: {
+        width: '100%'
     },
-    libformControl:{
-        [theme.breakpoints.up('lg')]:{
-            maxWidth:'30%',
-            width:'30%'
+    libformControl: {
+        [theme.breakpoints.up('lg')]: {
+            maxWidth: '30%',
+            width: '30%'
         }
     },
 
@@ -1135,24 +1202,24 @@ const styles = theme => ({
         width: 96,
         height: 96,
         margin: 'auto',
-        marginBottom:16
+        marginBottom: 16
     },
     authorname: {
         color: '#242421',
         fontSize: 18,
         textAlign: 'center',
-        maxWidth:160,
-        margin:'auto',
-        fontWeight:'bold',
-        marginBottom:16
+        maxWidth: 160,
+        margin: 'auto',
+        fontWeight: 'bold',
+        marginBottom: 16
     },
-    subtext:{
-        fontSize:14,
-        color:'rgba(36,36,33,.6)'
+    subtext: {
+        fontSize: 14,
+        color: 'rgba(36,36,33,.6)'
     },
-    TabsRoot:{
-        '&::-webkit-scrollbar':{
-            display:'none'
+    TabsRoot: {
+        '&::-webkit-scrollbar': {
+            display: 'none'
         }
 
     },
@@ -1162,7 +1229,7 @@ const styles = theme => ({
         maxHeight: 24,
 
         '&$disabledisabled': {
-            color:'#123123'
+            color: '#123123'
         }
     },
     AlphabetTabLabel: {
@@ -1174,13 +1241,13 @@ const styles = theme => ({
     colorBlack: {
         color: '#242421 !important'
     },
-    disabledTab:{
+    disabledTab: {
         fontSize: 16,
-        color:'rgba(36,36,33,0.6)'
+        color: 'rgba(36,36,33,0.6)'
     },
-    scrollButtons:{
-        maxWidth:30,
-        color:'rgba(36,36,33,0.6)'
+    scrollButtons: {
+        maxWidth: 30,
+        color: 'rgba(36,36,33,0.6)'
     },
 
     NIpaper: {
@@ -1246,35 +1313,35 @@ const styles = theme => ({
     iconText: {
         fontSize: 14
     },
-    LIpaper:{
-        paddingLeft:82,
-        paddingRight:82,
-        paddingTop:24,
-        paddingBottom:34
+    LIpaper: {
+        paddingLeft: 82,
+        paddingRight: 82,
+        paddingTop: 24,
+        paddingBottom: 34
     },
     LIheader: {
         fontSize: 24,
         color: 'rgba(36,36,33,1)',
         fontWeight: 'bold',
-        marginBottom:20
+        marginBottom: 20
     },
     LItext: {
         fontSize: 16,
         color: 'rgba(36,36,33,1)',
-        marginBottom:24
+        marginBottom: 24
     },
-    img:{
-        maxWidth:'100%',
-        [theme.breakpoints.down('lg')]:{
-            marginLeft:-16,
-            marginRight:-16,
-            maxWidth:'calc(100% + 32px)'
+    img: {
+        maxWidth: '100%',
+        [theme.breakpoints.down('lg')]: {
+            marginLeft: -16,
+            marginRight: -16,
+            maxWidth: 'calc(100% + 32px)'
         }
     },
-    imgDescription:{
+    imgDescription: {
         color: 'rgba(36,36,33,0.3)',
-        fontSize:14,
-        marginBottom:33
+        fontSize: 14,
+        marginBottom: 33
     },
     flex: {
         flex: 1,
@@ -1358,13 +1425,13 @@ const styles = theme => ({
     trainerInfoTitle: {
         color: 'rgba(36,36,33,0.6)',
         fontSize: 14,
-        textAlign:'center'
+        textAlign: 'center'
     },
     dateicon: {
         color: 'rgba(36,36,33,0.2)',
         fontSize: 24,
-        position:'relative',
-        top:4,
+        position: 'relative',
+        top: 4,
 
     },
     datetext: {
@@ -1374,22 +1441,22 @@ const styles = theme => ({
     score: {
         fontSize: 40,
         color: '#242421',
-        textAlign:'center',
-        fontWeight:'bold'
+        textAlign: 'center',
+        fontWeight: 'bold'
     },
     datename: {
         fontSize: 18,
         color: '#242421',
-        fontWeight:'bold',
-        textAlign:'center'
+        fontWeight: 'bold',
+        textAlign: 'center'
     },
     secondScore: {
         fontSize: 14,
         color: 'rgba(36,36,33,0.2)',
     },
-    dot:{
+    dot: {
         color: 'rgba(36,36,33,0.2)',
-        fontSize:16
+        fontSize: 16
     }
 
 

@@ -198,7 +198,7 @@ module.exports = (env) => {
 //                 removeComments: true,
 //                 removeRedundantAttributes: true
 //             }
-//         }),
+//         })
 //         new PreloadWebpackPlugin({
 //             rel: 'preload',
 //             as: 'script',

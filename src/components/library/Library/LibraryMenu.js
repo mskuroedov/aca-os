@@ -58,7 +58,7 @@ class LibraryMenu extends React.Component {
     }
 
     state = {
-        value: 3,
+        value: 1,
     };
 
     handleChange = (event, value) => {

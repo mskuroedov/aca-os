@@ -39,7 +39,7 @@ class AuthorCard extends React.Component {
 
                             <Typography className={classes.subtext}>Материалы: <span style={{fontSize:16,color:'#242421',fontWeight:'bold'}}>12</span></Typography>
 
-                            <Typography className={classes.subtext}>Платные: <span style={{fontSize:16,color:'#242421',fontWeight:'bold'}}>7</span></Typography>
+                            {/*<Typography className={classes.subtext}>Платные: <span style={{fontSize:16,color:'#242421',fontWeight:'bold'}}>7</span></Typography>*/}
                         </Grid>
                     </Grid>
                 </Paper>
