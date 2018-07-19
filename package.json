@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "VZ",
   "license": "MIT",
+  "engines": {
+    "node": "9.4.0"
+  },
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack --env production",
