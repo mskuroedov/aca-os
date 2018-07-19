@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -49,20 +49,13 @@ module.exports = (env) => {
                 }
             ]
         },
-        plugins: isProduction ?
+        plugins:
             [
                 CSSExtract,
                 new webpack.DefinePlugin({ // <-- key to reducing React's size
                     'process.env.SECRET': JSON.stringify(process.env.SECRET),
                 }),
-                new UglifyJSPlugin(),
-            ]
-            :
-            [
-                CSSExtract,
-                new webpack.DefinePlugin({ // <-- key to reducing React's size
-                    'process.env.SECRET': JSON.stringify(process.env.SECRET),
-                }),
+                isProduction && new UglifyJSPlugin(),
             ],
 
         // new webpack.optimize.ModuleConcatenationPlugin(),
@@ -99,11 +92,9 @@ module.exports = (env) => {
                 contentBase: path.join(__dirname, 'public'),
                 historyApiFallback:
                     true,
-                publicPath:
-                    '/dist/'
+                publicPath: '/dist/'
             }
-    }
-        ;
+    };
 };
 
 
