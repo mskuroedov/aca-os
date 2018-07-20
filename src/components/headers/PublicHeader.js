@@ -15,7 +15,6 @@ import Link from "react-router-dom/es/Link";
 import Button from "material-ui/es/Button/Button";
 import {connect} from "react-redux";
 import {login} from "../../actions/auth";
-import styles from '../styles'
 import LoginModal from "./LoginModal";
 
 const options = [{
@@ -69,7 +68,7 @@ class PublicHeader extends React.Component {
     };
 
     render() {
-        const {classes} = this.props;
+        // const {classes} = this.props;
         const {auth, anchorEl} = this.state;
         const open = Boolean(anchorEl);
 
@@ -151,12 +150,10 @@ class PublicHeader extends React.Component {
     }
 }
 
-PublicHeader.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
+
 
 const mapDispatchToProps = (dispatch) => ({
     login: () => dispatch(login('Maxim', '1'))
 });
 
-export default connect(undefined, mapDispatchToProps)(withStyles(styles)(PublicHeader));
+export default connect(undefined, mapDispatchToProps)(PublicHeader);

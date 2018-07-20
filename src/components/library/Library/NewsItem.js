@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
+import withStyles from "@material-ui/core/es/styles/withStyles";
 import Paper from "material-ui/es/Paper/Paper";
 import Grid from "material-ui/es/Grid/Grid";
 import Avatar from "material-ui/es/Avatar/Avatar";

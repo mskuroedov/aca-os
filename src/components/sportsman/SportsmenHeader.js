@@ -2,7 +2,7 @@ import React from 'react';
 import {Grid} from "material-ui";
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {withStyles} from 'material-ui/styles';
+import withStyles from "@material-ui/core/es/styles/withStyles";
 import Avatar from 'material-ui/Avatar';
 import styles from '../styles'
 

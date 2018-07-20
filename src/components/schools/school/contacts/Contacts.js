@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
+import withStyles from "@material-ui/core/es/styles/withStyles";
 import Typography from 'material-ui/Typography';
 import {Redirect} from "react-router-dom";
 import Grid from "material-ui/es/Grid/Grid";

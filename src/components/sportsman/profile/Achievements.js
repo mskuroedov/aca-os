@@ -1,6 +1,6 @@
 import React from 'react';
 import {Grid, Paper, Table, TableBody, TableCell, TableHead, TableRow} from "material-ui";
-import {withStyles} from "material-ui/styles/index";
+import withStyles from "@material-ui/core/es/styles/withStyles";
 import PropTypes from 'prop-types';
 import Typography from "@material-ui/core/es/Typography/Typography";
 import classNames from 'classnames'

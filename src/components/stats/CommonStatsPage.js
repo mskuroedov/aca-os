@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
-import classNames from 'classnames';
 import Header from "../headers/Header";
 import Subheader from "../headers/Subheader";
-import StatsPageContent from "./StatsPageContent";
 import StatsPage from "../schools/school/statistic/StatsPage"
 import Footer from "../footer/Footer";
 

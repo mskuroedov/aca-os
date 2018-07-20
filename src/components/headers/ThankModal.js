@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Dialog from 'material-ui/Dialog';
 import DialogActions from 'material-ui/Dialog/DialogActions';
 import DialogContent from 'material-ui/Dialog/DialogContent';
-import {withStyles} from "material-ui/styles/index";
+import withStyles from "@material-ui/core/es/styles/withStyles";
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Grid from "@material-ui/core/es/Grid/Grid";

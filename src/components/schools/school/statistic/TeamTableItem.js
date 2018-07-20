@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import {Avatar, TableCell, TableRow} from "material-ui";
 import {Link} from "react-router-dom";
-import {withStyles} from "material-ui/styles/index";
+import withStyles from "@material-ui/core/es/styles/withStyles";
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import MoreVertIcon from 'material-ui-icons/MoreVert';
 import styles from '../../../styles'

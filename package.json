@@ -4,9 +4,6 @@
   "main": "index.js",
   "author": "VZ",
   "license": "MIT",
-  "engines": {
-    "node": "9.4.0"
-  },
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack --env production",
@@ -50,7 +47,7 @@
     "numeral": "2.0.6",
     "preload-webpack-plugin": "^2.3.0",
     "raf": "3.3.2",
-    "react": "16.0.0-rc.3",
+    "react": "16.3.0",
     "react-addons-shallow-compare": "15.6.0",
     "react-big-calendar": "^0.19.1",
     "react-big-calendar-like-google": "^0.0.3",

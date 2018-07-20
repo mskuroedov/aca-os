@@ -1,11 +1,11 @@
+import styles from '../../../styles'
 import React from 'react';
 import {Grid} from "material-ui";
-import Paper from "material-ui/es/Paper/Paper";
 import Typography from "material-ui/es/Typography/Typography";
 import Avatar from "material-ui/es/Avatar/Avatar";
-import {withStyles} from 'material-ui/styles';
 import Link from "react-router-dom/es/Link";
-import styles from '../../../styles'
+import Paper from "@material-ui/core/es/Paper/Paper";
+import withStyles from "@material-ui/core/es/styles/withStyles";
 
 class NewsPaper extends React.Component {
     constructor(props) {
@@ -17,7 +17,9 @@ class NewsPaper extends React.Component {
         const {classes} = this.props;
         return (
             <Link to='/news/1'>
-                <Paper className={classes.newsPaper}>
+                <Paper className={classes.newsPaper} classes={{
+                    root:classes.newsPaper
+                }}>
                     <Typography className={classes.date}>10.01.2018</Typography>
 
                     <Typography className={classes.primaryTextfs14}>

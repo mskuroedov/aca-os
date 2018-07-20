@@ -1056,6 +1056,9 @@ const styles = theme => ({
         height: 100,
         margin: 'auto'
     },
+    marginA:{
+      margin:'auto'
+    },
     STlink: {
         borderBottom: '1px solid rgba(36,36,33,0.2)',
         color: 'rgba(36,36,33,1)',

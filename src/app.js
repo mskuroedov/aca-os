@@ -6,11 +6,12 @@ import configureStore from './store/configureStore';
 // import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
-import {createMuiTheme, MuiThemeProvider} from 'material-ui/styles';
 import {login, logout} from "./actions/auth";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab,faGooglePlay } from '@fortawesome/free-brands-svg-icons'
+import MuiThemeProvider from "@material-ui/core/es/styles/MuiThemeProvider";
+import createMuiTheme from "@material-ui/core/es/styles/createMuiTheme";
 
 library.add(fab, faGooglePlay);
 

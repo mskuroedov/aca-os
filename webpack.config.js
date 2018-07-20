@@ -49,13 +49,20 @@ module.exports = (env) => {
                 }
             ]
         },
-        plugins:
+        plugins: isProduction ?
             [
                 CSSExtract,
                 new webpack.DefinePlugin({ // <-- key to reducing React's size
                     'process.env.SECRET': JSON.stringify(process.env.SECRET),
                 }),
-                isProduction && new UglifyJSPlugin(),
+                new UglifyJSPlugin(),
+            ]
+            :
+            [
+                CSSExtract,
+                new webpack.DefinePlugin({ // <-- key to reducing React's size
+                    'process.env.SECRET': JSON.stringify(process.env.SECRET),
+                }),
             ],
 
         // new webpack.optimize.ModuleConcatenationPlugin(),
@@ -92,9 +99,11 @@ module.exports = (env) => {
                 contentBase: path.join(__dirname, 'public'),
                 historyApiFallback:
                     true,
-                publicPath: '/dist/'
+                publicPath:
+                    '/dist/'
             }
-    };
+    }
+        ;
 };
 
 
@@ -189,7 +198,7 @@ module.exports = (env) => {
 //                 removeComments: true,
 //                 removeRedundantAttributes: true
 //             }
-//         })
+//         }),
 //         new PreloadWebpackPlugin({
 //             rel: 'preload',
 //             as: 'script',

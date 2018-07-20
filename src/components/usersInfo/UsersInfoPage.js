@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
 import classNames from 'classnames';
 import Header from "../headers/Header";
 import Subheader from "../headers/Subheader";
 import UsersInfoMenu from "./UsersInfoMenu";
 import Footer from "../footer/Footer";
+import withStyles from "@material-ui/core/es/styles/withStyles";
 
 const styles = theme => ({});
 

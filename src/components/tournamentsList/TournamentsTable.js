@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
+import withStyles from "@material-ui/core/es/styles/withStyles";
 import classNames from 'classnames';
 import Table from "material-ui/es/Table/Table";
 import TableHead from "material-ui/es/Table/TableHead";

@@ -242,20 +242,20 @@ class PublicHeader extends React.Component {
                     </Toolbar>
                 </AppBar>
             </div>
-    );
+        );
     }
-    }
+}
 
-    PublicHeader.propTypes = {
-        classes: PropTypes.object.isRequired,
-    };
+PublicHeader.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
 
-    const mapStateToProps = (state) => ({
-        username: state.auth.user.username
-    })
+const mapStateToProps = (state) => ({
+    username: state.auth.user.username
+})
 
-    const mapDispatchToProps = (dispatch) => ({
-        logout: () => dispatch(logout())
-    });
+const mapDispatchToProps = (dispatch) => ({
+    logout: () => dispatch(logout())
+});
 
-    export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(PublicHeader));
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(PublicHeader));

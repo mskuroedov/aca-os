@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
+import withStyles from "@material-ui/core/es/styles/withStyles";
 import Button from 'material-ui/Button';
 import FormControl from "material-ui/es/Form/FormControl";
 import Grid from "material-ui/es/Grid/Grid";

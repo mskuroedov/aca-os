@@ -13,7 +13,7 @@ import Typography from "@material-ui/core/es/Typography/Typography";
 import MenuItem from "@material-ui/core/es/MenuItem/MenuItem";
 import Select from "material-ui/es/Select/Select";
 import FormControl from "material-ui/es/Form/FormControl";
-import {withStyles} from 'material-ui/styles';
+import withStyles from "@material-ui/core/es/styles/withStyles";
 import CustomEvent from './calendarCustom/CustomEvent';
 
 

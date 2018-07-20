@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
+import withStyles from "@material-ui/core/es/styles/withStyles";
 import Grid from "@material-ui/core/es/Grid/Grid";
 import TournamentsTable from "./TournamentsTable";
 import Paper from "@material-ui/core/es/Paper/Paper";

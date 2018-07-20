@@ -1,17 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
+import withStyles from "@material-ui/core/es/styles/withStyles";
 import classNames from 'classnames';
 import Link from "react-router-dom/es/Link";
 import Paper from "@material-ui/core/es/Paper/Paper";
 import Avatar from "material-ui/es/Avatar/Avatar";
 import Grid from "@material-ui/core/es/Grid/Grid";
 import Typography from "@material-ui/core/es/Typography/Typography";
-
-const styles = theme => ({
-
-
-});
+import styles from '../styles'
 
 
 class TrainerView extends React.Component {
@@ -25,17 +21,17 @@ class TrainerView extends React.Component {
         return (
             <Link to='/worker/1'>
                 <Paper className={classes.paper}>
-                    <Avatar
-                        alt="Adelle Charles"
-                        src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
-                        classes={{
-                            root: classes.avatarw100
-                        }}
-                        styles={{
-                            margin: 'auto',
-                            marginBottom:20}}
-                    />
-                    <Grid container spacing={16}>
+
+                    <Grid container spacing={16} justify={'center'}>
+                        <Grid item xs={12}>
+                            <Avatar
+                                alt="Adelle Charles"
+                                src="https://jira.hyperledger.org/secure/useravatar?size=xsmall&avatarId=10346"
+                                classes={{
+                                    root: classNames(classes.avatarw100,classes.marginA)
+                                }}
+                            />
+                        </Grid>
                         <Grid item xs={10} style={{margin: 'auto'}}>
                             <Typography className={classes.trainerName}>
                                 Красильников <br/>

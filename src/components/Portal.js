@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withStyles} from 'material-ui/styles';
 import classNames from 'classnames';
 import Typography from 'material-ui/Typography';
 import Grid from "@material-ui/core/es/Grid/Grid";
@@ -13,6 +12,7 @@ import Input from "material-ui/es/Input/Input";
 import InputAdornment from "material-ui/es/Input/InputAdornment";
 import Icon from "material-ui/es/Icon/Icon";
 import styles from "./styles";
+import withStyles from "@material-ui/core/es/styles/withStyles";
 
 function TabContainer(props) {
     return (
